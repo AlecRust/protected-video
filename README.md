@@ -5,7 +5,7 @@ of access to underlying player controls.
 
 ## Installation
 
-Install [Protected Video](https://wordpress.org/plugins/email-templates/) from the WordPress plugins directory.
+Install [Protected Video](https://wordpress.org/plugins/protected-video/) from the WordPress plugins directory.
 
 ## Development
 

@@ -15,17 +15,21 @@
     "build": "wp-scripts build src/protected-video-block.js --output-path=admin/js",
     "watch": "wp-scripts start src/protected-video-block.js --output-path=admin/js",
     "lint": "prettier '**/*.{js,php,md}' --write; eslint '**/*.js' --fix",
+    "release": "release-it --ci",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.16.3",
     "@wordpress/scripts": "^16.1.1",
+    "auto-changelog": "^2.3.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "get-video-id": "^3.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "release-it": "^14.7.0",
+    "replace": "^1.2.1"
   },
   "lint-staged": {
     "*.{js,php,md}": "prettier --write",

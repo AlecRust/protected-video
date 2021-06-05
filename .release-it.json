@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "before:init": "yarn lint",
+    "after:bump": [
+      "replace \"${latestVersion}'\" \"${version}'\" protected-video.php",
+      "auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false",
+      "yarn build"
+    ]
+  },
+  "git": {
+    "commitArgs": ["--no-verify", "-S"],
+    "tagArgs": ["-s"]
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "${version}"
+  }
+}
