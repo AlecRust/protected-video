@@ -1,0 +1,34 @@
+{
+  "name": "protected-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YouTube/Vimeo player with disabled access to the original video.",
+  "main": "admin/js/protected-video-block.js",
+  "repository": "https://github.com/AlecRust/protected-video",
+  "author": "Alec Rust <me@alecrust.com>",
+  "license": "MIT",
+  "keywords": [
+    "WordPress",
+    "block"
+  ],
+  "scripts": {
+    "build": "wp-scripts build src/protected-video-block.js --output-path=admin/js",
+    "watch": "wp-scripts start src/protected-video-block.js --output-path=admin/js",
+    "lint": "prettier '**/*.{js,php,md}' --write; eslint '**/*.js' --fix",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.16.3",
+    "@wordpress/scripts": "^16.1.1",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "get-video-id": "^3.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1"
+  },
+  "lint-staged": {
+    "*.{js,php,md}": "prettier --write",
+    "*.js": "eslint --fix"
+  }
+}
