@@ -3,6 +3,7 @@
     "before:init": "yarn lint",
     "after:bump": [
       "replace \"${latestVersion}'\" \"${version}'\" protected-video.php",
+      "replace 'Version:           ${latestVersion}' 'Version:           ${version}' protected-video.php",
       "auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false",
       "yarn build"
     ]
