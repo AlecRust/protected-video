@@ -2,7 +2,7 @@
   "name": "protected-video",
   "version": "1.0.5",
   "private": true,
-  "description": "YouTube/Vimeo player with disabled access to the original video.",
+  "description": "YouTube/Vimeo player that prevents access to the original video.",
   "main": "admin/js/protected-video-block.js",
   "repository": "https://github.com/AlecRust/protected-video",
   "author": "Alec Rust <me@alecrust.com>",
