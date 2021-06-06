@@ -31,7 +31,7 @@ if (!defined('WPINC')) {
 /**
  * Protected Video plugin version.
  */
-define('PROTECTED_VIDEO_VERSION', '1.0.1');
+define('PROTECTED_VIDEO_VERSION', '1.0.2');
 
 /**
  * Plyr player version.
