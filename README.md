@@ -5,8 +5,8 @@ of access to underlying player controls.
 
 ## Installation
 
-Install this plugin from the [plugins directory](https://wordpress.org/plugins/protected-video/) or by downloading a
-ZIP from the [releases page](https://github.com/AlecRust/protected-video/releases) and uploading it to your site.
+Install this plugin from the [plugins directory](https://wordpress.org/plugins/protected-video/)
+or grab a ZIP from the [releases page](https://github.com/AlecRust/protected-video/releases).
 
 ## Development
 
