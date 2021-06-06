@@ -3,7 +3,7 @@ Contributors: alecrust
 Tags: block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to: 5.7
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,9 +50,17 @@ development tools or inspecting the page source.
 
 == Changelog ==
 
+= 1.0.3 =
+
+* Improve README installation instructions
+* Add GitHub Plugin URI to plugin header
+
 = 1.0.2 =
 
+* Release date: 6 June 2021
+
 * Add Rollup build process for public JS
+* Release 1.0.2
 * Bump release-it version
 * Tweak readme
 * Add plugin banner/icon assets
