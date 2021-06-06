@@ -102,7 +102,11 @@ class Protected_Video
     );
 
     // Gutenberg block
-    $this->loader->add_action('init', $plugin_admin, 'register_block');
+    $this->loader->add_action(
+      'enqueue_block_editor_assets',
+      $plugin_admin,
+      'register_block'
+    );
 
     // Admin settings page
     $this->loader->add_action(
