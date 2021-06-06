@@ -145,7 +145,7 @@ class Protected_Video_Admin
   }
 
   /**
-   * Register the Gutenberg block for the admin post editor.
+   * Register the Gutenberg block for the blocks editor.
    *
    * @since    1.0.0
    */
@@ -154,7 +154,7 @@ class Protected_Video_Admin
     $asset_file = include plugin_dir_path(__FILE__) .
       'js/protected-video-block.asset.php';
 
-    // Register the block
+    // Register block JS
     wp_register_script(
       'protected-video-block',
       plugins_url('js/protected-video-block.js', __FILE__),
@@ -169,5 +169,20 @@ class Protected_Video_Admin
     if (function_exists('wp_set_script_translations')) {
       wp_set_script_translations('protected-video-block', 'protected-video');
     }
+  }
+
+  /**
+   * Register the stylesheet for the admin area.
+   *
+   * @since    1.0.0
+   */
+  public function enqueue_styles()
+  {
+    wp_enqueue_style(
+      'protected-video-admin-css',
+      plugin_dir_url(__FILE__) . 'css/protected-video-admin.css',
+      [],
+      $this->version
+    );
   }
 }

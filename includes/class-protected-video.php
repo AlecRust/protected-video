@@ -108,6 +108,13 @@ class Protected_Video
       'register_block'
     );
 
+    // Admin CSS
+    $this->loader->add_action(
+      'enqueue_block_editor_assets',
+      $plugin_admin,
+      'enqueue_styles'
+    );
+
     // Admin settings page
     $this->loader->add_action(
       'admin_init',
