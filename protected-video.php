@@ -14,6 +14,7 @@
  * @wordpress-plugin
  * Plugin Name:       Protected Video
  * Plugin URI:        http://github.com/AlecRust/protected-video
+ * GitHub Plugin URI: AlecRust/protected-video
  * Description:       YouTube/Vimeo player with disabled access to the original video.
  * Version:           1.0.0
  * Author:            Alec Rust
