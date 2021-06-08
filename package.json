@@ -6,7 +6,7 @@
   "main": "admin/js/protected-video-block.js",
   "repository": "https://github.com/AlecRust/protected-video",
   "author": "Alec Rust <me@alecrust.com>",
-  "license": "MIT",
+  "license": "GPL-2.0-or-later",
   "keywords": [
     "WordPress",
     "block"
