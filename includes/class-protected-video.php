@@ -5,8 +5,6 @@
  * Used to define admin-specific public-facing site hooks.
  *
  * @link       https://www.alecrust.com/
- * @since      1.0.0
- *
  * @package    Protected_Video
  * @subpackage Protected_Video/includes
  * @author     Alec Rust <me@alecrust.com>
@@ -16,7 +14,6 @@ class Protected_Video
   /**
    * Loader responsible for maintaining and registering all plugin hooks.
    *
-   * @since    1.0.0
    * @access   protected
    * @var      Protected_Video_Loader    $loader    Maintains and registers all hooks for the plugin.
    */
@@ -25,7 +22,6 @@ class Protected_Video
   /**
    * Unique identifier of this plugin.
    *
-   * @since    1.0.0
    * @access   protected
    * @var      string    $plugin_name    The string used to uniquely identify this plugin.
    */
@@ -34,7 +30,6 @@ class Protected_Video
   /**
    * Current version of the plugin.
    *
-   * @since    1.0.0
    * @access   protected
    * @var      string    $version    The current version of the plugin.
    */
@@ -42,8 +37,6 @@ class Protected_Video
 
   /**
    * Define the core functionality of the plugin.
-   *
-   * @since    1.0.0
    */
   public function __construct()
   {
@@ -62,7 +55,6 @@ class Protected_Video
   /**
    * Load the required plugin dependencies.
    *
-   * @since    1.0.0
    * @access   private
    */
   private function load_dependencies()
@@ -91,7 +83,6 @@ class Protected_Video
   /**
    * Register hooks related to the admin area functionality.
    *
-   * @since    1.0.0
    * @access   private
    */
   private function define_admin_hooks()
@@ -129,7 +120,6 @@ class Protected_Video
   /**
    * Register hooks related to the public-facing functionality.
    *
-   * @since    1.0.0
    * @access   private
    */
   private function define_public_hooks()
@@ -163,8 +153,6 @@ class Protected_Video
 
   /**
    * Run the loader to execute all of the hooks with WordPress.
-   *
-   * @since    1.0.0
    */
   public function run()
   {
@@ -174,7 +162,6 @@ class Protected_Video
   /**
    * Name of the plugin to uniquely identify it within the context of WordPress.
    *
-   * @since     1.0.0
    * @return    string    The name of the plugin.
    */
   public function get_plugin_name()
@@ -185,7 +172,6 @@ class Protected_Video
   /**
    * Reference to the class that orchestrates the hooks with the plugin.
    *
-   * @since     1.0.0
    * @return    Protected_Video_Loader    Orchestrates the hooks of the plugin.
    */
   public function get_loader()
@@ -196,7 +182,6 @@ class Protected_Video
   /**
    * Retrieve the version number of the plugin.
    *
-   * @since     1.0.0
    * @return    string    The version number of the plugin.
    */
   public function get_version()

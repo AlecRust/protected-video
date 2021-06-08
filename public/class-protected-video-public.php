@@ -6,8 +6,6 @@
  * the public-facing stylesheet and JavaScript.
  *
  * @link       https://www.alecrust.com/
- * @since      1.0.0
- *
  * @package    Protected_Video
  * @subpackage Protected_Video/public
  * @author     Alec Rust <me@alecrust.com>
@@ -17,7 +15,6 @@ class Protected_Video_Public
   /**
    * The plugin ID.
    *
-   * @since    1.0.0
    * @access   private
    * @var      string    $plugin_name    The ID of this plugin.
    */
@@ -26,7 +23,6 @@ class Protected_Video_Public
   /**
    * The plugin version.
    *
-   * @since    1.0.0
    * @access   private
    * @var      string    $version    The current version of this plugin.
    */
@@ -35,7 +31,6 @@ class Protected_Video_Public
   /**
    * Initialize the class and set its properties.
    *
-   * @since    1.0.0
    * @param      string    $plugin_name       The name of the plugin.
    * @param      string    $version    The version of this plugin.
    */
@@ -47,8 +42,6 @@ class Protected_Video_Public
 
   /**
    * Adds inline player CSS to <head>.
-   *
-   * @since    1.0.0
    */
   public function enqueue_inline_styles()
   {
@@ -66,8 +59,6 @@ class Protected_Video_Public
 
   /**
    * Register stylesheets for the public-facing side of the site.
-   *
-   * @since    1.0.0
    */
   public function enqueue_styles()
   {
@@ -92,8 +83,6 @@ class Protected_Video_Public
 
   /**
    * Register the JavaScript for the public-facing side of the site.
-   *
-   * @since    1.0.0
    */
   public function enqueue_scripts()
   {

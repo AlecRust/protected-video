@@ -3,8 +3,6 @@
  * Template for plugin settings page in admin area
  *
  * @link       https://www.alecrust.com/
- * @since      1.0.0
- *
  * @package    Protected_Video
  * @subpackage Protected_Video/admin/partials
  */

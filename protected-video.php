@@ -1,17 +1,5 @@
 <?php
-
 /**
- * Plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * and defines a function that starts the plugin.
- *
- * @link              https://www.alecrust.com/
- * @since             1.0.0
- * @package           Protected_Video
- *
- * @wordpress-plugin
  * Plugin Name:       Protected Video
  * Plugin URI:        http://github.com/AlecRust/protected-video
  * GitHub Plugin URI: AlecRust/protected-video
@@ -22,6 +10,9 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       protected-video
+ *
+ * @link              https://www.alecrust.com/
+ * @package           Protected_Video
  */
 
 // If this file is called directly, abort.
@@ -46,8 +37,6 @@ require plugin_dir_path(__FILE__) . 'includes/class-protected-video.php';
 
 /**
  * Begin execution of the plugin.
- *
- * @since    1.0.0
  */
 function run_protected_video()
 {

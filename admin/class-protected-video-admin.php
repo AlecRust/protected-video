@@ -6,8 +6,6 @@
  * enqueuing the admin-specific Gutenberg block.
  *
  * @link       https://www.alecrust.com/
- * @since      1.0.0
- *
  * @package    Protected_Video
  * @subpackage Protected_Video/admin
  * @author     Alec Rust <me@alecrust.com>
@@ -17,7 +15,6 @@ class Protected_Video_Admin
   /**
    * The plugin ID.
    *
-   * @since    1.0.0
    * @access   private
    * @var      string    $plugin_name    The ID of this plugin.
    */
@@ -26,7 +23,6 @@ class Protected_Video_Admin
   /**
    * The plugin version.
    *
-   * @since    1.0.0
    * @access   private
    * @var      string    $version    The current version of this plugin.
    */
@@ -35,7 +31,6 @@ class Protected_Video_Admin
   /**
    * Initialize the class and set its properties.
    *
-   * @since      1.0.0
    * @param      string    $plugin_name       The name of this plugin.
    * @param      string    $version    The version of this plugin.
    */
@@ -47,8 +42,6 @@ class Protected_Video_Admin
 
   /**
    * Register settings page in admin.
-   *
-   * @since    1.0.0
    */
   public function add_menu_item()
   {
@@ -63,8 +56,6 @@ class Protected_Video_Admin
 
   /**
    * Return settings page.
-   *
-   * @since    1.0.0
    */
   public function protected_video_create_admin_page()
   {
@@ -75,8 +66,6 @@ class Protected_Video_Admin
 
   /**
    * Register settings page options in admin.
-   *
-   * @since    1.0.0
    */
   public function settings_page_init()
   {
@@ -104,8 +93,6 @@ class Protected_Video_Admin
 
   /**
    * Sanitize settings page options.
-   *
-   * @since    1.0.0
    */
   public function protected_video_sanitize($input)
   {
@@ -121,8 +108,6 @@ class Protected_Video_Admin
 
   /**
    * Explanation copy on settings page (between heading and fields).
-   *
-   * @since    1.0.0
    */
   public function protected_video_section_info()
   {
@@ -131,8 +116,6 @@ class Protected_Video_Admin
 
   /**
    * Populates fields on settings page.
-   *
-   * @since    1.0.0
    */
   public function player_theme_color_callback()
   {
@@ -146,8 +129,6 @@ class Protected_Video_Admin
 
   /**
    * Register the Gutenberg block for the blocks editor.
-   *
-   * @since    1.0.0
    */
   public function register_block()
   {
@@ -173,8 +154,6 @@ class Protected_Video_Admin
 
   /**
    * Register the stylesheet for the admin area.
-   *
-   * @since    1.0.0
    */
   public function enqueue_styles()
   {
