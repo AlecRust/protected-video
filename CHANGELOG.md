@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.1](https://github.com/AlecRust/protected-video/compare/1.1.0...1.1.1)
+
+- Fix changelog generating [`4e575ae`](https://github.com/AlecRust/protected-video/commit/4e575aed23898558553d13d437a586a8cfa586a9)
+
 #### [1.1.0](https://github.com/AlecRust/protected-video/compare/1.0.8...1.1.0)
+
+> 9 June 2021
 
 - Move GitHub release to CI [`a196553`](https://github.com/AlecRust/protected-video/commit/a196553138da034580ef2330cda49113e9dbe99a)
 - Add link to plugin settings on Plugins page [`5bc6f61`](https://github.com/AlecRust/protected-video/commit/5bc6f61b61e22b6e09a17d3ad0dd6ce60b96cac8)
 - Improve readmes [`1547510`](https://github.com/AlecRust/protected-video/commit/1547510b1e5e9a20c1b5d81f0290dec3e367f94c)
+- Release 1.1.0 [`cf8a778`](https://github.com/AlecRust/protected-video/commit/cf8a778acaa9a49a62171450128e79b96f7dcffa)
 - Add FAQ [`9621734`](https://github.com/AlecRust/protected-video/commit/9621734d26879ab856048c27c8e664832e9f91fd)
 
 #### [1.0.8](https://github.com/AlecRust/protected-video/compare/1.0.7...1.0.8)
