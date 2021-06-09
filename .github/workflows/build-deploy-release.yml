@@ -1,0 +1,46 @@
+name: Build Deploy Release
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+jobs:
+  build-deploy-release:
+    name: Build Deploy Release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install Node packages
+      uses: bahmutov/npm-install@v1
+
+    - name: Build dist files
+      run: yarn build
+
+    - name: Build readme.txt
+      run: yarn auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false
+
+    - name: Deploy to WordPress SVN
+      id: deploy
+      uses: 10up/action-wordpress-plugin-deploy@stable
+      env:
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+      with:
+        generate-zip: true
+
+    - name: Save previous tag
+      id: save_tag
+      run: echo ::set-output name=previous_tag::$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
+
+    - name: Generate GitHub release changelog
+      run: echo $(git log --oneline --pretty=format:"* %s (%h)\n" ${{steps.save_tag.outputs.previous_tag}}..${GITHUB_REF#refs/*/})) > ${{ github.workflow }}-CHANGELOG.txt
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ${{github.workspace}}/${{ github.event.repository.name }}.zip
+        body_path: ${{ github.workflow }}-CHANGELOG.txt
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
