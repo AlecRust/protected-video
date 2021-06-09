@@ -1,12 +1,15 @@
 # Protected Video
 
-WordPress plugin that adds a "Protected Video" Gutenberg block, used for embedding
-YouTube/Vimeo videos with a player overlay that prevents access to the default player.
+WordPress plugin that adds a "Protected Video" Gutenberg block, used for embedding YouTube/Vimeo videos with a player
+overlay that prevents access to the underlying player. For more details and FAQ please see the
+[plugin page](https://wordpress.org/plugins/protected-video/).
 
 ## Installation
 
-Install this plugin from the [plugins directory](https://wordpress.org/plugins/protected-video/)
-or grab a ZIP from the [releases page](https://github.com/AlecRust/protected-video/releases).
+Install from the [WordPress Plugin Directory](https://wordpress.org/plugins/protected-video/) or grab a ZIP from the
+[releases page](https://github.com/AlecRust/protected-video/releases).
+
+If you choose manual ZIP installation note that this plugin supports [Git Updater](https://github.com/afragen/git-updater).
 
 ## Development
 
