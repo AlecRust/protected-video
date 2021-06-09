@@ -43,7 +43,7 @@ jobs:
       run: echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
 
     - name: Build temporary changelog
-      run: git log --oneline --pretty=format:"* %s (%h)" ${{steps.save_previous.outputs.tag}}..${{steps.save_current.outputs.tag}} > temp-changelog.txt
+      run: git log --pretty=format:"* %s (%h)" ${{steps.save_previous.outputs.tag}}..${{steps.save_current.outputs.tag}} > temp-changelog.txt
 
     - name: Create GitHub release
       uses: softprops/action-gh-release@v1
