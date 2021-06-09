@@ -12,6 +12,6 @@ jobs:
     - name: Install Node packages
       uses: bahmutov/npm-install@v1
     - name: Run Prettier
-      run: yarn prettier '**/*.{js,php,md}'
+      run: yarn prettier --check '**/*.{js,php,md}'
     - name: Run ESLint
       run: yarn eslint '**/*.js'
