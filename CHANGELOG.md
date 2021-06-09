@@ -2,9 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.8](https://github.com/AlecRust/protected-video/compare/1.1.7...1.1.8)
+
+- Exclude release commit from temp changelog [`d3e9f5c`](https://github.com/AlecRust/protected-video/commit/d3e9f5cd1a848e3b883bb91ef02a35cf340db7dc)
+- Remove unnecessary --oneline flag [`965582f`](https://github.com/AlecRust/protected-video/commit/965582f034a0bb5b6cd8db7e237e7ae4e11da2e2)
+
 #### [1.1.7](https://github.com/AlecRust/protected-video/compare/1.1.6...1.1.7)
 
+> 9 June 2021
+
 - Improve order of CI steps [`f65bb34`](https://github.com/AlecRust/protected-video/commit/f65bb34fdeace2586ef44138969c49563676aba1)
+- Release 1.1.7 [`4e20750`](https://github.com/AlecRust/protected-video/commit/4e2075023526556320db3cf6f2ba6c86d00f60e0)
 - Exclude Lint workflow from tag pushes [`ce73f69`](https://github.com/AlecRust/protected-video/commit/ce73f69d55fc9d981ab4742007fd50daf12e16ca)
 - Improve date output in changelog [`45953c0`](https://github.com/AlecRust/protected-video/commit/45953c0fdb305ad55d7e6c3b3c7d0b12d2fb278d)
 
