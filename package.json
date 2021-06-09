@@ -1,6 +1,6 @@
 {
   "name": "protected-video",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "description": "YouTube/Vimeo player that prevents access to the original video.",
   "main": "admin/js/protected-video-block.js",

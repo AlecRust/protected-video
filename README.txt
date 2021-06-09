@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      5.7
-Stable tag:        1.0.6
+Stable tag:        1.0.7
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -44,10 +44,18 @@ For general non-technical users, yes this plugin provides a basic level of prote
 
 == Changelog ==
 
+= 1.0.7 =
+
+* Exclude files from plugin deployment
+* Add missing admin/index.php
+
 = 1.0.6 =
+
+* Release date: 9 June 2021
 
 * Remove unnecessary @since comments
 * Set up plugin deploy
+* Release 1.0.6
 * Specify minimum PHP version
 * Improve plugin description
 * Improve README
