@@ -1,4 +1,4 @@
-name: Build and Deploy to WordPress.org
+name: Build and Deploy to WordPress
 
 on:
   release:
@@ -19,7 +19,7 @@ jobs:
     - name: Build JS
       run: yarn build
 
-    - name: Deploy WordPress plugin
+    - name: Deploy to WordPress
       id: deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
       env:
