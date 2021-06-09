@@ -59,11 +59,7 @@ If you don't care about your users sharing the video or actually want them to, a
 == Changelog ==
 
 {{#each releases}}
-  = {{title}} =
-
-  {{#if tag}}
-    * Release date: {{niceDate}}
-  {{/if}}
+  = {{title}}{{#if tag}} - {{isoDate}}{{/if}} =
 
   {{#if summary}}
     {{summary}}
