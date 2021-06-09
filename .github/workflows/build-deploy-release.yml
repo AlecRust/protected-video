@@ -37,12 +37,12 @@ jobs:
       run: echo ::set-output name=previous_tag::$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
 
     - name: Generate GitHub release changelog
-      run: echo $(git log --oneline --pretty=format:"* %s (%h)\n" ${{steps.save_tag.outputs.previous_tag}}..${GITHUB_REF#refs/*/}) > ${{ github.workflow }}-CHANGELOG.txt
+      run: echo $(git log --oneline --pretty=format:"* %s (%h)\n" ${{steps.save_tag.outputs.previous_tag}}..${{GITHUB_REF#refs/*/}}) > temp-changelog.txt
 
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
         files: ${{github.workspace}}/${{ github.event.repository.name }}.zip
-        body_path: ${{ github.workflow }}-CHANGELOG.txt
+        body_path: temp-changelog.txt
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
