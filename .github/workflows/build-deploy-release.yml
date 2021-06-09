@@ -23,6 +23,13 @@ jobs:
     - name: Build readme.txt
       run: yarn auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false
 
+    - name: Save previous tag
+      id: save_tag
+      run: echo ::set-output name=previous_tag::$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
+
+    - name: Generate GitHub release changelog
+      run: echo $(git log --oneline --pretty=format:"* %s (%h)\n" ${{steps.save_tag.outputs.previous_tag}}..$(echo ${GITHUB_REF#refs/*/})) > temp-changelog.txt
+
     - name: Deploy to WordPress SVN
       id: deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
@@ -31,13 +38,6 @@ jobs:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
       with:
         generate-zip: true
-
-    - name: Save previous tag
-      id: save_tag
-      run: echo ::set-output name=previous_tag::$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
-
-    - name: Generate GitHub release changelog
-      run: echo $(git log --oneline --pretty=format:"* %s (%h)\n" ${{steps.save_tag.outputs.previous_tag}}..${{GITHUB_REF#refs/*/}}) > temp-changelog.txt
 
     - name: Release
       uses: softprops/action-gh-release@v1
