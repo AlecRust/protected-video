@@ -40,6 +40,10 @@ Displays YouTube/Vimeo videos within the [Plyr](https://plyr.io/) player, with a
 
 This plugin only provides a basic level of protection against users accessing the default player or otherwise determining the video URL. Technical users would still be able to determine this information relatively easily.
 
+= Does this plugin work on mobile? =
+
+Yes, the custom player works on mobile browsers and the disabling of access to the default player is still in place even in fullscreen mode.
+
 = Why not use Plyr player on its own? =
 
 The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with its own controls, which prevents access to the underlying video copy/share buttons under some scenarios, but this is a side-effect of the way it works rather than a feature. The goal of Protected Video is to make this a feature by accounting for more scenarios e.g. when the player is paused, and providing additional features such as obfuscation of the original video ID in the HTML.
