@@ -10,10 +10,12 @@ jobs:
     name: Build Deploy Release
     runs-on: ubuntu-latest
     steps:
+
     - name: Checkout code
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
+
     - name: Install Node packages
       uses: bahmutov/npm-install@v1
 
@@ -22,17 +24,6 @@ jobs:
 
     - name: Build readme.txt
       run: yarn auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false
-
-    - name: Get previous Git tag
-      id: get_previous
-      run: echo ::set-output name=tag::$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
-
-    - name: Get current Git tag
-      id: get_current
-      run: echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
-
-    - name: Generate GitHub release changelog
-      run: git log --oneline --pretty=format:"* %s (%h)" ${{steps.get_previous.outputs.tag}}..${{steps.get_current.outputs.tag}} > temp-changelog.txt
 
     - name: Deploy to WordPress SVN
       id: deploy
@@ -43,7 +34,18 @@ jobs:
       with:
         generate-zip: true
 
-    - name: Release
+    - name: Save previous Git tag
+      id: save_previous
+      run: echo ::set-output name=tag::$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
+
+    - name: Save current Git tag
+      id: save_current
+      run: echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
+
+    - name: Build temporary changelog
+      run: git log --oneline --pretty=format:"* %s (%h)" ${{steps.save_previous.outputs.tag}}..${{steps.save_current.outputs.tag}} > temp-changelog.txt
+
+    - name: Create GitHub release
       uses: softprops/action-gh-release@v1
       with:
         files: ${{github.workspace}}/${{ github.event.repository.name }}.zip
