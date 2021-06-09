@@ -29,7 +29,7 @@ jobs:
 
     - name: Get current Git tag
       id: get_current
-      run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+      run: echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
 
     - name: Generate GitHub release changelog
       run: echo $(git log --oneline --pretty=format:"* %s (%h)\n" ${{steps.get_previous.outputs.tag}}..${{steps.get_current.outputs.tag}}) > temp-changelog.txt
