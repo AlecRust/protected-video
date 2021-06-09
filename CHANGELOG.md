@@ -2,8 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.7](https://github.com/AlecRust/protected-video/compare/1.1.6...1.1.7)
+
+- Improve order of CI steps [`f65bb34`](https://github.com/AlecRust/protected-video/commit/f65bb34fdeace2586ef44138969c49563676aba1)
+- Exclude Lint workflow from tag pushes [`ce73f69`](https://github.com/AlecRust/protected-video/commit/ce73f69d55fc9d981ab4742007fd50daf12e16ca)
+- Improve date output in changelog [`45953c0`](https://github.com/AlecRust/protected-video/commit/45953c0fdb305ad55d7e6c3b3c7d0b12d2fb278d)
+
 #### [1.1.6](https://github.com/AlecRust/protected-video/compare/1.1.5...1.1.6)
 
+> 9 June 2021
+
+- Release 1.1.6 [`af05078`](https://github.com/AlecRust/protected-video/commit/af0507802b7b2020ab61bb695d0de626eea4e124)
 - Write to temporary file with git log [`0b384f9`](https://github.com/AlecRust/protected-video/commit/0b384f9cbb979e9f15cc1b4e39fb20a987e29353)
 - Simplify git log output [`7214b4e`](https://github.com/AlecRust/protected-video/commit/7214b4ef3aa59c052d0e18b23f3aed3afe0e3b53)
 - Exclude temp-changelog.txt from dist [`3974bcf`](https://github.com/AlecRust/protected-video/commit/3974bcfe45b8ea2645d995e1272345d5623ed024)
