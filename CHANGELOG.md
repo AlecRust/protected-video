@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.3](https://github.com/AlecRust/protected-video/compare/1.1.2...1.1.3)
+
+- Fix GitHub release [`ebbc25e`](https://github.com/AlecRust/protected-video/commit/ebbc25e27ae1a90636003fdf70ef952aa6904106)
+
 #### [1.1.2](https://github.com/AlecRust/protected-video/compare/1.1.1...1.1.2)
 
+> 9 June 2021
+
+- Release 1.1.2 [`858a24f`](https://github.com/AlecRust/protected-video/commit/858a24fecc6e4139a8a3f066378464bd678c27c5)
 - Add fetch-depth [`2f54e33`](https://github.com/AlecRust/protected-video/commit/2f54e33c518e3c274a8646f377737ebcfd00abea)
 
 #### [1.1.1](https://github.com/AlecRust/protected-video/compare/1.1.0...1.1.1)
