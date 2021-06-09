@@ -1,2 +1,3 @@
 node_modules
-admin/js/*.js.map
+admin/js
+public/js

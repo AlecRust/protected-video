@@ -1,0 +1,40 @@
+name: Build and Deploy to WordPress.org
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy to WordPress.org
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Node packages
+      uses: bahmutov/npm-install@v1
+
+    - name: Build JS
+      run: yarn build
+
+    - name: Deploy WordPress plugin
+      id: deploy
+      uses: 10up/action-wordpress-plugin-deploy@stable
+      env:
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+      with:
+        generate-zip: true
+
+    # TODO: Use a newer maintained action for this
+    - name: Upload release asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ${{github.workspace}}/${{ github.event.repository.name }}.zip
+        asset_name: ${{ github.event.repository.name }}.zip
+        asset_content_type: application/zip
