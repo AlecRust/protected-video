@@ -32,7 +32,7 @@ jobs:
       run: echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
 
     - name: Generate GitHub release changelog
-      run: echo $(git log --oneline ${{steps.get_previous.outputs.tag}}..${{steps.get_current.outputs.tag}}) > temp-changelog.txt
+      run: git log --oneline --pretty=format:"* %s (%h)" ${{steps.get_previous.outputs.tag}}..${{steps.get_current.outputs.tag}} > temp-changelog.txt
 
     - name: Deploy to WordPress SVN
       id: deploy
