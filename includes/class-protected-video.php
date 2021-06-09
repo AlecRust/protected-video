@@ -115,6 +115,13 @@ class Protected_Video
 
     // Admin menu item
     $this->loader->add_action('admin_menu', $plugin_admin, 'add_menu_item');
+
+    // Plugin settings link on "Plugins" page
+    $this->loader->add_filter(
+      'plugin_action_links_protected-video/protected-video.php',
+      $plugin_admin,
+      'add_settings_link'
+    );
   }
 
   /**

@@ -55,6 +55,24 @@ class Protected_Video_Admin
   }
 
   /**
+   * Add link to plugin settings on Plugins page.
+   */
+  public function add_settings_link($links)
+  {
+    $url = esc_url(
+      add_query_arg(
+        'page',
+        $this->plugin_name,
+        get_admin_url() . 'options-general.php'
+      )
+    );
+    $settings_link =
+      "<a href=\"$url\">" . __('Settings', 'protected-video') . '</a>';
+    array_unshift($links, $settings_link);
+    return $links;
+  }
+
+  /**
    * Return settings page.
    */
   public function protected_video_create_admin_page()
