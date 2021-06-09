@@ -15,13 +15,13 @@
  * @package           Protected_Video
  */
 
-// If this file is called directly, abort.
+// Abort if this file is called directly.
 if (!defined('WPINC')) {
   die();
 }
 
 /**
- * Protected Video plugin version.
+ * Plugin version.
  */
 define('PROTECTED_VIDEO_VERSION', '1.0.5');
 
@@ -31,12 +31,12 @@ define('PROTECTED_VIDEO_VERSION', '1.0.5');
 define('PLYR_VERSION', '3.6.8');
 
 /**
- * Core plugin class used to define admin-specific hooks and public-facing site hooks.
+ * Load core plugin class defining all hooks.
  */
 require plugin_dir_path(__FILE__) . 'includes/class-protected-video.php';
 
 /**
- * Begin execution of the plugin.
+ * Begin plugin execution.
  */
 function run_protected_video()
 {

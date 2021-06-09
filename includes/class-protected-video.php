@@ -2,7 +2,7 @@
 /**
  * Core plugin class.
  *
- * Used to define admin-specific public-facing site hooks.
+ * Defines admin-specific and public-facing site hooks.
  *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
@@ -36,7 +36,7 @@ class Protected_Video
   protected $version;
 
   /**
-   * Define the core functionality of the plugin.
+   * Define core plugin functionality.
    */
   public function __construct()
   {
@@ -53,26 +53,26 @@ class Protected_Video
   }
 
   /**
-   * Load the required plugin dependencies.
+   * Load required plugin dependencies.
    *
    * @access   private
    */
   private function load_dependencies()
   {
     /**
-     * Orchestrates the actions and filters of the plugin.
+     * Orchestrate the actions and filters of the plugin.
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
       'includes/class-protected-video-loader.php';
 
     /**
-     * Defines all actions that occur in the admin area.
+     * Define all actions that occur in the admin area.
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
       'admin/class-protected-video-admin.php';
 
     /**
-     * Defines all actions that occur in the public-facing site.
+     * Define all actions that occur in the public-facing site.
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
       'public/class-protected-video-public.php';
@@ -160,7 +160,7 @@ class Protected_Video
   }
 
   /**
-   * Name of the plugin to uniquely identify it within the context of WordPress.
+   * Utility returning plugin name uniquely identifying it within the context of WordPress.
    *
    * @return    string    The name of the plugin.
    */
@@ -170,7 +170,8 @@ class Protected_Video
   }
 
   /**
-   * Reference to the class that orchestrates the hooks with the plugin.
+   * Utility returning reference to the class that orchestrates the hooks with the plugin.
+   * TODO: Unused?
    *
    * @return    Protected_Video_Loader    Orchestrates the hooks of the plugin.
    */
@@ -180,7 +181,7 @@ class Protected_Video
   }
 
   /**
-   * Retrieve the version number of the plugin.
+   * Utility returning the version number of the plugin.
    *
    * @return    string    The version number of the plugin.
    */
