@@ -2,8 +2,9 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [1.0.7](https://github.com/AlecRust/protected-video/compare/1.0.7...1.0.7)
+#### [1.0.8](https://github.com/AlecRust/protected-video/compare/1.0.7...1.0.8)
 
+- Add CHANGELOG.md [`44e77e1`](https://github.com/AlecRust/protected-video/commit/44e77e1db85b3d18bac226f361671f1af948bdcd)
 - Improve readme [`2703b42`](https://github.com/AlecRust/protected-video/commit/2703b422c7282c52c36a51a414870ded82c98e08)
 - Bump npm deps [`6550fb1`](https://github.com/AlecRust/protected-video/commit/6550fb10062743a8d8ec6ed63424991c5d79f0fe)
 - Add Lint workflow [`4fdda45`](https://github.com/AlecRust/protected-video/commit/4fdda457c8a3bb43f9fe5ca3dcf61ca430788e2d)

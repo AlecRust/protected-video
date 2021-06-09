@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      5.7
-Stable tag:        1.0.7
+Stable tag:        1.0.8
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +18,7 @@ Protected Video provides a Gutenberg block for embedding YouTube/Vimeo hosted vi
 
 The plugin uses the excellent [Plyr](https://plyr.io/) player to overlay the original player and includes additional modifications to prevent access to the original player where the user could "Share" or "Copy Link".
 
-Since it's a custom player you can define a base color for the controls to match your site's branding. This can be set in the plugin settings at `Settings > Protected Video`.
+A base color for the player can be set in the plugin settings at `Settings > Protected Video` to match your site's branding.
 
 **Note:** This only provides a basic level of protection for your videos for general users. Technical users would still be able to identify the original video URL.
 
@@ -36,15 +36,15 @@ This plugin is open source and contributions are welcome [on GitHub](https://git
 
 Displays YouTube/Vimeo videos within the [Plyr](https://plyr.io/) player, with additional modifications to disable access to the original player. This helps to prevent users from easily copying or sharing the URL to the original video.
 
+= How secure is this plugin? =
+
+This plugin only provides a basic level of protection against users accessing the default player or otherwise determining the video URL. Technical users would still be able to determine this information relatively easily.
+
 = Why not use Plyr player on its own? =
 
 The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with its own controls, which prevents access to the underlying video copy/share buttons under some scenarios, but this is a side-effect of the way it works rather than a feature. The goal of Protected Video is to make this a feature by accounting for more scenarios e.g. when the player is paused, and providing additional features such as obfuscation of the original video ID in the HTML.
 
 If you don't care about your users sharing the video or actually want them to, a plugin like [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/) is probably more suitable.
-
-= Does this plugin prevent the user from accessing the original video? =
-
-For general non-technical users, yes this plugin provides a basic level of protection against opening the original video or copying its URL. However technical users would still be able to determine this information using browser development tools or inspecting the page source.
 
 == Screenshots ==
 
@@ -54,9 +54,23 @@ For general non-technical users, yes this plugin provides a basic level of prote
 
 == Changelog ==
 
+= 1.0.8 =
+
+* Add CHANGELOG.md
+* Improve readme
+* Bump npm deps
+* Add Lint workflow
+* Improve readme
+* Tidy workflow
+* Add check flag to Prettier in CI
+* Rename readme
+
 = 1.0.7 =
 
+* Release date: 9 June 2021
+
 * Exclude files from plugin deployment
+* Release 1.0.7
 * Add missing admin/index.php
 
 = 1.0.6 =
