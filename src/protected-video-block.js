@@ -8,7 +8,7 @@ import getVideoId from 'get-video-id'
 registerBlockType('protected-video/protected-video', {
   title: __('Protected Video', 'protected-video'),
   description: __(
-    'YouTube/Vimeo player that prevents access to the original video.',
+    'YouTube/Vimeo player that prevents easy sharing of the video.',
     'protected-video'
   ),
   icon: 'lock',

@@ -8,29 +8,39 @@ Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-YouTube/Vimeo player that prevents access to the original video.
+YouTube/Vimeo player that prevents easy sharing of the video.
 
 == Description ==
 
-Protected Video provides a block for embedding YouTube and Vimeo videos in a way that prevents easy access to the underlying player. This is useful for premium video content you want to host externally and display behind a paywall.
+**Want to embed your YouTube/Vimeo hosted videos on your site, but don't want your users to share the original video? Then this is the plugin for you.**
 
-For example if you provide a paid-for video course and the videos are "unlisted" on YouTube or Vimeo, embedding them in your pages using Protected Video provides a basic level of protection against the videos being directly accessed and shared.
+Protected Video provides a Gutenberg block for embedding YouTube/Vimeo hosted videos in a way that prevents users interacting with the original player. This is useful in cases where you want to avoid the original unlisted video being easily shared or viewed externally e.g. premium video course content.
 
-Built on top of the excellent [Plyr](https://plyr.io/) which provides custom themeable player controls, this plugin provides extra code to prevent easy access to the underlying player, and basic configuration of the player theme.
+The plugin uses the excellent [Plyr](https://plyr.io/) player to overlay the original player and includes additional modifications to prevent access to the original player where the user could "Share" or "Copy Link".
 
-Protected Video is open source! Contribute to its development [on GitHub](https://github.com/AlecRust/protected-video).
+Since it's a custom player you can define a base color for the controls to match your site's branding. This can be set in the plugin settings at `Settings > Protected Video`.
+
+**Note:** This only provides a basic level of protection for your videos for general users. Technical users would still be able to identify the original video URL.
+
+This plugin is open source and contributions are welcome [on GitHub](https://github.com/AlecRust/protected-video).
 
 == Installation ==
 
 1. Install and activate the plugin
+2. Optionally configure player base color at `Settings > Protected Video`
 2. Search for and use "Protected Video" block in the blocks editor
-3. Optionally configure player theme at Settings > Protected Video
 
 == Frequently Asked Questions ==
 
 = What does this plugin do? =
 
-Displays YouTube and Vimeo videos within the [Plyr](https://plyr.io/) player, with extra code to disable access to the original player. This helps to prevent users from easily copying and share the URL to the original video.
+Displays YouTube/Vimeo videos within the [Plyr](https://plyr.io/) player, with additional modifications to disable access to the original player. This helps to prevent users from easily copying or sharing the URL to the original video.
+
+= Why not use Plyr player on its own? =
+
+The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with its own controls, which prevents access to the underlying video copy/share buttons under some scenarios, but this is a side-effect of the way it works rather than a feature. The goal of Protected Video is to make this a feature by accounting for more scenarios e.g. when the player is paused, and providing additional features such as obfuscation of the original video ID in the HTML.
+
+If you don't care about your users sharing the video or actually want them to, a plugin like [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/) is probably more suitable.
 
 = Does this plugin prevent the user from accessing the original video? =
 
