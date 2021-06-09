@@ -2,8 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.6](https://github.com/AlecRust/protected-video/compare/1.1.5...1.1.6)
+
+- Write to temporary file with git log [`0b384f9`](https://github.com/AlecRust/protected-video/commit/0b384f9cbb979e9f15cc1b4e39fb20a987e29353)
+- Simplify git log output [`7214b4e`](https://github.com/AlecRust/protected-video/commit/7214b4ef3aa59c052d0e18b23f3aed3afe0e3b53)
+- Exclude temp-changelog.txt from dist [`3974bcf`](https://github.com/AlecRust/protected-video/commit/3974bcfe45b8ea2645d995e1272345d5623ed024)
+
 #### [1.1.5](https://github.com/AlecRust/protected-video/compare/1.1.4...1.1.5)
 
+> 9 June 2021
+
+- Release 1.1.5 [`ea3ea8d`](https://github.com/AlecRust/protected-video/commit/ea3ea8d99bdf7fca63e1d82f55ff8402cc3db2b4)
 - Fix output savings [`935b8b1`](https://github.com/AlecRust/protected-video/commit/935b8b197c88a9578c3f03682d06fff3000092f3)
 
 #### [1.1.4](https://github.com/AlecRust/protected-video/compare/1.1.3...1.1.4)
