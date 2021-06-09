@@ -2,8 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.4](https://github.com/AlecRust/protected-video/compare/1.1.3...1.1.4)
+
+- Release 1.1.3 [`e793bc6`](https://github.com/AlecRust/protected-video/commit/e793bc6ac25d3e2a8f95f1f0306e1bdea2491a42)
+- Save current tag as output [`e886ff3`](https://github.com/AlecRust/protected-video/commit/e886ff3b1b6605dc0f438151b485c528438a06f8)
+
 #### [1.1.3](https://github.com/AlecRust/protected-video/compare/1.1.2...1.1.3)
 
+> 9 June 2021
+
+- Release 1.1.3 [`46cf074`](https://github.com/AlecRust/protected-video/commit/46cf07473ec567fba875507cd9259fdc721ad250)
+- Fix build [`a05cb4c`](https://github.com/AlecRust/protected-video/commit/a05cb4c8a5997c4d4e0a3ec4b44561749f972ce9)
 - Fix GitHub release [`ebbc25e`](https://github.com/AlecRust/protected-video/commit/ebbc25e27ae1a90636003fdf70ef952aa6904106)
 
 #### [1.1.2](https://github.com/AlecRust/protected-video/compare/1.1.1...1.1.2)
