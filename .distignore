@@ -1,8 +1,20 @@
-/.wordpress-org
+/.git
 /.github
+/.husky
+/.wordpress-org
 /node_modules
-
 /src
 
 .distignore
+.editorconfig
+.eslintignore
+.eslintrc.json
 .gitignore
+.prettierignore
+.prettierrc
+.release-it.json
+package.json
+readme.hbs
+README.md
+rollup.config.js
+yarn.lock
