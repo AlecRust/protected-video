@@ -13,6 +13,7 @@
 .prettierignore
 .prettierrc
 .release-it.json
+CHANGELOG.md
 package.json
 readme.hbs
 README.md
