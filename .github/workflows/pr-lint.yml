@@ -1,9 +1,6 @@
-name: Lint
+name: PR Lint
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
 
 jobs:
