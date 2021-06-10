@@ -17,10 +17,11 @@ registerBlockType('protected-video/protected-video', {
     videoUrl: { type: 'string' },
     videoId: { type: 'string' },
     videoService: { type: 'string' },
+    cannotEmbed: { type: 'boolean' },
   },
 
   edit({ attributes, setAttributes }) {
-    const { videoUrl, videoId, videoService } = attributes
+    const { videoUrl, videoId, videoService, cannotEmbed } = attributes
 
     function onChangeVideoUrl(newVideoUrl) {
       const videoIdAndService = getVideoId(newVideoUrl)
@@ -28,6 +29,7 @@ registerBlockType('protected-video/protected-video', {
         videoUrl: newVideoUrl,
         videoId: videoIdAndService.id,
         videoService: videoIdAndService.service,
+        cannotEmbed: newVideoUrl && !videoIdAndService.id,
       })
     }
 
@@ -68,6 +70,14 @@ registerBlockType('protected-video/protected-video', {
                 height="180"
                 alt={__('Video thumbnail', 'protected-video')}
               />
+            </div>
+          )}
+          {cannotEmbed && (
+            <div>
+              {__(
+                'Sorry, a video ID could not be found in that URL.',
+                'protected-video'
+              )}
             </div>
           )}
         </Placeholder>
