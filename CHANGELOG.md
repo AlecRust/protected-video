@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.11](https://github.com/AlecRust/protected-video/compare/1.1.10...1.1.11)
+
+- Replace "replace" with "replace-in-files" [`bf0ace2`](https://github.com/AlecRust/protected-video/commit/bf0ace2fd7eb779cd8c77b93079f350cc42f00fc)
+- Show error notice when no video ID found [`f0ff40f`](https://github.com/AlecRust/protected-video/commit/f0ff40f8f0ab2c7d39d66a2692b10386952edb68)
+- Improve block copy [`fa21925`](https://github.com/AlecRust/protected-video/commit/fa219255c8a0f1887a792bb41395fb0c5fd1ab15)
+- Add placeholder to embed input [`1071a11`](https://github.com/AlecRust/protected-video/commit/1071a118ab390af11c5a159c604e5731a9f5e2bb)
+- Use "yarn start" instead of "yarn watch" [`9f0da1a`](https://github.com/AlecRust/protected-video/commit/9f0da1a19db6bca6e1e2f83decb98b23f899f3ce)
+- Remove readme CI badge for now [`d54b450`](https://github.com/AlecRust/protected-video/commit/d54b45033245bd9f6c9c7e986a08f508b6e54532)
+- Improve plugin banner/icon [`50e4243`](https://github.com/AlecRust/protected-video/commit/50e424326083f3908964912469edb9c9d103ea46)
+
 #### [1.1.10](https://github.com/AlecRust/protected-video/compare/1.1.9...1.1.10)
+
+> 10 June 2021
 
 - Run separate lint workflow only on PRs [`d0d72ba`](https://github.com/AlecRust/protected-video/commit/d0d72baa6caf13e06329e636f6b3cb79dfffc399)
 - Fix readme.txt changelog [`7ac9710`](https://github.com/AlecRust/protected-video/commit/7ac971096f1a5cd5abef4e0aa3d520f8f6f12991)
