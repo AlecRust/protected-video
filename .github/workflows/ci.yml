@@ -15,8 +15,6 @@ jobs:
       run: yarn prettier --check '**/*.{js,php,md}'
     - name: Run ESLint
       run: yarn eslint '**/*.js'
-    - name: Check licenses
-      run: yarn wp-scripts check-licenses --gpl2
 
   deploy:
     needs: lint

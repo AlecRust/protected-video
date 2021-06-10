@@ -14,7 +14,7 @@
   "scripts": {
     "start": "rollup -c -w & wp-scripts start src/protected-video-block.js --output-path=admin/js",
     "build": "rollup -c && wp-scripts build src/protected-video-block.js --output-path=admin/js",
-    "lint": "prettier '**/*.{js,php,md}' --write; eslint '**/*.js' --fix; wp-scripts check-licenses --gpl2",
+    "lint": "prettier '**/*.{js,php,md}' --write; eslint '**/*.js' --fix",
     "release": "release-it --ci",
     "prepare": "husky install"
   },
