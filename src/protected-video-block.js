@@ -55,6 +55,10 @@ registerBlockType('protected-video/protected-video', {
             label={__('YouTube or Vimeo URL', 'protected-video')}
             value={videoUrl}
             onChange={onChangeVideoUrl}
+            placeholder={__(
+              'e.g. https://youtu.be/c_hO_fjmMnk',
+              'protected-video'
+            )}
           />
           {videoId && (
             <div>
