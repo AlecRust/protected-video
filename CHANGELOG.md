@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.10](https://github.com/AlecRust/protected-video/compare/1.1.9...1.1.10)
+
+- Run separate lint workflow only on PRs [`d0d72ba`](https://github.com/AlecRust/protected-video/commit/d0d72baa6caf13e06329e636f6b3cb79dfffc399)
+- Fix readme.txt changelog [`7ac9710`](https://github.com/AlecRust/protected-video/commit/7ac971096f1a5cd5abef4e0aa3d520f8f6f12991)
+
 #### [1.1.9](https://github.com/AlecRust/protected-video/compare/1.1.8...1.1.9)
+
+> 10 June 2021
 
 - Split up deployment workflow [`38f8eb2`](https://github.com/AlecRust/protected-video/commit/38f8eb25f9a4e3d0ed4474d606e01203a618bb4a)
 - Exclude release commits from changelogs [`ee10d87`](https://github.com/AlecRust/protected-video/commit/ee10d87b9d03640a2a16133b044d9bb9a6a24e62)
