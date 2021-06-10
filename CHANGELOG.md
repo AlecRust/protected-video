@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.1.12](https://github.com/AlecRust/protected-video/compare/1.1.11...1.1.12)
+
+- Simplify CI workflow [`26de3b7`](https://github.com/AlecRust/protected-video/commit/26de3b7f404770dceb09c3998ca6a7cb9b6909bb)
+- Improve readme [`3a1a040`](https://github.com/AlecRust/protected-video/commit/3a1a040b87e90fc96b5cdcb0d14083b596beab7c)
+- Update block screenshot [`73424de`](https://github.com/AlecRust/protected-video/commit/73424de8d33bddae0f850b8ef426842e563ba827)
+
 #### [1.1.11](https://github.com/AlecRust/protected-video/compare/1.1.10...1.1.11)
+
+> 10 June 2021
 
 - Replace "replace" with "replace-in-files" [`bf0ace2`](https://github.com/AlecRust/protected-video/commit/bf0ace2fd7eb779cd8c77b93079f350cc42f00fc)
 - Show error notice when no video ID found [`f0ff40f`](https://github.com/AlecRust/protected-video/commit/f0ff40f8f0ab2c7d39d66a2692b10386952edb68)
