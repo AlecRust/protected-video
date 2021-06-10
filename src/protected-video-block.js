@@ -47,12 +47,12 @@ registerBlockType('protected-video/protected-video', {
           label={__('Protected Video', 'protected-video')}
           className="wp-block-protected-video"
           instructions={__(
-            'Paste a link to a YouTube or Vimeo video you want to display in a protected player.',
+            'Paste the URL of a YouTube or Vimeo video you want to display in a protected player.',
             'protected-video'
           )}
         >
           <TextControl
-            label={__('YouTube or Vimeo URL', 'protected-video')}
+            label={__('Video URL', 'protected-video')}
             value={videoUrl}
             onChange={onChangeVideoUrl}
             placeholder={__(
