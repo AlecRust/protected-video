@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.2.0](https://github.com/AlecRust/protected-video/compare/1.1.12...1.2.0)
+
+- Add obfuscation of provider and video ID in HTML [`dffc3dc`](https://github.com/AlecRust/protected-video/commit/dffc3dcf05c7f0ca6749fa149a6d4cf618582182)
+- Improve readmes [`cf4cd9e`](https://github.com/AlecRust/protected-video/commit/cf4cd9ef678a01da34bc10f7a0ac414960cfa060)
+- Remove check-licenses [`1a77635`](https://github.com/AlecRust/protected-video/commit/1a77635507fd75d957a50d66f6a92ddf836c7d09)
+- Tidy CI [`19137b6`](https://github.com/AlecRust/protected-video/commit/19137b624d5fefb846783a9c583ef46fa50c6016)
+- Add license checking to lint [`0bbcf3a`](https://github.com/AlecRust/protected-video/commit/0bbcf3abee533ef30e100ee66d4645f4af549fa6)
+- Improve FAQ [`d3b2bd7`](https://github.com/AlecRust/protected-video/commit/d3b2bd77ba4592ddec2b44b6703f47663d616bb7)
+- Add CI badge to README [`e52bd36`](https://github.com/AlecRust/protected-video/commit/e52bd36299878369598a10cc59b0f92738ce1dfc)
+
 #### [1.1.12](https://github.com/AlecRust/protected-video/compare/1.1.11...1.1.12)
+
+> 10 June 2021
 
 - Simplify CI workflow [`26de3b7`](https://github.com/AlecRust/protected-video/commit/26de3b7f404770dceb09c3998ca6a7cb9b6909bb)
 - Improve readme [`3a1a040`](https://github.com/AlecRust/protected-video/commit/3a1a040b87e90fc96b5cdcb0d14083b596beab7c)
