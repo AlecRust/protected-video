@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.2.3](https://github.com/AlecRust/protected-video/compare/1.2.2...1.2.3)
+
+- Improve readme.txt [`83f1fa7`](https://github.com/AlecRust/protected-video/commit/83f1fa7a358a95e22c3adbaf28727535dc128607)
+- Exclude /docs from plugin dist [`777d880`](https://github.com/AlecRust/protected-video/commit/777d8808395b0f57634fc3708833ef8d18d756ba)
+
 #### [1.2.2](https://github.com/AlecRust/protected-video/compare/1.2.1...1.2.2)
+
+> 11 June 2021
 
 - Add demo of player [`901a89d`](https://github.com/AlecRust/protected-video/commit/901a89dbf3aa509c3501ba213cb8863b9689a44e)
 - Link to demo in readmes [`1ed5f7b`](https://github.com/AlecRust/protected-video/commit/1ed5f7b9e47a62d414efaa12a784452e5b093725)
