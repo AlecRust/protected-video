@@ -1,6 +1,6 @@
 # Protected Video [![CI](https://github.com/AlecRust/protected-video/actions/workflows/ci.yml/badge.svg)](https://github.com/AlecRust/protected-video/actions/workflows/ci.yml)
 
-WordPress plugin that adds a "Protected Video" Gutenberg block, that prevents easy sharing of the video.
+WordPress plugin for embedding YouTube/Vimeo videos with features that prevent users easily obtaining the original video URL.
 
 ## Features
 
