@@ -5,6 +5,13 @@ import { Placeholder, TextControl } from '@wordpress/components' // eslint-disab
 import { registerBlockType } from '@wordpress/blocks'
 import getVideoId from 'get-video-id'
 
+const attributes = {
+  videoUrl: { type: 'string' },
+  videoId: { type: 'string' },
+  videoService: { type: 'string' },
+  cannotEmbed: { type: 'boolean' },
+}
+
 registerBlockType('protected-video/protected-video', {
   title: __('Protected Video', 'protected-video'),
   description: __(
@@ -13,19 +20,14 @@ registerBlockType('protected-video/protected-video', {
   ),
   icon: 'lock',
   category: 'embed',
-  attributes: {
-    videoUrl: { type: 'string' },
-    videoId: { type: 'string' },
-    videoService: { type: 'string' },
-    cannotEmbed: { type: 'boolean' },
-  },
+  attributes,
 
-  edit({ attributes, setAttributes }) {
-    const { videoUrl, videoId, videoService, cannotEmbed } = attributes
+  edit(props) {
+    const { videoUrl, videoId, videoService, cannotEmbed } = props.attributes
 
     function onChangeVideoUrl(newVideoUrl) {
       const videoIdAndService = getVideoId(newVideoUrl)
-      setAttributes({
+      props.setAttributes({
         videoUrl: newVideoUrl,
         videoId: videoIdAndService.id,
         videoService: videoIdAndService.service,
@@ -85,15 +87,33 @@ registerBlockType('protected-video/protected-video', {
     )
   },
 
-  save({ attributes }) {
-    const { videoId, videoService } = attributes
+  save(props) {
+    const { videoId, videoService } = props.attributes
 
     return (
       <div
         className="wp-block-protected-video"
-        data-plyr-provider={videoService}
-        data-plyr-embed-id={videoId}
+        data-id1={btoa(videoService)}
+        data-id2={btoa(videoId)}
       />
     )
   },
+
+  deprecated: [
+    {
+      attributes,
+
+      save(props) {
+        const { videoId, videoService } = props.attributes
+
+        return (
+          <div
+            className="wp-block-protected-video"
+            data-plyr-provider={videoService}
+            data-plyr-embed-id={videoId}
+          />
+        )
+      },
+    },
+  ],
 })

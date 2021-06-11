@@ -1,7 +1,13 @@
 # Protected Video [![CI](https://github.com/AlecRust/protected-video/actions/workflows/ci.yml/badge.svg)](https://github.com/AlecRust/protected-video/actions/workflows/ci.yml)
 
-WordPress plugin that adds a "Protected Video" Gutenberg block, used for embedding YouTube/Vimeo videos with a
-[Plyr](https://github.com/sampotts/plyr) overlay that prevents access to the underlying player.
+WordPress plugin that adds a "Protected Video" Gutenberg block, that prevents easy sharing of the video.
+
+## Features
+
+- Uses [Plyr](https://github.com/sampotts/plyr) as the video player which overlays default player with custom controls
+- Includes modifications to prevent default player becoming clickable when paused etc.
+- Obfuscates video information in the HTML to prevent users finding it via "View Source"
+- Provides a settings page to configure the player theme to match your site's branding
 
 ## Installation
 
@@ -12,7 +18,7 @@ If you choose manual ZIP installation note that this plugin supports [Git Update
 
 ## Development
 
-To develop this plugin locally:
+To develop locally:
 
 1. Fork and clone this repository
 2. Symlink/map the clone location to `/wp-content/plugins/protected-video` in a local WordPress site

@@ -1,4 +1,5 @@
 // Build process for public non-block JS
+import { babel } from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 
 export default {
@@ -7,5 +8,11 @@ export default {
     file: 'public/js/protected-video-public.js',
     format: 'iife',
   },
-  plugins: [terser()],
+  plugins: [
+    babel({
+      babelHelpers: 'bundled',
+      presets: ['@babel/preset-env'],
+    }),
+    terser(),
+  ],
 }
