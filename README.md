@@ -2,6 +2,8 @@
 
 WordPress plugin for embedding YouTube/Vimeo videos with features that prevent users easily obtaining the original video URL.
 
+[View Player Demo](https://alecrust.github.io/protected-video/)
+
 ## Features
 
 - Uses [Plyr](https://github.com/sampotts/plyr) as the video player which overlays default player with custom controls
