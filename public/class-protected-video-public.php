@@ -66,7 +66,7 @@ class Protected_Video_Public
     if (has_block('protected-video/protected-video', get_the_ID())) {
       // Default Plyr CSS
       wp_enqueue_style(
-        'plyr',
+        'plyr-player',
         'https://cdn.plyr.io/' . PLYR_VERSION . '/plyr.css'
       );
 
