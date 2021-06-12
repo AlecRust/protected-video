@@ -1,15 +1,15 @@
 # Protected Video [![CI](https://github.com/AlecRust/protected-video/actions/workflows/ci.yml/badge.svg)](https://github.com/AlecRust/protected-video/actions/workflows/ci.yml)
 
-WordPress plugin for embedding YouTube/Vimeo videos with features that prevent users easily obtaining the original video URL.
+Gutenberg block WordPress plugin for embedding YouTube/Vimeo videos in a way that prevent users easily accessing the original video.
 
 [View Player Demo](https://alecrust.github.io/protected-video/)
 
 ## Features
 
-- Uses [Plyr](https://github.com/sampotts/plyr) as the video player which overlays default player with custom controls
-- Includes modifications to prevent default player becoming clickable when paused etc.
-- Obfuscates video information in the HTML to prevent users finding it via "View Source"
-- Provides a settings page to configure the player theme to match your site's branding
+- [Plyr](https://plyr.io/) player used to overlay default player with custom controls
+- Player modifications to always prevent clicking the default player
+- Encodes video ID in HTML to prevent finding it via “View Source”
+- Settings page to configure the player theme to match your site
 
 ## Installation
 

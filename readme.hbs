@@ -12,20 +12,20 @@ YouTube/Vimeo player that prevents easy sharing of the video.
 
 == Description ==
 
-Protected Video provides a Gutenberg block for embedding YouTube/Vimeo videos with features that prevent users easily obtaining the original video URL.
+Provides a Gutenberg block for embedding YouTube/Vimeo videos in a way that prevent users easily accessing the original video.
 
-An example use case is embedding an "unlisted" YouTube video as premium video course content behind a paywall on your site.
+This is useful for example when embedding an "unlisted" video as premium video course content behind a paywall on your site.
 
-Features:
+Features include:
 
-* Uses [Plyr](https://plyr.io/) as the video player which overlays default player with custom controls
-* Includes modifications to prevent default player becoming clickable when paused etc.
-* Obfuscates video information in the HTML to prevent users finding it via "View Source"
-* Provides a settings page to configure the player theme to match your site's branding
+* [Plyr](https://plyr.io/) player used to overlay default player with custom controls
+* Player modifications to always prevent clicking the default player
+* Encodes video ID in HTML to prevent finding it via “View Source”
+* Settings page to configure the player theme to match your site
 
 [View Player Demo](https://alecrust.github.io/protected-video/)
 
-**Note:** This is not foolproof and technical users may still be able to identify the original video URL.
+**Note:** This only provides a basic level of protection. Technical users may still be able to identify the original video URL.
 
 This plugin is open source and contributions are welcome [on GitHub](https://github.com/AlecRust/protected-video).
 
