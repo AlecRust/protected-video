@@ -2,14 +2,14 @@
 
 Gutenberg block WordPress plugin for embedding YouTube/Vimeo videos in a way that prevent users easily accessing the original video.
 
-[View Player Demo](https://alecrust.github.io/protected-video/)
-
 ## Features
 
 - [Plyr](https://plyr.io/) player used to overlay default player with custom controls
 - Player modifications to always prevent clicking the default player
 - Encodes video ID in HTML to prevent finding it via “View Source”
 - Settings page to configure the player theme to match your site
+
+[View Player Demo](https://alecrust.github.io/protected-video/)
 
 ## Installation
 
