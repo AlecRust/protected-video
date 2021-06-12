@@ -74,7 +74,7 @@ class Protected_Video_Public
       wp_enqueue_style(
         $this->plugin_name,
         plugin_dir_url(__FILE__) . 'css/protected-video-public.css',
-        [],
+        ['plyr-player'],
         $this->version
       );
     }
