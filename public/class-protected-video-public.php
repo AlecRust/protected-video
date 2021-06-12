@@ -64,7 +64,7 @@ class Protected_Video_Public
   {
     // Check Protected Video block is in use on this page
     if (has_block('protected-video/protected-video', get_the_ID())) {
-      // Plyr CSS from CDN
+      // Default Plyr CSS
       wp_enqueue_style(
         'plyr',
         'https://cdn.plyr.io/' . PLYR_VERSION . '/plyr.css'
@@ -75,8 +75,7 @@ class Protected_Video_Public
         $this->plugin_name,
         plugin_dir_url(__FILE__) . 'css/protected-video-public.css',
         [],
-        $this->version,
-        'all'
+        $this->version
       );
     }
   }
