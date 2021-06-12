@@ -71,10 +71,10 @@ If you don't care about your users sharing the video or actually want them to, a
   {{/if}}
 
   {{#each merges}}
-    * {{{message}}}{{#if href}} [`#{{id}}`]({{href}}){{/if}}
+    * {{{message}}}
   {{/each}}
   {{#each fixes}}
-    * {{{commit.subject}}}{{#each fixes}}{{#if href}} (issue #{{id}}){{/if}}{{/each}}
+    * {{{commit.subject}}}
   {{/each}}
   {{#each commits}}
     * {{#if breaking}}**Breaking change:** {{/if}}{{{subject}}}
