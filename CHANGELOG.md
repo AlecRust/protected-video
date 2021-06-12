@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.2.4](https://github.com/AlecRust/protected-video/compare/1.2.3...1.2.4)
+
+- Bump rollup from 2.51.1 to 2.51.2 [`#1`](https://github.com/AlecRust/protected-video/pull/1)
+- Improve readmes [`df58d22`](https://github.com/AlecRust/protected-video/commit/df58d2207feda73fd485a81f480412f03f3764c2)
+- Automate dependency PRs [`3b8c0eb`](https://github.com/AlecRust/protected-video/commit/3b8c0eb0154f057aebeb47a109e4ff9c7c02ee0e)
+- Remove unnecessary wp_enqueue_style option [`5568fc9`](https://github.com/AlecRust/protected-video/commit/5568fc94fd6ab6601a87ed0151763fd5bb82dba7)
+- Depend on Plyr player CSS for custom CSS [`6a06521`](https://github.com/AlecRust/protected-video/commit/6a06521352fc694588e04cbb370626729c6a1812)
+- Improve dependency naming [`e5c9a15`](https://github.com/AlecRust/protected-video/commit/e5c9a156332af52b4efb26c548881a925038094d)
+- Support translation of more settings UI strings [`6d7269c`](https://github.com/AlecRust/protected-video/commit/6d7269cd21b55cd184d84a51fb6ad21cd5271291)
+
 #### [1.2.3](https://github.com/AlecRust/protected-video/compare/1.2.2...1.2.3)
+
+> 11 June 2021
 
 - Improve readme.txt [`83f1fa7`](https://github.com/AlecRust/protected-video/commit/83f1fa7a358a95e22c3adbaf28727535dc128607)
 - Exclude /docs from plugin dist [`777d880`](https://github.com/AlecRust/protected-video/commit/777d8808395b0f57634fc3708833ef8d18d756ba)
