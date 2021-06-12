@@ -95,7 +95,7 @@ class Protected_Video_Admin
 
     add_settings_section(
       'protected_video_setting_section', // id
-      'Settings', // title
+      __('Settings', 'protected-video'), // title
       [$this, 'protected_video_section_info'], // callback
       'protected-video-admin' // page
     );
