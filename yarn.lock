@@ -1415,14 +1415,14 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.15.tgz#6a9d143f7f4f49db2d782f9e1c8839a29b43ae23"
   integrity sha512-15spi3V28QdevleWBNXE4pIls3nFZmBbUGrW9IVPwiQczuSb9n76TCB4bsk8TSel+I1OkHEdPhu5QKMfY6rQHA==
 
-"@prettier/plugin-php@^0.16.3":
-  version "0.16.3"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.16.3.tgz#74867210079ba3c0c3ae843029d76e25ff0aadf3"
-  integrity sha512-DNidzeGpP+/wmcCAZNSHxgoAnhEosYG+no4jJRqln19e1o3Okpuir/2JMxb07VCwdG50IWjtNgVwNPVl4uj0Hg==
+"@prettier/plugin-php@^0.17.2":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.17.2.tgz#33f30a640e0c3798c528a7e52b6153ad731c89f3"
+  integrity sha512-0TB3rrQgCELav68Rkk0EPoanJw4tiT879pSsG4AvuvEHtPBSVHgg+lgYSCCOmdfWfTXAa/lvq5c13r0sdt2vUQ==
   dependencies:
     linguist-languages "^7.5.1"
     mem "^8.0.0"
-    php-parser "3.0.2"
+    php-parser "git+https://github.com/glayzzle/php-parser.git#cca83041d938b972c7ef74648f29de03777b0ea4"
 
 "@rollup/plugin-babel@^5.3.0":
   version "5.3.0"
@@ -8743,10 +8743,10 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-php-parser@3.0.2:
+"php-parser@git+https://github.com/glayzzle/php-parser.git#cca83041d938b972c7ef74648f29de03777b0ea4":
   version "3.0.2"
-  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.0.2.tgz#a86dbbc110e57378cba71ab4cd9b0d18f3872ac3"
-  integrity sha512-a7y1+odEGsceLDLpu7oNyspZ0pK8FMWJOoim4/yd82AtnEZNLdCLZ67arnOQZ9K0lHJiSp4/7lVUpGELVxE14w==
+  uid cca83041d938b972c7ef74648f29de03777b0ea4
+  resolved "git+https://github.com/glayzzle/php-parser.git#cca83041d938b972c7ef74648f29de03777b0ea4"
 
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.2.3:
   version "2.3.0"
