@@ -20,10 +20,12 @@ If you choose manual ZIP installation note that this plugin supports [Git Update
 
 ## Development
 
-To develop locally:
+To develop locally within a WordPress installation:
 
 1. Fork and clone this repository
 2. Symlink/map the clone location to `/wp-content/plugins/protected-video` in a local WordPress site
 3. Run `yarn` to install dependencies
 4. Run `yarn start` to build JS and watch for changes
 5. Activate the "Protected Video" plugin in your local WordPress site
+
+There's also a standalone player demo in `/docs` which can be served with e.g. `npx serve docs`.
