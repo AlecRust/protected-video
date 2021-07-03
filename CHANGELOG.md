@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.2.5](https://github.com/AlecRust/protected-video/compare/1.2.4...1.2.5)
+
+- Bump dependencies [`f40bf97`](https://github.com/AlecRust/protected-video/commit/f40bf9755bccf706fc5bbd47ae1547308ca4498d)
+- Disable weekly Dependabot PRs [`01bb094`](https://github.com/AlecRust/protected-video/commit/01bb094b0d9b4a1e6ba7f7d4ddf351881a6f8698)
+- Bump release-it from 14.8.0 to 14.9.0 [`4b0ccc9`](https://github.com/AlecRust/protected-video/commit/4b0ccc9b2b88f95088e591daaeda1d0920cd694d)
+- Mention /docs in local development instructions [`a5749e2`](https://github.com/AlecRust/protected-video/commit/a5749e239a483fbd72d485aa9dc7ccd19a8a73c4)
+- Remove links to PRs in readme.txt changelog [`510cd5b`](https://github.com/AlecRust/protected-video/commit/510cd5b7ff2e1692dc89592f07b0da92db7dacc1)
+- Improve readme [`3be65fb`](https://github.com/AlecRust/protected-video/commit/3be65fb6ca8da60cd6a6b33b9a680634120d0731)
+- Remove unnecessary .husky/.gitignore [`8364a5c`](https://github.com/AlecRust/protected-video/commit/8364a5caad11312c4f65dd988b012181331ee29b)
+
 #### [1.2.4](https://github.com/AlecRust/protected-video/compare/1.2.3...1.2.4)
+
+> 12 June 2021
 
 - Bump rollup from 2.51.1 to 2.51.2 [`#1`](https://github.com/AlecRust/protected-video/pull/1)
 - Improve readmes [`df58d22`](https://github.com/AlecRust/protected-video/commit/df58d2207feda73fd485a81f480412f03f3764c2)
