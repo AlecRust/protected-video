@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.2.6](https://github.com/AlecRust/protected-video/compare/1.2.5...1.2.6)
+
+- Update dependencies [`211f895`](https://github.com/AlecRust/protected-video/commit/211f89519b8601e2babe77e19eedea5c3a465ff7)
+- Use "block editor" instead of "blocks editor" in readme [`df904e0`](https://github.com/AlecRust/protected-video/commit/df904e051d060e16d71b9aa85437f1001947831b)
+- Tidy readme.txt [`3ccfa10`](https://github.com/AlecRust/protected-video/commit/3ccfa10b17efb2317ab6760a0fe41fdf580c14c8)
+- Update "Tested up to" to WordPress 5.8 [`86ff192`](https://github.com/AlecRust/protected-video/commit/86ff192356d8a590278278d55b3fbb61e85e2071)
+- Update plugin banner and icon [`b2049e7`](https://github.com/AlecRust/protected-video/commit/b2049e74d589dd66977285bae76ba129d37721eb)
+
 #### [1.2.5](https://github.com/AlecRust/protected-video/compare/1.2.4...1.2.5)
+
+> 3 July 2021
 
 - Bump dependencies [`f40bf97`](https://github.com/AlecRust/protected-video/commit/f40bf9755bccf706fc5bbd47ae1547308ca4498d)
 - Disable weekly Dependabot PRs [`01bb094`](https://github.com/AlecRust/protected-video/commit/01bb094b0d9b4a1e6ba7f7d4ddf351881a6f8698)
