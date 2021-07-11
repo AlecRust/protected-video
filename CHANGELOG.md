@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.2.7](https://github.com/AlecRust/protected-video/compare/1.2.6...1.2.7)
+
+- Bump sub-dependencies to resolve security vulnerabilities [`6fa827f`](https://github.com/AlecRust/protected-video/commit/6fa827facc5130c6286fef861f8001a61ee9b6c8)
+
 #### [1.2.6](https://github.com/AlecRust/protected-video/compare/1.2.5...1.2.6)
+
+> 11 July 2021
 
 - Update dependencies [`211f895`](https://github.com/AlecRust/protected-video/commit/211f89519b8601e2babe77e19eedea5c3a465ff7)
 - Use "block editor" instead of "blocks editor" in readme [`df904e0`](https://github.com/AlecRust/protected-video/commit/df904e051d060e16d71b9aa85437f1001947831b)
