@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.2.8](https://github.com/AlecRust/protected-video/compare/1.2.7...1.2.8)
+
+- Update dependencies [`6462c26`](https://github.com/AlecRust/protected-video/commit/6462c26ebd1f3c964db75a75646a6bfc86143e5f)
+
 #### [1.2.7](https://github.com/AlecRust/protected-video/compare/1.2.6...1.2.7)
+
+> 11 July 2021
 
 - Bump sub-dependencies to resolve security vulnerabilities [`6fa827f`](https://github.com/AlecRust/protected-video/commit/6fa827facc5130c6286fef861f8001a61ee9b6c8)
 
