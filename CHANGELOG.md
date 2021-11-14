@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.3.1](https://github.com/AlecRust/protected-video/compare/1.3.0...1.3.1)
+
+- Upgrade get-video-id to improve YouTube URL matching [`aeb0a6b`](https://github.com/AlecRust/protected-video/commit/aeb0a6b4721b4e7f32f98282277cb81cc1e284a2)
+- Fix typo in plugin description [`c6ced38`](https://github.com/AlecRust/protected-video/commit/c6ced38dbd9f469c22857edb461026165b6a1b58)
+
 #### [1.3.0](https://github.com/AlecRust/protected-video/compare/1.2.10...1.3.0)
+
+> 13 October 2021
 
 - Update npm dependencies [`ee27215`](https://github.com/AlecRust/protected-video/commit/ee272155d4188e2225a69dd9abdda169da8fb93f)
 - Update Plyr version 3.6.8 -&gt; 3.6.9 [`612664b`](https://github.com/AlecRust/protected-video/commit/612664b2685a6233bb5c7e54b4f4bedf18edd2cf)
