@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.4.0](https://github.com/AlecRust/protected-video/compare/1.3.1...1.4.0)
+
+- Bump dependencies [`1e4d5ba`](https://github.com/AlecRust/protected-video/commit/1e4d5ba807fe4fed6eb86f0e935ad9e7efb3d8ce)
+- Add Shortcode as alternative embed method [`ca8da88`](https://github.com/AlecRust/protected-video/commit/ca8da8884c93118c825dfa6bcc93f3ba41c040f5)
+- Fix installation steps order [`6ea79cf`](https://github.com/AlecRust/protected-video/commit/6ea79cfd37e66884c8efdae2365697482479ce0d)
+- Optimise banner image PNG [`39de0c6`](https://github.com/AlecRust/protected-video/commit/39de0c6dc9ed52cb576f00785984d2d8eaba57c2)
+
 #### [1.3.1](https://github.com/AlecRust/protected-video/compare/1.3.0...1.3.1)
+
+> 14 November 2021
 
 - Upgrade get-video-id to improve YouTube URL matching [`aeb0a6b`](https://github.com/AlecRust/protected-video/commit/aeb0a6b4721b4e7f32f98282277cb81cc1e284a2)
 - Fix typo in plugin description [`c6ced38`](https://github.com/AlecRust/protected-video/commit/c6ced38dbd9f469c22857edb461026165b6a1b58)
