@@ -12,7 +12,7 @@ YouTube/Vimeo player that prevents easy sharing of the video.
 
 == Description ==
 
-Provides a Gutenberg block for embedding YouTube/Vimeo videos in a way that prevents users easily accessing the original video.
+Gutenberg block and Shortcode for embedding YouTube/Vimeo videos in a way that prevents users easily accessing the original video.
 
 **This is useful for example when embedding an “unlisted” video as premium course content behind a paywall on your site.**
 
@@ -33,7 +33,8 @@ This plugin is open source and contributions are welcome [on GitHub](https://git
 
 1. Install and activate the plugin
 2. Optionally configure player theme at **Settings > Protected Video**
-3. Search for and use “Protected Video” block in the block editor
+3. Search for and use “Protected Video” block in the Block Editor
+4. Alternatively use the Shortcode <code>[protected_video url="https://www.youtube.com/watch?v=c_hO_fjmMnk" service="youtube"]</code>
 
 == Frequently Asked Questions ==
 
@@ -55,11 +56,16 @@ The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with 
 
 If you don't care about your users sharing the video or actually want them to, a plugin like [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/) is probably more suitable.
 
+= Why is there a Shortcode as well as Gutenberg block? =
+
+Not everyone likes to use the Block Editor. Others may be using a different page builder that does not support blocks. The Shortcode is provided as an alternative way to embed the video that still provides the same level of protection.
+
 == Screenshots ==
 
-1. Protected Video block in the block editor.
+1. Protected Video block in the Block Editor.
 2. Configuration of the player theme in plugin settings.
-3. Display of the player in the public facing site.
+3. Optional usage as Shortcode.
+4. Display of the player in the public facing site.
 
 == Changelog ==
 

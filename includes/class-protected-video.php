@@ -136,6 +136,13 @@ class Protected_Video
       $this->get_version()
     );
 
+    // Shortcode
+    $this->loader->add_shortcode(
+      'protected_video',
+      $plugin_public,
+      'protected_video_shortcode'
+    );
+
     // Inline player CSS
     $this->loader->add_action(
       'wp_head',

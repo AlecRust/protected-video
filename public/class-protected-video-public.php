@@ -41,6 +41,34 @@ class Protected_Video_Public
   }
 
   /**
+   * Sets up shortcode for use as alternative to Gutenberg block.
+   *
+   * Usage example: [protected_video url="https://www.youtube.com/watch?v=c_hO_fjmMnk" service="youtube"]
+   */
+  public function protected_video_shortcode($atts)
+  {
+    $atts = shortcode_atts(
+      [
+        'url' => '',
+        'service' => '',
+      ],
+      $atts,
+      'protected_video'
+    );
+
+    $output_html =
+      '<div class="' .
+      'wp-block-protected-video-protected-video wp-block-protected-video' .
+      '" data-id1="' .
+      base64_encode($atts['service']) .
+      '" data-id2="' .
+      base64_encode($atts['url']) .
+      '"></div>';
+
+    return $output_html;
+  }
+
+  /**
    * Adds inline player CSS to <head>.
    */
   public function enqueue_inline_styles()
