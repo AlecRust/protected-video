@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.5.1](https://github.com/AlecRust/protected-video/compare/1.5.0...1.5.1)
+
+- Upgrade Plyr version 3.6.11 -&gt; 3.6.12 [`202bbe5`](https://github.com/AlecRust/protected-video/commit/202bbe5ebaa215cd8be8cdf09e774021f46fb67e)
+
 #### [1.5.0](https://github.com/AlecRust/protected-video/compare/1.4.0...1.5.0)
+
+> 16 December 2021
 
 - Bump dependencies [`c2634f4`](https://github.com/AlecRust/protected-video/commit/c2634f4b65e70cf375d751d26ea690d361cafc09)
 - Fix Shortcode-only usage not loading assets [`b1265b2`](https://github.com/AlecRust/protected-video/commit/b1265b2fcb51c9e87f29eb12dc9a6499d5d0db40)
