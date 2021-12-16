@@ -28,7 +28,7 @@ define('PROTECTED_VIDEO_VERSION', '1.5.0');
 /**
  * Plyr player version.
  */
-define('PLYR_VERSION', '3.6.11');
+define('PLYR_VERSION', '3.6.12');
 
 /**
  * Load core plugin class defining all hooks.
