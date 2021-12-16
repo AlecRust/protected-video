@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.5.0](https://github.com/AlecRust/protected-video/compare/1.4.0...1.5.0)
+
+- Bump dependencies [`c2634f4`](https://github.com/AlecRust/protected-video/commit/c2634f4b65e70cf375d751d26ea690d361cafc09)
+- Fix Shortcode-only usage not loading assets [`b1265b2`](https://github.com/AlecRust/protected-video/commit/b1265b2fcb51c9e87f29eb12dc9a6499d5d0db40)
+- Upgrade Plyr player 3.6.9 -&gt; 3.6.11 [`14d0e21`](https://github.com/AlecRust/protected-video/commit/14d0e218ba8611d28549d0eb09ea0184d320d4fc)
+- Adjust formatting in readme.txt [`3022a6e`](https://github.com/AlecRust/protected-video/commit/3022a6ec225a2b9f993012f6b3658bcb4c5377eb)
+
 #### [1.4.0](https://github.com/AlecRust/protected-video/compare/1.3.1...1.4.0)
+
+> 17 November 2021
 
 - Bump dependencies [`1e4d5ba`](https://github.com/AlecRust/protected-video/commit/1e4d5ba807fe4fed6eb86f0e935ad9e7efb3d8ce)
 - Add Shortcode as alternative embed method [`ca8da88`](https://github.com/AlecRust/protected-video/commit/ca8da8884c93118c825dfa6bcc93f3ba41c040f5)
