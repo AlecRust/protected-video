@@ -73,8 +73,12 @@ class Protected_Video_Public
    */
   public function enqueue_inline_styles()
   {
-    // Check Protected Video block is in use on this page
-    if (has_block('protected-video/protected-video', get_the_ID())) {
+    global $post;
+    // Check Protected Video block or shortcode is in use on this page
+    if (
+      has_block('protected-video/protected-video', get_the_ID()) ||
+      has_shortcode($post->post_content, 'protected_video')
+    ) {
       $player_theme_color = get_option('protected_video_option_name');
 
       if ($player_theme_color) {
@@ -90,8 +94,12 @@ class Protected_Video_Public
    */
   public function enqueue_styles()
   {
-    // Check Protected Video block is in use on this page
-    if (has_block('protected-video/protected-video', get_the_ID())) {
+    global $post;
+    // Check Protected Video block or shortcode is in use on this page
+    if (
+      has_block('protected-video/protected-video', get_the_ID()) ||
+      has_shortcode($post->post_content, 'protected_video')
+    ) {
       // Default Plyr CSS
       wp_enqueue_style(
         'plyr-player',
@@ -113,8 +121,12 @@ class Protected_Video_Public
    */
   public function enqueue_scripts()
   {
-    // Check Protected Video block is in use on this page
-    if (has_block('protected-video/protected-video', get_the_ID())) {
+    global $post;
+    // Check Protected Video block or shortcode is in use on this page
+    if (
+      has_block('protected-video/protected-video', get_the_ID()) ||
+      has_shortcode($post->post_content, 'protected_video')
+    ) {
       // Plyr JS from CDN
       wp_enqueue_script(
         'plyr-player',
