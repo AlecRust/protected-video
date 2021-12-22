@@ -43,7 +43,7 @@ class Protected_Video_Public
   /**
    * Sets up shortcode for use as alternative to Gutenberg block.
    *
-   * Usage example: [protected_video url="https://www.youtube.com/watch?v=c_hO_fjmMnk" service="youtube"]
+   * Usage example: [protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
    */
   public function protected_video_shortcode($atts)
   {

@@ -13,10 +13,12 @@ WordPress plugin that provides a Gutenberg block and traditional Shortcode for e
 
 ## Installation
 
-Install from the [WordPress Plugin Directory](https://wordpress.org/plugins/protected-video/) or grab a ZIP from the
-[releases page](https://github.com/AlecRust/protected-video/releases).
+Install from the [WordPress Plugin Directory](https://wordpress.org/plugins/protected-video/) or grab a ZIP from
+[Releases](https://github.com/AlecRust/protected-video/releases). This plugin supports [Git Updater](https://github.com/afragen/git-updater).
 
-If you choose manual ZIP installation note that this plugin supports [Git Updater](https://github.com/afragen/git-updater).
+To embed a video either search for "Protected Video" in the Block Editor, or use the Shortcode e.g.
+
+    [protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
 
 ## Development
 
