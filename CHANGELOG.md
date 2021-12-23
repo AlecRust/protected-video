@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.5.2](https://github.com/AlecRust/protected-video/compare/1.5.1...1.5.2)
+
+- Bump linting dependencies [`cfee712`](https://github.com/AlecRust/protected-video/commit/cfee71230f336c8446a222462498aa2461e564e0)
+- Extract "check if video on page" check into function [`61f7127`](https://github.com/AlecRust/protected-video/commit/61f7127f27f80b3f2af44ab5602cfa08da02b2d4)
+- Improve README/documentation [`bf2b92f`](https://github.com/AlecRust/protected-video/commit/bf2b92f85ff285bda3d19df529761eda0bcf7c43)
+- Remove unused get_loader() utility function [`2bba447`](https://github.com/AlecRust/protected-video/commit/2bba44793ec70b46cf388427d5d500e2c1f020af)
+- Remove unused globals from ESLint config [`301b7a4`](https://github.com/AlecRust/protected-video/commit/301b7a41965c18a6c8fafe249701e7d40d54a688)
+- Tidy README [`96a9b57`](https://github.com/AlecRust/protected-video/commit/96a9b574fcb682a5d6b28826e9f5d39896330d7c)
+
 #### [1.5.1](https://github.com/AlecRust/protected-video/compare/1.5.0...1.5.1)
+
+> 16 December 2021
 
 - Upgrade Plyr version 3.6.11 -&gt; 3.6.12 [`202bbe5`](https://github.com/AlecRust/protected-video/commit/202bbe5ebaa215cd8be8cdf09e774021f46fb67e)
 
