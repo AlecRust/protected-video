@@ -73,12 +73,7 @@ class Protected_Video_Public
    */
   public function enqueue_inline_styles()
   {
-    global $post;
-    // Check Protected Video block or shortcode is in use on this page
-    if (
-      has_block('protected-video/protected-video', get_the_ID()) ||
-      has_shortcode($post->post_content, 'protected_video')
-    ) {
+    if ($this->post_has_block_or_shortcode()) {
       $player_theme_color = get_option('protected_video_option_name');
 
       if ($player_theme_color) {
@@ -94,12 +89,7 @@ class Protected_Video_Public
    */
   public function enqueue_styles()
   {
-    global $post;
-    // Check Protected Video block or shortcode is in use on this page
-    if (
-      has_block('protected-video/protected-video', get_the_ID()) ||
-      has_shortcode($post->post_content, 'protected_video')
-    ) {
+    if ($this->post_has_block_or_shortcode()) {
       // Default Plyr CSS
       wp_enqueue_style(
         'plyr-player',
@@ -121,12 +111,7 @@ class Protected_Video_Public
    */
   public function enqueue_scripts()
   {
-    global $post;
-    // Check Protected Video block or shortcode is in use on this page
-    if (
-      has_block('protected-video/protected-video', get_the_ID()) ||
-      has_shortcode($post->post_content, 'protected_video')
-    ) {
+    if ($this->post_has_block_or_shortcode()) {
       // Plyr JS from CDN
       wp_enqueue_script(
         'plyr-player',
@@ -144,6 +129,20 @@ class Protected_Video_Public
         $this->version, // set the query string version to plugin version
         true // enqueue at the end of <body> instead of in <head>
       );
+    }
+  }
+
+  /**
+   * Utility returning if the post contains the plugin block or Shortcode.
+   */
+  public function post_has_block_or_shortcode()
+  {
+    global $post;
+    if (
+      has_block('protected-video/protected-video', get_the_ID()) ||
+      has_shortcode($post->post_content, 'protected_video')
+    ) {
+      return true;
     }
   }
 }

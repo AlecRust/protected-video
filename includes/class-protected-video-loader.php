@@ -1,6 +1,6 @@
 <?php
 /**
- * Register all actions and filters for the plugin.
+ * Registers plugin actions, filters and shortcodes.
  *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
