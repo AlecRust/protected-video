@@ -184,17 +184,6 @@ class Protected_Video
   }
 
   /**
-   * Utility returning reference to the class that orchestrates the hooks with the plugin.
-   * TODO: Unused?
-   *
-   * @return    Protected_Video_Loader    Orchestrates the hooks of the plugin.
-   */
-  public function get_loader()
-  {
-    return $this->loader;
-  }
-
-  /**
    * Utility returning the version number of the plugin.
    *
    * @return    string    The version number of the plugin.
