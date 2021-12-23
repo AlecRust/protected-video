@@ -1,9 +1,5 @@
 {
   "extends": ["eslint:recommended", "prettier"],
-  "globals": {
-    "jQuery": "readonly",
-    "wp": "readonly"
-  },
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
