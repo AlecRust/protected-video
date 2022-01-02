@@ -137,10 +137,9 @@ class Protected_Video_Public
    */
   public function post_has_block_or_shortcode()
   {
-    global $post;
     if (
       has_block('protected-video/protected-video', get_the_ID()) ||
-      has_shortcode($post->post_content, 'protected_video')
+      has_shortcode(get_the_content(), 'protected_video')
     ) {
       return true;
     }
