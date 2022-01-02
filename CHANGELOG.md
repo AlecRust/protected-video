@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.6.0](https://github.com/AlecRust/protected-video/compare/1.5.2...1.6.0)
+
+- Bump dependencies to add support for YouTube Shorts [`664dcdd`](https://github.com/AlecRust/protected-video/commit/664dcdd2adaea61b0c509a5933c5068978c0ea11)
+- Fix error when fetching post content when not on a post [`1d44cb0`](https://github.com/AlecRust/protected-video/commit/1d44cb07e6499a67471a67f2e596eb8bb8ed7313)
+
 #### [1.5.2](https://github.com/AlecRust/protected-video/compare/1.5.1...1.5.2)
+
+> 23 December 2021
 
 - Bump linting dependencies [`cfee712`](https://github.com/AlecRust/protected-video/commit/cfee71230f336c8446a222462498aa2461e564e0)
 - Extract "check if video on page" check into function [`61f7127`](https://github.com/AlecRust/protected-video/commit/61f7127f27f80b3f2af44ab5602cfa08da02b2d4)
