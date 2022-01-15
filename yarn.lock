@@ -3716,7 +3716,7 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-debug@4, debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.3:
+debug@4, debug@4.3.3, debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.3:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
@@ -3727,13 +3727,6 @@ debug@4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
-  dependencies:
-    ms "2.1.2"
-
-debug@4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
-  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
   dependencies:
     ms "2.1.2"
 
@@ -6810,10 +6803,10 @@ linkify-it@^3.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-lint-staged@^12.1.4:
-  version "12.1.4"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.1.4.tgz#a92ec8509f13018caaafade61d515c2d5873316e"
-  integrity sha512-RgDz9nsFsE0/5eL9Vat0AvCuk0+j5mEuzBIVfrRH5FRtt5wibYe8zTjZs2nuqLFrLAGQGYnj8+HJxolcj08i/A==
+lint-staged@^12.1.7:
+  version "12.1.7"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.1.7.tgz#fe9137992ac18a456422bb8484dd30be0140629f"
+  integrity sha512-bltv/ejiLWtowExpjU+s5z8j1Byjg9AlmaAjMmqNbIicY69u6sYIwXGg0dCn0TlkrrY2CphtHIXAkbZ+1VoWQQ==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -8029,7 +8022,6 @@ performance-now@^2.1.0:
 
 "php-parser@https://github.com/glayzzle/php-parser#27abcb2337ac6450c068ef064982dfabf77916a5":
   version "3.0.2"
-  uid "27abcb2337ac6450c068ef064982dfabf77916a5"
   resolved "https://github.com/glayzzle/php-parser#27abcb2337ac6450c068ef064982dfabf77916a5"
 
 picocolors@^0.2.1:
@@ -8866,17 +8858,17 @@ regjsparser@^0.7.0:
   dependencies:
     jsesc "~0.5.0"
 
-release-it@^14.11.8:
-  version "14.11.8"
-  resolved "https://registry.yarnpkg.com/release-it/-/release-it-14.11.8.tgz#6da25daa93286d832cae4f10008a3bf0c08c2725"
-  integrity sha512-951DJ0kwjwU7CwGU3BCvRBgLxuJsOPRrZkqx0AsugJdSyPpUdwY9nlU0RAoSKqgh+VTerzecXLIIwgsGIpNxlA==
+release-it@^14.12.2:
+  version "14.12.2"
+  resolved "https://registry.yarnpkg.com/release-it/-/release-it-14.12.2.tgz#6bdb0794c81b453185879f2176077414f93949b1"
+  integrity sha512-pBoW0R92X2RxxU+gGygmHngTlOsZ8/wF4seiBWBGd3/r0NdKVHYgU1Na8xERVYs9qU0poLITf2BiXfut34nsQw==
   dependencies:
     "@iarna/toml" "2.2.5"
     "@octokit/rest" "18.12.0"
     async-retry "1.3.3"
     chalk "4.1.2"
     cosmiconfig "7.0.1"
-    debug "4.3.2"
+    debug "4.3.3"
     deprecated-obj "2.0.0"
     execa "5.1.1"
     form-data "4.0.0"
@@ -9094,10 +9086,10 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.62.0:
-  version "2.62.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.62.0.tgz#9e640b419fc5b9e0241844f6d55258bd79986ecc"
-  integrity sha512-cJEQq2gwB0GWMD3rYImefQTSjrPYaC6s4J9pYqnstVLJ1CHa/aZNVkD4Epuvg4iLeMA4KRiq7UM7awKK6j7jcw==
+rollup@^2.64.0:
+  version "2.64.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.64.0.tgz#f0f59774e21fbb56de438a37d06a2189632b207a"
+  integrity sha512-+c+lbw1lexBKSMb1yxGDVfJ+vchJH3qLbmavR+awDinTDA2C5Ug9u7lkOzj62SCu0PKUExsW36tpgW7Fmpn3yQ==
   optionalDependencies:
     fsevents "~2.3.2"
 
