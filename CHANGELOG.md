@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.6.2](https://github.com/AlecRust/protected-video/compare/1.6.1...1.6.2)
+
+- Fix syntax in readme FAQ [`3dd5dfd`](https://github.com/AlecRust/protected-video/commit/3dd5dfdecc22c828b9b66ef302d7d44b32995de1)
+
 #### [1.6.1](https://github.com/AlecRust/protected-video/compare/1.6.0...1.6.1)
+
+> 16 January 2022
 
 - Switch from Rollup to webpack for building public JS [`241a1b5`](https://github.com/AlecRust/protected-video/commit/241a1b5ddb725f3217d4ad686f896b6dfd64e8b2)
 - Bump dependencies [`90dcf1e`](https://github.com/AlecRust/protected-video/commit/90dcf1efe6b2550e23f833234f3d35beab46dc5a)
