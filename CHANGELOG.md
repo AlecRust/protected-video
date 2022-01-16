@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.6.1](https://github.com/AlecRust/protected-video/compare/1.6.0...1.6.1)
+
+- Switch from Rollup to webpack for building public JS [`241a1b5`](https://github.com/AlecRust/protected-video/commit/241a1b5ddb725f3217d4ad686f896b6dfd64e8b2)
+- Bump dependencies [`90dcf1e`](https://github.com/AlecRust/protected-video/commit/90dcf1efe6b2550e23f833234f3d35beab46dc5a)
+- Bump dependencies [`05cf245`](https://github.com/AlecRust/protected-video/commit/05cf24561fe5ab689a6f0fff67c7567665641270)
+- Bump follow-redirects from 1.14.6 to 1.14.7 [`fd1bb69`](https://github.com/AlecRust/protected-video/commit/fd1bb69970177b28b1308a10ba5eda9300dbf5ad)
+- Add FAQ about setting player dimensions [`5ae8972`](https://github.com/AlecRust/protected-video/commit/5ae8972a880fb0cb3e2fda9b3a581fe8e43e4310)
+
 #### [1.6.0](https://github.com/AlecRust/protected-video/compare/1.5.2...1.6.0)
+
+> 2 January 2022
 
 - Bump dependencies to add support for YouTube Shorts [`664dcdd`](https://github.com/AlecRust/protected-video/commit/664dcdd2adaea61b0c509a5933c5068978c0ea11)
 - Fix error when fetching post content when not on a post [`1d44cb0`](https://github.com/AlecRust/protected-video/commit/1d44cb07e6499a67471a67f2e596eb8bb8ed7313)
