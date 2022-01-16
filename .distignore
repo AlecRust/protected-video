@@ -18,5 +18,5 @@ CHANGELOG.md
 package.json
 readme.hbs
 README.md
-rollup.config.js
+webpack-public.config.js
 yarn.lock

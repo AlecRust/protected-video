@@ -12,17 +12,19 @@
     "block"
   ],
   "scripts": {
-    "start": "rollup -c -w & wp-scripts start src/protected-video-block.js --output-path=admin/js",
-    "build": "rollup -c && wp-scripts build src/protected-video-block.js --output-path=admin/js",
+    "start": "webpack watch -c webpack-public.js & wp-scripts start src/protected-video-block.js --output-path=admin/js",
+    "build": "webpack -c webpack-public.js && wp-scripts build src/protected-video-block.js --output-path=admin/js",
     "lint": "prettier '**/*.{html,php,js,md}' --write; eslint '**/*.js' --fix",
     "release": "release-it --ci",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
     "@prettier/plugin-php": "^0.17.6",
-    "@rollup/plugin-babel": "^5.3.0",
     "@wordpress/scripts": "^19.2.2",
     "auto-changelog": "^2.3.0",
+    "babel-loader": "^8.2.3",
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
     "get-video-id": "^3.5.3",
@@ -31,8 +33,8 @@
     "prettier": "^2.5.1",
     "release-it": "^14.12.2",
     "replace-in-files-cli": "^2.0.0",
-    "rollup": "^2.64.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
   },
   "lint-staged": {
     "*.{js,php,md}": "prettier --write",
