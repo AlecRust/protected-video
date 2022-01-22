@@ -18,6 +18,9 @@
     "release": "release-it --ci",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "plyr": "^3.6.12"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",

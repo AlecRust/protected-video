@@ -26,11 +26,6 @@ if (!defined('WPINC')) {
 define('PROTECTED_VIDEO_VERSION', '1.6.2');
 
 /**
- * Plyr player version.
- */
-define('PLYR_VERSION', '3.6.12');
-
-/**
  * Load core plugin class defining all hooks.
  */
 require plugin_dir_path(__FILE__) . 'includes/class-protected-video.php';

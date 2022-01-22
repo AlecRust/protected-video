@@ -90,18 +90,12 @@ class Protected_Video_Public
   public function enqueue_styles()
   {
     if ($this->post_has_block_or_shortcode()) {
-      // Default Plyr CSS
-      wp_enqueue_style(
-        'plyr-player',
-        'https://cdn.plyr.io/' . PLYR_VERSION . '/plyr.css'
-      );
-
-      // Custom Plyr CSS
+      // Public CSS with bundled Plyr CSS
       wp_enqueue_style(
         $this->plugin_name,
         plugin_dir_url(__FILE__) . 'css/protected-video-public.css',
-        ['plyr-player'],
-        $this->version
+        [], // no stylesheet dependencies
+        $this->version // include plugin version in query string
       );
     }
   }
@@ -112,21 +106,12 @@ class Protected_Video_Public
   public function enqueue_scripts()
   {
     if ($this->post_has_block_or_shortcode()) {
-      // Plyr JS from CDN
-      wp_enqueue_script(
-        'plyr-player',
-        'https://cdn.plyr.io/' . PLYR_VERSION . '/plyr.polyfilled.js',
-        [], // no registered script dependencies
-        null, // disable ?ver= query string on this 3rd party asset
-        true // enqueue at the end of <body> instead of in <head>
-      );
-
-      // Custom Plyr JS
+      // Public JS with bundled Plyr JS
       wp_enqueue_script(
         $this->plugin_name,
         plugin_dir_url(__FILE__) . 'js/protected-video-public.js',
-        ['plyr-player'], // depend on plyr-player script set above
-        $this->version, // set the query string version to plugin version
+        [], // no script dependencies
+        $this->version, // include plugin version in query string
         true // enqueue at the end of <body> instead of in <head>
       );
     }

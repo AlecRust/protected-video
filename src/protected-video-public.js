@@ -1,3 +1,4 @@
+import Plyr from 'plyr'
 import './protected-video-public.css'
 
 // Decode video provider and ID and set up players

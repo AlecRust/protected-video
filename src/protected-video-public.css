@@ -2,6 +2,8 @@
  * CSS for public-facing functionality
  */
 
+@import "plyr";
+
 .plyr {
   margin-bottom: 30px;
 }
