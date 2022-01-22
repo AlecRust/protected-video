@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.0](https://github.com/AlecRust/protected-video/compare/1.6.2...1.7.0)
+
+- Bump dependencies [`9ec2bd9`](https://github.com/AlecRust/protected-video/commit/9ec2bd9b08b3add80d5bebd998dec4e9f08da408)
+- Bundle Plyr in plugin JS/CSS instead of loading from CDN [`3e5bacf`](https://github.com/AlecRust/protected-video/commit/3e5bacfa615cc5580fd2f95a56f3c8b7db10cb1d)
+- Optimize and minify public CSS [`aec0240`](https://github.com/AlecRust/protected-video/commit/aec02401594ad9b03b41b3dee1cae2358d05cd39)
+- Build public CSS with webpack [`ac2bc22`](https://github.com/AlecRust/protected-video/commit/ac2bc22f7f31a97fcd33792c480bc4da43bda55c)
+- Optimize and minify public JS [`0063b19`](https://github.com/AlecRust/protected-video/commit/0063b19d567f2d72dd984fc26b249cbb7342c5b6)
+
 #### [1.6.2](https://github.com/AlecRust/protected-video/compare/1.6.1...1.6.2)
+
+> 16 January 2022
 
 - Fix syntax in readme FAQ [`3dd5dfd`](https://github.com/AlecRust/protected-video/commit/3dd5dfdecc22c828b9b66ef302d7d44b32995de1)
 
