@@ -1,5 +1,6 @@
-// Decode video provider and ID and set up players
+import './protected-video-public.css'
 
+// Decode video provider and ID and set up players
 const videos = document.querySelectorAll('.wp-block-protected-video')
 
 videos.forEach((video) => {

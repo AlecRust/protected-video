@@ -1,12 +1,13 @@
 // Build process for public non-block JS
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'production',
   entry: './src/protected-video-public.js',
   output: {
-    filename: 'protected-video-public.js',
-    path: path.resolve(__dirname, 'public', 'js'),
+    path: path.resolve(__dirname, 'public'),
+    filename: 'js/protected-video-public.js',
   },
   module: {
     rules: [
@@ -20,6 +21,15 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/protected-video-public.css',
+    }),
+  ],
 }
