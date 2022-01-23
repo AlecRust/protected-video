@@ -6,13 +6,12 @@
 
 .plyr {
   margin-bottom: 30px;
-}
 
-/**
- * Disable interaction with underlying YouTube player when paused
- * https://github.com/sampotts/plyr/issues/2181
- */
-
-.plyr.plyr--youtube.plyr--paused.plyr__poster-enabled:not(.plyr--stopped) .plyr__poster {
-  display: block;
+  /**
+  * Disable interaction with underlying YouTube player when paused
+  * https://github.com/sampotts/plyr/issues/2181
+  */
+  &.plyr--youtube.plyr--paused.plyr__poster-enabled:not(.plyr--stopped) .plyr__poster {
+    display: block;
+  }
 }

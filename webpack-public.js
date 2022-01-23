@@ -1,4 +1,4 @@
-// Build process for public non-block JS
+// Build process for public non-block JS and CSS
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -25,7 +25,18 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['postcss-nested', 'postcss-preset-env'],
+              },
+            },
+          },
+        ],
       },
     ],
   },
