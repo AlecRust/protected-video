@@ -18,5 +18,5 @@ CHANGELOG.md
 package.json
 readme.hbs
 README.md
-webpack-public.config.js
+webpack-public.js
 yarn.lock
