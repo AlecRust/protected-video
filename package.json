@@ -18,6 +18,9 @@
     "release": "release-it --ci",
     "prepare": "husky install"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
     "plyr": "^3.6.12"
   },
