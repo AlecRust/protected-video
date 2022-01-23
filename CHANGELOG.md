@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.1](https://github.com/AlecRust/protected-video/compare/1.7.0...1.7.1)
+
+- Update plugin "Tested up to" to WordPress 5.9 [`692b51b`](https://github.com/AlecRust/protected-video/commit/692b51b11dad433935a41138efb24d3412555030)
+
 #### [1.7.0](https://github.com/AlecRust/protected-video/compare/1.6.2...1.7.0)
+
+> 22 January 2022
 
 - Bump dependencies [`9ec2bd9`](https://github.com/AlecRust/protected-video/commit/9ec2bd9b08b3add80d5bebd998dec4e9f08da408)
 - Bundle Plyr in plugin JS/CSS instead of loading from CDN [`3e5bacf`](https://github.com/AlecRust/protected-video/commit/3e5bacfa615cc5580fd2f95a56f3c8b7db10cb1d)
