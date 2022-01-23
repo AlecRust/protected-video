@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.2](https://github.com/AlecRust/protected-video/compare/1.7.1...1.7.2)
+
+- Bump dependencies [`1e77f5e`](https://github.com/AlecRust/protected-video/commit/1e77f5ea0d9af224ccc58fb1eaef3b052b95ceed)
+- Build public CSS with PostCSS [`20ae8a8`](https://github.com/AlecRust/protected-video/commit/20ae8a8b3f39b5e7c42c1aabae33fad667143565)
+- Set Browserslist value in package.json [`0941b61`](https://github.com/AlecRust/protected-video/commit/0941b6157b33c9f853eb181e5a923fd0cd357b87)
+
 #### [1.7.1](https://github.com/AlecRust/protected-video/compare/1.7.0...1.7.1)
+
+> 23 January 2022
 
 - Update plugin "Tested up to" to WordPress 5.9 [`692b51b`](https://github.com/AlecRust/protected-video/commit/692b51b11dad433935a41138efb24d3412555030)
 
