@@ -1,5 +1,5 @@
-node_modules
+/node_modules
+/demo
 admin/js
-demo
 public/css
 public/js

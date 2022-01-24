@@ -1,0 +1,36 @@
+/**
+ * Demo page CSS
+ */
+
+@import "normalize.css";
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: greenlight;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.demo-container {
+  width: 300px;
+}
+
+@media (min-width: 640px) {
+  .demo-container {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .demo-container {
+    width: 700px;
+  }
+}
