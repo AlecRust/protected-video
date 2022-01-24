@@ -9,7 +9,7 @@ WordPress plugin that provides a Gutenberg block and traditional Shortcode for e
 - Encodes video ID in HTML to prevent finding it via “View Source”
 - Settings page to configure the player theme to match your site
 
-[View Player Demo](https://alecrust.github.io/protected-video/)
+[View Player Demo](https://protected-video.alecrust.com/)
 
 ## Installation
 
