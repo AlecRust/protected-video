@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.3](https://github.com/AlecRust/protected-video/compare/1.7.2...1.7.3)
+
+- Bump webpack-cli version [`25f1476`](https://github.com/AlecRust/protected-video/commit/25f1476d2fdb3e1c7befe91c2ea90a63efdea7b4)
+- Refactor/simplify public JS [`5d24272`](https://github.com/AlecRust/protected-video/commit/5d24272656e40d2ea38bebd69d11a35a9a3e2fb0)
+- Update URL to player demo [`bdfdad4`](https://github.com/AlecRust/protected-video/commit/bdfdad4a36a705f7443b04d99c74dc111325493e)
+- Fix excluding webpack-public.js from plugin dist [`ddd2620`](https://github.com/AlecRust/protected-video/commit/ddd262020693877cfb61b33b2ed083bd698fbcbd)
+- Create CNAME [`4a6f29f`](https://github.com/AlecRust/protected-video/commit/4a6f29f56a82f5488c3078c81c26306e26014436)
+
 #### [1.7.2](https://github.com/AlecRust/protected-video/compare/1.7.1...1.7.2)
+
+> 23 January 2022
 
 - Bump dependencies [`1e77f5e`](https://github.com/AlecRust/protected-video/commit/1e77f5ea0d9af224ccc58fb1eaef3b052b95ceed)
 - Build public CSS with PostCSS [`20ae8a8`](https://github.com/AlecRust/protected-video/commit/20ae8a8b3f39b5e7c42c1aabae33fad667143565)
