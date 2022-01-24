@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    name: Build and deploy demo
+    name: Build Demo
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
