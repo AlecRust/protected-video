@@ -12,8 +12,9 @@
     "block"
   ],
   "scripts": {
-    "start": "webpack watch -c webpack-public.js & wp-scripts start src/protected-video-block.js --output-path=admin/js",
-    "build": "webpack -c webpack-public.js && wp-scripts build src/protected-video-block.js --output-path=admin/js",
+    "start": "webpack serve -c webpack.demo.js & wp-scripts start src/protected-video-block.js --output-path=admin/js",
+    "build": "webpack -c webpack.public.js && wp-scripts build src/protected-video-block.js --output-path=admin/js",
+    "build-demo": "webpack -c webpack.demo.js",
     "lint": "prettier '**/*.{html,php,js,md}' --write; eslint '**/*.js' --fix",
     "release": "release-it --ci",
     "prepare": "husky install"
@@ -31,14 +32,17 @@
     "@wordpress/scripts": "^19.2.3",
     "auto-changelog": "^2.3.0",
     "babel-loader": "^8.2.3",
+    "cname-webpack-plugin": "^3.0.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "get-video-id": "^3.5.3",
+    "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.1",
     "mini-css-extract-plugin": "^2.5.2",
+    "normalize.css": "^8.0.1",
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
     "postcss-nested": "^5.0.6",
@@ -48,7 +52,8 @@
     "replace-in-files-cli": "^2.0.0",
     "terser-webpack-plugin": "^5.3.0",
     "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3"
   },
   "lint-staged": {
     "*.{js,php,md}": "prettier --write",

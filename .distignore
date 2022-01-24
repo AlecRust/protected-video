@@ -2,7 +2,7 @@
 /.github
 /.husky
 /.wordpress-org
-/docs
+/demo
 /node_modules
 /src
 
@@ -18,5 +18,6 @@ CHANGELOG.md
 package.json
 readme.hbs
 README.md
-webpack-public.js
+webpack.demo.js
+webpack.public.js
 yarn.lock
