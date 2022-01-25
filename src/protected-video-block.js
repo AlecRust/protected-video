@@ -40,7 +40,7 @@ registerBlockType('protected-video/protected-video', {
         return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`
       }
       if (videoService == 'vimeo') {
-        return `https://i.vimeocdn.com/video/${videoId}_320x180`
+        return `https://vumbnail.com/${videoId}.jpg`
       }
     }
 
