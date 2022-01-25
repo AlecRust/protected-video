@@ -20,7 +20,7 @@
     /**
     * Disable interaction with <iframe> if poster element removed in Dev Tools
     */
-    iframe {
+    & iframe {
       pointer-events: none;
     }
   }

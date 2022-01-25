@@ -3,6 +3,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   mode: 'production',
@@ -32,7 +33,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: ['postcss-nested', 'postcss-preset-env'],
+                plugins: [postcssPresetEnv({ stage: 0 })],
               },
             },
           },
