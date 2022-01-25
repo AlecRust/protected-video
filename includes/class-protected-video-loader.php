@@ -5,7 +5,7 @@
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
  * @subpackage Protected_Video/includes
- * @author     Alec Rust <me@alecrust.com>
+ * @author     Alec Rust (https://www.alecrust.com/)
  */
 class Protected_Video_Loader
 {
