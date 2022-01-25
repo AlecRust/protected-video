@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.4](https://github.com/AlecRust/protected-video/compare/1.7.3...1.7.4)
+
+- Build player demo assets with webpack [`c6373e8`](https://github.com/AlecRust/protected-video/commit/c6373e857e75d8e9bf12b313c5ae1bb31cc5f738)
+- Add missing demo src files [`8b51c08`](https://github.com/AlecRust/protected-video/commit/8b51c085f1e8d2fd127b5bbc217558aa06ff08ae)
+- Bump mini-css-extract-plugin version [`a99552f`](https://github.com/AlecRust/protected-video/commit/a99552f925f2ccb9d7def2031b3e1c05cd5ea871)
+- Prevent interaction with &lt;iframe&gt; if poster removed in Dev Tools [`ee14451`](https://github.com/AlecRust/protected-video/commit/ee1445123f15cf7a9d5c3459a2917325d8308cdf)
+- Improve WordPress vs standalone player dev experience [`b90864e`](https://github.com/AlecRust/protected-video/commit/b90864e7353cf667f113d1bc9bbc1402b2ce89cf)
+- Fix lint [`a2a4b39`](https://github.com/AlecRust/protected-video/commit/a2a4b397b879085b42c359f6b968690738901631)
+- Simplify Demo CI [`44f73de`](https://github.com/AlecRust/protected-video/commit/44f73dec741def99066c583577b2501a216c3fdf)
+- Tidy [`55c564b`](https://github.com/AlecRust/protected-video/commit/55c564b08742ffe667c4e2091611584acee79448)
+- Fix Vimeo thumbnail in blocks editor [`92e6424`](https://github.com/AlecRust/protected-video/commit/92e6424f52b9c76b5e1bea43c24dc3a48690a223)
+- Exclude /demo from Prettier [`264d043`](https://github.com/AlecRust/protected-video/commit/264d0437265108c1f97a6d5eb72102b839e7b984)
+
 #### [1.7.3](https://github.com/AlecRust/protected-video/compare/1.7.2...1.7.3)
+
+> 24 January 2022
 
 - Bump webpack-cli version [`25f1476`](https://github.com/AlecRust/protected-video/commit/25f1476d2fdb3e1c7befe91c2ea90a63efdea7b4)
 - Refactor/simplify public JS [`5d24272`](https://github.com/AlecRust/protected-video/commit/5d24272656e40d2ea38bebd69d11a35a9a3e2fb0)
