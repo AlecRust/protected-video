@@ -9,11 +9,10 @@ html {
 }
 
 body {
-  background-color: greenlight;
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: system-ui;
   height: 100%;
   justify-content: center;
   text-align: center;
