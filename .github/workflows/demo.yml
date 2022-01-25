@@ -15,7 +15,7 @@ jobs:
       - name: Install Node packages
         uses: bahmutov/npm-install@v1
       - name: Build demo files
-        run: yarn build-demo
+        run: yarn build:demo
       - name: Deploy to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:

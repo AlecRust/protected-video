@@ -12,9 +12,10 @@
     "block"
   ],
   "scripts": {
-    "start": "webpack serve -c webpack.demo.js & wp-scripts start src/protected-video-block.js --output-path=admin/js",
+    "start": "webpack watch --mode development -c webpack.public.js & wp-scripts start src/protected-video-block.js --output-path=admin/js",
     "build": "webpack -c webpack.public.js && wp-scripts build src/protected-video-block.js --output-path=admin/js",
-    "build-demo": "webpack -c webpack.demo.js",
+    "start:demo": "webpack serve --mode development -c webpack.demo.js",
+    "build:demo": "webpack -c webpack.demo.js",
     "lint": "prettier '**/*.{html,php,js,md}' --write; eslint '**/*.js' --fix",
     "release": "release-it --ci",
     "prepare": "husky install"
