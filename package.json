@@ -16,7 +16,7 @@
     "build": "webpack -c webpack.public.js && wp-scripts build src/protected-video-block.js --output-path=admin/js",
     "start:demo": "webpack serve --mode development -c webpack.demo.js",
     "build:demo": "webpack -c webpack.demo.js",
-    "lint": "prettier '**/*.{html,php,js,md}' --write; eslint '**/*.js' --fix",
+    "lint": "prettier '**/*.{html,php,js,yml}' --write; eslint '**/*.js' --fix",
     "release": "release-it --ci",
     "prepare": "husky install"
   },
@@ -57,7 +57,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "lint-staged": {
-    "*.{html,php,js,md}": "prettier --write",
+    "*.{html,php,js,md,yml}": "prettier --write",
     "*.js": "eslint --fix"
   }
 }
