@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.5](https://github.com/AlecRust/protected-video/compare/1.7.4...1.7.5)
+
+- Bump dependencies [`8ef7854`](https://github.com/AlecRust/protected-video/commit/8ef7854965f4d2362df725b4c1191fdacbdbd8be)
+- Include .yml files in linting [`46562fa`](https://github.com/AlecRust/protected-video/commit/46562fa2ff92b1428b7d66d6044ec21517e5cf6c)
+- Remove unnecessary postcss-nested plugin [`3fbbbe0`](https://github.com/AlecRust/protected-video/commit/3fbbbe05bf521113e0485f089594e170c264918c)
+- Update author notes [`1636993`](https://github.com/AlecRust/protected-video/commit/163699317759aced736ce57278f903750311cca0)
+- Improve public CSS webpack configs [`6b2563d`](https://github.com/AlecRust/protected-video/commit/6b2563d92755b0cda8d14d258abb18f080ab6cb5)
+- Remove invalid CSS from demo [`b17c6d9`](https://github.com/AlecRust/protected-video/commit/b17c6d93c3b0b07b8f18974bebf43efaf89494e1)
+
 #### [1.7.4](https://github.com/AlecRust/protected-video/compare/1.7.3...1.7.4)
+
+> 25 January 2022
 
 - Build player demo assets with webpack [`c6373e8`](https://github.com/AlecRust/protected-video/commit/c6373e857e75d8e9bf12b313c5ae1bb31cc5f738)
 - Add missing demo src files [`8b51c08`](https://github.com/AlecRust/protected-video/commit/8b51c085f1e8d2fd127b5bbc217558aa06ff08ae)
