@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.6](https://github.com/AlecRust/protected-video/compare/1.7.5...1.7.6)
+
+- Bump dependencies [`4400ff6`](https://github.com/AlecRust/protected-video/commit/4400ff68a33e405067a7ada227eff94abfc08fd1)
+
 #### [1.7.5](https://github.com/AlecRust/protected-video/compare/1.7.4...1.7.5)
+
+> 5 February 2022
 
 - Bump dependencies [`8ef7854`](https://github.com/AlecRust/protected-video/commit/8ef7854965f4d2362df725b4c1191fdacbdbd8be)
 - Include .yml files in linting [`46562fa`](https://github.com/AlecRust/protected-video/commit/46562fa2ff92b1428b7d66d6044ec21517e5cf6c)
