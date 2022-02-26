@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.7](https://github.com/AlecRust/protected-video/compare/1.7.6...1.7.7)
+
+- Bump dependencies [`779f589`](https://github.com/AlecRust/protected-video/commit/779f589cef1e9428c62faaf624ac7b0e609d3d17)
+- Store plugin option (theme color) as string instead of object [`2381df7`](https://github.com/AlecRust/protected-video/commit/2381df7b8ecefb5954e7b9c8c07a1116e264e372)
+
 #### [1.7.6](https://github.com/AlecRust/protected-video/compare/1.7.5...1.7.6)
+
+> 14 February 2022
 
 - Bump dependencies [`4400ff6`](https://github.com/AlecRust/protected-video/commit/4400ff68a33e405067a7ada227eff94abfc08fd1)
 
