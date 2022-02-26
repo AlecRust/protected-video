@@ -150,7 +150,6 @@ class Protected_Video_Admin
     $id = $val['id'];
     $option_name = $val['option_name'];
     $option_value = get_option($option_name) ?: '#00b3ff';
-    // Plyr default
     ?>
     <input
       type="color"
