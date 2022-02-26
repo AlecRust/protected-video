@@ -74,11 +74,11 @@ class Protected_Video_Public
   public function enqueue_inline_styles()
   {
     if ($this->post_has_block_or_shortcode()) {
-      $player_theme_color = get_option('protected_video_option_name');
+      $player_theme_color = get_option('protected_video_player_theme_color');
 
       if ($player_theme_color) {
         echo '<style>:root { --plyr-color-main: ' .
-          $player_theme_color['player_theme_color'] .
+          $player_theme_color .
           '; }</style>';
       }
     }

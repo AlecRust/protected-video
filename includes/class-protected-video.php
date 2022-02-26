@@ -122,6 +122,13 @@ class Protected_Video
       $plugin_admin,
       'add_settings_link'
     );
+
+    // Migrate settings when plugins have loaded
+    $this->loader->add_action(
+      'plugins_loaded',
+      $plugin_admin,
+      'migrate_plugin_options'
+    );
   }
 
   /**

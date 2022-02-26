@@ -55,6 +55,21 @@ class Protected_Video_Admin
   }
 
   /**
+   * Migrate old plugin options.
+   */
+  public function migrate_plugin_options()
+  {
+    $old_option = get_option('protected_video_option_name');
+    if (isset($old_option['player_theme_color'])) {
+      update_option(
+        'protected_video_player_theme_color',
+        $old_option['player_theme_color']
+      );
+      delete_option('protected_video_option_name');
+    }
+  }
+
+  /**
    * Add link to plugin settings on Plugins page.
    */
   public function add_settings_link($links)
@@ -77,8 +92,6 @@ class Protected_Video_Admin
    */
   public function protected_video_create_admin_page()
   {
-    $this->protected_video_options = get_option('protected_video_option_name');
-
     include 'partials/protected-video-admin-display.php';
   }
 
@@ -88,9 +101,9 @@ class Protected_Video_Admin
   public function settings_page_init()
   {
     register_setting(
-      'protected_video_option_group', // option_group
-      'protected_video_option_name', // option_name
-      [$this, 'protected_video_sanitize'] // sanitize_callback
+      'protected_video_option_group', // settings group name
+      'protected_video_player_theme_color', // option name
+      [$this, 'sanitize_plugin_text_input'] // sanitize callback
     );
 
     add_settings_section(
@@ -105,23 +118,20 @@ class Protected_Video_Admin
       __('Player Theme Color', 'protected-video'), // title
       [$this, 'player_theme_color_callback'], // callback
       'protected-video-admin', // page
-      'protected_video_setting_section' // section
+      'protected_video_setting_section', // section
+      [
+        'id' => 'player_theme_color',
+        'option_name' => 'protected_video_player_theme_color',
+      ]
     );
   }
 
   /**
-   * Sanitize settings page options.
+   * Sanitize plugin option text input data.
    */
-  public function protected_video_sanitize($input)
+  public function sanitize_plugin_text_input($input)
   {
-    $sanitary_values = [];
-    if (isset($input['player_theme_color'])) {
-      $sanitary_values['player_theme_color'] = sanitize_text_field(
-        $input['player_theme_color']
-      );
-    }
-
-    return $sanitary_values;
+    return sanitize_text_field($input);
   }
 
   /**
@@ -133,16 +143,22 @@ class Protected_Video_Admin
   }
 
   /**
-   * Populates fields on settings page.
+   * Returns player theme color field on settings page.
    */
-  public function player_theme_color_callback()
+  public function player_theme_color_callback($val)
   {
-    printf(
-      '<input value="%s" type="color" name="protected_video_option_name[player_theme_color]" id="player_theme_color">',
-      isset($this->protected_video_options['player_theme_color'])
-        ? esc_attr($this->protected_video_options['player_theme_color'])
-        : ''
-    );
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+    $option_value = get_option($option_name) ?: '#00b3ff';
+    // Plyr default
+    ?>
+    <input
+      type="color"
+      id="<?php echo esc_attr($id); ?>"
+      name="<?php echo esc_attr($option_name); ?>"
+      value="<?php echo esc_attr($option_value); ?>"
+    >
+    <?php
   }
 
   /**
