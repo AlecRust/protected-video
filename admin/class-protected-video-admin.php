@@ -100,22 +100,16 @@ class Protected_Video_Admin
    */
   public function settings_page_init()
   {
-    register_setting(
-      'protected_video_option_group', // settings group name
-      'protected_video_player_theme_color', // option name
-      [$this, 'sanitize_plugin_text_input'] // sanitize callback
-    );
-
     add_settings_section(
-      'protected_video_setting_section', // id
+      'protected_video_setting_section', // HTML id
       __('Settings', 'protected-video'), // title
       [$this, 'protected_video_section_info'], // callback
       'protected-video-admin' // page
     );
 
     add_settings_field(
-      'player_theme_color', // id
-      __('Player Theme Color', 'protected-video'), // title
+      'player_theme_color', // HTML id
+      __('Player Theme Color', 'protected-video'), // field title
       [$this, 'player_theme_color_callback'], // callback
       'protected-video-admin', // page
       'protected_video_setting_section', // section
@@ -123,6 +117,12 @@ class Protected_Video_Admin
         'id' => 'player_theme_color',
         'option_name' => 'protected_video_player_theme_color',
       ]
+    );
+
+    register_setting(
+      'protected_video_option_group', // settings group name
+      'protected_video_player_theme_color', // option name
+      [$this, 'sanitize_plugin_text_input'] // callback
     );
   }
 
@@ -148,14 +148,14 @@ class Protected_Video_Admin
   public function player_theme_color_callback($val)
   {
     $id = $val['id'];
-    $option_name = $val['option_name'];
-    $option_value = get_option($option_name) ?: '#00b3ff';
+    $name = $val['option_name'];
+    $value = get_option($name, '#00b3ff');
     ?>
     <input
       type="color"
       id="<?php echo esc_attr($id); ?>"
-      name="<?php echo esc_attr($option_name); ?>"
-      value="<?php echo esc_attr($option_value); ?>"
+      name="<?php echo esc_attr($name); ?>"
+      value="<?php echo esc_attr($value); ?>"
     >
     <?php
   }
