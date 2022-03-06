@@ -41,7 +41,7 @@ jobs:
         with:
           generate-zip: true
       - name: Upload release artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ github.event.repository.name }}
           path: ${{ github.workspace }}/${{ github.event.repository.name }}.zip
@@ -61,7 +61,7 @@ jobs:
       - name: Build temporary changelog
         run: git log --pretty=format:"* %s (%h)" ${{ steps.save_previous.outputs.tag }}..HEAD^1 > temp-changelog.txt
       - name: Download release artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ github.event.repository.name }}
       - name: Create GitHub release
