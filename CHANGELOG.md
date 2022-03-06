@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.8](https://github.com/AlecRust/protected-video/compare/1.7.7...1.7.8)
+
+- Bump dependencies [`95a4953`](https://github.com/AlecRust/protected-video/commit/95a4953f5636ee842060de1d80b281486f985161)
+- Refactor fetching of default player theme color option [`28f270e`](https://github.com/AlecRust/protected-video/commit/28f270ecad0fbb4f0c48cd841877da324dae83da)
+- Automate keeping GitHub Actions up to date [`48ffd8a`](https://github.com/AlecRust/protected-video/commit/48ffd8aeac8e2e0ff133725dad5b7ea3798f772e)
+- Upgrade "Checkout" GitHub Action to v3 [`d0d10a7`](https://github.com/AlecRust/protected-video/commit/d0d10a7e4fa29084e82c3254cca5ea7e250f42dd)
+- Upgrade download/upload artifact GitHub Actions to v3 [`39e10a7`](https://github.com/AlecRust/protected-video/commit/39e10a7c214806f35900db408df93ea274f5cca4)
+- Remove unnecessary settings_errors call [`c9b5fde`](https://github.com/AlecRust/protected-video/commit/c9b5fded9c902563b6264562fce4650a0b1d0651)
+- Allow errors to display at top of plugin settings page [`5a18bab`](https://github.com/AlecRust/protected-video/commit/5a18bab8d096902f852ddfa5f8635cd3e2447c9b)
+- Tidy [`5d37ca1`](https://github.com/AlecRust/protected-video/commit/5d37ca1c55bf0679766c7cfd8150475c756f9c1c)
+
 #### [1.7.7](https://github.com/AlecRust/protected-video/compare/1.7.6...1.7.7)
+
+> 26 February 2022
 
 - Bump dependencies [`779f589`](https://github.com/AlecRust/protected-video/commit/779f589cef1e9428c62faaf624ac7b0e609d3d17)
 - Store plugin option (theme color) as string instead of object [`2381df7`](https://github.com/AlecRust/protected-video/commit/2381df7b8ecefb5954e7b9c8c07a1116e264e372)
