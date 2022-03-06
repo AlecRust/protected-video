@@ -10,7 +10,6 @@
 
 <div class="wrap">
   <h2><?php _e('Protected Video', 'protected-video'); ?></h2>
-  <?php settings_errors(); ?>
   <form method="post" action="options.php">
     <?php
     settings_fields('protected_video_option_group');
