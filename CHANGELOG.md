@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.9](https://github.com/AlecRust/protected-video/compare/1.7.8...1.7.9)
+
+- Bump dependencies [`3fa3143`](https://github.com/AlecRust/protected-video/commit/3fa3143a616560c7dc613d1f8ec627f091b5eefd)
+- Improve README [`0df6492`](https://github.com/AlecRust/protected-video/commit/0df649269fd834e3e1ca9e36e58680c7fadd6b97)
+
 #### [1.7.8](https://github.com/AlecRust/protected-video/compare/1.7.7...1.7.8)
+
+> 6 March 2022
 
 - Bump dependencies [`95a4953`](https://github.com/AlecRust/protected-video/commit/95a4953f5636ee842060de1d80b281486f985161)
 - Refactor fetching of default player theme color option [`28f270e`](https://github.com/AlecRust/protected-video/commit/28f270ecad0fbb4f0c48cd841877da324dae83da)
