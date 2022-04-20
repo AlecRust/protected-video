@@ -3642,10 +3642,15 @@ core-js-pure@^3.20.2, core-js-pure@^3.8.1:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.21.1.tgz#8c4d1e78839f5f46208de7230cebfb72bc3bdb51"
   integrity sha512-12VZfFIu+wyVbBebyHmRTuEE/tZrB4tJToWcwAMcsp3h4+sHR+fMJWbKpYiCRWlhFBq+KNyO8rIV9rTkeVmznQ==
 
-core-js@^3.19.1, core-js@^3.20.0:
+core-js@^3.19.1:
   version "3.21.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
   integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
+
+core-js@^3.22.0:
+  version "3.22.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.22.1.tgz#1936e4f1da82675fe22ae10ee60ef638cd9752fd"
+  integrity sha512-l6CwCLq7XgITOQGhv1dIUmwCFoqFjyQ6zQHUCQlS0xKmb9d6OHIg8jDiEoswhaettT21BSF5qKr6kbvE+aKwxw==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -8089,12 +8094,12 @@ plur@^4.0.0:
   dependencies:
     irregular-plurals "^3.2.0"
 
-plyr@^3.6.12:
-  version "3.6.12"
-  resolved "https://registry.yarnpkg.com/plyr/-/plyr-3.6.12.tgz#e64481f163f9188d783447aedbf424fefd2ee92f"
-  integrity sha512-42WhYpMS/FEyX2unSEvhYtj1RvJgWvOsjZQFDongOQHA4eVzsyr7b06bzVpinMAOVC9e5H7RCbK+6CCAFIl2VQ==
+plyr@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/plyr/-/plyr-3.7.2.tgz#183d2397e7401a577700c8319fe133692b4aff54"
+  integrity sha512-I0ZC/OI4oJ0iWG9s2rrnO0YFO6aLyrPiQBq9kum0FqITYljwTPBbYL3TZZu8UJQJUq7tUWN18Q7ACwNCkGKABQ==
   dependencies:
-    core-js "^3.20.0"
+    core-js "^3.22.0"
     custom-event-polyfill "^1.0.7"
     loadjs "^4.2.0"
     rangetouch "^2.0.1"

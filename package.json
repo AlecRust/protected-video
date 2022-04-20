@@ -24,7 +24,7 @@
     "defaults"
   ],
   "dependencies": {
-    "plyr": "^3.6.12"
+    "plyr": "^3.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
