@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.10](https://github.com/AlecRust/protected-video/compare/1.7.9...1.7.10)
+
+- Bump dependencies [`7982441`](https://github.com/AlecRust/protected-video/commit/798244144fe9849139f52f8d9bda97bbbdc9d00a)
+- Bump Plyr player version 3.6.12 -&gt; 3.7.2 [`6acaf56`](https://github.com/AlecRust/protected-video/commit/6acaf564d2686c391ed4455ceab9196574e79fc2)
+
 #### [1.7.9](https://github.com/AlecRust/protected-video/compare/1.7.8...1.7.9)
+
+> 10 April 2022
 
 - Bump dependencies [`3fa3143`](https://github.com/AlecRust/protected-video/commit/3fa3143a616560c7dc613d1f8ec627f091b5eefd)
 - Improve README [`0df6492`](https://github.com/AlecRust/protected-video/commit/0df649269fd834e3e1ca9e36e58680c7fadd6b97)
