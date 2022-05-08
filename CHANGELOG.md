@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.11](https://github.com/AlecRust/protected-video/compare/1.7.10...1.7.11)
+
+- Bump dependencies [`f672a90`](https://github.com/AlecRust/protected-video/commit/f672a90233ed4654f153ae9a4295074af6943a0c)
+- Update "Tested up to" to WordPress 6 [`ee3e5e2`](https://github.com/AlecRust/protected-video/commit/ee3e5e2288448d74291bde51d4615e5a5c03c62c)
+
 #### [1.7.10](https://github.com/AlecRust/protected-video/compare/1.7.9...1.7.10)
+
+> 20 April 2022
 
 - Bump dependencies [`7982441`](https://github.com/AlecRust/protected-video/commit/798244144fe9849139f52f8d9bda97bbbdc9d00a)
 - Bump Plyr player version 3.6.12 -&gt; 3.7.2 [`6acaf56`](https://github.com/AlecRust/protected-video/commit/6acaf564d2686c391ed4455ceab9196574e79fc2)
