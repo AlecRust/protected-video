@@ -4,7 +4,8 @@
     "after:bump": [
       "replace-in-files --string=\"${latestVersion}'\" --replacement=\"${version}'\" protected-video.php",
       "replace-in-files --string='Version:           ${latestVersion}' --replacement='Version:           ${version}' protected-video.php",
-      "auto-changelog -p --commit-limit false --hide-credit --ignore-commit-pattern \"Release ?\\d+\\.\\d+\\.\\d+\""
+      "auto-changelog -p --commit-limit false --hide-credit --ignore-commit-pattern \"Release ?\\d+\\.\\d+\\.\\d+\"",
+      "auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false --ignore-commit-pattern \"Release ?\\d+\\.\\d+\\.\\d+\""
     ]
   },
   "git": {
