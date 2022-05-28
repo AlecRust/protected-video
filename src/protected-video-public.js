@@ -12,7 +12,7 @@ function decodeVideoBlock(videoBlock) {
     if (decodedProvider && decodedVideoId) {
       // Add attributes that Plyr requires
       // https://github.com/sampotts/plyr/issues/1936
-      videoBlock.dataset.plyrProvider = decodedProvider
+      videoBlock.dataset.plyrProvider = decodedProvider.toLowerCase()
       videoBlock.dataset.plyrEmbedId = decodedVideoId
     }
   }
