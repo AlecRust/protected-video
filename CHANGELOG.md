@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.12](https://github.com/AlecRust/protected-video/compare/1.7.11...1.7.12)
+
+- Bump dependencies [`8c30d86`](https://github.com/AlecRust/protected-video/commit/8c30d86bafd268e8d1b3e0c322d2d1ca841a031b)
+- Split up CI workflows [`407022c`](https://github.com/AlecRust/protected-video/commit/407022c01dede9015c0e956c31006b9074f58ac9)
+- Ignore casing of "service" value in Shortcode [`f66e68c`](https://github.com/AlecRust/protected-video/commit/f66e68cd2360fb6e361e9b5a6fa3e246307bfefd)
+
 #### [1.7.11](https://github.com/AlecRust/protected-video/compare/1.7.10...1.7.11)
+
+> 8 May 2022
 
 - Bump dependencies [`f672a90`](https://github.com/AlecRust/protected-video/commit/f672a90233ed4654f153ae9a4295074af6943a0c)
 - Update "Tested up to" to WordPress 6 [`ee3e5e2`](https://github.com/AlecRust/protected-video/commit/ee3e5e2288448d74291bde51d4615e5a5c03c62c)
