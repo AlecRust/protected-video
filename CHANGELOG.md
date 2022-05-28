@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.14](https://github.com/AlecRust/protected-video/compare/1.7.13...1.7.14)
+
+- Move readme.txt into repository [`c4471bc`](https://github.com/AlecRust/protected-video/commit/c4471bcb583ce3e6705d1c60a90ef989eecf7dd6)
+
 #### [1.7.13](https://github.com/AlecRust/protected-video/compare/1.7.12...1.7.13)
+
+> 28 May 2022
 
 - Fix changelog building [`96f7150`](https://github.com/AlecRust/protected-video/commit/96f71500e76c1aefebac9ca34aa3d206c02f0cdd)
 

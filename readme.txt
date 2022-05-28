@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.0
-Stable tag:        1.7.13
+Stable tag:        1.7.14
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -73,7 +73,11 @@ The [Plyr](https://plyr.io/) player is responsive by default and will grow to fi
 
 == Changelog ==
 
-= 1.7.13 =
+= 1.7.14 =
+
+* Move readme.txt into repository
+
+= 1.7.13 - 2022-05-28 =
 
 * Fix changelog building
 
