@@ -13,5 +13,9 @@
   },
   "npm": {
     "publish": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "${version}"
   }
 }

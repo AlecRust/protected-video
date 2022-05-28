@@ -1,0 +1,32 @@
+name: Deploy Plugin
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Node packages
+        uses: bahmutov/npm-install@v1
+      - name: Build dist files
+        run: yarn build
+      - name: Build readme.txt
+        run: yarn auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false --ignore-commit-pattern "Release ?\d+\.\d+\.\d+"
+      - name: Deploy to WordPress SVN
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        with:
+          generate-zip: true
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ github.event.repository.name }}
+          path: ${{ github.workspace }}/${{ github.event.repository.name }}.zip

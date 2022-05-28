@@ -1,4 +1,4 @@
-name: Demo
+name: Deploy Demo
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  update-demo:
-    name: Update Demo
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
