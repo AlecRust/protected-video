@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.13](https://github.com/AlecRust/protected-video/compare/1.7.12...1.7.13)
+
+- Fix changelog building [`96f7150`](https://github.com/AlecRust/protected-video/commit/96f71500e76c1aefebac9ca34aa3d206c02f0cdd)
+
 #### [1.7.12](https://github.com/AlecRust/protected-video/compare/1.7.11...1.7.12)
+
+> 28 May 2022
 
 - Bump dependencies [`8c30d86`](https://github.com/AlecRust/protected-video/commit/8c30d86bafd268e8d1b3e0c322d2d1ca841a031b)
 - Split up CI workflows [`407022c`](https://github.com/AlecRust/protected-video/commit/407022c01dede9015c0e956c31006b9074f58ac9)
