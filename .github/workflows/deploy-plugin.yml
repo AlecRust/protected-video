@@ -15,8 +15,6 @@ jobs:
         uses: bahmutov/npm-install@v1
       - name: Build dist files
         run: yarn build
-      - name: Build readme.txt
-        run: yarn auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false --ignore-commit-pattern "Release ?\d+\.\d+\.\d+"
       - name: Deploy to WordPress SVN
         id: deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
