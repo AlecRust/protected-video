@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.15](https://github.com/AlecRust/protected-video/compare/1.7.14...1.7.15)
+
+- Bump dependencies [`a9d0caf`](https://github.com/AlecRust/protected-video/commit/a9d0caf553e0d8c33d19ba26de19b69a17edea60)
+- Fix CI badge in README.md [`5a6b4ee`](https://github.com/AlecRust/protected-video/commit/5a6b4ee4e4053dadf29c7aef295e49afd2c0df1d)
+
 #### [1.7.14](https://github.com/AlecRust/protected-video/compare/1.7.13...1.7.14)
+
+> 28 May 2022
 
 - Move readme.txt into repository [`c4471bc`](https://github.com/AlecRust/protected-video/commit/c4471bcb583ce3e6705d1c60a90ef989eecf7dd6)
 
