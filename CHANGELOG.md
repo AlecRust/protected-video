@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.16](https://github.com/AlecRust/protected-video/compare/1.7.15...1.7.16)
+
+- Bump dependencies [`a3a195f`](https://github.com/AlecRust/protected-video/commit/a3a195fac5077595585361c79d5ee895e7da47c7)
+- Switch to official WordPress Babel preset [`82456a9`](https://github.com/AlecRust/protected-video/commit/82456a9fb52ab61f42e8ace44ac7f39652e0b3b8)
+- Switch to official WordPress Browserslist [`687e3ea`](https://github.com/AlecRust/protected-video/commit/687e3eaf53e755d8680ab6c34e048a8734abdb68)
+- Improve plugin information [`6f7ac48`](https://github.com/AlecRust/protected-video/commit/6f7ac4885f13eeac31e1917f1bc64a00b4dadc15)
+
 #### [1.7.15](https://github.com/AlecRust/protected-video/compare/1.7.14...1.7.15)
+
+> 8 July 2022
 
 - Bump dependencies [`a9d0caf`](https://github.com/AlecRust/protected-video/commit/a9d0caf553e0d8c33d19ba26de19b69a17edea60)
 - Fix CI badge in README.md [`5a6b4ee`](https://github.com/AlecRust/protected-video/commit/5a6b4ee4e4053dadf29c7aef295e49afd2c0df1d)
