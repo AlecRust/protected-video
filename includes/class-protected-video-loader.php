@@ -34,12 +34,13 @@ class Protected_Video_Loader
   protected $shortcodes;
 
   /**
-   * Initialize the collections used to maintain the actions and filters.
+   * Initialize the collections used to maintain the actions, filters and shortcodes
    */
   public function __construct()
   {
     $this->actions = [];
     $this->filters = [];
+    $this->shortcodes = [];
   }
 
   /**
@@ -152,12 +153,12 @@ class Protected_Video_Loader
   }
 
   /**
-   * Register the filters, actions and shortcodes with WordPress.
+   * Register the actions, filters and shortcodes with WordPress.
    */
   public function run()
   {
-    foreach ($this->filters as $hook) {
-      add_filter(
+    foreach ($this->actions as $hook) {
+      add_action(
         $hook['hook'],
         [$hook['component'], $hook['callback']],
         $hook['priority'],
@@ -165,8 +166,8 @@ class Protected_Video_Loader
       );
     }
 
-    foreach ($this->actions as $hook) {
-      add_action(
+    foreach ($this->filters as $hook) {
+      add_filter(
         $hook['hook'],
         [$hook['component'], $hook['callback']],
         $hook['priority'],

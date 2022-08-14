@@ -41,7 +41,7 @@ class Protected_Video_Public
   }
 
   /**
-   * Sets up shortcode for use as alternative to Gutenberg block.
+   * Set up shortcode for use as alternative to Gutenberg block.
    *
    * Usage example: [protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
    */
