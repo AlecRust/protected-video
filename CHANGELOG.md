@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.17](https://github.com/AlecRust/protected-video/compare/1.7.16...1.7.17)
+
+- Bump dependencies [`5b85250`](https://github.com/AlecRust/protected-video/commit/5b85250a3418fc670bff5420de3fd3c0670900bd)
+- Add missing $this-&gt;shortcodes placeholder variable [`6a67306`](https://github.com/AlecRust/protected-video/commit/6a673069869eac6666e75a230354ec4cbdae3796)
+- Add "How do I use the Shortcode embed method?" to FAQs [`65e66b3`](https://github.com/AlecRust/protected-video/commit/65e66b3653c1b3a8fa0b8e5a837511e30bb383fb)
+- Add readme link to video that explains plugin [`90dfeac`](https://github.com/AlecRust/protected-video/commit/90dfeac06edc8462c4ba0ef9ebe2ba97500e80fd)
+
 #### [1.7.16](https://github.com/AlecRust/protected-video/compare/1.7.15...1.7.16)
+
+> 24 July 2022
 
 - Bump dependencies [`a3a195f`](https://github.com/AlecRust/protected-video/commit/a3a195fac5077595585361c79d5ee895e7da47c7)
 - Switch to official WordPress Babel preset [`82456a9`](https://github.com/AlecRust/protected-video/commit/82456a9fb52ab61f42e8ace44ac7f39652e0b3b8)

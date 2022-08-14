@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.0
-Stable tag:        1.7.16
+Stable tag:        1.7.17
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -42,6 +42,8 @@ This plugin is open source and contributions are welcome [on GitHub](https://git
 
 Embeds YouTube/Vimeo videos on your pages and takes steps to prevent users obtaining the original URL to the video, such as by clicking on the player or viewing the page source.
 
+Watch [this YouTube video](https://www.youtube.com/watch?v=OVL0z9pO60I) for sn introduction to the plugin and its potential use cases.
+
 = How secure is this plugin? =
 
 This plugin only provides a basic level of protection against users accessing the default player or otherwise determining the video URL. Technical users may still be able to figure out this information.
@@ -60,6 +62,16 @@ If you don't care about your users sharing the video or actually want them to, a
 
 Not everyone likes to use the Block Editor. Others may be using a different page builder that does not support blocks. The Shortcode is provided as an alternative way to embed the video that still provides the same level of protection.
 
+= How do I use the Shortcode embed method? =
+
+This is the format to use if you'd like to use the Shortcode embed method:
+
+`
+[protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
+`
+
+A `service` of either `youtube` or `vimeo` must be specified when using the Shortcode embed method.
+
 = How can I set the dimensions of the player? =
 
 The [Plyr](https://plyr.io/) player is responsive by default and will grow to fill the container it is placed in. If you'd like to restrict these dimensions, place the block or shortcode within a container that has your desired dimensions. See [this support topic](https://wordpress.org/support/topic/video-size-on-page/) for more.
@@ -73,7 +85,14 @@ The [Plyr](https://plyr.io/) player is responsive by default and will grow to fi
 
 == Changelog ==
 
-= 1.7.16 =
+= 1.7.17 =
+
+* Bump dependencies
+* Add missing $this-&gt;shortcodes placeholder variable
+* Add "How do I use the Shortcode embed method?" to FAQs
+* Add readme link to video that explains plugin
+
+= 1.7.16 - 2022-07-24 =
 
 * Bump dependencies
 * Switch to official WordPress Babel preset
