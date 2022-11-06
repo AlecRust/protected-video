@@ -1,6 +1,6 @@
 # Protected Video [![CI](https://github.com/AlecRust/protected-video/actions/workflows/lint.yml/badge.svg)](https://github.com/AlecRust/protected-video/actions/workflows/lint.yml)
 
-WordPress plugin that provides a Gutenberg block and traditional Shortcode for embedding YouTube/Vimeo videos, in a way that prevents users easily accessing the original video.
+WordPress plugin that provides a Gutenberg block and traditional Shortcode for embedding YouTube/Vimeo videos, in a way that prevents users easily accessing the underlying video.
 
 ## Features
 
