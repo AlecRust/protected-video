@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.18](https://github.com/AlecRust/protected-video/compare/1.7.17...1.7.18)
+
+- Bump dependencies [`ffdfcfa`](https://github.com/AlecRust/protected-video/commit/ffdfcfa2f4d1bb1f24e896c4439e2681b26d759d)
+- Tidy readmes [`66f5ed5`](https://github.com/AlecRust/protected-video/commit/66f5ed559b435844b59d5c2169b05080aae81ba3)
+- Add FAQ [`adc5976`](https://github.com/AlecRust/protected-video/commit/adc59760c0374a8831df287dca0c1c2111127a78)
+- Fix readme typo [`970cac8`](https://github.com/AlecRust/protected-video/commit/970cac8a58b87f71af32fcff4b8c8c71229b81e6)
+
 #### [1.7.17](https://github.com/AlecRust/protected-video/compare/1.7.16...1.7.17)
+
+> 14 August 2022
 
 - Bump dependencies [`5b85250`](https://github.com/AlecRust/protected-video/commit/5b85250a3418fc670bff5420de3fd3c0670900bd)
 - Add missing $this-&gt;shortcodes placeholder variable [`6a67306`](https://github.com/AlecRust/protected-video/commit/6a673069869eac6666e75a230354ec4cbdae3796)

@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.0
-Stable tag:        1.7.17
+Stable tag:        1.7.18
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ YouTube/Vimeo player that prevents easy sharing of the video.
 
 == Description ==
 
-Gutenberg block and Shortcode for embedding YouTube/Vimeo videos, in a way that prevents users easily accessing the original video.
+Gutenberg block and Shortcode for embedding YouTube/Vimeo videos, in a way that prevents users easily accessing the underlying video.
 
 **This is useful for example when embedding an “unlisted” video as premium course content behind a paywall on your site.**
 
@@ -25,7 +25,7 @@ Features include:
 
 [View Player Demo](https://protected-video.alecrust.com/)
 
-**Note:** This only provides a basic level of protection. Technical users may still be able to identify the original video URL.
+**Note:** This only provides a basic level of protection. Technical users may still be able to access the underlying video.
 
 This plugin is open source and contributions are welcome [on GitHub](https://github.com/AlecRust/protected-video).
 
@@ -40,9 +40,9 @@ This plugin is open source and contributions are welcome [on GitHub](https://git
 
 = What does this plugin do? =
 
-Embeds YouTube/Vimeo videos on your pages and takes steps to prevent users obtaining the original URL to the video, such as by clicking on the player or viewing the page source.
+Embeds YouTube/Vimeo videos on your pages and takes steps to prevent users obtaining the e.g. YouTube URL of the video by clicking on the player or viewing the page source.
 
-Watch [this YouTube video](https://www.youtube.com/watch?v=OVL0z9pO60I) for sn introduction to the plugin and its potential use cases.
+Watch [this YouTube video](https://www.youtube.com/watch?v=OVL0z9pO60I) for an introduction to the plugin and its potential use cases.
 
 = How secure is this plugin? =
 
@@ -54,9 +54,13 @@ Yes, the custom player works on mobile browsers and the disabling of access to t
 
 = Why not use plain Plyr player? =
 
-The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with its own controls, which prevents access to the underlying video copy/share buttons under some scenarios, but this is a side-effect of the way it works rather than a feature. The goal of Protected Video is to make this a feature by accounting for more scenarios e.g. when the player is paused, and providing additional features such as obfuscation of the original video ID in the HTML.
+The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with its own controls, which prevents access to the underlying video copy/share buttons under some scenarios, but this is a side-effect of the way it works rather than a feature. The goal of Protected Video is to make this a feature by accounting for more scenarios e.g. when the player is paused, and providing additional features such as obfuscation of the underlying video ID in the HTML.
 
 If you don't care about your users sharing the video or actually want them to, a plugin like [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/) is probably more suitable.
+
+= Can the watermark/other controls be removed from YouTube videos? =
+
+Unfortunately not. This plugin loads the standard YouTube player behind the overlay, which we have no control over. These aspects of the YouTube player cannot be disabled.
 
 = Why is there a Shortcode as well as Gutenberg block? =
 
@@ -85,7 +89,14 @@ The [Plyr](https://plyr.io/) player is responsive by default and will grow to fi
 
 == Changelog ==
 
-= 1.7.17 =
+= 1.7.18 =
+
+* Bump dependencies
+* Tidy readmes
+* Add FAQ
+* Fix readme typo
+
+= 1.7.17 - 2022-08-14 =
 
 * Bump dependencies
 * Add missing $this-&gt;shortcodes placeholder variable
