@@ -2,8 +2,8 @@
 Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
-Tested up to:      6.0
-Stable tag:        1.7.18
+Tested up to:      6.1
+Stable tag:        1.7.19
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -58,7 +58,7 @@ The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with 
 
 If you don't care about your users sharing the video or actually want them to, a plugin like [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/) is probably more suitable.
 
-= Can the watermark/other controls be removed from YouTube videos? =
+= Can the YouTube watermark/controls be hidden? =
 
 Unfortunately not. This plugin loads the standard YouTube player behind the overlay, which we have no control over. These aspects of the YouTube player cannot be disabled.
 
@@ -89,7 +89,13 @@ The [Plyr](https://plyr.io/) player is responsive by default and will grow to fi
 
 == Changelog ==
 
-= 1.7.18 =
+= 1.7.19 =
+
+* Bump dependencies inc Plyr player v3.7.3
+* Fix FAQ wrapping
+* Update plugin "Tested up to" version
+
+= 1.7.18 - 2022-11-06 =
 
 * Bump dependencies
 * Tidy readmes
