@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.1
-Stable tag:        1.7.19
+Stable tag:        1.7.20
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -64,7 +64,7 @@ Unfortunately not. This plugin loads the standard YouTube player behind the over
 
 = Why is there a Shortcode as well as Gutenberg block? =
 
-Not everyone likes to use the Block Editor. Others may be using a different page builder that does not support blocks. The Shortcode is provided as an alternative way to embed the video that still provides the same level of protection.
+The Shortcode is provided as an alternative embed method that still provides the same level of protection. Some people need the Shortcode for use with 3rd party page builders (Elementor etc.) and others simply prefer using a Shortcode over Gutenberg blocks.
 
 = How do I use the Shortcode embed method? =
 
@@ -89,7 +89,12 @@ The [Plyr](https://plyr.io/) player is responsive by default and will grow to fi
 
 == Changelog ==
 
-= 1.7.19 =
+= 1.7.20 =
+
+* Bump dependencies
+* Improve "Why is there a Shortcode as well as Gutenberg block?" FAQ
+
+= 1.7.19 - 2022-11-18 =
 
 * Bump dependencies inc Plyr player v3.7.3
 * Fix FAQ wrapping

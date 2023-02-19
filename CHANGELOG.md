@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.20](https://github.com/AlecRust/protected-video/compare/1.7.19...1.7.20)
+
+- Bump dependencies [`4ddf90d`](https://github.com/AlecRust/protected-video/commit/4ddf90d0e4e50405df4cf78a71c1a9dfadf0b5f6)
+- Improve "Why is there a Shortcode as well as Gutenberg block?" FAQ [`f8caa7f`](https://github.com/AlecRust/protected-video/commit/f8caa7f274c39e8718e3b2d653a424700ae4b390)
+
 #### [1.7.19](https://github.com/AlecRust/protected-video/compare/1.7.18...1.7.19)
+
+> 18 November 2022
 
 - Bump dependencies inc Plyr player v3.7.3 [`50cd424`](https://github.com/AlecRust/protected-video/commit/50cd42465b85556f6c8c20468f14fa74a001b700)
 - Fix FAQ wrapping [`4ac8654`](https://github.com/AlecRust/protected-video/commit/4ac8654515ce70fd3d27ad1d976de076b2711fd7)
