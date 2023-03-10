@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.21](https://github.com/AlecRust/protected-video/compare/1.7.20...1.7.21)
+
+- Bump dependencies including Plyr 3.7.3 -&gt; 3.7.6 [`e77db03`](https://github.com/AlecRust/protected-video/commit/e77db036eb5ced989f8078266985a7f0ea8e24ef)
+
 #### [1.7.20](https://github.com/AlecRust/protected-video/compare/1.7.19...1.7.20)
+
+> 19 February 2023
 
 - Bump dependencies [`4ddf90d`](https://github.com/AlecRust/protected-video/commit/4ddf90d0e4e50405df4cf78a71c1a9dfadf0b5f6)
 - Improve "Why is there a Shortcode as well as Gutenberg block?" FAQ [`f8caa7f`](https://github.com/AlecRust/protected-video/commit/f8caa7f274c39e8718e3b2d653a424700ae4b390)

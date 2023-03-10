@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.1
-Stable tag:        1.7.20
+Stable tag:        1.7.21
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -89,7 +89,11 @@ The [Plyr](https://plyr.io/) player is responsive by default and will grow to fi
 
 == Changelog ==
 
-= 1.7.20 =
+= 1.7.21 =
+
+* Bump dependencies including Plyr 3.7.3 -&gt; 3.7.6
+
+= 1.7.20 - 2023-02-19 =
 
 * Bump dependencies
 * Improve "Why is there a Shortcode as well as Gutenberg block?" FAQ
