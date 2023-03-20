@@ -139,7 +139,15 @@ class Protected_Video_Admin
    */
   public function protected_video_section_info()
   {
-    _e('Set the player theme color below.', 'protected-video');
+    printf(
+      __(
+        'Set the player theme color below. For more advanced styling options please refer to %s.',
+        'protected-video'
+      ),
+      '<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
+        __("Plyr's documentation", 'protected-video') .
+        '</a>'
+    );
   }
 
   /**
