@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.7.22](https://github.com/AlecRust/protected-video/compare/1.7.21...1.7.22)
+
+- Bump dependencies including Plyr 3.7.6 -&gt; 3.7.7 [`3da6c20`](https://github.com/AlecRust/protected-video/commit/3da6c20b596e041657f02a229283bd2a6698fda9)
+- Add "How can I style the player how I like?" FAQ [`4e54ec7`](https://github.com/AlecRust/protected-video/commit/4e54ec7b9156051fcedf56591df5ef308b04bec2)
+- Add link to Plyr's styling documentation on plugin settings page [`e1249c5`](https://github.com/AlecRust/protected-video/commit/e1249c54f0500d9c4b24617d6908bfc459ae21b6)
+- Add "The display of the player is broken/it doesn't work" FAQ [`7fabe50`](https://github.com/AlecRust/protected-video/commit/7fabe508226c91d2665b2dc8367055f012b439a2)
+- Update plugin "Tested up to" to WordPress 6.2 [`20af35c`](https://github.com/AlecRust/protected-video/commit/20af35ca014305713fac59f6d3114cc2fda7aa15)
+
 #### [1.7.21](https://github.com/AlecRust/protected-video/compare/1.7.20...1.7.21)
+
+> 10 March 2023
 
 - Bump dependencies including Plyr 3.7.3 -&gt; 3.7.6 [`e77db03`](https://github.com/AlecRust/protected-video/commit/e77db036eb5ced989f8078266985a7f0ea8e24ef)
 

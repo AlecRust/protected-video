@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.2
-Stable tag:        1.7.21
+Stable tag:        1.7.22
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -80,6 +80,25 @@ A `service` of either `youtube` or `vimeo` must be specified when using the Shor
 
 The [Plyr](https://plyr.io/) player is responsive by default and will grow to fill the container it is placed in. If you'd like to restrict these dimensions, place the block or shortcode within a container that has your desired dimensions. See [this support topic](https://wordpress.org/support/topic/video-size-on-page/) for more.
 
+= How can I style the player how I like? =
+
+The main color of the player can be configured at **Settings > Protected Video**. If you'd like to style the player further, you can provide your own CSS to override [the player's CSS variables](https://github.com/sampotts/plyr#customizing-the-css):
+
+`
+<style>
+:root {
+--plyr-badge-background: #000;
+--plyr-control-radius: 5px;
+}
+</style>
+`
+
+= The display of the player is broken/it doesn't work =
+
+If the player is not looking or behaving like [the demo](https://protected-video.alecrust.com/) on your site, this indicates another theme or plugin is interfering with Protected Video.
+
+This is usually caused by another plugin or theme loading its own version of [Plyr](https://plyr.io/), which interferes with the Plyr version provided by Protected Video. Please try disabling all other plugins and switching to a default theme to isolate what is causing this issue.
+
 == Screenshots ==
 
 1. Protected Video block in the Block Editor.
@@ -89,7 +108,15 @@ The [Plyr](https://plyr.io/) player is responsive by default and will grow to fi
 
 == Changelog ==
 
-= 1.7.21 =
+= 1.7.22 =
+
+* Bump dependencies including Plyr 3.7.6 -&gt; 3.7.7
+* Add "How can I style the player how I like?" FAQ
+* Add link to Plyr's styling documentation on plugin settings page
+* Add "The display of the player is broken/it doesn't work" FAQ
+* Update plugin "Tested up to" to WordPress 6.2
+
+= 1.7.21 - 2023-03-10 =
 
 * Bump dependencies including Plyr 3.7.3 -&gt; 3.7.6
 
