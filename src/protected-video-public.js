@@ -24,8 +24,12 @@ function decodeVideoBlock(videoBlock) {
 
 const videoBlocks = document.querySelectorAll('.wp-block-protected-video')
 
-if (videoBlocks.length) {
-  videoBlocks.forEach((videoBlock) => decodeVideoBlock(videoBlock))
+videoBlocks.forEach((videoBlock) => {
+  decodeVideoBlock(videoBlock)
 
-  Plyr.setup(videoBlocks)
-}
+  new Plyr(videoBlock, {
+    youtube: {
+      noCookie: true,
+    },
+  })
+})
