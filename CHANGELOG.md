@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.8.0](https://github.com/AlecRust/protected-video/compare/1.7.22...1.8.0)
+
+- Bump dependencies including Plyr 3.7.7 -&gt; 3.7.8 [`4a1a578`](https://github.com/AlecRust/protected-video/commit/4a1a578c50ecec0fd3ae4864c26eb0f2fdcf67ed)
+- Simplify JS for decoding HTML [`aea9a17`](https://github.com/AlecRust/protected-video/commit/aea9a179731e22e955d7f787b4e307c10c51104f)
+- Switch YouTube embeds to use "no cookie" domain for GDPR support [`1fb04ee`](https://github.com/AlecRust/protected-video/commit/1fb04ee421184c0875a33f5a052c8b9b7818daa1)
+- Add "Can you add feature X to the player?" FAQ [`2a9c173`](https://github.com/AlecRust/protected-video/commit/2a9c1735a64e5249c05c2cb6206b68da65fe0dca)
+
 #### [1.7.22](https://github.com/AlecRust/protected-video/compare/1.7.21...1.7.22)
+
+> 20 March 2023
 
 - Bump dependencies including Plyr 3.7.6 -&gt; 3.7.7 [`3da6c20`](https://github.com/AlecRust/protected-video/commit/3da6c20b596e041657f02a229283bd2a6698fda9)
 - Add "How can I style the player how I like?" FAQ [`4e54ec7`](https://github.com/AlecRust/protected-video/commit/4e54ec7b9156051fcedf56591df5ef308b04bec2)

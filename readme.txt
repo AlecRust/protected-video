@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.2
-Stable tag:        1.7.22
+Stable tag:        1.8.0
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -58,9 +58,17 @@ The default [Plyr](https://plyr.io/) player overlays YouTube/Vimeo players with 
 
 If you don't care about your users sharing the video or actually want them to, a plugin like [WP YouTube Lyte](https://wordpress.org/plugins/wp-youtube-lyte/) is probably more suitable.
 
+= How can I style the player with CSS? =
+
+The main color of the player can be configured at **Settings > Protected Video**. If you'd like to style the player further, you can provide your own CSS to override [the player's CSS variables](https://github.com/sampotts/plyr#customizing-the-css):
+
 = Can the YouTube watermark/controls be hidden? =
 
 Unfortunately not. This plugin loads the standard YouTube player behind the overlay, which we have no control over. These aspects of the YouTube player cannot be disabled.
+
+= Can you add feature X to the player? =
+
+This plugin embeds the [Plyr](https://plyr.io/) player in a particular way and adds modifications to prevent access to the underlying video player. This plugin cannot provide additional features to the player itself beyond what is provided by Plyr. If you'd like to see a feature added to the player, please [open an issue on Plyr's GitHub](https://github.com/sampotts/plyr/issues).
 
 = Why is there a Shortcode as well as Gutenberg block? =
 
@@ -79,10 +87,6 @@ A `service` of either `youtube` or `vimeo` must be specified when using the Shor
 = How can I set the dimensions of the player? =
 
 The [Plyr](https://plyr.io/) player is responsive by default and will grow to fill the container it is placed in. If you'd like to restrict these dimensions, place the block or shortcode within a container that has your desired dimensions. See [this support topic](https://wordpress.org/support/topic/video-size-on-page/) for more.
-
-= How can I style the player how I like? =
-
-The main color of the player can be configured at **Settings > Protected Video**. If you'd like to style the player further, you can provide your own CSS to override [the player's CSS variables](https://github.com/sampotts/plyr#customizing-the-css):
 
 `
 <style>
@@ -108,7 +112,14 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.7.22 =
+= 1.8.0 =
+
+* Bump dependencies including Plyr 3.7.7 -&gt; 3.7.8
+* Simplify JS for decoding HTML
+* Switch YouTube embeds to use "no cookie" domain for GDPR support
+* Add "Can you add feature X to the player?" FAQ
+
+= 1.7.22 - 2023-03-20 =
 
 * Bump dependencies including Plyr 3.7.6 -&gt; 3.7.7
 * Add "How can I style the player how I like?" FAQ
