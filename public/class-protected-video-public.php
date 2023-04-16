@@ -73,7 +73,7 @@ class Protected_Video_Public
    */
   public function enqueue_inline_styles()
   {
-    if ($this->post_has_block_or_shortcode()) {
+    if ($this->should_enqueue_assets()) {
       $player_theme_color = get_option(
         'protected_video_player_theme_color',
         '#00b3ff'
@@ -92,7 +92,7 @@ class Protected_Video_Public
    */
   public function enqueue_styles()
   {
-    if ($this->post_has_block_or_shortcode()) {
+    if ($this->should_enqueue_assets()) {
       // Public CSS with bundled Plyr CSS
       wp_enqueue_style(
         $this->plugin_name,
@@ -108,7 +108,7 @@ class Protected_Video_Public
    */
   public function enqueue_scripts()
   {
-    if ($this->post_has_block_or_shortcode()) {
+    if ($this->should_enqueue_assets()) {
       // Public JS with bundled Plyr JS
       wp_enqueue_script(
         $this->plugin_name,
@@ -121,15 +121,45 @@ class Protected_Video_Public
   }
 
   /**
-   * Utility returning if the post contains the plugin block or Shortcode.
+   * Utility returning if the scripts and styles should be enqueued.
    */
-  public function post_has_block_or_shortcode()
+  public function should_enqueue_assets()
   {
+    $post_id = get_the_ID();
     if (
-      has_block('protected-video/protected-video', get_the_ID()) ||
-      has_shortcode(get_the_content(), 'protected_video')
+      $this->post_contains_block_or_shortcode($post_id) ||
+      $this->post_is_custom_post_type($post_id)
     ) {
       return true;
     }
+    return false;
+  }
+
+  /**
+   * Utility returning if the post contains the plugin block or Shortcode.
+   */
+  public function post_contains_block_or_shortcode($post_id)
+  {
+    $post_content = get_post_field('post_content', $post_id);
+    if (
+      has_block('protected-video/protected-video', $post_id) ||
+      has_shortcode($post_content, 'protected_video')
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Utility returning if the post is any custom post type.
+   */
+  public function post_is_custom_post_type($post_id)
+  {
+    if (
+      in_array(get_post_type($post_id), get_post_types(['_builtin' => false]))
+    ) {
+      return true;
+    }
+    return false;
   }
 }
