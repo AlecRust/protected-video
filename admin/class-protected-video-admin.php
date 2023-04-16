@@ -179,7 +179,7 @@ class Protected_Video_Admin
     // Register block JS
     wp_register_script(
       'protected-video-block',
-      plugins_url('js/protected-video-block.js', __FILE__),
+      plugin_dir_url(__FILE__) . 'js/protected-video-block.js',
       $asset_file['dependencies'],
       $asset_file['version']
     );
