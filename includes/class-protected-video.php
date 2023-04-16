@@ -150,13 +150,6 @@ class Protected_Video
       'protected_video_shortcode'
     );
 
-    // Inline player CSS
-    $this->loader->add_action(
-      'wp_head',
-      $plugin_public,
-      'enqueue_inline_styles'
-    );
-
     // Public CSS
     $this->loader->add_action(
       'wp_enqueue_scripts',

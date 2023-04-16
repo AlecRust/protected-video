@@ -69,25 +69,6 @@ class Protected_Video_Public
   }
 
   /**
-   * Adds inline player CSS to <head>.
-   */
-  public function enqueue_inline_styles()
-  {
-    if ($this->should_enqueue_assets()) {
-      $player_theme_color = get_option(
-        'protected_video_player_theme_color',
-        '#00b3ff'
-      );
-
-      echo '<style>
-        :root { --plyr-color-main: ' .
-        $player_theme_color .
-        '; }
-      </style>';
-    }
-  }
-
-  /**
    * Register stylesheets for the public-facing side of the site.
    */
   public function enqueue_styles()
@@ -99,6 +80,15 @@ class Protected_Video_Public
         plugin_dir_url(__FILE__) . 'css/protected-video-public.css',
         [], // no stylesheet dependencies
         $this->version // include plugin version in query string
+      );
+
+      // Inline styles for customizing player theme color
+      wp_add_inline_style(
+        $this->plugin_name,
+        sprintf(
+          ':root { --plyr-color-main: %s; }',
+          get_option('protected_video_player_theme_color', '#00b3ff')
+        )
       );
     }
   }
