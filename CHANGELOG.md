@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.8.1](https://github.com/AlecRust/protected-video/compare/1.8.0...1.8.1)
+
+- Bump build dependencies [`62b1ae4`](https://github.com/AlecRust/protected-video/commit/62b1ae45036ebfb93f51c9bcbeaeed6be3b8b8d5)
+- Load player assets on custom post type pages [`9a77b23`](https://github.com/AlecRust/protected-video/commit/9a77b234a7c2a4d6e5c9367cf490d108ccaa167e)
+- Use better wp_add_inline_style() for loading inline styles [`a13b1bf`](https://github.com/AlecRust/protected-video/commit/a13b1bf223abad6eddf5afdbb90c82243dee61c7)
+- Use plugin_dir_url consistently over plugins_url [`f7d8d13`](https://github.com/AlecRust/protected-video/commit/f7d8d133f95a51532283e0b7632393edfdcc16cc)
+
 #### [1.8.0](https://github.com/AlecRust/protected-video/compare/1.7.22...1.8.0)
+
+> 1 April 2023
 
 - Bump dependencies including Plyr 3.7.7 -&gt; 3.7.8 [`4a1a578`](https://github.com/AlecRust/protected-video/commit/4a1a578c50ecec0fd3ae4864c26eb0f2fdcf67ed)
 - Simplify JS for decoding HTML [`aea9a17`](https://github.com/AlecRust/protected-video/commit/aea9a179731e22e955d7f787b4e307c10c51104f)

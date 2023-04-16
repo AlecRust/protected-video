@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.2
-Stable tag:        1.8.0
+Stable tag:        1.8.1
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -112,7 +112,14 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.8.0 =
+= 1.8.1 =
+
+* Bump build dependencies
+* Load player assets on custom post type pages
+* Use better wp_add_inline_style() for loading inline styles
+* Use plugin_dir_url consistently over plugins_url
+
+= 1.8.0 - 2023-04-01 =
 
 * Bump dependencies including Plyr 3.7.7 -&gt; 3.7.8
 * Simplify JS for decoding HTML
