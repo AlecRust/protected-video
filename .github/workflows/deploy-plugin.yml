@@ -11,8 +11,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+          cache: 'yarn'
       - name: Install Node packages
-        uses: bahmutov/npm-install@v1
+        run: yarn install --immutable
       - name: Build dist files
         run: yarn build
       - name: Deploy to WordPress SVN
