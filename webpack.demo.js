@@ -2,7 +2,6 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CnameWebpackPlugin = require('cname-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const postcssPresetEnv = require('postcss-preset-env')
@@ -65,9 +64,6 @@ module.exports = {
           'https://ps.w.org/protected-video/assets/banner-772x250.png',
         viewport: 'width=device-width, initial-scale=1',
       },
-    }),
-    new CnameWebpackPlugin({
-      domain: 'protected-video.alecrust.com',
     }),
     new MiniCssExtractPlugin({
       filename: 'protected-video-public.css',
