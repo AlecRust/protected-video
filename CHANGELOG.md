@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.8.2](https://github.com/AlecRust/protected-video/compare/1.8.1...1.8.2)
+
+- Bump dependencies [`f94652d`](https://github.com/AlecRust/protected-video/commit/f94652da9d4e0e25e62a02d8db468a0596728aeb)
+- Bump dependencies [`22410ca`](https://github.com/AlecRust/protected-video/commit/22410ca77d6cdc59e052266850932c2e8e532ced)
+- Improve CI and demo deploy [`e407732`](https://github.com/AlecRust/protected-video/commit/e4077321bf6b9b7c97166b4f565327d3883aa215)
+- Remove unnecessary CNAME file from demo [`c5b06ac`](https://github.com/AlecRust/protected-video/commit/c5b06ac88dd32f6ac0fae23b3f892f3f5ebfa48e)
+- Improve plugin icon [`273b19c`](https://github.com/AlecRust/protected-video/commit/273b19c6ef6ce0c0b0f692aa58f63477af5f3f27)
+
 #### [1.8.1](https://github.com/AlecRust/protected-video/compare/1.8.0...1.8.1)
+
+> 16 April 2023
 
 - Bump build dependencies [`62b1ae4`](https://github.com/AlecRust/protected-video/commit/62b1ae45036ebfb93f51c9bcbeaeed6be3b8b8d5)
 - Load player assets on custom post type pages [`9a77b23`](https://github.com/AlecRust/protected-video/commit/9a77b234a7c2a4d6e5c9367cf490d108ccaa167e)
