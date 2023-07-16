@@ -8,12 +8,12 @@
  * Author:            Alec Rust
  * Author URI:        https://www.alecrust.com/
  * Text Domain:       protected-video
- * License:           GPL 2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package           Protected_Video
  * @author            Alec Rust
- * @license           GPL 2.0+
+ * @license           GPL-2.0-or-later
  * @link              https://www.alecrust.com/
  */
 
