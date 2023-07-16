@@ -8,7 +8,6 @@
   margin-bottom: 30px;
 
   &.plyr--youtube {
-
     /**
     * Disable interaction with underlying player when paused
     * https://github.com/sampotts/plyr/issues/2181

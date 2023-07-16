@@ -13,10 +13,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19
-          cache: 'yarn'
+          cache: "yarn"
       - name: Install Node packages
         run: yarn install --immutable
       - name: Run Prettier
-        run: yarn prettier --check '**/*.{html,php,js,md}'
+        run: yarn prettier --check .
       - name: Run ESLint
-        run: yarn eslint '**/*.js'
+        run: yarn eslint .'
