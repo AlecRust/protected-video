@@ -16,7 +16,5 @@ jobs:
           cache: "yarn"
       - name: Install Node packages
         run: yarn install --immutable
-      - name: Run Prettier
-        run: yarn prettier --check .
-      - name: Run ESLint
-        run: yarn eslint .'
+      - name: Run lint
+        run: yarn lint
