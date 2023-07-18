@@ -4,24 +4,9 @@ import { Fragment } from '@wordpress/element' // eslint-disable-line no-unused-v
 import { Placeholder, TextControl } from '@wordpress/components' // eslint-disable-line no-unused-vars
 import { registerBlockType } from '@wordpress/blocks'
 import getVideoId from 'get-video-id'
+import metadata from './block.json'
 
-const attributes = {
-  videoUrl: { type: 'string' },
-  videoId: { type: 'string' },
-  videoService: { type: 'string' },
-  cannotEmbed: { type: 'boolean' },
-}
-
-registerBlockType('protected-video/protected-video', {
-  title: __('Protected Video', 'protected-video'),
-  description: __(
-    'YouTube/Vimeo player that prevents easy sharing of the video.',
-    'protected-video'
-  ),
-  icon: 'lock',
-  category: 'embed',
-  attributes,
-
+registerBlockType(metadata, {
   edit(props) {
     const { videoUrl, videoId, videoService, cannotEmbed } = props.attributes
 
@@ -101,7 +86,7 @@ registerBlockType('protected-video/protected-video', {
 
   deprecated: [
     {
-      attributes,
+      attributes: metadata.attributes,
 
       save(props) {
         const { videoId, videoService } = props.attributes

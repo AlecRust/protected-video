@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 1,
+  "name": "protected-video/protected-video",
+  "version": "1.8.2",
+  "title": "Protected Video",
+  "category": "embed",
+  "icon": "lock",
+  "description": "YouTube/Vimeo player that prevents easy sharing of the video.",
+  "attributes": {
+    "videoUrl": {
+      "type": "string"
+    },
+    "videoId": {
+      "type": "string"
+    },
+    "videoService": {
+      "type": "string"
+    },
+    "cannotEmbed": {
+      "type": "boolean"
+    }
+  },
+  "textdomain": "protected-video"
+}
