@@ -21,10 +21,10 @@ registerBlockType(metadata, {
     }
 
     function thumbUrl() {
-      if (videoService == 'youtube') {
+      if (videoService === 'youtube') {
         return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`
       }
-      if (videoService == 'vimeo') {
+      if (videoService === 'vimeo') {
         return `https://vumbnail.com/${videoId}.jpg`
       }
     }
@@ -37,7 +37,7 @@ registerBlockType(metadata, {
           className="wp-block-protected-video"
           instructions={__(
             'Paste the URL of a YouTube or Vimeo video you want to display in a protected player.',
-            'protected-video'
+            'protected-video',
           )}
         >
           <TextControl
@@ -46,7 +46,7 @@ registerBlockType(metadata, {
             onChange={onChangeVideoUrl}
             placeholder={__(
               'e.g. https://youtu.be/c_hO_fjmMnk',
-              'protected-video'
+              'protected-video',
             )}
           />
           {videoId && (
@@ -63,7 +63,7 @@ registerBlockType(metadata, {
             <div>
               {__(
                 'Sorry, a video ID could not be found in that URL.',
-                'protected-video'
+                'protected-video',
               )}
             </div>
           )}
