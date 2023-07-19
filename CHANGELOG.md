@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.8.3](https://github.com/AlecRust/protected-video/compare/1.8.2...1.8.3)
+
+- Bump dependencies [`b5b25ee`](https://github.com/AlecRust/protected-video/commit/b5b25ee792523547cb8d83668840232887fe3720)
+- Store block metadata in block.json [`f8a5638`](https://github.com/AlecRust/protected-video/commit/f8a5638f67916ed5112c55e65fbbcb7e6a9aa38c)
+- Run Prettier on all possible file extensions [`6f156f9`](https://github.com/AlecRust/protected-video/commit/6f156f9ac192c9f3e68b991b3ed016e0aff1036a)
+- Bump semver from 5.7.1 to 5.7.2 [`4000cee`](https://github.com/AlecRust/protected-video/commit/4000ceeaff5027136582b9d7523e1a59e5594d92)
+- Separate lint and format scripts [`0d2a3a8`](https://github.com/AlecRust/protected-video/commit/0d2a3a89b0428156b3cf3432ace9c62bfcff18ab)
+- Tidy license comments [`bcddea6`](https://github.com/AlecRust/protected-video/commit/bcddea6be6da1871e065a8f69d3062a97b4bc8bf)
+- Bump actions/upload-pages-artifact from 1 to 2 [`c4e95f2`](https://github.com/AlecRust/protected-video/commit/c4e95f2cc0f34f61a83ed4a7045b3ff1a29cca60)
+- Exclude public CSS from Prettier [`4bc0dcb`](https://github.com/AlecRust/protected-video/commit/4bc0dcb343036c8fd1cbdf996e5196109464234b)
+
 #### [1.8.2](https://github.com/AlecRust/protected-video/compare/1.8.1...1.8.2)
+
+> 26 June 2023
 
 - Bump dependencies [`f94652d`](https://github.com/AlecRust/protected-video/commit/f94652da9d4e0e25e62a02d8db468a0596728aeb)
 - Bump dependencies [`22410ca`](https://github.com/AlecRust/protected-video/commit/22410ca77d6cdc59e052266850932c2e8e532ced)
