@@ -6,12 +6,12 @@ import getVideoId from 'get-video-id'
 import metadata from './block.json'
 
 registerBlockType(metadata, {
-  edit(props) {
-    const { videoUrl, videoId, videoService, cannotEmbed } = props.attributes
+  edit({ attributes, setAttributes }) {
+    const { videoUrl, videoId, videoService, cannotEmbed } = attributes
 
     function onChangeVideoUrl(newVideoUrl) {
       const videoIdAndService = getVideoId(newVideoUrl)
-      props.setAttributes({
+      setAttributes({
         videoUrl: newVideoUrl,
         videoId: videoIdAndService.id,
         videoService: videoIdAndService.service,
@@ -70,8 +70,8 @@ registerBlockType(metadata, {
     )
   },
 
-  save(props) {
-    const { videoId, videoService } = props.attributes
+  save({ attributes }) {
+    const { videoId, videoService } = attributes
 
     return (
       <div
@@ -86,8 +86,8 @@ registerBlockType(metadata, {
     {
       attributes: metadata.attributes,
 
-      save(props) {
-        const { videoId, videoService } = props.attributes
+      save({ attributes }) {
+        const { videoId, videoService } = attributes
 
         return (
           <div
