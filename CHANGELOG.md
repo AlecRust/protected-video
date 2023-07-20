@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.8.4](https://github.com/AlecRust/protected-video/compare/1.8.3...1.8.4)
+
+- Bump dependencies [`16c3747`](https://github.com/AlecRust/protected-video/commit/16c37479bb9adf6e92efc6cd0e5bf82ad0a39732)
+- Move thumbUrl() out of main block code [`dbcf3b6`](https://github.com/AlecRust/protected-video/commit/dbcf3b6dbb22c337a537d08f110466dffde8b2b1)
+- Use destructuring [`fc1636a`](https://github.com/AlecRust/protected-video/commit/fc1636a6b613c207cab4abbb0b6ec982e7c16131)
+- Implement useBlockProps() to support block.json apiVersion 3 [`1f09946`](https://github.com/AlecRust/protected-video/commit/1f099468054a05a54acef6f6a1ba7dcf9fea6462)
+- Set editorScript in block.json [`a74e6b5`](https://github.com/AlecRust/protected-video/commit/a74e6b5d14e052b973c45ecf91c51448d95a6a05)
+
 #### [1.8.3](https://github.com/AlecRust/protected-video/compare/1.8.2...1.8.3)
+
+> 19 July 2023
 
 - Bump dependencies [`b5b25ee`](https://github.com/AlecRust/protected-video/commit/b5b25ee792523547cb8d83668840232887fe3720)
 - Store block metadata in block.json [`f8a5638`](https://github.com/AlecRust/protected-video/commit/f8a5638f67916ed5112c55e65fbbcb7e6a9aa38c)

@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.2
-Stable tag:        1.8.3
+Stable tag:        1.8.4
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -112,7 +112,15 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.8.3 =
+= 1.8.4 =
+
+* Bump dependencies
+* Move thumbUrl() out of main block code
+* Use destructuring
+* Implement useBlockProps() to support block.json apiVersion 3
+* Set editorScript in block.json
+
+= 1.8.3 - 2023-07-19 =
 
 * Bump dependencies
 * Store block metadata in block.json
