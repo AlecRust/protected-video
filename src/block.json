@@ -5,7 +5,6 @@
   "version": "1.8.5",
   "title": "Protected Video",
   "category": "embed",
-  "icon": "lock",
   "example": {
     "attributes": {
       "videoUrl": "https://www.youtube.com/watch?v=9bZkp7q19f0",

@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const postcssPresetEnv = require('postcss-preset-env')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -67,6 +68,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'protected-video-public.css',
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'src/demo/favicon.svg', to: '.' }],
     }),
   ],
 }
