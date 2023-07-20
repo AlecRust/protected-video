@@ -22,7 +22,9 @@ function decodeVideoBlock(videoBlock) {
   videoBlock.dataset.plyrEmbedId = decodedVideoId
 }
 
-const videoBlocks = document.querySelectorAll('.wp-block-protected-video')
+const videoBlocks = document.querySelectorAll(
+  '.wp-block-protected-video-protected-video',
+)
 
 videoBlocks.forEach((videoBlock) => {
   decodeVideoBlock(videoBlock)

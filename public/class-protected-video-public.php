@@ -58,7 +58,7 @@ class Protected_Video_Public
 
     $output_html =
       '<div class="' .
-      'wp-block-protected-video-protected-video wp-block-protected-video' .
+      'wp-block-protected-video-protected-video' .
       '" data-id1="' .
       base64_encode($atts['service']) .
       '" data-id2="' .
