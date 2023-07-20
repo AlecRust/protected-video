@@ -18,7 +18,7 @@ registerBlockType(metadata, {
   edit({ attributes, setAttributes }) {
     const { videoUrl, videoId, videoService } = attributes
 
-    function onChangeVideoUrl(newUrl) {
+    function setVideoDetails(newUrl) {
       const { id: newId, service: newService } = getVideoId(newUrl)
       setAttributes({
         videoUrl: newUrl,
@@ -40,7 +40,7 @@ registerBlockType(metadata, {
           <TextControl
             label={__('Video URL', 'protected-video')}
             value={videoUrl}
-            onChange={onChangeVideoUrl}
+            onChange={setVideoDetails}
             placeholder={__(
               'e.g. https://youtu.be/c_hO_fjmMnk',
               'protected-video',
