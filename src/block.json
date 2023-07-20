@@ -10,8 +10,7 @@
     "attributes": {
       "videoUrl": "https://www.youtube.com/watch?v=9bZkp7q19f0",
       "videoId": "9bZkp7q19f0",
-      "videoService": "youtube",
-      "cannotEmbed": false
+      "videoService": "youtube"
     }
   },
   "description": "YouTube/Vimeo player that prevents easy sharing of the video.",
@@ -24,9 +23,6 @@
     },
     "videoService": {
       "type": "string"
-    },
-    "cannotEmbed": {
-      "type": "boolean"
     }
   },
   "textdomain": "protected-video",

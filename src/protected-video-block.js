@@ -5,7 +5,7 @@ import { registerBlockType } from '@wordpress/blocks'
 import getVideoId from 'get-video-id'
 import metadata from './block.json'
 
-function thumbUrl(videoService, videoId) {
+function getVideoThumb(videoService, videoId) {
   if (videoService === 'youtube') {
     return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`
   }
@@ -16,15 +16,14 @@ function thumbUrl(videoService, videoId) {
 
 registerBlockType(metadata, {
   edit({ attributes, setAttributes }) {
-    const { videoUrl, videoId, videoService, cannotEmbed } = attributes
+    const { videoUrl, videoId, videoService } = attributes
 
-    function onChangeVideoUrl(newVideoUrl) {
-      const videoIdAndService = getVideoId(newVideoUrl)
+    function onChangeVideoUrl(newUrl) {
+      const { id: newId, service: newService } = getVideoId(newUrl)
       setAttributes({
-        videoUrl: newVideoUrl,
-        videoId: videoIdAndService.id,
-        videoService: videoIdAndService.service,
-        cannotEmbed: newVideoUrl && !videoIdAndService.id,
+        videoUrl: newUrl,
+        videoId: newId,
+        videoService: newService,
       })
     }
 
@@ -50,14 +49,14 @@ registerBlockType(metadata, {
           {videoId && (
             <div>
               <img
-                src={thumbUrl(videoService, videoId)}
+                src={getVideoThumb(videoService, videoId)}
                 width="320"
                 height="180"
                 alt={__('Video thumbnail', 'protected-video')}
               />
             </div>
           )}
-          {cannotEmbed && (
+          {videoUrl && !videoId && (
             <div>
               {__(
                 'Sorry, a video ID could not be found in that URL.',
