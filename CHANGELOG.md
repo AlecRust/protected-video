@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.8.5](https://github.com/AlecRust/protected-video/compare/1.8.4...1.8.5)
+
+- Bump release-it version [`b161f34`](https://github.com/AlecRust/protected-video/commit/b161f34bec0a05cd948cb8b1f628a03bfa5bae0c)
+- Remove unnecessary cannotEmbed block attribute [`5ccf5ac`](https://github.com/AlecRust/protected-video/commit/5ccf5ac7beec11bc70ac79c227c35f5f054fd2b3)
+- Fix class names [`5c11d8f`](https://github.com/AlecRust/protected-video/commit/5c11d8f1024b4c3d491aa5071ccba145ff1a956f)
+- Add support for block preview when browsing [`335ab29`](https://github.com/AlecRust/protected-video/commit/335ab2959cb7295037cf74aa8747ecd9ff1e5a10)
+- Improve robustness of block editor CSS [`800c57a`](https://github.com/AlecRust/protected-video/commit/800c57a0726e183f06d969e3e348a7a57071175e)
+
 #### [1.8.4](https://github.com/AlecRust/protected-video/compare/1.8.3...1.8.4)
+
+> 20 July 2023
 
 - Bump dependencies [`16c3747`](https://github.com/AlecRust/protected-video/commit/16c37479bb9adf6e92efc6cd0e5bf82ad0a39732)
 - Move thumbUrl() out of main block code [`dbcf3b6`](https://github.com/AlecRust/protected-video/commit/dbcf3b6dbb22c337a537d08f110466dffde8b2b1)
