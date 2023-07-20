@@ -3,6 +3,6 @@
  */
 
 /* Override flex layout in editor */
-.wp-block-protected-video .components-placeholder__fieldset {
+.wp-block-protected-video-protected-video .components-placeholder__fieldset {
   flex-direction: column;
 }
