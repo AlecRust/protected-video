@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.2
-Stable tag:        1.8.5
+Stable tag:        1.8.6
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -112,7 +112,12 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.8.5 =
+= 1.8.6 =
+
+* Add custom SVG as block icon
+* Improve function name
+
+= 1.8.5 - 2023-07-20 =
 
 * Bump release-it version
 * Remove unnecessary cannotEmbed block attribute

@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.8.6](https://github.com/AlecRust/protected-video/compare/1.8.5...1.8.6)
+
+- Add custom SVG as block icon [`faac228`](https://github.com/AlecRust/protected-video/commit/faac22893a2ab109561809afbf4c2724f0473b1d)
+- Improve function name [`38fc561`](https://github.com/AlecRust/protected-video/commit/38fc561746ddae001a527b93e7a32dbe3c2ac997)
+
 #### [1.8.5](https://github.com/AlecRust/protected-video/compare/1.8.4...1.8.5)
+
+> 20 July 2023
 
 - Bump release-it version [`b161f34`](https://github.com/AlecRust/protected-video/commit/b161f34bec0a05cd948cb8b1f628a03bfa5bae0c)
 - Remove unnecessary cannotEmbed block attribute [`5ccf5ac`](https://github.com/AlecRust/protected-video/commit/5ccf5ac7beec11bc70ac79c227c35f5f054fd2b3)
