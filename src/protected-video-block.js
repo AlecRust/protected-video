@@ -1,6 +1,5 @@
 import { __ } from '@wordpress/i18n'
-import { BlockIcon } from '@wordpress/block-editor' // eslint-disable-line no-unused-vars
-import { Fragment } from '@wordpress/element' // eslint-disable-line no-unused-vars
+import { useBlockProps, BlockIcon } from '@wordpress/block-editor' // eslint-disable-line no-unused-vars
 import { Placeholder, TextControl } from '@wordpress/components' // eslint-disable-line no-unused-vars
 import { registerBlockType } from '@wordpress/blocks'
 import getVideoId from 'get-video-id'
@@ -30,11 +29,10 @@ registerBlockType(metadata, {
     }
 
     return (
-      <Fragment>
+      <div {...useBlockProps()}>
         <Placeholder
           icon={<BlockIcon icon="lock" />}
           label={__('Protected Video', 'protected-video')}
-          className="wp-block-protected-video"
           instructions={__(
             'Paste the URL of a YouTube or Vimeo video you want to display in a protected player.',
             'protected-video',
@@ -68,7 +66,7 @@ registerBlockType(metadata, {
             </div>
           )}
         </Placeholder>
-      </Fragment>
+      </div>
     )
   },
 
@@ -77,7 +75,7 @@ registerBlockType(metadata, {
 
     return (
       <div
-        className="wp-block-protected-video"
+        {...useBlockProps.save()}
         data-id1={btoa(videoService)}
         data-id2={btoa(videoId)}
       />
