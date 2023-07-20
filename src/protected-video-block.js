@@ -5,6 +5,15 @@ import { registerBlockType } from '@wordpress/blocks'
 import getVideoId from 'get-video-id'
 import metadata from './block.json'
 
+function thumbUrl(videoService, videoId) {
+  if (videoService === 'youtube') {
+    return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`
+  }
+  if (videoService === 'vimeo') {
+    return `https://vumbnail.com/${videoId}.jpg`
+  }
+}
+
 registerBlockType(metadata, {
   edit({ attributes, setAttributes }) {
     const { videoUrl, videoId, videoService, cannotEmbed } = attributes
@@ -17,15 +26,6 @@ registerBlockType(metadata, {
         videoService: videoIdAndService.service,
         cannotEmbed: newVideoUrl && !videoIdAndService.id,
       })
-    }
-
-    function thumbUrl() {
-      if (videoService === 'youtube') {
-        return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`
-      }
-      if (videoService === 'vimeo') {
-        return `https://vumbnail.com/${videoId}.jpg`
-      }
     }
 
     return (
@@ -50,7 +50,7 @@ registerBlockType(metadata, {
           {videoId && (
             <div>
               <img
-                src={thumbUrl()}
+                src={thumbUrl(videoService, videoId)}
                 width="320"
                 height="180"
                 alt={__('Video thumbnail', 'protected-video')}
