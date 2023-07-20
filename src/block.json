@@ -21,5 +21,6 @@
       "type": "boolean"
     }
   },
-  "textdomain": "protected-video"
+  "textdomain": "protected-video",
+  "editorScript": "file:./protected-video-block.js"
 }
