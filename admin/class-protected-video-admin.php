@@ -169,28 +169,15 @@ class Protected_Video_Admin
   }
 
   /**
-   * Register the Gutenberg block for the blocks editor.
+   * Register the block using the metadata loaded from the `block.json` file.
+   * Behind the scenes, it also registers all assets so they can be enqueued
+   * through the block editor in the corresponding context.
+   *
+   * @see https://developer.wordpress.org/reference/functions/register_block_type/
    */
   public function register_block()
   {
-    $asset_file = include plugin_dir_path(__FILE__) .
-      'js/protected-video-block.asset.php';
-
-    // Register block JS
-    wp_register_script(
-      'protected-video-block',
-      plugin_dir_url(__FILE__) . 'js/protected-video-block.js',
-      $asset_file['dependencies'],
-      $asset_file['version']
-    );
-    register_block_type('protected-video/protected-video', [
-      'editor_script' => 'protected-video-block',
-    ]);
-
-    // Load translations for JS
-    if (function_exists('wp_set_script_translations')) {
-      wp_set_script_translations('protected-video-block', 'protected-video');
-    }
+    register_block_type(__DIR__ . '/../build');
   }
 
   /**
