@@ -17,9 +17,6 @@
     "release": "release-it --ci",
     "prepare": "husky install"
   },
-  "browserslist": [
-    "extends @wordpress/browserslist-config"
-  ],
   "dependencies": {
     "plyr": "^3.7.8"
   },
@@ -27,7 +24,6 @@
     "@babel/core": "^7.22.9",
     "@prettier/plugin-php": "^0.19.6",
     "@wordpress/babel-preset-default": "^7.22.0",
-    "@wordpress/browserslist-config": "^5.21.0",
     "@wordpress/scripts": "^26.9.0",
     "auto-changelog": "^2.4.0",
     "babel-loader": "^9.1.3",
