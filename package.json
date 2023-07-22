@@ -10,8 +10,8 @@
   "scripts": {
     "start": "wp-scripts start",
     "build": "wp-scripts build",
-    "start:demo": "webpack serve --mode development",
-    "build:demo": "webpack",
+    "start:demo": "webpack serve --mode development -c webpack.demo.js",
+    "build:demo": "webpack -c webpack.demo.js",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write . && eslint --fix .",
     "release": "release-it --ci",

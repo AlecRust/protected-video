@@ -1,5 +1,6 @@
 /**
  * Build process for player demo
+ * NOTE: Don't rename this to webpack.config.js or it will override wp-scripts
  */
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
