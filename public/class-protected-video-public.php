@@ -95,12 +95,19 @@ class Protected_Video_Public
   public function enqueue_scripts()
   {
     if ($this->should_enqueue_assets()) {
+      // Get block public JS metadata
+      $asset_file = include plugin_dir_path(__FILE__) .
+        '../build/view.asset.php';
+      $block_view_version = isset($asset_file['version'])
+        ? $asset_file['version']
+        : false;
+
       // Public JS with bundled Plyr JS
       wp_enqueue_script(
         $this->plugin_name,
         plugin_dir_url(__FILE__) . '../build/view.js',
         [], // no script dependencies
-        $this->version, // include plugin version in query string
+        $block_view_version,
         true // enqueue at the end of <body> instead of in <head>
       );
     }
@@ -113,7 +120,7 @@ class Protected_Video_Public
   {
     $post_id = get_the_ID();
     if (
-      $this->post_contains_shortcode($post_id) ||
+      $this->post_contains_block_or_shortcode($post_id) ||
       $this->post_is_custom_post_type($post_id)
     ) {
       return true;
@@ -124,10 +131,13 @@ class Protected_Video_Public
   /**
    * Utility returning if the post contains the plugin Shortcode.
    */
-  public function post_contains_shortcode($post_id)
+  public function post_contains_block_or_shortcode($post_id)
   {
     $post_content = get_post_field('post_content', $post_id);
-    if (has_shortcode($post_content, 'protected_video')) {
+    if (
+      has_block('protected-video/protected-video', $post_id) ||
+      has_shortcode($post_content, 'protected_video')
+    ) {
       return true;
     }
     return false;
