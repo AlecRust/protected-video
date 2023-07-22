@@ -19,4 +19,4 @@ package.json
 package-lock.json
 readme.hbs
 README.md
-webpack.config.js
+webpack.demo.js
