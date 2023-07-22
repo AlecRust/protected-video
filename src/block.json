@@ -13,6 +13,7 @@
     }
   },
   "description": "YouTube/Vimeo player that prevents easy sharing of the video.",
+  "keywords": ["video", "youtube", "vimeo", "embed", "protected"],
   "attributes": {
     "videoUrl": {
       "type": "string"
