@@ -2,8 +2,8 @@
 Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
-Tested up to:      6.2
-Stable tag:        1.8.6
+Tested up to:      6.3
+Stable tag:        1.9.0
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -112,7 +112,21 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.8.6 =
+= 1.9.0 =
+
+* Switch from Yarn to npm, downgrade Prettier to fix prettier-php incompatibility
+* Use wp-scripts to build all block assets
+* Move block build directory from /admin/js to /build
+* Fix duplicate enqueuing of public JS
+* Tidy package.json
+* Fix demo webpack config filename
+* Move get-video-id to main dependencies
+* Remove now-unnecessary Browserslist config
+* Add "player" to block.json keywords
+* Update plugin "Tested up to" to WordPress 6.3
+* Add keywords to block.json
+
+= 1.8.6 - 2023-07-20 =
 
 * Add custom SVG as block icon
 * Improve function name

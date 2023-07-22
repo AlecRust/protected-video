@@ -2,7 +2,23 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.9.0](https://github.com/AlecRust/protected-video/compare/1.8.6...1.9.0)
+
+- Switch from Yarn to npm, downgrade Prettier to fix prettier-php incompatibility [`6bb7d8b`](https://github.com/AlecRust/protected-video/commit/6bb7d8b9b2cdff2ba6ba255dd130f10a57073294)
+- Use wp-scripts to build all block assets [`30e2e81`](https://github.com/AlecRust/protected-video/commit/30e2e8152b8e5b0bb39f4e7908c4e9d03d93e39b)
+- Move block build directory from /admin/js to /build [`1aee52a`](https://github.com/AlecRust/protected-video/commit/1aee52a24ecbadf9cde29bccfb2c68d2c50bb379)
+- Fix duplicate enqueuing of public JS [`562a197`](https://github.com/AlecRust/protected-video/commit/562a197147bd1746478f8169bcd49ad37a62dd1e)
+- Tidy package.json [`0ea705f`](https://github.com/AlecRust/protected-video/commit/0ea705f50bd226c9d1e9efcdc9d64fc8d1734563)
+- Fix demo webpack config filename [`ef180d9`](https://github.com/AlecRust/protected-video/commit/ef180d96d6d794dcd610bf4959e8f461bb67c5ea)
+- Move get-video-id to main dependencies [`15a8a14`](https://github.com/AlecRust/protected-video/commit/15a8a144d6a6431a029b5adbab5948951e353825)
+- Remove now-unnecessary Browserslist config [`a5fc8fe`](https://github.com/AlecRust/protected-video/commit/a5fc8fe73e766a4d3a1d9cdf5c3592623a5c65c3)
+- Add "player" to block.json keywords [`3662c8f`](https://github.com/AlecRust/protected-video/commit/3662c8f0aa74f163a3215ab64f4b1f01f3a4a506)
+- Update plugin "Tested up to" to WordPress 6.3 [`38eebe9`](https://github.com/AlecRust/protected-video/commit/38eebe911d1107d54eb08f3c02e35b5de4ab4735)
+- Add keywords to block.json [`d23ac37`](https://github.com/AlecRust/protected-video/commit/d23ac379d767fa740f83896e2a954e15384b2866)
+
 #### [1.8.6](https://github.com/AlecRust/protected-video/compare/1.8.5...1.8.6)
+
+> 20 July 2023
 
 - Add custom SVG as block icon [`faac228`](https://github.com/AlecRust/protected-video/commit/faac22893a2ab109561809afbf4c2724f0473b1d)
 - Improve function name [`38fc561`](https://github.com/AlecRust/protected-video/commit/38fc561746ddae001a527b93e7a32dbe3c2ac997)
