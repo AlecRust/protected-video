@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19
-          cache: "yarn"
+          cache: "npm"
       - name: Install Node packages
-        run: yarn install --immutable
+        run: npm ci
       - name: Run lint
-        run: yarn lint
+        run: npm run lint

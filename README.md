@@ -24,8 +24,8 @@ To embed a video either search for "Protected Video" in the Block Editor, or use
 
 To develop locally within WordPress, symlink this repository to `wp-content/plugins/protected-video`.
 
-Then run `yarn` and `yarn build` to build the plugin, and activate it in the WordPress admin.
+Then run `npm install` and `npm run build` to build the plugin, and activate it in the WordPress admin.
 
-Run `yarn start` to build/watch files for development within WordPress.
+Run `npm start` to build/watch files for development within WordPress.
 
-Run `yarn start:demo` to build/watch files for standalone player demo and open in browser.
+Run `npm run start:demo` to build/watch files for standalone player demo and open in browser.

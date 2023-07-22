@@ -15,11 +15,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19
-          cache: "yarn"
+          cache: "npm"
       - name: Install Node packages
-        run: yarn install --immutable
+        run: npm ci
       - name: Build dist files
-        run: yarn build
+        run: npm run build
       - name: Deploy to WordPress SVN
         id: deploy
         uses: 10up/action-wordpress-plugin-deploy@stable

@@ -16,8 +16,8 @@
 .release-it.json
 CHANGELOG.md
 package.json
+package-lock.json
 readme.hbs
 README.md
 webpack.demo.js
 webpack.public.js
-yarn.lock

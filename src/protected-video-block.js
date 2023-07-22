@@ -53,7 +53,7 @@ registerBlockType(metadata, {
           label={__('Protected Video', 'protected-video')}
           instructions={__(
             'Paste the URL of a YouTube or Vimeo video you want to display in a protected player.',
-            'protected-video',
+            'protected-video'
           )}
         >
           <TextControl
@@ -62,7 +62,7 @@ registerBlockType(metadata, {
             onChange={setVideoDetails}
             placeholder={__(
               'e.g. https://youtu.be/c_hO_fjmMnk',
-              'protected-video',
+              'protected-video'
             )}
           />
           {videoId && (
@@ -79,7 +79,7 @@ registerBlockType(metadata, {
             <div>
               {__(
                 'Sorry, a video ID could not be found in that URL.',
-                'protected-video',
+                'protected-video'
               )}
             </div>
           )}

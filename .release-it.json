@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "before:init": "yarn lint",
+    "before:init": "npm run lint",
     "after:bump": [
       "replace-in-files --string=\"${latestVersion}'\" --replacement=\"${version}'\" protected-video.php",
       "replace-in-files --string='Version:           ${latestVersion}' --replacement='Version:           ${version}' protected-video.php",
