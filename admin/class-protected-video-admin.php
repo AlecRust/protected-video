@@ -167,29 +167,4 @@ class Protected_Video_Admin
     >
     <?php
   }
-
-  /**
-   * Register the block using the metadata loaded from the `block.json` file.
-   * Behind the scenes, it also registers all assets so they can be enqueued
-   * through the block editor in the corresponding context.
-   *
-   * @see https://developer.wordpress.org/reference/functions/register_block_type/
-   */
-  public function register_block()
-  {
-    register_block_type(__DIR__ . '/../build');
-  }
-
-  /**
-   * Register the stylesheet for the admin area.
-   */
-  public function enqueue_styles()
-  {
-    wp_enqueue_style(
-      'protected-video-admin-css',
-      plugin_dir_url(__FILE__) . 'css/protected-video-admin.css',
-      [],
-      $this->version
-    );
-  }
 }

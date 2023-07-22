@@ -92,20 +92,6 @@ class Protected_Video
       $this->get_version()
     );
 
-    // Gutenberg block
-    $this->loader->add_action(
-      'enqueue_block_editor_assets',
-      $plugin_admin,
-      'register_block'
-    );
-
-    // Admin CSS
-    $this->loader->add_action(
-      'enqueue_block_editor_assets',
-      $plugin_admin,
-      'enqueue_styles'
-    );
-
     // Admin settings page
     $this->loader->add_action(
       'admin_init',

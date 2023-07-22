@@ -3,6 +3,7 @@
  */
 
 @import "normalize.css";
+@import "../style.scss";
 
 html {
   height: 100%;
@@ -22,14 +23,10 @@ body {
   width: 300px;
 
   @media (min-width: 640px) {
-    & {
-      width: 500px;
-    }
+    width: 500px;
   }
 
   @media (min-width: 1024px) {
-    & {
-      width: 700px;
-    }
+    width: 700px;
   }
 }

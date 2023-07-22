@@ -1,0 +1,26 @@
+/**
+ * CSS for public-facing functionality (also loaded in the admin area)
+ */
+
+@import "plyr";
+
+.plyr {
+  margin-bottom: 30px;
+
+  &.plyr--youtube {
+    /**
+     * Disable interaction with underlying player when paused
+     * https://github.com/sampotts/plyr/issues/2181
+     */
+    &.plyr--paused.plyr__poster-enabled:not(.plyr--stopped) .plyr__poster {
+      display: block;
+    }
+
+    /**
+     * Disable interaction with <iframe> if poster element removed in Dev Tools
+     */
+    & iframe {
+      pointer-events: none;
+    }
+  }
+}

@@ -1,18 +1,18 @@
-// Build process for player demo
+/**
+ * Build process for player demo
+ */
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const postcssPresetEnv = require('postcss-preset-env')
 const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: ['./src/protected-video-public.js', './src/demo/style.css'],
+  entry: ['./src/view.js', './src/demo/style.scss'],
   output: {
     path: path.resolve(__dirname, 'demo'),
-    filename: 'protected-video-public.js',
   },
   devServer: {
     static: {
@@ -37,17 +37,12 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 1 } },
           {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [postcssPresetEnv({ stage: 0 })],
-              },
-            },
+            loader: 'sass-loader',
           },
         ],
       },
@@ -66,9 +61,7 @@ module.exports = {
         viewport: 'width=device-width, initial-scale=1',
       },
     }),
-    new MiniCssExtractPlugin({
-      filename: 'protected-video-public.css',
-    }),
+    new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [{ from: 'src/demo/favicon.svg', to: '.' }],
     }),

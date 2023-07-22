@@ -69,20 +69,15 @@ class Protected_Video_Public
   }
 
   /**
-   * Register stylesheets for the public-facing side of the site.
+   * Register stylesheet/inline CSS for the public-facing side of the site.
+   * NOTE: Empty stylesheet is registered to allow for inline CSS.
    */
   public function enqueue_styles()
   {
     if ($this->should_enqueue_assets()) {
-      // Public CSS with bundled Plyr CSS
-      wp_enqueue_style(
-        $this->plugin_name,
-        plugin_dir_url(__FILE__) . 'css/protected-video-public.css',
-        [], // no stylesheet dependencies
-        $this->version // include plugin version in query string
-      );
-
-      // Inline styles for customizing player theme color
+      // Load inline CSS (public CSS is loaded automatically)
+      wp_register_style($this->plugin_name, false);
+      wp_enqueue_style($this->plugin_name);
       wp_add_inline_style(
         $this->plugin_name,
         sprintf(
@@ -94,7 +89,8 @@ class Protected_Video_Public
   }
 
   /**
-   * Register the JavaScript for the public-facing side of the site.
+   * Register the JavaScript for the public-facing side of the site
+   * NOTE: This is for the case where the Shortcode alone is used.
    */
   public function enqueue_scripts()
   {
@@ -102,7 +98,7 @@ class Protected_Video_Public
       // Public JS with bundled Plyr JS
       wp_enqueue_script(
         $this->plugin_name,
-        plugin_dir_url(__FILE__) . 'js/protected-video-public.js',
+        plugin_dir_url(__FILE__) . '../build/view.js',
         [], // no script dependencies
         $this->version, // include plugin version in query string
         true // enqueue at the end of <body> instead of in <head>
@@ -117,7 +113,7 @@ class Protected_Video_Public
   {
     $post_id = get_the_ID();
     if (
-      $this->post_contains_block_or_shortcode($post_id) ||
+      $this->post_contains_shortcode($post_id) ||
       $this->post_is_custom_post_type($post_id)
     ) {
       return true;
@@ -126,15 +122,12 @@ class Protected_Video_Public
   }
 
   /**
-   * Utility returning if the post contains the plugin block or Shortcode.
+   * Utility returning if the post contains the plugin Shortcode.
    */
-  public function post_contains_block_or_shortcode($post_id)
+  public function post_contains_shortcode($post_id)
   {
     $post_content = get_post_field('post_content', $post_id);
-    if (
-      has_block('protected-video/protected-video', $post_id) ||
-      has_shortcode($post_content, 'protected_video')
-    ) {
+    if (has_shortcode($post_content, 'protected_video')) {
       return true;
     }
     return false;

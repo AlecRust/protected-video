@@ -1,5 +1,9 @@
+/**
+ * Public JS that decodes the video ID and provider from
+ * the data attributes and initializes Plyr.
+ */
+
 import Plyr from 'plyr'
-import './protected-video-public.css'
 
 function decodeVideoBlock(videoBlock) {
   const encodedProvider = videoBlock.dataset.id1
