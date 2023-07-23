@@ -122,12 +122,9 @@ class Protected_Video_Public
       return true;
     }
 
+    // Fall back check for Shortcode
     $content = do_shortcode('[protected_video]');
-    if (!empty($content)) {
-      return true;
-    }
-
-    return false;
+    return !empty($content);
   }
 
   /**
