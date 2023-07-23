@@ -61,14 +61,19 @@ class Protected_Video_Public
 
   /**
    * Register stylesheet/inline CSS for the public-facing side of the site.
-   * NOTE: Empty stylesheet is registered to allow for inline CSS.
+   * NOTE: This is for the case where the Shortcode alone is used.
    */
   public function enqueue_styles()
   {
     if ($this->should_enqueue_assets()) {
-      // Load inline CSS (public CSS is loaded automatically)
-      wp_register_style($this->plugin_name, false);
-      wp_enqueue_style($this->plugin_name);
+      // Public CSS with bundled Plyr CSS
+      wp_enqueue_style(
+        $this->plugin_name,
+        plugin_dir_url(__FILE__) . '../build/style-index.css',
+        [], // no stylesheet dependencies
+        $this->version // include plugin version in query string
+      );
+
       wp_add_inline_style(
         $this->plugin_name,
         sprintf(
