@@ -94,16 +94,14 @@ class Protected_Video_Public
       // Get block public JS metadata
       $asset_file = include plugin_dir_path(__FILE__) .
         '../build/view.asset.php';
-      $block_view_version = isset($asset_file['version'])
-        ? $asset_file['version']
-        : false;
+      $version = isset($asset_file['version']) ? $asset_file['version'] : false;
 
       // Public JS with bundled Plyr JS
       wp_enqueue_script(
         $this->plugin_name,
         plugin_dir_url(__FILE__) . '../build/view.js',
         [], // no script dependencies
-        $block_view_version,
+        $version,
         true // enqueue at the end of <body> instead of in <head>
       );
     }
@@ -121,6 +119,8 @@ class Protected_Video_Public
     ) {
       return true;
     }
+
+    return false; // Disable Shortcode fallback
 
     // Fall back check for Shortcode
     $content = do_shortcode('[protected_video]');

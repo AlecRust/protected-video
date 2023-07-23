@@ -63,19 +63,19 @@ class Protected_Video
      * Orchestrate the actions and filters of the plugin.
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
-      'includes/class-hooks-loader.php';
+      'includes/hooks-loader.php';
 
     /**
      * Define all actions that occur in the admin area.
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
-      'includes/class-admin-settings.php';
+      'includes/admin-settings.php';
 
     /**
      * Define all actions that occur in the public-facing site.
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
-      'includes/class-public-assets.php';
+      'includes/public-assets.php';
 
     $this->loader = new Protected_Video_Loader();
   }

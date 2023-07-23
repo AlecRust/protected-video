@@ -29,7 +29,7 @@ define('PROTECTED_VIDEO_VERSION', '1.9.1');
 /**
  * Load core plugin class defining all hooks.
  */
-require plugin_dir_path(__FILE__) . 'includes/class-plugin-core.php';
+require plugin_dir_path(__FILE__) . 'includes/plugin-core.php';
 
 /**
  * Register the Gutenberg block using metadata loaded from the `block.json` file.
