@@ -1,7 +1,3 @@
-/**
- * Build process for player demo
- * NOTE: Don't rename this to webpack.config.js or it will override wp-scripts
- */
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -12,11 +8,11 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   mode: 'production',
   entry: [
-    path.resolve(__dirname, 'src', 'view.js'),
-    path.resolve(__dirname, 'src', 'demo', 'style.scss'),
+    path.resolve(__dirname, '..', 'view.js'),
+    path.resolve(__dirname, 'style.scss'),
   ],
   output: {
-    path: path.resolve(__dirname, 'demo'),
+    path: path.resolve(__dirname, '..', '..', 'demo'),
     filename: '[name].[contenthash].js',
   },
   devServer: {
@@ -56,7 +52,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'demo', 'index.html'),
+      template: path.resolve(__dirname, 'index.html'),
       inject: 'body',
       meta: {
         description: 'Protected Video WordPress plugin demo page.',
@@ -71,7 +67,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src', 'demo', 'favicon.svg'),
+          from: path.resolve(__dirname, 'favicon.svg'),
           to: '.',
         },
       ],
