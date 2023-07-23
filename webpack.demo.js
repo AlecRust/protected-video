@@ -46,9 +46,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 1 } },
-          {
-            loader: 'sass-loader',
-          },
+          'sass-loader',
         ],
       },
     ],
@@ -59,6 +57,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'demo', 'index.html'),
+      inject: 'body',
       meta: {
         description: 'Protected Video WordPress plugin demo page.',
         'og:image':
