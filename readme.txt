@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.3
-Stable tag:        1.9.0
+Stable tag:        1.9.1
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -112,7 +112,19 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.9.0 =
+= 1.9.1 =
+
+* Add support for @wordpress/env Docker dev environment
+* Simplify dir structure of PHP files
+* Simplify PHP utility functions
+* Refactor Shortcode output HTML to use sprintf
+* Improve checking for Shortcode usage
+* Fix case where public CSS fails to load
+* Tidy plugin metadata
+* Add plugin banner to repo README
+* Exclude webpack.demo.js from plugin dist
+
+= 1.9.0 - 2023-07-22 =
 
 * Switch from Yarn to npm, downgrade Prettier to fix prettier-php incompatibility
 * Use wp-scripts to build all block assets

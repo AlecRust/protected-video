@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.9.1](https://github.com/AlecRust/protected-video/compare/1.9.0...1.9.1)
+
+- Add support for @wordpress/env Docker dev environment [`7ac659d`](https://github.com/AlecRust/protected-video/commit/7ac659d815c104101c186eecdbb8c8f56efa14c7)
+- Simplify dir structure of PHP files [`96f49cf`](https://github.com/AlecRust/protected-video/commit/96f49cf9076be6f505cd06ea97ae8d11af62bbc1)
+- Simplify PHP utility functions [`540c827`](https://github.com/AlecRust/protected-video/commit/540c8279707a6e39908936b70d218e05cc7db120)
+- Refactor Shortcode output HTML to use sprintf [`433347d`](https://github.com/AlecRust/protected-video/commit/433347d58fae1da15bbf84a1f011f4515e5374bc)
+- Improve checking for Shortcode usage [`23addb4`](https://github.com/AlecRust/protected-video/commit/23addb4372e68a2ce1a815531c319ee1a78a5fc8)
+- Fix case where public CSS fails to load [`a41bc5f`](https://github.com/AlecRust/protected-video/commit/a41bc5fa2d07ae09156ceda5d10e8f77d0d10040)
+- Tidy plugin metadata [`e313443`](https://github.com/AlecRust/protected-video/commit/e313443ffaf1c1a68690bf35bb15b78014800343)
+- Add plugin banner to repo README [`6de559c`](https://github.com/AlecRust/protected-video/commit/6de559cb1305bdf347d279e7a5dcf82630ffee9c)
+- Exclude webpack.demo.js from plugin dist [`3ed7692`](https://github.com/AlecRust/protected-video/commit/3ed769240167616a80d1d6ef04196eff72b67bc4)
+
 #### [1.9.0](https://github.com/AlecRust/protected-video/compare/1.8.6...1.9.0)
+
+> 22 July 2023
 
 - Switch from Yarn to npm, downgrade Prettier to fix prettier-php incompatibility [`6bb7d8b`](https://github.com/AlecRust/protected-video/commit/6bb7d8b9b2cdff2ba6ba255dd130f10a57073294)
 - Use wp-scripts to build all block assets [`30e2e81`](https://github.com/AlecRust/protected-video/commit/30e2e8152b8e5b0bb39f4e7908c4e9d03d93e39b)
