@@ -48,24 +48,15 @@ class Protected_Video_Public
   public function protected_video_shortcode($atts)
   {
     $atts = shortcode_atts(
-      [
-        'url' => '',
-        'service' => '',
-      ],
+      ['url' => '', 'service' => ''],
       $atts,
       'protected_video'
     );
-
-    $output_html =
-      '<div class="' .
-      'wp-block-protected-video-protected-video' .
-      '" data-id1="' .
-      base64_encode($atts['service']) .
-      '" data-id2="' .
-      base64_encode($atts['url']) .
-      '"></div>';
-
-    return $output_html;
+    return sprintf(
+      '<div class="wp-block-protected-video-protected-video" data-id1="%s" data-id2="%s"></div>',
+      base64_encode($atts['service']),
+      base64_encode($atts['url'])
+    );
   }
 
   /**
