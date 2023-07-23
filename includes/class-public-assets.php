@@ -119,28 +119,18 @@ class Protected_Video_Public
   public function should_enqueue_assets()
   {
     $post_id = get_the_ID();
-    if (
-      $this->post_contains_block_or_shortcode($post_id) ||
-      $this->post_is_custom_post_type($post_id)
-    ) {
-      return true;
-    }
-    return false;
+    return $this->post_contains_block_or_shortcode($post_id) ||
+      $this->post_is_custom_post_type($post_id);
   }
 
   /**
-   * Utility returning if the post contains the plugin Shortcode.
+   * Utility returning if the post contains the plugin block or Shortcode.
    */
   public function post_contains_block_or_shortcode($post_id)
   {
     $post_content = get_post_field('post_content', $post_id);
-    if (
-      has_block('protected-video/protected-video', $post_id) ||
-      has_shortcode($post_content, 'protected_video')
-    ) {
-      return true;
-    }
-    return false;
+    return has_block('protected-video/protected-video', $post_id) ||
+      has_shortcode($post_content, 'protected_video');
   }
 
   /**
@@ -148,11 +138,9 @@ class Protected_Video_Public
    */
   public function post_is_custom_post_type($post_id)
   {
-    if (
-      in_array(get_post_type($post_id), get_post_types(['_builtin' => false]))
-    ) {
-      return true;
-    }
-    return false;
+    return in_array(
+      get_post_type($post_id),
+      get_post_types(['_builtin' => false])
+    );
   }
 }
