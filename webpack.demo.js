@@ -11,13 +11,17 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: ['./src/view.js', './src/demo/style.scss'],
+  entry: [
+    path.resolve(__dirname, 'src', 'view.js'),
+    path.resolve(__dirname, 'src', 'demo', 'style.scss'),
+  ],
   output: {
     path: path.resolve(__dirname, 'demo'),
+    filename: '[name].[contenthash].js',
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'demo'),
+      directory: path.resolve(__dirname, 'demo'),
     },
     client: {
       overlay: false,
@@ -54,7 +58,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/demo/index.html',
+      template: path.resolve(__dirname, 'src', 'demo', 'index.html'),
       meta: {
         description: 'Protected Video WordPress plugin demo page.',
         'og:image':
@@ -62,9 +66,16 @@ module.exports = {
         viewport: 'width=device-width, initial-scale=1',
       },
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
     new CopyPlugin({
-      patterns: [{ from: 'src/demo/favicon.svg', to: '.' }],
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src', 'demo', 'favicon.svg'),
+          to: '.',
+        },
+      ],
     }),
   ],
 }
