@@ -7,7 +7,7 @@
  *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
- * @subpackage Protected_Video/admin
+ * @subpackage Protected_Video/includes
  * @author     Alec Rust (https://www.alecrust.com/)
  */
 class Protected_Video_Admin
@@ -92,7 +92,17 @@ class Protected_Video_Admin
    */
   public function protected_video_create_admin_page()
   {
-    include 'partials/protected-video-admin-display.php';
+    ?>
+      <div class="wrap">
+        <h2><?php _e('Protected Video', 'protected-video'); ?></h2>
+        <form method="post" action="options.php">
+          <?php
+          settings_fields('protected_video_option_group');
+          do_settings_sections('protected-video-admin');
+          submit_button();?>
+        </form>
+      </div>
+    <?php
   }
 
   /**

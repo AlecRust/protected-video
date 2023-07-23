@@ -7,7 +7,7 @@
  *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
- * @subpackage Protected_Video/public
+ * @subpackage Protected_Video/includes
  * @author     Alec Rust (https://www.alecrust.com/)
  */
 class Protected_Video_Public
