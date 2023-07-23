@@ -61,12 +61,12 @@ class Protected_Video_Public
 
   /**
    * Register stylesheet/inline CSS for the public-facing side of the site.
-   * NOTE: This is for the case where the Shortcode alone is used.
    */
   public function enqueue_styles()
   {
     if ($this->should_enqueue_assets()) {
       // Public CSS with bundled Plyr CSS
+      // NOTE: This is for the case where the Shortcode alone is used.
       wp_enqueue_style(
         $this->plugin_name,
         plugin_dir_url(__FILE__) . '../build/style-index.css',
