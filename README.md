@@ -22,10 +22,13 @@ To embed a video either search for "Protected Video" in the Block Editor, or use
 
 ## Development
 
-To develop locally within WordPress, symlink this repository to `wp-content/plugins/protected-video`.
+Launch a Docker-based development environment with this plugin pre-installed using
+[wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/):
 
-Then run `npm install` and `npm run build` to build the plugin, and activate it in the WordPress admin.
+1. `npm install`
+2. `npm run build`
+3. `npm run env start`
 
-Run `npm start` to build/watch files for development within WordPress.
+Use `npm start` to watch and rebuild block source files as they change.
 
-Run `npm run start:demo` to build/watch files for standalone player demo and open in browser.
+Use `npm run start:demo` to launch the demo page on a local server.

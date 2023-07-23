@@ -10,6 +10,7 @@
   "scripts": {
     "start": "wp-scripts start",
     "build": "wp-scripts build",
+    "env": "wp-env",
     "start:demo": "webpack serve --mode development -c webpack.demo.js",
     "build:demo": "webpack -c webpack.demo.js",
     "lint": "prettier --check . && eslint .",
@@ -25,6 +26,7 @@
     "@babel/core": "^7.22.9",
     "@prettier/plugin-php": "^0.19.6",
     "@wordpress/babel-preset-default": "^7.22.0",
+    "@wordpress/env": "^8.4.0",
     "@wordpress/scripts": "^26.9.0",
     "auto-changelog": "^2.4.0",
     "babel-loader": "^9.1.3",
