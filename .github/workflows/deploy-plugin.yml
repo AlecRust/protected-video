@@ -22,7 +22,7 @@ jobs:
         run: npm run lint
 
   deploy:
-    name: Deploy
+    name: Deploy plugin
     needs: lint
     runs-on: ubuntu-latest
     steps:
