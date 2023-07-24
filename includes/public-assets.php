@@ -61,21 +61,22 @@ class Protected_Video_Public
 
   /**
    * Register stylesheet/inline CSS for the public-facing side of the site.
+   * NOTE: block.json automatically registers the block assets if the
+   * block is used, we duplicate it here to support "Shortcode only"
    */
   public function enqueue_styles()
   {
     if ($this->should_enqueue_assets()) {
       // Public CSS with bundled Plyr CSS
-      // NOTE: This is for the case where the Shortcode alone is used.
       wp_enqueue_style(
-        $this->plugin_name,
+        'protected-video-protected-video-style', // matches block asset handle
         plugin_dir_url(__FILE__) . '../build/style-index.css',
         [], // no stylesheet dependencies
         $this->version // include plugin version in query string
       );
 
       wp_add_inline_style(
-        $this->plugin_name,
+        'protected-video-protected-video-style', // matches block asset handle
         sprintf(
           ':root { --plyr-color-main: %s; }',
           get_option('protected_video_player_theme_color', '#00b3ff')
@@ -86,7 +87,8 @@ class Protected_Video_Public
 
   /**
    * Register the JavaScript for the public-facing side of the site
-   * NOTE: This is for the case where the Shortcode alone is used.
+   * NOTE: block.json automatically registers the block assets if the
+   * block is used, we duplicate it here to support "Shortcode only"
    */
   public function enqueue_scripts()
   {
@@ -98,7 +100,7 @@ class Protected_Video_Public
 
       // Public JS with bundled Plyr JS
       wp_enqueue_script(
-        $this->plugin_name,
+        'protected-video-protected-video-view-script', // matches block asset handle
         plugin_dir_url(__FILE__) . '../build/view.js',
         [], // no script dependencies
         $version,
