@@ -39,3 +39,6 @@ videoBlocks.forEach((videoBlock) => {
     },
   })
 })
+
+// Disable right-clicking anywhere on the page
+document.addEventListener('contextmenu', (event) => event.preventDefault())
