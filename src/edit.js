@@ -23,7 +23,7 @@ import './editor.scss'
 export default function Edit({ attributes, setAttributes }) {
   const { videoUrl, videoId, videoService } = attributes
 
-  function setVideoDetails(newUrl) {
+  function handleVideoUrlChange(newUrl) {
     const { id: newId, service: newService } = getVideoId(newUrl)
     setAttributes({
       videoUrl: newUrl,
@@ -45,7 +45,7 @@ export default function Edit({ attributes, setAttributes }) {
         <TextControl
           label={__('Video URL', 'protected-video')}
           value={videoUrl}
-          onChange={setVideoDetails}
+          onChange={handleVideoUrlChange}
           placeholder={__(
             'e.g. https://youtu.be/c_hO_fjmMnk',
             'protected-video'
@@ -75,10 +75,10 @@ export default function Edit({ attributes, setAttributes }) {
 }
 
 function getVideoThumb(videoService, videoId) {
-  if (videoService === 'youtube') {
-    return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`
+  const thumbUrls = {
+    youtube: `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`,
+    vimeo: `https://vumbnail.com/${videoId}.jpg`,
   }
-  if (videoService === 'vimeo') {
-    return `https://vumbnail.com/${videoId}.jpg`
-  }
+
+  return thumbUrls[videoService]
 }
