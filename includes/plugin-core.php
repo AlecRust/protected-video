@@ -149,6 +149,13 @@ class Protected_Video
       $plugin_public,
       'enqueue_scripts'
     );
+
+    // Allow plugin styles to be enqueued in "MemberPress Courses" course pages
+    // https://docs.memberpress.com/article/381-how-to-edit-lessons-in-classroom-mode-with-a-page-builder
+    add_filter('mpcs_classroom_style_handles', function ($allowed_handles) {
+      $allowed_handles[] = 'protected-video-protected-video-style';
+      return $allowed_handles;
+    });
   }
 
   /**
