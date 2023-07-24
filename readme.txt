@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.3
-Stable tag:        1.9.1
+Stable tag:        1.10.0
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -105,14 +105,30 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Screenshots ==
 
-1. Protected Video block in the Block Editor.
-2. Configuration of the player theme in plugin settings.
-3. Optional usage as Shortcode.
-4. Display of the player in the public facing site.
+1. Searching for Protected Video in the Block Editor.
+2. Protected Video block inserted in the Block Editor.
+3. Protected Video displayed on public facing site.
+4. Configuration of the player theme in plugin settings.
+5. Optional Shortcode embed method also supported.
 
 == Changelog ==
 
-= 1.9.1 =
+= 1.10.0 =
+
+* Consolidate CI workflows
+* Add cache busting to demo page
+* Move demo webpack config to demo dir
+* Simplify file names
+* Refactor getVideoThumb() function
+* Fix issue causing duplicate references to assets in HTML
+* Improve plugin screenshots
+* Tidy Shortcode fall back check
+* Inject JS at end of &lt;body&gt; in demo to match plugin
+* Disable right-clicking anywhere on a page containing a Protected Video
+* Fix README CI badge
+* Improve comment
+
+= 1.9.1 - 2023-07-23 =
 
 * Add support for @wordpress/env Docker dev environment
 * Simplify dir structure of PHP files

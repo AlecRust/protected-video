@@ -2,7 +2,24 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.0](https://github.com/AlecRust/protected-video/compare/1.9.1...1.10.0)
+
+- Consolidate CI workflows [`44e10c0`](https://github.com/AlecRust/protected-video/commit/44e10c0afa292474ebfb2f78eb08fb3d3d38c13e)
+- Add cache busting to demo page [`a99eb11`](https://github.com/AlecRust/protected-video/commit/a99eb1194c7446a1304a4e457b89f1d9418aa313)
+- Move demo webpack config to demo dir [`c329274`](https://github.com/AlecRust/protected-video/commit/c32927430e742fd88a63eff1463de0a04c87b8b3)
+- Simplify file names [`860aa5e`](https://github.com/AlecRust/protected-video/commit/860aa5e1f921da640b8e3ddb2eb71091d03b0f30)
+- Refactor getVideoThumb() function [`7f09f67`](https://github.com/AlecRust/protected-video/commit/7f09f67a907ef554d041e9b8038c5800fccc654d)
+- Fix issue causing duplicate references to assets in HTML [`e4b872b`](https://github.com/AlecRust/protected-video/commit/e4b872b9f5099f9439821a8837528cc8913fb762)
+- Improve plugin screenshots [`b68cc18`](https://github.com/AlecRust/protected-video/commit/b68cc1826192423c95c6ef5f6be636739d7d5b89)
+- Tidy Shortcode fall back check [`951dcee`](https://github.com/AlecRust/protected-video/commit/951dcee502e32099329e2fc743a13c0c854854b6)
+- Inject JS at end of &lt;body&gt; in demo to match plugin [`20c9964`](https://github.com/AlecRust/protected-video/commit/20c9964bace35a10dce61c097bdea6d1b5460552)
+- Disable right-clicking anywhere on a page containing a Protected Video [`1626b22`](https://github.com/AlecRust/protected-video/commit/1626b229a5f0e3697a4a15167492089731b79b26)
+- Fix README CI badge [`f3639b0`](https://github.com/AlecRust/protected-video/commit/f3639b08834373bb4c7ce87464b71c60d49cce42)
+- Improve comment [`b744b8b`](https://github.com/AlecRust/protected-video/commit/b744b8ba5c53cdec70196be5997fd56225e11b51)
+
 #### [1.9.1](https://github.com/AlecRust/protected-video/compare/1.9.0...1.9.1)
+
+> 23 July 2023
 
 - Add support for @wordpress/env Docker dev environment [`7ac659d`](https://github.com/AlecRust/protected-video/commit/7ac659d815c104101c186eecdbb8c8f56efa14c7)
 - Simplify dir structure of PHP files [`96f49cf`](https://github.com/AlecRust/protected-video/commit/96f49cf9076be6f505cd06ea97ae8d11af62bbc1)
