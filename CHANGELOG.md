@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.1](https://github.com/AlecRust/protected-video/compare/1.10.0...1.10.1)
+
+- Split up CI workflows [`5bd1c8a`](https://github.com/AlecRust/protected-video/commit/5bd1c8a29e1431188a9a452bc13cef12202fb866)
+- Add "MemberPress Courses" plugin custom filter to allow styles to load [`61c2c3d`](https://github.com/AlecRust/protected-video/commit/61c2c3d3c0b0a5cce06b1208e4d06b6b188ff6e6)
+
 #### [1.10.0](https://github.com/AlecRust/protected-video/compare/1.9.1...1.10.0)
+
+> 24 July 2023
 
 - Consolidate CI workflows [`44e10c0`](https://github.com/AlecRust/protected-video/commit/44e10c0afa292474ebfb2f78eb08fb3d3d38c13e)
 - Add cache busting to demo page [`a99eb11`](https://github.com/AlecRust/protected-video/commit/a99eb1194c7446a1304a4e457b89f1d9418aa313)
