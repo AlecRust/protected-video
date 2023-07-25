@@ -54,14 +54,12 @@ class Protected_Video
     /**
      * Define all actions that occur in the admin area.
      */
-    require_once plugin_dir_path(dirname(__FILE__)) .
-      'includes/admin-settings.php';
+    require_once plugin_dir_path(dirname(__FILE__)) . 'includes/admin.php';
 
     /**
      * Define all actions that occur in the public-facing site.
      */
-    require_once plugin_dir_path(dirname(__FILE__)) .
-      'includes/public-assets.php';
+    require_once plugin_dir_path(dirname(__FILE__)) . 'includes/public.php';
   }
 
   /**
