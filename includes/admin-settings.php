@@ -41,6 +41,18 @@ class Protected_Video_Admin
   }
 
   /**
+   * Register the block using the metadata loaded from the `block.json` file.
+   * Behind the scenes, it also registers all assets so they can be enqueued
+   * through the block editor in the corresponding context.
+   *
+   * @see https://developer.wordpress.org/reference/functions/register_block_type/
+   */
+  public function register_block()
+  {
+    register_block_type(__DIR__ . '/../build');
+  }
+
+  /**
    * Register settings page in admin.
    */
   public function add_menu_item()

@@ -76,6 +76,9 @@ class Protected_Video
       $this->get_version()
     );
 
+    // Gutenberg block
+    add_action('init', [$plugin_admin, 'register_block']);
+
     // Admin settings page
     add_action('admin_init', [$plugin_admin, 'settings_page_init']);
 
