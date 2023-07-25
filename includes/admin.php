@@ -75,7 +75,7 @@ class Protected_Video_Admin
     if (isset($old_option['player_theme_color'])) {
       update_option(
         'protected_video_player_theme_color',
-        $old_option['player_theme_color']
+        sanitize_hex_color($old_option['player_theme_color'])
       );
       delete_option('protected_video_option_name');
     }
@@ -144,16 +144,16 @@ class Protected_Video_Admin
     register_setting(
       'protected_video_option_group', // settings group name
       'protected_video_player_theme_color', // option name
-      [$this, 'sanitize_plugin_text_input'] // callback
+      [$this, 'sanitize_plugin_color_input'] // callback
     );
   }
 
   /**
-   * Sanitize plugin option text input data.
+   * Sanitize plugin option color input data.
    */
-  public function sanitize_plugin_text_input($input)
+  public function sanitize_plugin_color_input($input)
   {
-    return sanitize_text_field($input);
+    return sanitize_hex_color($input);
   }
 
   /**
