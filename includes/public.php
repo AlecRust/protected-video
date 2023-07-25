@@ -111,8 +111,10 @@ class Protected_Video_Public
 
   /**
    * Utility returning if the scripts and styles should be enqueued.
+   *
+   * @access   private
    */
-  public function should_enqueue_assets()
+  private function should_enqueue_assets()
   {
     $post_id = get_the_ID();
     if (
@@ -131,8 +133,10 @@ class Protected_Video_Public
 
   /**
    * Utility returning if the post contains the plugin block or Shortcode.
+   *
+   * @access   private
    */
-  public function post_contains_block_or_shortcode($post_id)
+  private function post_contains_block_or_shortcode($post_id)
   {
     $post_content = get_post_field('post_content', $post_id);
     return has_block('protected-video/protected-video', $post_id) ||
@@ -141,8 +145,10 @@ class Protected_Video_Public
 
   /**
    * Utility returning if the post is any custom post type.
+   *
+   * @access   private
    */
-  public function post_is_custom_post_type($post_id)
+  private function post_is_custom_post_type($post_id)
   {
     return in_array(
       get_post_type($post_id),
