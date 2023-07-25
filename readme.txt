@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.3
-Stable tag:        1.10.2
+Stable tag:        1.10.3
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -113,7 +113,13 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.10.2 =
+= 1.10.3 =
+
+* Switch to @release-it/bumper plugin for bumping version in files
+* Refactor plugin init code
+* Use sanitize_hex_color for sanitizing player color value
+
+= 1.10.2 - 2023-07-25 =
 
 * Refactor away "hooks loader" abstraction
 * Move registering of Gutenberg block to admin class

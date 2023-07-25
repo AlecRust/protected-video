@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.3](https://github.com/AlecRust/protected-video/compare/1.10.2...1.10.3)
+
+- Switch to @release-it/bumper plugin for bumping version in files [`e9a7b06`](https://github.com/AlecRust/protected-video/commit/e9a7b06e0ea202c7500c597a117408e8cdac4576)
+- Refactor plugin init code [`b57844d`](https://github.com/AlecRust/protected-video/commit/b57844d4b008315a51cec7c75993c54ebd8f2c85)
+- Use sanitize_hex_color for sanitizing player color value [`095871f`](https://github.com/AlecRust/protected-video/commit/095871feee38a9ecb4ed15ff483e81bb76d541f3)
+
 #### [1.10.2](https://github.com/AlecRust/protected-video/compare/1.10.1...1.10.2)
+
+> 25 July 2023
 
 - Refactor away "hooks loader" abstraction [`b71ca25`](https://github.com/AlecRust/protected-video/commit/b71ca25c51fa96f1067f41f5d8d4e08f2c4f8d10)
 - Move registering of Gutenberg block to admin class [`49bf11b`](https://github.com/AlecRust/protected-video/commit/49bf11b889c4750cefd05caf9cade35e05819ff3)
