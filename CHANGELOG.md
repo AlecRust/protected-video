@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.2](https://github.com/AlecRust/protected-video/compare/1.10.1...1.10.2)
+
+- Refactor away "hooks loader" abstraction [`b71ca25`](https://github.com/AlecRust/protected-video/commit/b71ca25c51fa96f1067f41f5d8d4e08f2c4f8d10)
+- Move registering of Gutenberg block to admin class [`49bf11b`](https://github.com/AlecRust/protected-video/commit/49bf11b889c4750cefd05caf9cade35e05819ff3)
+- Change some methods to be private [`f7ddd39`](https://github.com/AlecRust/protected-video/commit/f7ddd397d9562e2457b74b73bfc4604596591e7d)
+- Move lint-staged config to its own file [`2af59a0`](https://github.com/AlecRust/protected-video/commit/2af59a046829d5764dd51d91e24fb8bb6587fc6e)
+- Simplify file names [`10e1510`](https://github.com/AlecRust/protected-video/commit/10e151016d1a43b50dd4c9deedda4782be5f5ba8)
+- Improve CI job names [`8aeeedd`](https://github.com/AlecRust/protected-video/commit/8aeeeddd32e88dc65eddbda48e579809c7b9665d)
+- Remove unnecessary index.php files [`552bb26`](https://github.com/AlecRust/protected-video/commit/552bb26fc55d792db431a9f208211f0a58d62c97)
+- Fix CI badge in README [`a3c6c1b`](https://github.com/AlecRust/protected-video/commit/a3c6c1bd8db986ad4ea3873d1e787325afc41518)
+
 #### [1.10.1](https://github.com/AlecRust/protected-video/compare/1.10.0...1.10.1)
+
+> 24 July 2023
 
 - Split up CI workflows [`5bd1c8a`](https://github.com/AlecRust/protected-video/commit/5bd1c8a29e1431188a9a452bc13cef12202fb866)
 - Add "MemberPress Courses" plugin custom filter to allow styles to load [`61c2c3d`](https://github.com/AlecRust/protected-video/commit/61c2c3d3c0b0a5cce06b1208e4d06b6b188ff6e6)

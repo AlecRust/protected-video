@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.3
-Stable tag:        1.10.1
+Stable tag:        1.10.2
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -113,7 +113,18 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.10.1 =
+= 1.10.2 =
+
+* Refactor away "hooks loader" abstraction
+* Move registering of Gutenberg block to admin class
+* Change some methods to be private
+* Move lint-staged config to its own file
+* Simplify file names
+* Improve CI job names
+* Remove unnecessary index.php files
+* Fix CI badge in README
+
+= 1.10.1 - 2023-07-24 =
 
 * Split up CI workflows
 * Add "MemberPress Courses" plugin custom filter to allow styles to load
