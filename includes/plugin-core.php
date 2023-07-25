@@ -12,14 +12,6 @@
 class Protected_Video
 {
   /**
-   * Loader responsible for maintaining and registering all plugin hooks.
-   *
-   * @access   protected
-   * @var      Protected_Video_Loader    $loader    Maintains and registers all hooks for the plugin.
-   */
-  protected $loader;
-
-  /**
    * Unique identifier of this plugin.
    *
    * @access   protected
@@ -60,12 +52,6 @@ class Protected_Video
   private function load_dependencies()
   {
     /**
-     * Orchestrate the actions and filters of the plugin.
-     */
-    require_once plugin_dir_path(dirname(__FILE__)) .
-      'includes/hooks-loader.php';
-
-    /**
      * Define all actions that occur in the admin area.
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
@@ -76,8 +62,6 @@ class Protected_Video
      */
     require_once plugin_dir_path(dirname(__FILE__)) .
       'includes/public-assets.php';
-
-    $this->loader = new Protected_Video_Loader();
   }
 
   /**
@@ -93,28 +77,19 @@ class Protected_Video
     );
 
     // Admin settings page
-    $this->loader->add_action(
-      'admin_init',
-      $plugin_admin,
-      'settings_page_init'
-    );
+    add_action('admin_init', [$plugin_admin, 'settings_page_init']);
 
     // Admin menu item
-    $this->loader->add_action('admin_menu', $plugin_admin, 'add_menu_item');
+    add_action('admin_menu', [$plugin_admin, 'add_menu_item']);
 
     // Plugin settings link on "Plugins" page
-    $this->loader->add_filter(
-      'plugin_action_links_protected-video/protected-video.php',
+    add_filter('plugin_action_links_protected-video/protected-video.php', [
       $plugin_admin,
-      'add_settings_link'
-    );
+      'add_settings_link',
+    ]);
 
     // Migrate settings when plugins have loaded
-    $this->loader->add_action(
-      'plugins_loaded',
-      $plugin_admin,
-      'migrate_plugin_options'
-    );
+    add_action('plugins_loaded', [$plugin_admin, 'migrate_plugin_options']);
   }
 
   /**
@@ -130,25 +105,16 @@ class Protected_Video
     );
 
     // Shortcode
-    $this->loader->add_shortcode(
-      'protected_video',
+    add_shortcode('protected_video', [
       $plugin_public,
-      'protected_video_shortcode'
-    );
+      'protected_video_shortcode',
+    ]);
 
     // Public CSS
-    $this->loader->add_action(
-      'wp_enqueue_scripts',
-      $plugin_public,
-      'enqueue_styles'
-    );
+    add_action('wp_enqueue_scripts', [$plugin_public, 'enqueue_styles']);
 
     // Public JS
-    $this->loader->add_action(
-      'wp_enqueue_scripts',
-      $plugin_public,
-      'enqueue_scripts'
-    );
+    add_action('wp_enqueue_scripts', [$plugin_public, 'enqueue_scripts']);
 
     // Allow plugin styles to be enqueued in "MemberPress Courses" course pages
     // https://docs.memberpress.com/article/381-how-to-edit-lessons-in-classroom-mode-with-a-page-builder
@@ -156,14 +122,6 @@ class Protected_Video
       $allowed_handles[] = 'protected-video-protected-video-style';
       return $allowed_handles;
     });
-  }
-
-  /**
-   * Run the loader to execute all of the hooks with WordPress.
-   */
-  public function run()
-  {
-    $this->loader->run();
   }
 
   /**

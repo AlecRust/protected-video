@@ -49,7 +49,6 @@ add_action('init', 'protected_video_block_init');
  */
 function run_protected_video()
 {
-  $plugin = new Protected_Video();
-  $plugin->run();
+  new Protected_Video();
 }
 run_protected_video();
