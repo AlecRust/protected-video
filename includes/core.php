@@ -38,7 +38,13 @@ class Protected_Video
       $this->version = '1.0.0';
     }
     $this->plugin_name = 'protected-video';
+  }
 
+  /**
+   * Initialize the plugin.
+   */
+  public function init()
+  {
     $this->load_dependencies();
     $this->define_admin_hooks();
     $this->define_public_hooks();
