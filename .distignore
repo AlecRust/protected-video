@@ -11,6 +11,7 @@
 .eslintignore
 .eslintrc.json
 .gitignore
+.lintstagedrc.json
 .prettierignore
 .prettierrc
 .release-it.json
