@@ -104,7 +104,7 @@ class Protected_Video_Public
         plugin_dir_url(__FILE__) . '../build/view.js',
         [], // no script dependencies
         $version,
-        true // enqueue at the end of <body> instead of in <head>
+        ['strategy' => 'defer'] // defer script execution
       );
     }
   }

@@ -53,7 +53,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'index.html'),
-      inject: 'body',
       meta: {
         description: 'Protected Video WordPress plugin demo page.',
         'og:image':
