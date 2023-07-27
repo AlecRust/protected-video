@@ -112,10 +112,7 @@ class Protected_Video
     );
 
     // Shortcode
-    add_shortcode('protected_video', [
-      $plugin_public,
-      'protected_video_shortcode',
-    ]);
+    add_shortcode('protected_video', [$plugin_public, 'render_shortcode']);
 
     // Public CSS
     add_action('wp_enqueue_scripts', [$plugin_public, 'enqueue_styles']);

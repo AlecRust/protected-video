@@ -62,7 +62,7 @@ class Protected_Video_Admin
       __('Protected Video', 'protected-video'), // menu_title
       'manage_options', // capability
       $this->plugin_name, // menu_slug
-      [$this, 'protected_video_create_admin_page'] // function
+      [$this, 'render_settings_page'] // callback
     );
   }
 
@@ -102,7 +102,7 @@ class Protected_Video_Admin
   /**
    * Return settings page.
    */
-  public function protected_video_create_admin_page()
+  public function render_settings_page()
   {
     ?>
       <div class="wrap">
@@ -125,14 +125,14 @@ class Protected_Video_Admin
     add_settings_section(
       'protected_video_setting_section', // HTML id
       __('Settings', 'protected-video'), // title
-      [$this, 'protected_video_section_info'], // callback
+      [$this, 'render_settings_description'], // callback
       'protected-video-admin' // page
     );
 
     add_settings_field(
       'player_theme_color', // HTML id
       __('Player Theme Color', 'protected-video'), // field title
-      [$this, 'player_theme_color_callback'], // callback
+      [$this, 'render_color_input'], // callback
       'protected-video-admin', // page
       'protected_video_setting_section', // section
       [
@@ -159,7 +159,7 @@ class Protected_Video_Admin
   /**
    * Explanation copy on settings page (between heading and fields).
    */
-  public function protected_video_section_info()
+  public function render_settings_description()
   {
     printf(
       __(
@@ -175,7 +175,7 @@ class Protected_Video_Admin
   /**
    * Returns player theme color field on settings page.
    */
-  public function player_theme_color_callback($val)
+  public function render_color_input($val)
   {
     $id = $val['id'];
     $name = $val['option_name'];

@@ -41,11 +41,11 @@ class Protected_Video_Public
   }
 
   /**
-   * Set up shortcode for use as alternative to Gutenberg block.
+   * Render Shortcode (Gutenberg block alternative).
    *
    * Usage example: [protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
    */
-  public function protected_video_shortcode($atts)
+  public function render_shortcode($atts)
   {
     $atts = shortcode_atts(
       ['url' => '', 'service' => ''],
