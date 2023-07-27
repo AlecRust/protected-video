@@ -15,24 +15,24 @@ class Protected_Video_Admin
   /**
    * The plugin ID.
    *
-   * @access   private
-   * @var      string    $plugin_name    The ID of this plugin.
+   * @access private
+   * @var    string    $plugin_name    The ID of this plugin.
    */
   private $plugin_name;
 
   /**
    * The plugin version.
    *
-   * @access   private
-   * @var      string    $version    The current version of this plugin.
+   * @access private
+   * @var    string    $version    The current version of this plugin.
    */
   private $version;
 
   /**
    * Initialize the class and set its properties.
    *
-   * @param      string    $plugin_name       The name of this plugin.
-   * @param      string    $version    The version of this plugin.
+   * @param string $plugin_name The name of this plugin.
+   * @param string $version     The version of this plugin.
    */
   public function __construct($plugin_name, $version)
   {
@@ -106,7 +106,7 @@ class Protected_Video_Admin
   {
     ?>
       <div class="wrap">
-        <h2><?= __('Protected Video', 'protected-video') ?></h2>
+        <h2><?php echo __('Protected Video', 'protected-video'); ?></h2>
         <form method="post" action="options.php">
           <?php
           settings_fields('protected_video_option_group');

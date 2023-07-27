@@ -11,9 +11,9 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       protected-video
  *
- * @package           Protected_Video
- * @author            Alec Rust
- * @link              https://www.alecrust.com/
+ * @package Protected_Video
+ * @author  Alec Rust
+ * @link    https://www.alecrust.com/
  */
 
 // Abort if this file is called directly.

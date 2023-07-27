@@ -2,8 +2,8 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @link       https://www.alecrust.com/
- * @package    Protected_Video
+ * @link    https://www.alecrust.com/
+ * @package Protected_Video
  */
 
 // If uninstall not called from WordPress, then exit.

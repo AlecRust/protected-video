@@ -14,16 +14,16 @@ class Protected_Video
   /**
    * Unique identifier of this plugin.
    *
-   * @access   protected
-   * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+   * @access protected
+   * @var    string    $plugin_name    The string used to uniquely identify this plugin.
    */
   protected $plugin_name;
 
   /**
    * Current version of the plugin.
    *
-   * @access   protected
-   * @var      string    $version    The current version of the plugin.
+   * @access protected
+   * @var    string    $version    The current version of the plugin.
    */
   protected $version;
 
@@ -53,7 +53,7 @@ class Protected_Video
   /**
    * Load required plugin dependencies.
    *
-   * @access   private
+   * @access private
    */
   private function load_dependencies()
   {
@@ -71,7 +71,7 @@ class Protected_Video
   /**
    * Register hooks related to the admin area functionality.
    *
-   * @access   private
+   * @access private
    */
   private function define_admin_hooks()
   {
@@ -102,7 +102,7 @@ class Protected_Video
   /**
    * Register hooks related to the public-facing functionality.
    *
-   * @access   private
+   * @access private
    */
   private function define_public_hooks()
   {
@@ -131,7 +131,7 @@ class Protected_Video
   /**
    * Utility returning plugin name uniquely identifying it within the context of WordPress.
    *
-   * @return    string    The name of the plugin.
+   * @return string    The name of the plugin.
    */
   public function get_plugin_name()
   {
@@ -141,7 +141,7 @@ class Protected_Video
   /**
    * Utility returning the version number of the plugin.
    *
-   * @return    string    The version number of the plugin.
+   * @return string    The version number of the plugin.
    */
   public function get_version()
   {

@@ -15,24 +15,24 @@ class Protected_Video_Public
   /**
    * The plugin ID.
    *
-   * @access   private
-   * @var      string    $plugin_name    The ID of this plugin.
+   * @access private
+   * @var    string    $plugin_name    The ID of this plugin.
    */
   private $plugin_name;
 
   /**
    * The plugin version.
    *
-   * @access   private
-   * @var      string    $version    The current version of this plugin.
+   * @access private
+   * @var    string    $version    The current version of this plugin.
    */
   private $version;
 
   /**
    * Initialize the class and set its properties.
    *
-   * @param      string    $plugin_name       The name of the plugin.
-   * @param      string    $version    The version of this plugin.
+   * @param string $plugin_name The name of the plugin.
+   * @param string $version     The version of this plugin.
    */
   public function __construct($plugin_name, $version)
   {
@@ -112,7 +112,7 @@ class Protected_Video_Public
   /**
    * Utility returning if the scripts and styles should be enqueued.
    *
-   * @access   private
+   * @access private
    */
   private function should_enqueue_assets()
   {
@@ -129,7 +129,7 @@ class Protected_Video_Public
   /**
    * Utility returning if the post contains the plugin block or Shortcode.
    *
-   * @access   private
+   * @access private
    */
   private function post_contains_block_or_shortcode($post_id)
   {
@@ -141,7 +141,7 @@ class Protected_Video_Public
   /**
    * Utility returning if the post is any custom post type.
    *
-   * @access   private
+   * @access private
    */
   private function post_is_custom_post_type($post_id)
   {
