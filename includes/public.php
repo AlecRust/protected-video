@@ -123,12 +123,7 @@ class Protected_Video_Public
     ) {
       return true;
     }
-
-    return false; // Disable Shortcode fallback
-
-    // Fall back check for Shortcode
-    $content = do_shortcode('[protected_video]');
-    return !empty($content);
+    return false;
   }
 
   /**
