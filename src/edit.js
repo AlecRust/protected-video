@@ -32,6 +32,22 @@ export default function Edit({ attributes, setAttributes }) {
     })
   }
 
+  function renderVideoThumb() {
+    const thumbUrls = {
+      youtube: `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`,
+      vimeo: `https://vumbnail.com/${videoId}.jpg`,
+    }
+
+    return (
+      <img
+        src={thumbUrls[videoService]}
+        width="320"
+        height="180"
+        alt={__('Video thumbnail', 'protected-video')}
+      />
+    )
+  }
+
   return (
     <div {...useBlockProps()}>
       <Placeholder
@@ -51,34 +67,17 @@ export default function Edit({ attributes, setAttributes }) {
             'protected-video'
           )}
         />
-        {videoId && (
+        {videoUrl && (
           <div>
-            <img
-              src={getVideoThumb(videoService, videoId)}
-              width="320"
-              height="180"
-              alt={__('Video thumbnail', 'protected-video')}
-            />
-          </div>
-        )}
-        {videoUrl && !videoId && (
-          <div>
-            {__(
-              'Sorry, a video ID could not be found in that URL.',
-              'protected-video'
-            )}
+            {videoId
+              ? renderVideoThumb()
+              : __(
+                  'Sorry, a video ID could not be found in that URL.',
+                  'protected-video'
+                )}
           </div>
         )}
       </Placeholder>
     </div>
   )
-}
-
-function getVideoThumb(videoService, videoId) {
-  const thumbUrls = {
-    youtube: `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`,
-    vimeo: `https://vumbnail.com/${videoId}.jpg`,
-  }
-
-  return thumbUrls[videoService]
 }
