@@ -106,7 +106,7 @@ class Protected_Video_Admin
   {
     ?>
       <div class="wrap">
-        <h2><?php _e('Protected Video', 'protected-video'); ?></h2>
+        <h2><?= __('Protected Video', 'protected-video') ?></h2>
         <form method="post" action="options.php">
           <?php
           settings_fields('protected_video_option_group');
@@ -180,13 +180,12 @@ class Protected_Video_Admin
     $id = $val['id'];
     $name = $val['option_name'];
     $value = get_option($name, '#00b3ff');
-    ?>
-    <input
-      type="color"
-      id="<?php echo esc_attr($id); ?>"
-      name="<?php echo esc_attr($name); ?>"
-      value="<?php echo esc_attr($value); ?>"
-    >
-    <?php
+
+    printf(
+      '<input type="color" id="%s" name="%s" value="%s">',
+      esc_attr($id),
+      esc_attr($name),
+      esc_attr($value)
+    );
   }
 }
