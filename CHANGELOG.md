@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.4](https://github.com/AlecRust/protected-video/compare/1.10.3...1.10.4)
+
+- Tidy comments formatting [`1c07bf0`](https://github.com/AlecRust/protected-video/commit/1c07bf0d0ecd8f396ab4a74c3d366fdc2cac8b7a)
+- Refactor rendering of video thumbnail [`0126ccf`](https://github.com/AlecRust/protected-video/commit/0126ccfb41a851d92f20fe1279b1dfa56b8e1e3e)
+- Improve method names consistency [`d4862c3`](https://github.com/AlecRust/protected-video/commit/d4862c3c63db1d4e54ef7e42735bf8479300e719)
+- Use Notice component for displaying error message [`d13cb6c`](https://github.com/AlecRust/protected-video/commit/d13cb6cb966c634de67de46e0cbaa9968c070d35)
+- Refactor color input render code [`2e8c87d`](https://github.com/AlecRust/protected-video/commit/2e8c87db04c64bf6f3e7e06003b024c4ee9cad07)
+- Remove unused do_shortcode fallback [`89840f0`](https://github.com/AlecRust/protected-video/commit/89840f09786643a47ff4c9536463c355da580cf8)
+- Load JS in head with defer, instead of end of body [`22fca7e`](https://github.com/AlecRust/protected-video/commit/22fca7e6eba4834cc98cfc9ecea7fb773ad36e3e)
+
 #### [1.10.3](https://github.com/AlecRust/protected-video/compare/1.10.2...1.10.3)
+
+> 25 July 2023
 
 - Switch to @release-it/bumper plugin for bumping version in files [`e9a7b06`](https://github.com/AlecRust/protected-video/commit/e9a7b06e0ea202c7500c597a117408e8cdac4576)
 - Refactor plugin init code [`b57844d`](https://github.com/AlecRust/protected-video/commit/b57844d4b008315a51cec7c75993c54ebd8f2c85)
