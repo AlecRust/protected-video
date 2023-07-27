@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n'
 import { useBlockProps, BlockIcon } from '@wordpress/block-editor' // eslint-disable-line no-unused-vars
-import { Placeholder, TextControl } from '@wordpress/components' // eslint-disable-line no-unused-vars
+import { Placeholder, TextControl, Notice } from '@wordpress/components' // eslint-disable-line no-unused-vars
 import { pluginIcon } from './icons'
 import getVideoId from 'get-video-id'
 
@@ -69,12 +69,16 @@ export default function Edit({ attributes, setAttributes }) {
         />
         {videoUrl && (
           <div>
-            {videoId
-              ? renderVideoThumb()
-              : __(
+            {videoId ? (
+              renderVideoThumb()
+            ) : (
+              <Notice status="error" isDismissible={false}>
+                {__(
                   'Sorry, a video ID could not be found in that URL.',
                   'protected-video'
                 )}
+              </Notice>
+            )}
           </div>
         )}
       </Placeholder>
