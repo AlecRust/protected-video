@@ -5,6 +5,16 @@
 @import "normalize.css";
 @import "../style.scss";
 
+:root {
+  --color-dark-grey: #455a64;
+  --color-light-grey: #8b989e;
+  --color-pale-blue: #b3e1fb;
+  --color-pale-turquoise: #d7eeec;
+  --color-pale-yellow: #f7f1df;
+  --color-pale-pink: #f2d8dd;
+  --plyr-color-main: var(--color-dark-grey);
+}
+
 html {
   height: 100%;
 }
@@ -17,9 +27,50 @@ body {
   height: 100%;
   justify-content: center;
   text-align: center;
+  line-height: 1.6;
+  font-size: 1em;
+  color: var(--color-dark-grey);
+  background-size: cover;
+  background-image: linear-gradient(
+    160deg,
+    var(--color-pale-blue),
+    var(--color-pale-turquoise),
+    var(--color-pale-yellow),
+    var(--color-pale-pink)
+  );
 }
 
-.demo-container {
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+small {
+  color: var(--color-dark-grey);
+}
+
+.container {
   width: 300px;
 
   @media (min-width: 640px) {
@@ -29,4 +80,78 @@ body {
   @media (min-width: 1024px) {
     width: 700px;
   }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.intro {
+  font-size: 0.9em;
+
+  @media (min-width: 640px) {
+    font-size: 0.95em;
+    padding: 0 30px;
+  }
+}
+
+.player {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+
+  & .plyr {
+    margin-bottom: 0;
+  }
+}
+
+.button {
+  display: inline-block;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    text-decoration: none;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.external-links {
+  @media (min-width: 640px) {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.external-link {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
 }

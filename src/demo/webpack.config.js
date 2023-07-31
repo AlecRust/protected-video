@@ -1,4 +1,9 @@
 const path = require('path')
+const fs = require('fs')
+const blockJson = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, '..', 'block.json'), 'utf8')
+)
+const pluginVersion = blockJson.version
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -52,9 +57,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'index.html'),
+      template: path.resolve(__dirname, 'index.ejs'),
+      templateParameters: {
+        version: pluginVersion,
+      },
       meta: {
-        description: 'Protected Video WordPress plugin demo page.',
         'og:image':
           'https://ps.w.org/protected-video/assets/banner-772x250.png',
         viewport: 'width=device-width, initial-scale=1',
@@ -66,8 +73,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'favicon.svg'),
-          to: '.',
+          from: path.resolve(__dirname, 'images'),
+          to: 'images',
         },
       ],
     }),
