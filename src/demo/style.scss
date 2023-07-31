@@ -15,22 +15,17 @@
   --plyr-color-main: var(--color-dark-grey);
 }
 
-html {
-  height: 100%;
-}
-
 body {
   align-items: center;
   display: flex;
   flex-direction: column;
   font-family: system-ui, sans-serif;
-  height: 100%;
   justify-content: center;
   text-align: center;
   line-height: 1.6;
   font-size: 1em;
   color: var(--color-dark-grey);
-  background-size: cover;
+  background-attachment: fixed;
   background-image: linear-gradient(
     160deg,
     var(--color-pale-blue),
@@ -71,7 +66,13 @@ small {
 }
 
 .container {
-  width: 300px;
+  padding: 50px 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 450px) {
+    width: 400px;
+  }
 
   @media (min-width: 640px) {
     width: 500px;
@@ -79,14 +80,21 @@ small {
 
   @media (min-width: 1024px) {
     width: 700px;
+    padding-top: 100px;
   }
 }
 
 .heading {
+  font-size: 1.7em;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 5px;
+
+  @media (min-width: 640px) {
+    font-size: 1.9em;
+  }
 }
 
 .intro {
@@ -116,8 +124,6 @@ small {
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  text-decoration: none;
-  text-align: center;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
 
@@ -140,8 +146,21 @@ small {
   font-size: 0.9em;
   display: flex;
   align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
   gap: 5px;
   justify-content: center;
+  margin-bottom: 10px;
+
+  &:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (min-width: 640px) {
+    margin-bottom: 0;
+  }
 }
 
 .mb-1 {
