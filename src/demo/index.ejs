@@ -6,9 +6,7 @@
     <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
     <meta
       name="description"
-      content="Open source WordPress plugin that provides a 'block' and Shortcode to
-      embed YouTube/Vimeo videos, in a way that prevents users easily
-      accessing the underlying video."
+      content="<%= description %>"
     />
   </head>
   <body>
@@ -20,9 +18,7 @@
 
       <div class="intro mb-3">
         <p class="mb-2">
-          Open source WordPress plugin that provides a 'block' and Shortcode to
-          embed YouTube/Vimeo videos, in a way that prevents users easily
-          accessing the underlying video.
+          <%= description %>
         </p>
         <p>Below demonstrates the player loading a YouTube video.</p>
       </div>
@@ -41,7 +37,12 @@
             href="https://wordpress.org/plugins/protected-video/"
             class="external-link"
           >
-            <img src="images/wordpress.svg" width="16" height="16" alt="WordPress" />
+            <img
+              src="images/wordpress.svg"
+              width="16"
+              height="16"
+              alt="WordPress"
+            />
             View WordPress Plugin
           </a>
         </li>

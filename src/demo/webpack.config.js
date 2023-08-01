@@ -60,6 +60,8 @@ module.exports = {
       template: path.resolve(__dirname, 'index.ejs'),
       templateParameters: {
         version: pluginVersion,
+        description:
+          'WordPress plugin providing Gutenberg block and Shortcode to embed a YouTube/Vimeo player that prevents users from easily viewing or sharing the original video.',
       },
       meta: {
         'og:image':
