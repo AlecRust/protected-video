@@ -55,7 +55,7 @@ export default function Edit({ attributes, setAttributes }) {
         label={__('Protected Video', 'protected-video')}
         instructions={__(
           'Paste the URL of a YouTube or Vimeo video you want to display in a protected player.',
-          'protected-video'
+          'protected-video',
         )}
       >
         <TextControl
@@ -64,7 +64,7 @@ export default function Edit({ attributes, setAttributes }) {
           onChange={handleVideoUrlChange}
           placeholder={__(
             'e.g. https://youtu.be/c_hO_fjmMnk',
-            'protected-video'
+            'protected-video',
           )}
         />
         {videoUrl && (
@@ -75,7 +75,7 @@ export default function Edit({ attributes, setAttributes }) {
               <Notice status="error" isDismissible={false}>
                 {__(
                   'Sorry, a video ID could not be found in that URL.',
-                  'protected-video'
+                  'protected-video',
                 )}
               </Notice>
             )}

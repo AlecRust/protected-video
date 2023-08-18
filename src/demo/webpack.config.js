@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const blockJson = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '..', 'block.json'), 'utf8')
+  fs.readFileSync(path.resolve(__dirname, '..', 'block.json'), 'utf8'),
 )
 const pluginVersion = blockJson.version
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')

@@ -27,7 +27,7 @@ function decodeVideoBlock(videoBlock) {
 }
 
 const videoBlocks = document.querySelectorAll(
-  '.wp-block-protected-video-protected-video'
+  '.wp-block-protected-video-protected-video',
 )
 
 videoBlocks.forEach((videoBlock) => {
