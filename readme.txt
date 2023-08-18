@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.3
-Stable tag:        1.10.4
+Stable tag:        1.10.5
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -113,7 +113,16 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.10.4 =
+= 1.10.5 =
+
+* Bump dependencies
+* Refine demo page
+* Refactor demo page
+* Further refine demo page
+* Use GitHub CLI to upload release asset
+* Tidy some CSS
+
+= 1.10.4 - 2023-07-27 =
 
 * Tidy comments formatting
 * Refactor rendering of video thumbnail

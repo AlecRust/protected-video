@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.5](https://github.com/AlecRust/protected-video/compare/1.10.4...1.10.5)
+
+- Bump dependencies [`c1dfa5e`](https://github.com/AlecRust/protected-video/commit/c1dfa5e67eba706b42ddbee26d8d896e3e6e0527)
+- Refine demo page [`1a55ff2`](https://github.com/AlecRust/protected-video/commit/1a55ff2e06a897b022d679ce7a8ba32964f20dcf)
+- Refactor demo page [`cf84ce5`](https://github.com/AlecRust/protected-video/commit/cf84ce56c5380616a2bbcc81f23c086555ced7e0)
+- Further refine demo page [`100a44b`](https://github.com/AlecRust/protected-video/commit/100a44b459e100e6ef0e1f74cef0ca835d557c8c)
+- Use GitHub CLI to upload release asset [`c5187ea`](https://github.com/AlecRust/protected-video/commit/c5187ea217b64b7e6d2138f27892c4ea6a1e724a)
+- Tidy some CSS [`6d5db16`](https://github.com/AlecRust/protected-video/commit/6d5db1637c94081ee422ecc2a5321603c802d69d)
+
 #### [1.10.4](https://github.com/AlecRust/protected-video/compare/1.10.3...1.10.4)
+
+> 27 July 2023
 
 - Tidy comments formatting [`1c07bf0`](https://github.com/AlecRust/protected-video/commit/1c07bf0d0ecd8f396ab4a74c3d366fdc2cac8b7a)
 - Refactor rendering of video thumbnail [`0126ccf`](https://github.com/AlecRust/protected-video/commit/0126ccfb41a851d92f20fe1279b1dfa56b8e1e3e)
