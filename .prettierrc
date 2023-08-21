@@ -1,8 +1,0 @@
-overrides:
-  - files: "*.js"
-    options:
-      singleQuote: true
-      semi: false
-  - files: "*.php"
-    options:
-      singleQuote: true

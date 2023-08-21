@@ -13,7 +13,7 @@
 .gitignore
 .lintstagedrc.json
 .prettierignore
-.prettierrc
+.prettierrc.json
 .release-it.json
 .wp-env.json
 CHANGELOG.md
