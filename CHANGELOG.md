@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.6](https://github.com/AlecRust/protected-video/compare/1.10.5...1.10.6)
+
+- Bump dependencies [`0aaf6bc`](https://github.com/AlecRust/protected-video/commit/0aaf6bc16300e42c2736ea816c295707afc54a60)
+- Specify Prettier PHP plugin in config [`1fb621e`](https://github.com/AlecRust/protected-video/commit/1fb621e31debccfade2f988578be714e515dcdcd)
+- Bump actions/checkout from 3 to 4 [`563ffeb`](https://github.com/AlecRust/protected-video/commit/563ffeb28d98386d2b5f190ce3c7ad9e3deb9295)
+
 #### [1.10.5](https://github.com/AlecRust/protected-video/compare/1.10.4...1.10.5)
+
+> 18 August 2023
 
 - Bump dependencies [`c1dfa5e`](https://github.com/AlecRust/protected-video/commit/c1dfa5e67eba706b42ddbee26d8d896e3e6e0527)
 - Refine demo page [`1a55ff2`](https://github.com/AlecRust/protected-video/commit/1a55ff2e06a897b022d679ce7a8ba32964f20dcf)

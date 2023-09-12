@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.3
-Stable tag:        1.10.5
+Stable tag:        1.10.6
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -113,7 +113,13 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.10.5 =
+= 1.10.6 =
+
+* Bump dependencies
+* Specify Prettier PHP plugin in config
+* Bump actions/checkout from 3 to 4
+
+= 1.10.5 - 2023-08-18 =
 
 * Bump dependencies
 * Refine demo page
