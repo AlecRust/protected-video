@@ -119,7 +119,7 @@ class Protected_Video_Public
     $post_id = get_the_ID();
     if (
       $this->post_contains_block_or_shortcode($post_id) ||
-      $this->post_is_custom_post_type($post_id)
+      $this->post_is_custom($post_id)
     ) {
       return true;
     }
@@ -139,15 +139,19 @@ class Protected_Video_Public
   }
 
   /**
-   * Utility returning if the post is any custom post type.
+   * Utility returning if the post is a custom type or is using a custom template.
    *
    * @access private
    */
-  private function post_is_custom_post_type($post_id)
+  private function post_is_custom($post_id)
   {
-    return in_array(
+    $is_custom_post_type = in_array(
       get_post_type($post_id),
       get_post_types(['_builtin' => false])
     );
+
+    $is_custom_template = get_page_template_slug($post_id) !== '';
+
+    return $is_custom_post_type || $is_custom_template;
   }
 }
