@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.3
-Stable tag:        1.10.6
+Stable tag:        1.10.7
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,15 @@ If you don't care about your users sharing the video or actually want them to, a
 
 The main color of the player can be configured at **Settings > Protected Video**. If you'd like to style the player further, you can provide your own CSS to override [the player's CSS variables](https://github.com/sampotts/plyr#customizing-the-css):
 
+`
+<style>
+:root {
+--plyr-badge-background: #000;
+--plyr-control-radius: 5px;
+}
+</style>
+`
+
 = Can the YouTube watermark/controls be hidden? =
 
 Unfortunately not. This plugin loads the standard YouTube player behind the overlay, which we have no control over. These aspects of the YouTube player cannot be disabled.
@@ -86,22 +95,15 @@ A `service` of either `youtube` or `vimeo` must be specified when using the Shor
 
 = How can I set the dimensions of the player? =
 
-The [Plyr](https://plyr.io/) player is responsive by default and will grow to fill the container it is placed in. If you'd like to restrict these dimensions, place the block or shortcode within a container that has your desired dimensions. See [this support topic](https://wordpress.org/support/topic/video-size-on-page/) for more.
-
-`
-<style>
-:root {
---plyr-badge-background: #000;
---plyr-control-radius: 5px;
-}
-</style>
-`
+The [Plyr](https://plyr.io/) player is responsive by default and will grow to fill the container it is placed in. If you'd like to restrict these dimensions, place the block or Shortcode within a container that has your desired dimensions. See [this support topic](https://wordpress.org/support/topic/video-size-on-page/) for more.
 
 = The display of the player is broken/it doesn't work =
 
-If the player is not looking or behaving like [the demo](https://protected-video.alecrust.com/) on your site, this indicates another theme or plugin is interfering with Protected Video.
+If the player is not looking or behaving like [the demo](https://protected-video.alecrust.com/) on your site, this usually indicates another theme or plugin is interfering with Protected Video.
 
-This is usually caused by another plugin or theme loading its own version of [Plyr](https://plyr.io/), which interferes with the Plyr version provided by Protected Video. Please try disabling all other plugins and switching to a default theme to isolate what is causing this issue.
+Please try disabling all other plugins one by one and switching to a default theme, to isolate which plugin or theme is causing the issue.
+
+For performance reasons, Protected Video only loads its associated JS and CSS when it detects that a Gutenberg block or Shortcode is present on the page. If you insert a Protected Video in a non-standard way this detection may fail.
 
 == Screenshots ==
 
@@ -113,7 +115,13 @@ This is usually caused by another plugin or theme loading its own version of [Pl
 
 == Changelog ==
 
-= 1.10.6 =
+= 1.10.7 =
+
+* Bump dependencies
+* Improve FAQ
+* Load assets if post uses custom page template
+
+= 1.10.6 - 2023-09-12 =
 
 * Bump dependencies
 * Specify Prettier PHP plugin in config

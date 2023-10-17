@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.7](https://github.com/AlecRust/protected-video/compare/1.10.6...1.10.7)
+
+- Bump dependencies [`d858534`](https://github.com/AlecRust/protected-video/commit/d858534e2ab214931bf4230726ce279539aabb10)
+- Improve FAQ [`a3a68cc`](https://github.com/AlecRust/protected-video/commit/a3a68cc5e13ad3058d04df2d511e2cc62f1e27c8)
+- Load assets if post uses custom page template [`21a4328`](https://github.com/AlecRust/protected-video/commit/21a43282248c070159f86e7454e0ce467525b1fd)
+
 #### [1.10.6](https://github.com/AlecRust/protected-video/compare/1.10.5...1.10.6)
+
+> 12 September 2023
 
 - Bump dependencies [`0aaf6bc`](https://github.com/AlecRust/protected-video/commit/0aaf6bc16300e42c2736ea816c295707afc54a60)
 - Specify Prettier PHP plugin in config [`1fb621e`](https://github.com/AlecRust/protected-video/commit/1fb621e31debccfade2f988578be714e515dcdcd)
