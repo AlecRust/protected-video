@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.8](https://github.com/AlecRust/protected-video/compare/1.10.7...1.10.8)
+
+- Bump dependencies [`5411cc7`](https://github.com/AlecRust/protected-video/commit/5411cc7cecf5c08e48cdc30e2687942ba5be442b)
+- Update "Tested up to" to 6.4 [`1832c54`](https://github.com/AlecRust/protected-video/commit/1832c54735814d7ade5a659119332fbd16f5e250)
+
 #### [1.10.7](https://github.com/AlecRust/protected-video/compare/1.10.6...1.10.7)
+
+> 17 October 2023
 
 - Bump dependencies [`d858534`](https://github.com/AlecRust/protected-video/commit/d858534e2ab214931bf4230726ce279539aabb10)
 - Improve FAQ [`a3a68cc`](https://github.com/AlecRust/protected-video/commit/a3a68cc5e13ad3058d04df2d511e2cc62f1e27c8)

@@ -1,6 +1,6 @@
 {
   "name": "protected-video",
-  "version": "1.10.7",
+  "version": "1.10.8",
   "description": "YouTube/Vimeo player that prevents easy sharing of the video.",
   "author": "Alec Rust (https://www.alecrust.com/)",
   "license": "GPL-2.0-or-later",
