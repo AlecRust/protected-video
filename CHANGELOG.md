@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.10.9](https://github.com/AlecRust/protected-video/compare/1.10.8...1.10.9)
+
+- Bump dependencies [`ecf8292`](https://github.com/AlecRust/protected-video/commit/ecf82924d29f209c0b4b12aef339c5428c31482e)
+- Automate deletion of old plugin SVN tags [`fcba3f8`](https://github.com/AlecRust/protected-video/commit/fcba3f8e0267ea54721c9184d45c041d4792beb2)
+- Bump actions/setup-node from 3 to 4 [`f4e8cf7`](https://github.com/AlecRust/protected-video/commit/f4e8cf71c5635c7672a8194f740d192b2a9f5151)
+
 #### [1.10.8](https://github.com/AlecRust/protected-video/compare/1.10.7...1.10.8)
+
+> 27 October 2023
 
 - Bump dependencies [`5411cc7`](https://github.com/AlecRust/protected-video/commit/5411cc7cecf5c08e48cdc30e2687942ba5be442b)
 - Update "Tested up to" to 6.4 [`1832c54`](https://github.com/AlecRust/protected-video/commit/1832c54735814d7ade5a659119332fbd16f5e250)
