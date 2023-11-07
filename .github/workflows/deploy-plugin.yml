@@ -37,6 +37,11 @@ jobs:
         run: npm ci
       - name: Build dist files
         run: npm run build
+      - name: Clean up old SVN tags
+        run: bash .github/workflows/cleanup-svn-tags.sh
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
       - name: Deploy to WordPress SVN
         id: deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
