@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Set SVN repo URL
 SVN_REPO_URL="https://plugins.svn.wordpress.org/protected-video/"
 
 # Fetch all tags from SVN
