@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.4
-Stable tag:        1.10.9
+Stable tag:        1.10.10
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -115,7 +115,14 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 
 == Changelog ==
 
-= 1.10.9 =
+= 1.10.10 =
+
+* Bump dependencies
+* Bump actions/deploy-pages from 2 to 3
+* Bump actions/configure-pages from 3 to 4
+* Remove unnecessary comment
+
+= 1.10.9 - 2023-11-07 =
 
 * Bump dependencies
 * Automate deletion of old plugin SVN tags
