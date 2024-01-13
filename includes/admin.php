@@ -156,7 +156,11 @@ class Protected_Video_Admin
       __('Disable right-click', 'protected-video'), // field title
       [$this, 'render_disable_right_click_checkbox'], // callback
       'protected-video-admin', // page
-      'protected_video_setting_section' // section
+      'protected_video_setting_section', // section
+      [
+        'id' => 'disable_right_click',
+        'option_name' => 'protected_video_disable_right_click',
+      ]
     );
 
     // Register "Disable right-click" setting
@@ -197,7 +201,7 @@ class Protected_Video_Admin
   }
 
   /**
-   * Render the Player theme color field.
+   * Render the "Player theme color" field.
    */
   public function render_color_input($val)
   {
@@ -227,13 +231,18 @@ class Protected_Video_Admin
   }
 
   /**
-   * Render the disable right-click checkbox field.
+   * Render the "Disable right-click" checkbox field.
    */
-  public function render_disable_right_click_checkbox()
+  public function render_disable_right_click_checkbox($val)
   {
-    $value = get_option('protected_video_disable_right_click', '1');
+    $id = $val['id'];
+    $name = $val['option_name'];
+    $value = get_option($name, '1');
+
     printf(
-      '<input type="checkbox" id="disable_right_click" name="protected_video_disable_right_click" value="1" %s>',
+      '<input type="checkbox" id="%s" name="%s" value="1" %s>',
+      esc_attr($id),
+      esc_attr($name),
       checked(1, $value, false)
     );
 
