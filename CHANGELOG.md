@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.11.0](https://github.com/AlecRust/protected-video/compare/1.10.10...1.11.0)
+
+- Bump dependencies [`f695eba`](https://github.com/AlecRust/protected-video/commit/f695eba27cebbea26f85dd22045b9fba8c0b3377)
+- Add "Disable right-click" plugin option [`472cdce`](https://github.com/AlecRust/protected-video/commit/472cdce2039f80707a6d0ce86cbf354667274fbd)
+- Use LTS Node version in CI workflows [`48ea8d3`](https://github.com/AlecRust/protected-video/commit/48ea8d391e4468499b69a599db5a02a1ad22a13e)
+- Bump actions/upload-pages-artifact from 2 to 3 [`9a55a70`](https://github.com/AlecRust/protected-video/commit/9a55a70873368b22d84fcf83aee145b8a89323cb)
+- Bump actions/deploy-pages from 3 to 4 [`73eae23`](https://github.com/AlecRust/protected-video/commit/73eae239957dd1f450524e69cf83200c78f9c18f)
+
 #### [1.10.10](https://github.com/AlecRust/protected-video/compare/1.10.9...1.10.10)
+
+> 19 December 2023
 
 - Bump dependencies [`427e39d`](https://github.com/AlecRust/protected-video/commit/427e39db943649cdd0a449a834af74ac58e183f7)
 - Bump actions/deploy-pages from 2 to 3 [`8fade77`](https://github.com/AlecRust/protected-video/commit/8fade778fb69bc4bd97957d3b6c2a6b3ee0b54f0)

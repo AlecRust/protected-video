@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
 Tested up to:      6.4
-Stable tag:        1.10.10
+Stable tag:        1.11.0
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -21,7 +21,7 @@ Features include:
 * [Plyr](https://plyr.io/) player used to overlay default player with custom controls
 * Player modifications to always prevent clicking the default player
 * Encodes video ID in HTML to prevent finding it via “View Source”
-* Settings page to configure the player theme to match your site
+* Settings page to e.g. configure the player theme to match your site
 
 [View Player Demo](https://protected-video.alecrust.com/)
 
@@ -110,12 +110,20 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 1. Searching for Protected Video in the Block Editor.
 2. Protected Video block inserted in the Block Editor.
 3. Protected Video displayed on public facing site.
-4. Configuration of the player theme in plugin settings.
+4. Configuration of the global plugin settings.
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
 
-= 1.10.10 =
+= 1.11.0 =
+
+* Bump dependencies
+* Add "Disable right-click" plugin option
+* Use LTS Node version in CI workflows
+* Bump actions/upload-pages-artifact from 2 to 3
+* Bump actions/deploy-pages from 3 to 4
+
+= 1.10.10 - 2023-12-19 =
 
 * Bump dependencies
 * Bump actions/deploy-pages from 2 to 3
