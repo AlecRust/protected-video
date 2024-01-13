@@ -147,7 +147,10 @@ class Protected_Video_Admin
     register_setting(
       'protected_video_option_group', // settings group name
       'protected_video_player_theme_color', // option name
-      ['sanitize_callback' => [$this, 'sanitize_color_input']] // callback
+      [
+        'default' => '#00b3ff',
+        'sanitize_callback' => [$this, 'sanitize_color_input'],
+      ]
     );
 
     // Add "Disable right-click" setting field
@@ -170,7 +173,7 @@ class Protected_Video_Admin
       [
         'default' => '1',
         'sanitize_callback' => [$this, 'sanitize_checkbox_input'],
-      ] // callback
+      ]
     );
   }
 
