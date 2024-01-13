@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 19
+          node-version: "lts/*"
           cache: "npm"
       - name: Install Node packages
         run: npm ci
@@ -44,7 +44,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 19
+          node-version: "lts/*"
           cache: "npm"
       - name: Install Node packages
         run: npm ci
