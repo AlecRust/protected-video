@@ -122,6 +122,7 @@ class Protected_Video_Admin
    */
   public function settings_page_init()
   {
+    // Add settings section
     add_settings_section(
       'protected_video_setting_section', // HTML id
       __('Settings', 'protected-video'), // title
@@ -129,9 +130,10 @@ class Protected_Video_Admin
       'protected-video-admin' // page
     );
 
+    // Add "Player theme color" setting field
     add_settings_field(
       'player_theme_color', // HTML id
-      __('Player Theme Color', 'protected-video'), // field title
+      __('Player theme color', 'protected-video'), // field title
       [$this, 'render_color_input'], // callback
       'protected-video-admin', // page
       'protected_video_setting_section', // section
@@ -141,19 +143,47 @@ class Protected_Video_Admin
       ]
     );
 
+    // Register "Player theme color" setting
     register_setting(
       'protected_video_option_group', // settings group name
       'protected_video_player_theme_color', // option name
-      [$this, 'sanitize_plugin_color_input'] // callback
+      ['sanitize_callback' => [$this, 'sanitize_color_input']] // callback
+    );
+
+    // Add "Disable right-click" setting field
+    add_settings_field(
+      'disable_right_click', // HTML id
+      __('Disable right-click', 'protected-video'), // field title
+      [$this, 'render_disable_right_click_checkbox'], // callback
+      'protected-video-admin', // page
+      'protected_video_setting_section' // section
+    );
+
+    // Register "Disable right-click" setting
+    register_setting(
+      'protected_video_option_group', // settings group name
+      'protected_video_disable_right_click', // option name
+      [
+        'default' => '1',
+        'sanitize_callback' => [$this, 'sanitize_checkbox_input'],
+      ] // callback
     );
   }
 
   /**
-   * Sanitize plugin option color input data.
+   * Sanitize color input data.
    */
-  public function sanitize_plugin_color_input($input)
+  public function sanitize_color_input($input)
   {
     return sanitize_hex_color($input);
+  }
+
+  /**
+   * Sanitize checkbox input data.
+   */
+  public function sanitize_checkbox_input($input)
+  {
+    return isset($input) && true == $input ? '1' : '0';
   }
 
   /**
@@ -161,19 +191,13 @@ class Protected_Video_Admin
    */
   public function render_settings_description()
   {
-    printf(
-      __(
-        'Set the player theme color below. For more advanced styling options please refer to %s.',
-        'protected-video'
-      ),
-      '<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
-        __("Plyr's documentation", 'protected-video') .
-        '</a>'
-    );
+    echo '<p>' .
+      __('Global settings for the Protected Video plugin.', 'protected-video') .
+      '</p>';
   }
 
   /**
-   * Returns player theme color field on settings page.
+   * Render the Player theme color field.
    */
   public function render_color_input($val)
   {
@@ -186,6 +210,39 @@ class Protected_Video_Admin
       esc_attr($id),
       esc_attr($name),
       esc_attr($value)
+    );
+
+    printf(
+      '<p class="description">%s</p>',
+      sprintf(
+        __(
+          'Sets the player theme color. See %s for advanced styling options.',
+          'protected-video'
+        ),
+        '<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
+          __("Plyr's documentation", 'protected-video') .
+          '</a>'
+      )
+    );
+  }
+
+  /**
+   * Render the disable right-click checkbox field.
+   */
+  public function render_disable_right_click_checkbox()
+  {
+    $value = get_option('protected_video_disable_right_click', '1');
+    printf(
+      '<input type="checkbox" id="disable_right_click" name="protected_video_disable_right_click" value="1" %s>',
+      checked(1, $value, false)
+    );
+
+    printf(
+      '<p class="description">%s</p>',
+      __(
+        'Disables right-click on pages where a Protected Video is displayed.',
+        'protected-video'
+      )
     );
   }
 }

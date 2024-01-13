@@ -110,6 +110,23 @@ class Protected_Video_Public
   }
 
   /**
+   * Return body classes for the public-facing side of the site
+   */
+  public function add_body_classes($classes)
+  {
+    $disable_right_click = get_option(
+      'protected_video_disable_right_click',
+      '1'
+    );
+
+    if ($disable_right_click === '1') {
+      $classes[] = 'protected-video-disable-right-click';
+    }
+
+    return $classes;
+  }
+
+  /**
    * Utility returning if the scripts and styles should be enqueued.
    *
    * @access private

@@ -40,5 +40,7 @@ videoBlocks.forEach((videoBlock) => {
   })
 })
 
-// Disable right-clicking anywhere on the page
-document.addEventListener('contextmenu', (event) => event.preventDefault())
+// Disable right-click if plugin option enabled
+if (document.body.classList.contains('protected-video-disable-right-click')) {
+  document.addEventListener('contextmenu', (event) => event.preventDefault())
+}
