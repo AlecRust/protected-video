@@ -13,3 +13,4 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 
 // Delete the plugin option from the wp_options table
 delete_option('protected_video_player_theme_color');
+delete_option('protected_video_disable_right_click');
