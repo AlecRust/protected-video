@@ -199,7 +199,10 @@ class Protected_Video_Admin
   public function render_settings_description()
   {
     echo '<p>' .
-      __('Global settings for the Protected Video plugin.', 'protected-video') .
+      __(
+        'Control the global settings for Protected Video below.',
+        'protected-video'
+      ) .
       '</p>';
   }
 
@@ -234,7 +237,7 @@ class Protected_Video_Admin
   }
 
   /**
-   * Render the "Disable right-click" checkbox field.
+   * Render the "Disable right-click" field.
    */
   public function render_disable_right_click_checkbox($val)
   {
@@ -249,12 +252,11 @@ class Protected_Video_Admin
       checked(1, $value, false)
     );
 
-    printf(
-      '<p class="description">%s</p>',
+    echo '<p class="description">' .
       __(
-        'Disables right-click on pages where a Protected Video is displayed.',
+        'Disables right-click on pages where a video is displayed.',
         'protected-video'
-      )
-    );
+      ) .
+      '</p>';
   }
 }
