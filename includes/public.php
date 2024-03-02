@@ -134,13 +134,8 @@ class Protected_Video_Public
   private function should_enqueue_assets()
   {
     $post_id = get_the_ID();
-    if (
-      $this->post_contains_block_or_shortcode($post_id) ||
-      $this->post_is_custom($post_id)
-    ) {
-      return true;
-    }
-    return false;
+    return $this->post_contains_block_or_shortcode($post_id) ||
+      $this->post_is_custom($post_id);
   }
 
   /**

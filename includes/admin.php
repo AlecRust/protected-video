@@ -190,7 +190,7 @@ class Protected_Video_Admin
    */
   public function sanitize_checkbox_input($input)
   {
-    return isset($input) && true == $input ? '1' : '0';
+    return !empty($input) ? '1' : '0';
   }
 
   /**
