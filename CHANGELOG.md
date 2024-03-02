@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.11.1](https://github.com/AlecRust/protected-video/compare/1.11.0...1.11.1)
+
+- Bump dependencies [`a1118ed`](https://github.com/AlecRust/protected-video/commit/a1118ed38da2fd4831e2f1525c21a9b3850f3e33)
+- Upgrade get-video-id to v4 [`1a766dd`](https://github.com/AlecRust/protected-video/commit/1a766dd3075c0dc616a71eadd4602c41e929fd37)
+- Improve consistency of option fields rendering [`13769a1`](https://github.com/AlecRust/protected-video/commit/13769a1426bde61f7d79b33293739cdd07f856a2)
+- Upgrade husky to v9 [`31b4937`](https://github.com/AlecRust/protected-video/commit/31b4937e8b41c3de2d42dc777968460686abbed8)
+- Misc tidy [`4c787b6`](https://github.com/AlecRust/protected-video/commit/4c787b64182990c710892048a827c2196939c4a4)
+- Simplify some PHP code [`d9e7245`](https://github.com/AlecRust/protected-video/commit/d9e7245a146c9307a754389b9b2de30cbc6c6858)
+- Bump Prettier version [`c620768`](https://github.com/AlecRust/protected-video/commit/c620768b49ed9476a2c102bc12ff5b62130d2807)
+- Set default value for protected_video_player_theme_color option [`ffb8955`](https://github.com/AlecRust/protected-video/commit/ffb8955d47c0e2aaf01141cbacf00e0092043dd1)
+- Update "Tested up to" to 6.5 [`ca85ef6`](https://github.com/AlecRust/protected-video/commit/ca85ef6ba5c41e293c690bfa2b63ed8404033efb)
+- Include protected_video_disable_right_click option in plugin uninstall [`e24a28c`](https://github.com/AlecRust/protected-video/commit/e24a28c09c9e0de4aa4d26f519fdaba6476a0724)
+
 #### [1.11.0](https://github.com/AlecRust/protected-video/compare/1.10.10...1.11.0)
+
+> 13 January 2024
 
 - Bump dependencies [`f695eba`](https://github.com/AlecRust/protected-video/commit/f695eba27cebbea26f85dd22045b9fba8c0b3377)
 - Add "Disable right-click" plugin option [`472cdce`](https://github.com/AlecRust/protected-video/commit/472cdce2039f80707a6d0ce86cbf354667274fbd)

@@ -2,8 +2,8 @@
 Contributors:      alecrust
 Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
 Requires at least: 4.6
-Tested up to:      6.4
-Stable tag:        1.11.0
+Tested up to:      6.5
+Stable tag:        1.11.1
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -103,7 +103,7 @@ If the player is not looking or behaving like [the demo](https://protected-video
 
 Please try disabling all other plugins one by one and switching to a default theme, to isolate which plugin or theme is causing the issue.
 
-For performance reasons, Protected Video only loads its associated JS and CSS when it detects that a Gutenberg block or Shortcode is present on the page. If you insert a Protected Video in a non-standard way this detection may fail.
+For performance reasons, Protected Video only loads its associated JS and CSS when it detects that a Gutenberg block or Shortcode is present on the page. If you insert a video in a non-standard way this detection may fail.
 
 == Screenshots ==
 
@@ -115,7 +115,20 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 
 == Changelog ==
 
-= 1.11.0 =
+= 1.11.1 =
+
+* Bump dependencies
+* Upgrade get-video-id to v4
+* Improve consistency of option fields rendering
+* Upgrade husky to v9
+* Misc tidy
+* Simplify some PHP code
+* Bump Prettier version
+* Set default value for protected_video_player_theme_color option
+* Update "Tested up to" to 6.5
+* Include protected_video_disable_right_click option in plugin uninstall
+
+= 1.11.0 - 2024-01-13 =
 
 * Bump dependencies
 * Add "Disable right-click" plugin option
