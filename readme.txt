@@ -1,6 +1,6 @@
 === Protected Video ===
 Contributors:      alecrust
-Tags:              block, gutenberg, media player, video player, plyr, youtube, vimeo, copyright
+Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 4.6
 Tested up to:      6.5
 Stable tag:        1.11.1
