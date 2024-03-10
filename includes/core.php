@@ -2,9 +2,8 @@
 /**
  * Core plugin class.
  *
- * Defines admin-specific and public-facing site hooks.
- *
- * Also maintains the unique identifier and current version of the plugin.
+ * Defines the plugin name, version, and admin-specific
+ * and public-facing site hooks.
  *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video

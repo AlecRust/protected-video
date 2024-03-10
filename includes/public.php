@@ -2,9 +2,6 @@
 /**
  * Public-facing functionality of the plugin.
  *
- * Defines the plugin name, version, and hooks to enqueue
- * the public-facing stylesheet and JavaScript.
- *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
  * @subpackage Protected_Video/includes

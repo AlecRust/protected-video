@@ -2,9 +2,6 @@
 /**
  * Admin-specific functionality of the plugin.
  *
- * Defines the plugin name, version, and hooks for
- * enqueuing the admin-specific Gutenberg block.
- *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
  * @subpackage Protected_Video/includes
