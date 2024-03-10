@@ -4,6 +4,8 @@
  *
  * Defines admin-specific and public-facing site hooks.
  *
+ * Also maintains the unique identifier and current version of the plugin.
+ *
  * @link       https://www.alecrust.com/
  * @package    Protected_Video
  * @subpackage Protected_Video/includes

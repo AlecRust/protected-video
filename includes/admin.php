@@ -100,7 +100,7 @@ class Protected_Video_Admin
   }
 
   /**
-   * Return settings page.
+   * Render settings page.
    */
   public function render_settings_page()
   {

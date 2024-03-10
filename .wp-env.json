@@ -1,4 +1,7 @@
 {
   "core": "WordPress/WordPress",
-  "plugins": ["."]
+  "plugins": [
+    ".",
+    "https://downloads.wordpress.org/plugin/plugin-check.latest-stable.zip"
+  ]
 }

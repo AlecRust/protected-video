@@ -17,7 +17,7 @@
 .release-it.json
 .wp-env.json
 CHANGELOG.md
-package.json
 package-lock.json
+package.json
 readme.hbs
 README.md
