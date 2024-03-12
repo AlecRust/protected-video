@@ -2,7 +2,7 @@
 /**
  * Public-facing functionality of the plugin.
  *
- * @link       https://www.alecrust.com/
+ * @link       https://github.com/AlecRust/protected-video
  * @package    Protected_Video
  * @subpackage Protected_Video/includes
  * @author     Alec Rust (https://www.alecrust.com/)

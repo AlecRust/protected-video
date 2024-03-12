@@ -2,7 +2,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @link    https://www.alecrust.com/
+ * @link    https://github.com/AlecRust/protected-video
  * @package Protected_Video
  */
 

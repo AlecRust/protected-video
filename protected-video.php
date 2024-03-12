@@ -13,7 +13,7 @@
  *
  * @package Protected_Video
  * @author  Alec Rust
- * @link    https://www.alecrust.com/
+ * @link    https://github.com/AlecRust/protected-video
  */
 
 // Abort if this file is called directly.

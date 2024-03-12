@@ -29,7 +29,7 @@ To embed a video either search for "Protected Video" in the Block Editor, or use
 - [Node.js](https://nodejs.org/)
 - [Docker](https://www.docker.com/)
 
-Launch a Docker-based development environment with this plugin pre-installed by running:
+Start a WordPress instance for developing this plugin by running:
 
 1. `npm install`
 2. `npm run build`

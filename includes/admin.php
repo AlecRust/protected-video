@@ -2,7 +2,7 @@
 /**
  * Admin-specific functionality of the plugin.
  *
- * @link       https://www.alecrust.com/
+ * @link       https://github.com/AlecRust/protected-video
  * @package    Protected_Video
  * @subpackage Protected_Video/includes
  * @author     Alec Rust (https://www.alecrust.com/)
@@ -191,7 +191,7 @@ class Protected_Video_Admin
   }
 
   /**
-   * Explanation copy on settings page (between heading and fields).
+   * Render main description on plugin settings page.
    */
   public function render_settings_description()
   {
