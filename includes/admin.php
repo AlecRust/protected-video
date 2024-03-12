@@ -208,13 +208,13 @@ class Protected_Video_Admin
    */
   public function render_color_input($val)
   {
-    $id = $val['id'];
+    $field_id = $val['id'];
     $name = $val['option_name'];
     $value = get_option($name, '#00b3ff');
 
     printf(
       '<input type="color" id="%s" name="%s" value="%s">',
-      esc_attr($id),
+      esc_attr($field_id),
       esc_attr($name),
       esc_attr($value)
     );
@@ -238,13 +238,13 @@ class Protected_Video_Admin
    */
   public function render_disable_right_click_checkbox($val)
   {
-    $id = $val['id'];
+    $field_id = $val['id'];
     $name = $val['option_name'];
     $value = get_option($name, '1');
 
     printf(
       '<input type="checkbox" id="%s" name="%s" value="1" %s>',
-      esc_attr($id),
+      esc_attr($field_id),
       esc_attr($name),
       checked(1, $value, false)
     );
