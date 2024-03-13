@@ -103,7 +103,7 @@ class Protected_Video_Admin
   {
     ?>
       <div class="wrap">
-        <h2><?php echo __('Protected Video', 'protected-video'); ?></h2>
+        <h2><?php esc_html_e('Protected Video', 'protected-video'); ?></h2>
         <form method="post" action="options.php">
           <?php
           settings_fields('protected_video_option_group');
@@ -196,7 +196,7 @@ class Protected_Video_Admin
   public function render_settings_description()
   {
     echo '<p>' .
-      __(
+      esc_html__(
         'Control the global settings for Protected Video below.',
         'protected-video'
       ) .
@@ -222,12 +222,12 @@ class Protected_Video_Admin
     printf(
       '<p class="description">%s</p>',
       sprintf(
-        __(
+        esc_html__(
           'Sets the player theme color. See %s for advanced styling options.',
           'protected-video'
         ),
         '<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
-          __("Plyr's documentation", 'protected-video') .
+          esc_html__("Plyr's documentation", 'protected-video') .
           '</a>'
       )
     );
@@ -250,7 +250,7 @@ class Protected_Video_Admin
     );
 
     echo '<p class="description">' .
-      __(
+      esc_html__(
         'Disables right-click on pages where a video is displayed.',
         'protected-video'
       ) .
