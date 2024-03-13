@@ -222,6 +222,7 @@ class Protected_Video_Admin
     printf(
       '<p class="description">%s</p>',
       sprintf(
+        // translators: %s is a link to the Plyr documentation
         esc_html__(
           'Sets the player theme color. See %s for advanced styling options.',
           'protected-video'
