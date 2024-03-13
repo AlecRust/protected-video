@@ -18,7 +18,7 @@
 
 // Abort if this file is called directly.
 if (!defined('WPINC')) {
-  die();
+    die();
 }
 
 /**
@@ -36,7 +36,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/core.php';
  */
 function run_protected_video()
 {
-  $plugin = new Protected_Video();
-  $plugin->init();
+    $plugin = new Protected_Video();
+    $plugin->init();
 }
 run_protected_video();
