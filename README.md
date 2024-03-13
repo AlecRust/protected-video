@@ -24,17 +24,17 @@ To embed a video either search for "Protected Video" in the Block Editor, or use
 
 ## Development
 
-### Requirements
+Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/)
 - [Docker](https://www.docker.com/)
 
-Start a WordPress instance for developing this plugin by running:
+Start a WordPress instance for developing this plugin:
 
 1. `npm install`
 2. `npm run build`
 3. `npm run env start`
 
-Use `npm start` to watch and rebuild block source files as they change.
+Run `npm start` to watch and rebuild block source files as they change.
 
-Use `npm run start:demo` to launch the demo page on a local server.
+Run `npm run start:demo` to launch the demo page on a local server.

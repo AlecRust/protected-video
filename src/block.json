@@ -12,7 +12,7 @@
       "videoService": "youtube"
     }
   },
-  "description": "YouTube/Vimeo player that prevents easy sharing of the video.",
+  "description": "Embed YouTube/Vimeo player that prevents easy sharing of the video.",
   "keywords": ["video", "player", "plyr", "youtube", "vimeo"],
   "attributes": {
     "videoUrl": {
