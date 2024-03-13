@@ -2,7 +2,24 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.11.2](https://github.com/AlecRust/protected-video/compare/1.11.1...1.11.2)
+
+- Change PHP code to 4 spaces indentation [`5592000`](https://github.com/AlecRust/protected-video/commit/5592000558e89f7896ab3ac5be0d727e0e2ac40d)
+- Bump dependencies [`5e6a5e2`](https://github.com/AlecRust/protected-video/commit/5e6a5e20ee8845e42d33465c1e73856b900c030d)
+- Add Plugin Check to development plugins [`0823ed8`](https://github.com/AlecRust/protected-video/commit/0823ed8de776b2df374070359480cfdd5bb6200c)
+- Tidy @link comments [`77e0392`](https://github.com/AlecRust/protected-video/commit/77e03920509d0c0d0c2afe69f02496733c574927)
+- Tidy comments [`e112105`](https://github.com/AlecRust/protected-video/commit/e112105fb9644de2c908b9f33edccf5a4d28dd75)
+- Improve HTML escaping [`fcfca14`](https://github.com/AlecRust/protected-video/commit/fcfca14f8da86d20e3d4403244570859218496ba)
+- Tidy copy [`328c19f`](https://github.com/AlecRust/protected-video/commit/328c19fb2154ec6b0df95044d14009bf4474ebfe)
+- Increase var name length [`ed267fe`](https://github.com/AlecRust/protected-video/commit/ed267feca81079e5439c3ba14b052e12519663fd)
+- Add development requirements to README [`05a850a`](https://github.com/AlecRust/protected-video/commit/05a850a42aed4b09daf462c55c8f434f30b6d7d6)
+- Reduce plugin tags to 5 [`d770554`](https://github.com/AlecRust/protected-video/commit/d770554718ac9403c14921075cff519a5ec97c52)
+- Add "Can I load my own videos into the player?" FAQ [`60bf993`](https://github.com/AlecRust/protected-video/commit/60bf9934e5ae6e2b773855afb34a523207dc58a8)
+- Add translators comment [`fb4a898`](https://github.com/AlecRust/protected-video/commit/fb4a8985548391bd432368583fbcd74d52d78d3e)
+
 #### [1.11.1](https://github.com/AlecRust/protected-video/compare/1.11.0...1.11.1)
+
+> 2 March 2024
 
 - Bump dependencies [`a1118ed`](https://github.com/AlecRust/protected-video/commit/a1118ed38da2fd4831e2f1525c21a9b3850f3e33)
 - Upgrade get-video-id to v4 [`1a766dd`](https://github.com/AlecRust/protected-video/commit/1a766dd3075c0dc616a71eadd4602c41e929fd37)

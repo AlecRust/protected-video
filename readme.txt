@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 4.6
 Tested up to:      6.5
-Stable tag:        1.11.1
+Stable tag:        1.11.2
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -79,10 +79,6 @@ Unfortunately not. This plugin loads the standard YouTube player behind the over
 
 This plugin embeds the [Plyr](https://plyr.io/) player in a particular way and adds modifications to prevent access to the underlying video player. This plugin cannot provide additional features to the player itself beyond what is provided by Plyr. If you'd like to see a feature added to the player, please [open an issue on Plyr's GitHub](https://github.com/sampotts/plyr/issues).
 
-= Can I load my own videos into the player? =
-
-Currently this plugin only supports YouTube and Vimeo embeds. You can upload your videos to YouTube or Vimeo and then embed them using this plugin. Support for loading your own video file directly from a server is a potential future feature.
-
 = Why is there a Shortcode as well as Gutenberg block? =
 
 The Shortcode is provided as an alternative embed method that still provides the same level of protection. Some people need the Shortcode for use with 3rd party page builders (Elementor etc.) and others simply prefer using a Shortcode over Gutenberg blocks.
@@ -119,7 +115,22 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 
 == Changelog ==
 
-= 1.11.1 =
+= 1.11.2 =
+
+* Change PHP code to 4 spaces indentation
+* Bump dependencies
+* Add Plugin Check to development plugins
+* Tidy @link comments
+* Tidy comments
+* Improve HTML escaping
+* Tidy copy
+* Increase var name length
+* Add development requirements to README
+* Reduce plugin tags to 5
+* Add "Can I load my own videos into the player?" FAQ
+* Add translators comment
+
+= 1.11.1 - 2024-03-02 =
 
 * Bump dependencies
 * Upgrade get-video-id to v4
