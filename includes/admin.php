@@ -104,7 +104,7 @@ class Protected_Video_Admin
         ?>
       <div class="wrap">
         <h2><?php esc_html_e('Protected Video', 'protected-video'); ?></h2>
-        <form method="post" action="options.php">
+        <form action="options.php" method="post">
           <?php
           settings_fields('protected_video_option_group');
           do_settings_sections('protected-video-admin');
