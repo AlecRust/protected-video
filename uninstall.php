@@ -1,6 +1,6 @@
 <?php
 /**
- * Fired when the plugin is uninstalled.
+ * Runs when the plugin is uninstalled.
  *
  * @link    https://github.com/AlecRust/protected-video
  * @package Protected_Video

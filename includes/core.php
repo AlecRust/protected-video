@@ -133,7 +133,7 @@ class Protected_Video
     }
 
     /**
-     * Utility returning plugin name uniquely identifying it within the context of WordPress.
+     * Utility returning plugin name uniquely identifying it.
      *
      * @return string    The name of the plugin.
      */
