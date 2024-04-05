@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-#### [1.11.2](https://github.com/AlecRust/protected-video/releases/tag/1.11.2)
+#### [1.11.3](https://github.com/AlecRust/protected-video/releases/tag/1.11.3)
 
 > 5 April 2024
 
@@ -10,6 +10,10 @@ All notable changes to this project will be documented in this file.
 - Tidy comments [`0378eff`](https://github.com/AlecRust/protected-video/commit/0378eff7c1ea83c7a69dd91e3fd8387d6448d8b4)
 - Bump dependencies [`03810a7`](https://github.com/AlecRust/protected-video/commit/03810a756e09fcd16580f3231571d42a8dc4b1e4)
 - Bump actions/configure-pages from 4 to 5 [`c87b2b3`](https://github.com/AlecRust/protected-video/commit/c87b2b3454a78300a48cbcb6bebd40ceb47b62eb)
+- Switch to git-cliff for changelog building [`d08e2b6`](https://github.com/AlecRust/protected-video/commit/d08e2b688754fed6089e000d9d45ab4851e3be90)
+- Add Composer and GrumPHP for PHP linting [`b02e9d5`](https://github.com/AlecRust/protected-video/commit/b02e9d53bd77934ee5058180578bba35e73f77d0)
+- Bump dependencies [`928fc69`](https://github.com/AlecRust/protected-video/commit/928fc69f69d7307fd7f10f2e1d2a16c645867917)
+- Remove linting step from release [`7fc6543`](https://github.com/AlecRust/protected-video/commit/7fc6543aca0deb32dd18d9813b19641b31c02778)
 
 #### [1.11.2](https://github.com/AlecRust/protected-video/releases/tag/1.11.2)
 

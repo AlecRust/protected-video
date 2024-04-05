@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 4.6
 Tested up to:      6.5
-Stable tag:        1.11.2
+Stable tag:        1.11.3
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -119,12 +119,16 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 
 == Changelog ==
 
-= 1.11.2 - 2024-04-05 =
+= 1.11.3 - 2024-04-05 =
 
 * Add missing "Can I load my own videos into the player?" FAQ
 * Tidy comments
 * Bump dependencies
 * Bump actions/configure-pages from 4 to 5
+* Switch to git-cliff for changelog building
+* Add Composer and GrumPHP for PHP linting
+* Bump dependencies
+* Remove linting step from release
 
 = 1.11.2 - 2024-03-13 =
 
