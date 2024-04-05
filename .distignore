@@ -18,6 +18,9 @@
 .release-it.json
 .wp-env.json
 CHANGELOG.md
+composer.json
+composer.lock
+grumphp.yml
 package-lock.json
 package.json
 README.md

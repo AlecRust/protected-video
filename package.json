@@ -13,7 +13,7 @@
     "env": "wp-env",
     "start:demo": "webpack serve --mode development -c src/demo/webpack.config.js",
     "build:demo": "webpack -c src/demo/webpack.config.js",
-    "lint": "prettier --check . && eslint .",
+    "lint": "prettier --check . && eslint . && ./vendor/bin/grumphp run",
     "format": "prettier --write . && eslint --fix .",
     "release": "release-it --ci",
     "prepare": "husky"

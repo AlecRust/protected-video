@@ -27,13 +27,15 @@ To embed a video either search for "Protected Video" in the Block Editor, or use
 Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/)
+- [Composer](https://getcomposer.org/)
 - [Docker](https://www.docker.com/)
 
 Start a WordPress instance for developing this plugin:
 
 1. `npm install`
-2. `npm run build`
-3. `npm run env start`
+2. `composer install`
+3. `npm run build`
+4. `npm run env start`
 
 Run `npm start` to watch and rebuild block source files as they change.
 
