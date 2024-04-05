@@ -12,7 +12,6 @@
     }
   },
   "hooks": {
-    "before:init": "npm run lint",
     "after:bump": ["node .cliff/build-changelogs.js"]
   },
   "git": {
