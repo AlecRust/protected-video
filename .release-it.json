@@ -1,15 +1,19 @@
 {
   "plugins": {
     "@release-it/bumper": {
-      "out": ["protected-video.php", "src/block.json"]
+      "out": [
+        "protected-video.php",
+        "src/block.json",
+        {
+          "file": ".cliff/cliff-readme-txt.toml",
+          "type": "text/plain"
+        }
+      ]
     }
   },
   "hooks": {
     "before:init": "npm run lint",
-    "after:bump": [
-      "auto-changelog -p --commit-limit false --hide-credit --ignore-commit-pattern \"Release ?\\d+\\.\\d+\\.\\d+\"",
-      "auto-changelog -p --output readme.txt --template readme.hbs --commit-limit false --ignore-commit-pattern \"Release ?\\d+\\.\\d+\\.\\d+\""
-    ]
+    "after:bump": ["node .cliff/build-changelogs.js"]
   },
   "git": {
     "commitArgs": ["-S"],

@@ -1,4 +1,5 @@
 /.git
+/.cliff
 /.github
 /.husky
 /.wordpress-org
@@ -19,5 +20,4 @@
 CHANGELOG.md
 package-lock.json
 package.json
-readme.hbs
 README.md

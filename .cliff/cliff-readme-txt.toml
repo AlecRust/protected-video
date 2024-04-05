@@ -1,9 +1,11 @@
+[changelog]
+header = """
 === Protected Video ===
 Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 4.6
 Tested up to:      6.5
-Stable tag:        {{releases.0.title}}
+Stable tag:        1.11.2
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,22 +120,24 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
+"""
+body = """
+{% if version %}
+= {{ version | trim_start_matches(pat="v") }} {{ "-" }} {{ timestamp | date(format="%Y-%m-%d") | default(value="") }} =
 
-{{#each releases}}
-  = {{title}}{{#if tag}} - {{isoDate}}{{/if}} =
+{% for commit in commits %}* {{ commit.message | split(pat="
+") | first | trim }}
+{% endfor %}{% else %}{% endif %}
+"""
 
-  {{#if summary}}
-    {{summary}}
-  {{/if}}
+[git]
+conventional_commits = false
+filter_unconventional = false
 
-  {{#each merges}}
-    * {{{message}}}
-  {{/each}}
-  {{#each fixes}}
-    * {{{commit.subject}}}
-  {{/each}}
-  {{#each commits}}
-    * {{#if breaking}}**Breaking change:** {{/if}}{{{subject}}}
-  {{/each}}
+[[git.commit_parsers]]
+message = "^Release"
+skip = true
 
-{{/each}}
+[remote.github]
+owner = "AlecRust"
+repo = "protected-video"
