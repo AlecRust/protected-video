@@ -23,4 +23,5 @@ composer.lock
 grumphp.yml
 package-lock.json
 package.json
+phpstan.neon
 README.md

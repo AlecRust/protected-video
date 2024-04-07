@@ -7,5 +7,5 @@ grumphp:
     # phpmd:
     #   ruleset: ["cleancode", "naming"]
     phpmnd:
-    # phpstan:
-    #   memory_limit: 512M
+    phpstan:
+      memory_limit: 512M
