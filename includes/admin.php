@@ -12,7 +12,6 @@ class Protected_Video_Admin
     /**
      * The plugin ID.
      *
-     * @access private
      * @var    string    $plugin_name    The ID of this plugin.
      */
     private $plugin_name;
@@ -20,7 +19,6 @@ class Protected_Video_Admin
     /**
      * The plugin version.
      *
-     * @access private
      * @var    string    $version    The current version of this plugin.
      */
     private $version;

@@ -15,7 +15,6 @@ class Protected_Video
     /**
      * Unique identifier of this plugin.
      *
-     * @access protected
      * @var    string    $plugin_name    The string used to uniquely identify this plugin.
      */
     protected $plugin_name;
@@ -23,7 +22,6 @@ class Protected_Video
     /**
      * Current version of the plugin.
      *
-     * @access protected
      * @var    string    $version    The current version of the plugin.
      */
     protected $version;
@@ -51,8 +49,6 @@ class Protected_Video
 
     /**
      * Load required plugin dependencies.
-     *
-     * @access private
      */
     private function load_dependencies()
     {
@@ -69,8 +65,6 @@ class Protected_Video
 
     /**
      * Register hooks related to the admin area functionality.
-     *
-     * @access private
      */
     private function define_admin_hooks()
     {
@@ -100,8 +94,6 @@ class Protected_Video
 
     /**
      * Register hooks related to the public-facing functionality.
-     *
-     * @access private
      */
     private function define_public_hooks()
     {

@@ -12,7 +12,6 @@ class Protected_Video_Public
     /**
      * The plugin ID.
      *
-     * @access private
      * @var    string    $plugin_name    The ID of this plugin.
      */
     private $plugin_name;
@@ -20,7 +19,6 @@ class Protected_Video_Public
     /**
      * The plugin version.
      *
-     * @access private
      * @var    string    $version    The current version of this plugin.
      */
     private $version;
@@ -127,8 +125,6 @@ class Protected_Video_Public
 
     /**
      * Utility returning if the scripts and styles should be enqueued.
-     *
-     * @access private
      */
     private function should_enqueue_assets()
     {
@@ -139,8 +135,6 @@ class Protected_Video_Public
 
     /**
      * Utility returning if the post contains the plugin block or Shortcode.
-     *
-     * @access private
      */
     private function post_contains_block_or_shortcode($post_id)
     {
@@ -151,8 +145,6 @@ class Protected_Video_Public
 
     /**
      * Utility returning if the post is a custom type or is using a custom template.
-     *
-     * @access private
      */
     private function post_is_custom($post_id)
     {
