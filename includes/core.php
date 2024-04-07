@@ -33,11 +33,9 @@ class Protected_Video
      */
     public function __construct()
     {
-        if (defined('PROTECTED_VIDEO_VERSION')) {
-            $this->version = PROTECTED_VIDEO_VERSION;
-        } else {
-            $this->version = '1.0.0';
-        }
+        $this->version = defined('PROTECTED_VIDEO_VERSION')
+            ? PROTECTED_VIDEO_VERSION
+            : '1.0.0';
         $this->plugin_name = 'protected-video';
     }
 
