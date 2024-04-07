@@ -1,11 +1,5 @@
-parameters:
+grumphp:
   tasks:
-    phpparser:
-      visitors:
-        forbidden_function_calls:
-          blacklist:
-            - "var_dump"
-            - "print_r"
     phpversion:
       project: "7.0"
     # phpcs:
