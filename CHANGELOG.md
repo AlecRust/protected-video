@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [1.11.4](https://github.com/AlecRust/protected-video/releases/tag/1.11.4)
+
+> 7 April 2024
+
+- Improve variable names [`9839b5d`](https://github.com/AlecRust/protected-video/commit/9839b5de311e6426a9daf070abca564257d22493)
+- Add plugin Blueprint file [`70a0df8`](https://github.com/AlecRust/protected-video/commit/70a0df8f87dff2069a6f236b10128829f9ffc250)
+- Use latest version of all development Composer packages [`5a1007d`](https://github.com/AlecRust/protected-video/commit/5a1007dc82351a20b1b8160cec148cd62af73c7c)
+- Simplify setting of plugin version [`71a7900`](https://github.com/AlecRust/protected-video/commit/71a79001d977e33d81d2dfc338364aef79f99269)
+- Enable PHPStan [`c093253`](https://github.com/AlecRust/protected-video/commit/c09325314374f4c87f02d6e5cf9cd5165c63a691)
+- Remove @access tags [`44e9a64`](https://github.com/AlecRust/protected-video/commit/44e9a6472c22d8fe87786395a724146f1360c891)
+
 #### [1.11.3](https://github.com/AlecRust/protected-video/releases/tag/1.11.3)
 
 > 5 April 2024

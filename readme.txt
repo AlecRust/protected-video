@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 4.6
 Tested up to:      6.5
-Stable tag:        1.11.3
+Stable tag:        1.11.4
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,15 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
+
+= 1.11.4 - 2024-04-07 =
+
+* Improve variable names
+* Add plugin Blueprint file
+* Use latest version of all development Composer packages
+* Simplify setting of plugin version
+* Enable PHPStan
+* Remove @access tags
 
 = 1.11.3 - 2024-04-05 =
 
