@@ -133,6 +133,7 @@ body = """
 [git]
 conventional_commits = false
 filter_unconventional = false
+sort_commits = "newest"
 
 [[git.commit_parsers]]
 message = "^Release"

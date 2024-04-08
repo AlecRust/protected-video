@@ -10,12 +10,13 @@ body = """
 {% for commit in commits %}\
 - {{ commit.message | split(pat="\n") | first | trim }} [`{{ commit.id | truncate(length=7, end="") }}`](https://github.com/AlecRust/protected-video/commit/{{ commit.id }})
 {% endfor %}\
-{% else %}{% endif %}
+{% endif %}
 """
 
 [git]
 conventional_commits = false
 filter_unconventional = false
+sort_commits = "newest"
 
 [[git.commit_parsers]]
 message = "^Release"
