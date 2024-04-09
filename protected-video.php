@@ -34,9 +34,9 @@ require_once plugin_dir_path(__FILE__) . 'includes/core.php';
 /**
  * Begin plugin execution.
  */
-function run_protected_video()
+function protected_video_init()
 {
     $plugin = new Protected_Video();
     $plugin->init();
 }
-run_protected_video();
+protected_video_init();
