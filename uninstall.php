@@ -2,8 +2,8 @@
 /**
  * Runs when the plugin is uninstalled.
  *
- * @link    https://github.com/AlecRust/protected-video
  * @package Protected_Video
+ * @link    https://github.com/AlecRust/protected-video
  */
 
 // If uninstall not called from WordPress, then exit.
