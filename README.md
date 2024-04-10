@@ -20,7 +20,7 @@ Install from the [WordPress Plugin Directory](https://wordpress.org/plugins/prot
 
 To embed a video either search for "Protected Video" in the Block Editor, or use the Shortcode e.g.
 
-    [protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
+    [protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
 
 ## Development
 

@@ -41,7 +41,7 @@ class Protected_Video_Public {
 	/**
 	 * Render Shortcode (Gutenberg block alternative).
 	 *
-	 * Usage example: [protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
+	 * Usage example: [protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
 	 */
 	public function render_shortcode( $atts ) {
 		$atts = shortcode_atts(

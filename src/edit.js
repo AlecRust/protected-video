@@ -63,7 +63,7 @@ export default function Edit({ attributes, setAttributes }) {
 					value={videoUrl}
 					onChange={handleVideoUrlChange}
 					placeholder={__(
-						'e.g. https://youtu.be/c_hO_fjmMnk',
+						'e.g. https://youtu.be/aqz-KE-bpKQ',
 						'protected-video'
 					)}
 				/>

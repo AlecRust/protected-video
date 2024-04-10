@@ -7,8 +7,8 @@
 	"category": "embed",
 	"example": {
 		"attributes": {
-			"videoUrl": "https://www.youtube.com/watch?v=9bZkp7q19f0",
-			"videoId": "9bZkp7q19f0",
+			"videoUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+			"videoId": "aqz-KE-bpKQ",
 			"videoService": "youtube"
 		}
 	},
