@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [1.11.5](https://github.com/AlecRust/protected-video/releases/tag/1.11.5)
+
+> 10 April 2024
+
+-   Increase PHPStan level [`cc08dd6`](https://github.com/AlecRust/protected-video/commit/cc08dd60381eb33fddde8b127b5453469e8b3a4f)
+-   Use consistent example YouTube ID [`03712e2`](https://github.com/AlecRust/protected-video/commit/03712e2ed5558272cd143899e63b948c9e767d0b)
+-   Apply WPCS auto fixes [`979fbbe`](https://github.com/AlecRust/protected-video/commit/979fbbef5f109a5e31b97b8c85ebee3102468e2e)
+-   Change PHP files to use tabs [`25d0335`](https://github.com/AlecRust/protected-video/commit/25d0335529372bb8d3062cde7e5b80176814ea99)
+-   Enable PHPMD linting [`5c8be94`](https://github.com/AlecRust/protected-video/commit/5c8be944d354205b58d210955b92fc416728461b)
+-   Improve file naming [`7ad6b38`](https://github.com/AlecRust/protected-video/commit/7ad6b3818339429b1ccc420c46b77f6dabe2a866)
+-   Remove @prettier/plugin-php, use WP Prettier config [`0529849`](https://github.com/AlecRust/protected-video/commit/05298499f0d6fd79bc8291c08f6c8b503e52cafe)
+-   Tweak order in .distignore [`394c22b`](https://github.com/AlecRust/protected-video/commit/394c22b203dd65b4e223cd0b81e6a77b69786ebd)
+-   Include composer.json in plugin dist [`8c89262`](https://github.com/AlecRust/protected-video/commit/8c892626fac17247a8eba03283d9f3faec5a7b0d)
+-   Prefix public function [`ce05df7`](https://github.com/AlecRust/protected-video/commit/ce05df7002e1c8d6a672dd605a09c475726a9cc4)
+-   Sort changelogs consistently [`02ce35b`](https://github.com/AlecRust/protected-video/commit/02ce35b003b7fcae20b2c8028158f3528d1b3479)
+
 #### [1.11.4](https://github.com/AlecRust/protected-video/releases/tag/1.11.4)
 
 > 7 April 2024

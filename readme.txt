@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 4.6
 Tested up to:      6.5
-Stable tag:        1.11.4
+Stable tag:        1.11.5
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -34,7 +34,7 @@ This plugin is open source and contributions are welcome [on GitHub](https://git
 1. Install and activate the plugin
 2. Optionally configure player theme at **Settings > Protected Video**
 3. Search for and use “Protected Video” block in the Block Editor
-4. Alternatively use the Shortcode e.g. `[protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]`
+4. Alternatively use the Shortcode e.g. `[protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]`
 
 == Frequently Asked Questions ==
 
@@ -92,7 +92,7 @@ The Shortcode is provided as an alternative embed method that still provides the
 This is the format to use if you'd like to use the Shortcode embed method:
 
 `
-[protected_video url="https://youtu.be/c_hO_fjmMnk" service="youtube"]
+[protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
 `
 
 A `service` of either `youtube` or `vimeo` must be specified when using the Shortcode embed method.
@@ -118,6 +118,20 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
+
+= 1.11.5 - 2024-04-10 =
+
+* Increase PHPStan level
+* Use consistent example YouTube ID
+* Apply WPCS auto fixes
+* Change PHP files to use tabs
+* Enable PHPMD linting
+* Improve file naming
+* Remove @prettier/plugin-php, use WP Prettier config
+* Tweak order in .distignore
+* Include composer.json in plugin dist
+* Prefix public function
+* Sort changelogs consistently
 
 = 1.11.4 - 2024-04-07 =
 
