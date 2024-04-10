@@ -69,6 +69,8 @@ class Protected_Video
 
     /**
      * Register hooks related to the admin area functionality.
+     *
+     * @SuppressWarnings(PHPMD.MissingImport)
      */
     private function define_admin_hooks()
     {
@@ -98,6 +100,8 @@ class Protected_Video
 
     /**
      * Register hooks related to the public-facing functionality.
+     *
+     * @SuppressWarnings(PHPMD.MissingImport)
      */
     private function define_public_hooks()
     {

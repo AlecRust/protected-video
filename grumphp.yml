@@ -4,8 +4,8 @@ grumphp:
             project: '7.0'
         # phpcs:
         #   standard: ["WordPress"]
-        # phpmd:
-        #   ruleset: ["cleancode", "naming"]
+        phpmd:
+            ruleset: ['cleancode', 'naming']
         phpmnd:
         phpstan:
             memory_limit: 512M
