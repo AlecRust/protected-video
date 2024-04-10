@@ -17,19 +17,19 @@
  */
 
 // Abort if this file is called directly.
-if (!defined('WPINC')) {
+if ( ! defined( 'WPINC' ) ) {
 	die();
 }
 
 /**
  * Plugin version.
  */
-define('PROTECTED_VIDEO_VERSION', '1.11.4');
+define( 'PROTECTED_VIDEO_VERSION', '1.11.4' );
 
 /**
  * Load core plugin class defining all hooks.
  */
-require_once plugin_dir_path(__FILE__) . 'includes/class-protected-video.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-protected-video.php';
 
 /**
  * Begin plugin execution.
@@ -37,8 +37,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/class-protected-video.php';
  * @return void
  * @SuppressWarnings(PHPMD.MissingImport)
  */
-function protected_video_init()
-{
+function protected_video_init() {
 	$plugin = new Protected_Video();
 	$plugin->init();
 }

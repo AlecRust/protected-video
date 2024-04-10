@@ -11,8 +11,8 @@
 /**
  * The admin-specific functionality of the plugin.
  */
-class Protected_Video_Admin
-{
+class Protected_Video_Admin {
+
 	/**
 	 * The plugin ID.
 	 *
@@ -33,10 +33,9 @@ class Protected_Video_Admin
 	 * @param string $plugin_name The name of this plugin.
 	 * @param string $version     The version of this plugin.
 	 */
-	public function __construct($plugin_name, $version)
-	{
+	public function __construct( $plugin_name, $version ) {
 		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+		$this->version     = $version;
 	}
 
 	/**
@@ -46,46 +45,42 @@ class Protected_Video_Admin
 	 *
 	 * @see https://developer.wordpress.org/reference/functions/register_block_type/
 	 */
-	public function register_block()
-	{
-		register_block_type(__DIR__ . '/../build');
+	public function register_block() {
+		register_block_type( __DIR__ . '/../build' );
 	}
 
 	/**
 	 * Register settings page in admin.
 	 */
-	public function add_menu_item()
-	{
+	public function add_menu_item() {
 		add_options_page(
-			__('Protected Video', 'protected-video'), // page_title
-			__('Protected Video', 'protected-video'), // menu_title
+			__( 'Protected Video', 'protected-video' ), // page_title
+			__( 'Protected Video', 'protected-video' ), // menu_title
 			'manage_options', // capability
 			$this->plugin_name, // menu_slug
-			[$this, 'render_settings_page'] // callback
+			array( $this, 'render_settings_page' ) // callback
 		);
 	}
 
 	/**
 	 * Migrate old plugin options.
 	 */
-	public function migrate_plugin_options()
-	{
-		$old_option = get_option('protected_video_option_name');
-		if (isset($old_option['player_theme_color'])) {
+	public function migrate_plugin_options() {
+		$old_option = get_option( 'protected_video_option_name' );
+		if ( isset( $old_option['player_theme_color'] ) ) {
 			update_option(
 				'protected_video_player_theme_color',
-				sanitize_hex_color($old_option['player_theme_color'])
+				sanitize_hex_color( $old_option['player_theme_color'] )
 			);
-			delete_option('protected_video_option_name');
+			delete_option( 'protected_video_option_name' );
 		}
 	}
 
 	/**
 	 * Add link to plugin settings on Plugins page.
 	 */
-	public function add_settings_link($links)
-	{
-		$url = esc_url(
+	public function add_settings_link( $links ) {
+		$url           = esc_url(
 			add_query_arg(
 				'page',
 				$this->plugin_name,
@@ -93,110 +88,106 @@ class Protected_Video_Admin
 			)
 		);
 		$settings_link =
-			"<a href=\"$url\">" . __('Settings', 'protected-video') . '</a>';
-		array_unshift($links, $settings_link);
+			"<a href=\"$url\">" . __( 'Settings', 'protected-video' ) . '</a>';
+		array_unshift( $links, $settings_link );
 		return $links;
 	}
 
 	/**
 	 * Render settings page.
 	 */
-	public function render_settings_page()
-	{
+	public function render_settings_page() {
 		?>
-	  <div class="wrap">
-		<h2><?php esc_html_e('Protected Video', 'protected-video'); ?></h2>
+		<div class="wrap">
+		<h2><?php esc_html_e( 'Protected Video', 'protected-video' ); ?></h2>
 		<form action="options.php" method="post">
-		  <?php
-		  settings_fields('protected_video_option_group');
-		  do_settings_sections('protected-video-admin');
-		  submit_button();?>
+			<?php
+			settings_fields( 'protected_video_option_group' );
+			do_settings_sections( 'protected-video-admin' );
+			submit_button();
+			?>
 		</form>
-	  </div>
-	<?php
+		</div>
+		<?php
 	}
 
 	/**
 	 * Register settings page options in admin.
 	 */
-	public function settings_page_init()
-	{
+	public function settings_page_init() {
 		// Add settings section
 		add_settings_section(
 			'protected_video_setting_section', // HTML id
-			__('Settings', 'protected-video'), // title
-			[$this, 'render_settings_description'], // callback
+			__( 'Settings', 'protected-video' ), // title
+			array( $this, 'render_settings_description' ), // callback
 			'protected-video-admin' // page
 		);
 
 		// Add "Player theme color" setting field
 		add_settings_field(
 			'player_theme_color', // HTML id
-			__('Player theme color', 'protected-video'), // field title
-			[$this, 'render_color_input'], // callback
+			__( 'Player theme color', 'protected-video' ), // field title
+			array( $this, 'render_color_input' ), // callback
 			'protected-video-admin', // page
 			'protected_video_setting_section', // section
-			[
-				'id' => 'player_theme_color',
+			array(
+				'id'          => 'player_theme_color',
 				'option_name' => 'protected_video_player_theme_color',
-			]
+			)
 		);
 
 		// Register "Player theme color" setting
 		register_setting(
 			'protected_video_option_group', // settings group name
 			'protected_video_player_theme_color', // option name
-			[
-				'default' => '#00b3ff',
-				'sanitize_callback' => [$this, 'sanitize_color_input'],
-			]
+			array(
+				'default'           => '#00b3ff',
+				'sanitize_callback' => array( $this, 'sanitize_color_input' ),
+			)
 		);
 
 		// Add "Disable right-click" setting field
 		add_settings_field(
 			'disable_right_click', // HTML id
-			__('Disable right-click', 'protected-video'), // field title
-			[$this, 'render_disable_right_click_checkbox'], // callback
+			__( 'Disable right-click', 'protected-video' ), // field title
+			array( $this, 'render_disable_right_click_checkbox' ), // callback
 			'protected-video-admin', // page
 			'protected_video_setting_section', // section
-			[
-				'id' => 'disable_right_click',
+			array(
+				'id'          => 'disable_right_click',
 				'option_name' => 'protected_video_disable_right_click',
-			]
+			)
 		);
 
 		// Register "Disable right-click" setting
 		register_setting(
 			'protected_video_option_group', // settings group name
 			'protected_video_disable_right_click', // option name
-			[
-				'default' => '1',
-				'sanitize_callback' => [$this, 'sanitize_checkbox_input'],
-			]
+			array(
+				'default'           => '1',
+				'sanitize_callback' => array( $this, 'sanitize_checkbox_input' ),
+			)
 		);
 	}
 
 	/**
 	 * Sanitize color input data.
 	 */
-	public function sanitize_color_input($input)
-	{
-		return sanitize_hex_color($input);
+	public function sanitize_color_input( $input ) {
+		return sanitize_hex_color( $input );
 	}
 
 	/**
 	 * Sanitize checkbox input data.
 	 */
-	public function sanitize_checkbox_input($input)
-	{
-		return !empty($input) ? '1' : '0';
+	public function sanitize_checkbox_input( $input ) {
+		return ! empty( $input ) ? '1' : '0';
 	}
 
 	/**
 	 * Render main description on plugin settings page.
 	 */
-	public function render_settings_description()
-	{
+	public function render_settings_description() {
 		echo '<p>' .
 			esc_html__(
 				'Control the global settings for Protected Video below.',
@@ -208,17 +199,16 @@ class Protected_Video_Admin
 	/**
 	 * Render the "Player theme color" field.
 	 */
-	public function render_color_input($val)
-	{
+	public function render_color_input( $val ) {
 		$field_id = $val['id'];
-		$name = $val['option_name'];
-		$value = get_option($name, '#00b3ff');
+		$name     = $val['option_name'];
+		$value    = get_option( $name, '#00b3ff' );
 
 		printf(
 			'<input type="color" id="%s" name="%s" value="%s">',
-			esc_attr($field_id),
-			esc_attr($name),
-			esc_attr($value)
+			esc_attr( $field_id ),
+			esc_attr( $name ),
+			esc_attr( $value )
 		);
 
 		printf(
@@ -230,7 +220,7 @@ class Protected_Video_Admin
 					'protected-video'
 				),
 				'<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
-					esc_html__("Plyr's documentation", 'protected-video') .
+					esc_html__( "Plyr's documentation", 'protected-video' ) .
 					'</a>'
 			)
 		);
@@ -239,17 +229,16 @@ class Protected_Video_Admin
 	/**
 	 * Render the "Disable right-click" field.
 	 */
-	public function render_disable_right_click_checkbox($val)
-	{
+	public function render_disable_right_click_checkbox( $val ) {
 		$field_id = $val['id'];
-		$name = $val['option_name'];
-		$value = get_option($name, '1');
+		$name     = $val['option_name'];
+		$value    = get_option( $name, '1' );
 
 		printf(
 			'<input type="checkbox" id="%s" name="%s" value="1" %s>',
-			esc_attr($field_id),
-			esc_attr($name),
-			checked(1, $value, false)
+			esc_attr( $field_id ),
+			esc_attr( $name ),
+			checked( 1, $value, false )
 		);
 
 		echo '<p class="description">' .

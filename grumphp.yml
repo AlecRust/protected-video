@@ -3,7 +3,7 @@ grumphp:
         phpversion:
             project: '7.0'
         # phpcs:
-        #   standard: ["WordPress"]
+        #   standard: ['WordPress']
         phpmd:
             ruleset: ['cleancode', 'naming']
         phpmnd:
