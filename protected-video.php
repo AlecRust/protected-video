@@ -18,7 +18,7 @@
 
 // Abort if this file is called directly.
 if (!defined('WPINC')) {
-    die();
+	die();
 }
 
 /**
@@ -39,7 +39,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/class-protected-video.php';
  */
 function protected_video_init()
 {
-    $plugin = new Protected_Video();
-    $plugin->init();
+	$plugin = new Protected_Video();
+	$plugin->init();
 }
 protected_video_init();
