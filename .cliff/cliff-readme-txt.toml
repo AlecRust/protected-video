@@ -127,7 +127,7 @@ body = """
 
 {% for commit in commits %}* {{ commit.message | split(pat="
 ") | first | trim }}
-{% endfor %}{% else %}{% endif %}
+{% endfor %}{% endif %}
 """
 
 [git]
