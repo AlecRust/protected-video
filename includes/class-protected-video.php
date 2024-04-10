@@ -19,14 +19,14 @@ class Protected_Video {
 	/**
 	 * Unique identifier of this plugin.
 	 *
-	 * @var    string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @var string $plugin_name The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
 
 	/**
 	 * Current version of the plugin.
 	 *
-	 * @var    string    $version    The current version of the plugin.
+	 * @var string $version The current version of the plugin.
 	 */
 	protected $version;
 
@@ -34,14 +34,14 @@ class Protected_Video {
 	 * Define core plugin functionality.
 	 */
 	public function __construct() {
-		$this->version     = defined( 'PROTECTED_VIDEO_VERSION' )
-			? PROTECTED_VIDEO_VERSION
-			: '1.0.0';
+		$this->version     = defined( 'PROTECTED_VIDEO_VERSION' ) ? PROTECTED_VIDEO_VERSION : '1.0.0';
 		$this->plugin_name = 'protected-video';
 	}
 
 	/**
 	 * Initialize the plugin.
+	 *
+	 * @return void
 	 */
 	public function init() {
 		$this->load_dependencies();
@@ -51,6 +51,8 @@ class Protected_Video {
 
 	/**
 	 * Load required plugin dependencies.
+	 *
+	 * @return void
 	 */
 	private function load_dependencies() {
 		/**
@@ -68,6 +70,8 @@ class Protected_Video {
 	 * Register hooks related to the admin area functionality.
 	 *
 	 * @SuppressWarnings(PHPMD.MissingImport)
+	 *
+	 * @return void
 	 */
 	private function define_admin_hooks() {
 		$plugin_admin = new Protected_Video_Admin(
@@ -101,6 +105,8 @@ class Protected_Video {
 	 * Register hooks related to the public-facing functionality.
 	 *
 	 * @SuppressWarnings(PHPMD.MissingImport)
+	 *
+	 * @return void
 	 */
 	private function define_public_hooks() {
 		$plugin_public = new Protected_Video_Public(
@@ -134,7 +140,7 @@ class Protected_Video {
 	/**
 	 * Utility returning plugin name uniquely identifying it.
 	 *
-	 * @return string    The name of the plugin.
+	 * @return string The name of the plugin.
 	 */
 	public function get_plugin_name() {
 		return $this->plugin_name;
@@ -143,7 +149,7 @@ class Protected_Video {
 	/**
 	 * Utility returning the version number of the plugin.
 	 *
-	 * @return string    The version number of the plugin.
+	 * @return string The version number of the plugin.
 	 */
 	public function get_version() {
 		return $this->version;

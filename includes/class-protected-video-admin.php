@@ -16,22 +16,23 @@ class Protected_Video_Admin {
 	/**
 	 * The plugin ID.
 	 *
-	 * @var    string    $plugin_name    The ID of this plugin.
+	 * @var string $plugin_name The ID of this plugin.
 	 */
 	private $plugin_name;
 
 	/**
 	 * The plugin version.
 	 *
-	 * @var    string    $version    The current version of this plugin.
+	 * @var string $version The current version of this plugin.
 	 */
+	// @phpstan-ignore-next-line
 	private $version;
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @param string $plugin_name The name of this plugin.
-	 * @param string $version     The version of this plugin.
+	 * @param string $version  The version of this plugin.
 	 */
 	public function __construct( $plugin_name, $version ) {
 		$this->plugin_name = $plugin_name;
@@ -44,6 +45,7 @@ class Protected_Video_Admin {
 	 * through the block editor in the corresponding context.
 	 *
 	 * @see https://developer.wordpress.org/reference/functions/register_block_type/
+	 * @return void
 	 */
 	public function register_block() {
 		register_block_type( __DIR__ . '/../build' );
@@ -51,6 +53,8 @@ class Protected_Video_Admin {
 
 	/**
 	 * Register settings page in admin.
+	 *
+	 * @return void
 	 */
 	public function add_menu_item() {
 		add_options_page(
@@ -64,6 +68,8 @@ class Protected_Video_Admin {
 
 	/**
 	 * Migrate old plugin options.
+	 *
+	 * @return void
 	 */
 	public function migrate_plugin_options() {
 		$old_option = get_option( 'protected_video_option_name' );
@@ -78,6 +84,9 @@ class Protected_Video_Admin {
 
 	/**
 	 * Add link to plugin settings on Plugins page.
+	 *
+	 * @param array<string> $links Array of links.
+	 * @return array<string> Modified array of links.
 	 */
 	public function add_settings_link( $links ) {
 		$url           = esc_url(
@@ -95,6 +104,8 @@ class Protected_Video_Admin {
 
 	/**
 	 * Render settings page.
+	 *
+	 * @return void
 	 */
 	public function render_settings_page() {
 		?>
@@ -113,6 +124,8 @@ class Protected_Video_Admin {
 
 	/**
 	 * Register settings page options in admin.
+	 *
+	 * @return void
 	 */
 	public function settings_page_init() {
 		// Add settings section
@@ -172,6 +185,9 @@ class Protected_Video_Admin {
 
 	/**
 	 * Sanitize color input data.
+	 *
+	 * @param string $input Input data.
+	 * @return string Sanitized input data.
 	 */
 	public function sanitize_color_input( $input ) {
 		return sanitize_hex_color( $input );
@@ -179,6 +195,9 @@ class Protected_Video_Admin {
 
 	/**
 	 * Sanitize checkbox input data.
+	 *
+	 * @param string $input Input data.
+	 * @return string Sanitized input data.
 	 */
 	public function sanitize_checkbox_input( $input ) {
 		return ! empty( $input ) ? '1' : '0';
@@ -186,6 +205,8 @@ class Protected_Video_Admin {
 
 	/**
 	 * Render main description on plugin settings page.
+	 *
+	 * @return void
 	 */
 	public function render_settings_description() {
 		echo '<p>' .
@@ -198,6 +219,9 @@ class Protected_Video_Admin {
 
 	/**
 	 * Render the "Player theme color" field.
+	 *
+	 * @param array<string> $val Field values.
+	 * @return void
 	 */
 	public function render_color_input( $val ) {
 		$field_id = $val['id'];
@@ -228,6 +252,9 @@ class Protected_Video_Admin {
 
 	/**
 	 * Render the "Disable right-click" field.
+	 *
+	 * @param array<string> $val Field values.
+	 * @return void
 	 */
 	public function render_disable_right_click_checkbox( $val ) {
 		$field_id = $val['id'];

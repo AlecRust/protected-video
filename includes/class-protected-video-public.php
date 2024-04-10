@@ -16,14 +16,15 @@ class Protected_Video_Public {
 	/**
 	 * The plugin ID.
 	 *
-	 * @var    string    $plugin_name    The ID of this plugin.
+	 * @var string $plugin_name The ID of this plugin.
 	 */
+	// @phpstan-ignore-next-line
 	private $plugin_name;
 
 	/**
 	 * The plugin version.
 	 *
-	 * @var    string    $version    The current version of this plugin.
+	 * @var string $version The current version of this plugin.
 	 */
 	private $version;
 
@@ -31,7 +32,7 @@ class Protected_Video_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @param string $plugin_name The name of the plugin.
-	 * @param string $version     The version of this plugin.
+	 * @param string $version  The version of this plugin.
 	 */
 	public function __construct( $plugin_name, $version ) {
 		$this->plugin_name = $plugin_name;
@@ -42,6 +43,9 @@ class Protected_Video_Public {
 	 * Render Shortcode (Gutenberg block alternative).
 	 *
 	 * Usage example: [protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
+	 *
+	 * @param array<string> $atts Shortcode attributes.
+	 * @return string HTML output for the shortcode.
 	 */
 	public function render_shortcode( $atts ) {
 		$atts = shortcode_atts(
@@ -63,6 +67,8 @@ class Protected_Video_Public {
 	 * Register stylesheet/inline CSS for the public-facing side of the site.
 	 * NOTE: block.json automatically registers the block assets if the
 	 * block is used, we duplicate it here to support "Shortcode only"
+	 *
+	 * @return void
 	 */
 	public function enqueue_styles() {
 		if ( $this->should_enqueue_assets() ) {
@@ -88,6 +94,8 @@ class Protected_Video_Public {
 	 * Register the JavaScript for the public-facing side of the site
 	 * NOTE: block.json automatically registers the block assets if the
 	 * block is used, we duplicate it here to support "Shortcode only"
+	 *
+	 * @return void
 	 */
 	public function enqueue_scripts() {
 		if ( $this->should_enqueue_assets() ) {
@@ -111,6 +119,9 @@ class Protected_Video_Public {
 
 	/**
 	 * Return body classes for the public-facing side of the site
+	 *
+	 * @param array<string> $classes Body classes.
+	 * @return array<string> Body classes.
 	 */
 	public function add_body_classes( $classes ) {
 		$disable_right_click = get_option(
@@ -127,6 +138,8 @@ class Protected_Video_Public {
 
 	/**
 	 * Utility returning if the scripts and styles should be enqueued.
+	 *
+	 * @return bool True if the scripts and styles should be enqueued.
 	 */
 	private function should_enqueue_assets() {
 		$post_id = get_the_ID();
@@ -136,6 +149,9 @@ class Protected_Video_Public {
 
 	/**
 	 * Utility returning if the post contains the plugin block or Shortcode.
+	 *
+	 * @param int $post_id The post ID.
+	 * @return bool True if the post contains the plugin block or Shortcode.
 	 */
 	private function post_contains_block_or_shortcode( $post_id ) {
 		$post_content = get_post_field( 'post_content', $post_id );
@@ -145,6 +161,9 @@ class Protected_Video_Public {
 
 	/**
 	 * Utility returning if the post is a custom type or is using a custom template.
+	 *
+	 * @param int $post_id The post ID.
+	 * @return bool True if the post is a custom type or is using a custom template.
 	 */
 	private function post_is_custom( $post_id ) {
 		$is_custom_post_type = in_array(
