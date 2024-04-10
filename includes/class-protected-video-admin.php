@@ -7,6 +7,10 @@
  * @subpackage Protected_Video/includes
  * @author     Alec Rust (https://www.alecrust.com/)
  */
+
+/**
+ * The admin-specific functionality of the plugin.
+ */
 class Protected_Video_Admin
 {
     /**

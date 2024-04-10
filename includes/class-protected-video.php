@@ -10,6 +10,10 @@
  * @subpackage Protected_Video/includes
  * @author     Alec Rust (https://www.alecrust.com/)
  */
+
+/**
+ * The core plugin class.
+ */
 class Protected_Video
 {
     /**
@@ -55,12 +59,12 @@ class Protected_Video
         /**
          * Define all actions that occur in the admin area.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-protected-video-admin.php';
 
         /**
          * Define all actions that occur in the public-facing site.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/public.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-protected-video-public.php';
     }
 
     /**

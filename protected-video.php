@@ -29,7 +29,7 @@ define('PROTECTED_VIDEO_VERSION', '1.11.4');
 /**
  * Load core plugin class defining all hooks.
  */
-require_once plugin_dir_path(__FILE__) . 'includes/core.php';
+require_once plugin_dir_path(__FILE__) . 'includes/class-protected-video.php';
 
 /**
  * Begin plugin execution.
