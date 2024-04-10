@@ -4,11 +4,11 @@
 
 /* Override flex layout in editor */
 .wp-block-protected-video-protected-video .components-placeholder__fieldset {
-  flex-direction: column;
+	flex-direction: column;
 
-  /* Disable default flash margin */
-  .components-notice {
-    margin-left: 0;
-    margin-right: 0;
-  }
+	/* Disable default flash margin */
+	.components-notice {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }

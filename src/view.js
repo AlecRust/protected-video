@@ -3,44 +3,44 @@
  * the data attributes and initializes Plyr.
  */
 
-import Plyr from 'plyr'
+import Plyr from 'plyr';
 
 function decodeVideoBlock(videoBlock) {
-  const encodedProvider = videoBlock.dataset.id1
-  const encodedVideoId = videoBlock.dataset.id2
+	const encodedProvider = videoBlock.dataset.id1;
+	const encodedVideoId = videoBlock.dataset.id2;
 
-  if (!encodedProvider || !encodedVideoId) {
-    return
-  }
+	if (!encodedProvider || !encodedVideoId) {
+		return;
+	}
 
-  const decodedProvider = atob(encodedProvider)
-  const decodedVideoId = atob(encodedVideoId)
+	const decodedProvider = atob(encodedProvider);
+	const decodedVideoId = atob(encodedVideoId);
 
-  if (!decodedProvider || !decodedVideoId) {
-    return
-  }
+	if (!decodedProvider || !decodedVideoId) {
+		return;
+	}
 
-  // Add attributes that Plyr requires
-  // https://github.com/sampotts/plyr/issues/1936
-  videoBlock.dataset.plyrProvider = decodedProvider.toLowerCase()
-  videoBlock.dataset.plyrEmbedId = decodedVideoId
+	// Add attributes that Plyr requires
+	// https://github.com/sampotts/plyr/issues/1936
+	videoBlock.dataset.plyrProvider = decodedProvider.toLowerCase();
+	videoBlock.dataset.plyrEmbedId = decodedVideoId;
 }
 
 const videoBlocks = document.querySelectorAll(
-  '.wp-block-protected-video-protected-video',
-)
+	'.wp-block-protected-video-protected-video'
+);
 
 videoBlocks.forEach((videoBlock) => {
-  decodeVideoBlock(videoBlock)
+	decodeVideoBlock(videoBlock);
 
-  new Plyr(videoBlock, {
-    youtube: {
-      noCookie: true,
-    },
-  })
-})
+	new Plyr(videoBlock, {
+		youtube: {
+			noCookie: true,
+		},
+	});
+});
 
 // Disable right-click if plugin option enabled
 if (document.body.classList.contains('protected-video-disable-right-click')) {
-  document.addEventListener('contextmenu', (event) => event.preventDefault())
+	document.addEventListener('contextmenu', (event) => event.preventDefault());
 }

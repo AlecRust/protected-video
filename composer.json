@@ -1,28 +1,28 @@
 {
-  "name": "alecrust/protected-video",
-  "description": "YouTube/Vimeo player that prevents easy sharing of the video.",
-  "homepage": "https://github.com/AlecRust/protected-video",
-  "license": "GPL-2.0-or-later",
-  "type": "wordpress-plugin",
-  "authors": [
-    {
-      "name": "Alec Rust",
-      "homepage": "https://www.alecrust.com/"
-    }
-  ],
-  "require-dev": {
-    "phpro/grumphp": "*",
-    "phpmd/phpmd": "*",
-    "povils/phpmnd": "*",
-    "squizlabs/php_codesniffer": "*",
-    "phpstan/phpstan": "*",
-    "szepeviktor/phpstan-wordpress": "*",
-    "wp-coding-standards/wpcs": "*"
-  },
-  "config": {
-    "allow-plugins": {
-      "phpro/grumphp": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  }
+	"name": "alecrust/protected-video",
+	"description": "YouTube/Vimeo player that prevents easy sharing of the video.",
+	"homepage": "https://github.com/AlecRust/protected-video",
+	"license": "GPL-2.0-or-later",
+	"type": "wordpress-plugin",
+	"authors": [
+		{
+			"name": "Alec Rust",
+			"homepage": "https://www.alecrust.com/"
+		}
+	],
+	"require-dev": {
+		"phpro/grumphp": "*",
+		"phpmd/phpmd": "*",
+		"povils/phpmnd": "*",
+		"squizlabs/php_codesniffer": "*",
+		"phpstan/phpstan": "*",
+		"szepeviktor/phpstan-wordpress": "*",
+		"wp-coding-standards/wpcs": "*"
+	},
+	"config": {
+		"allow-plugins": {
+			"phpro/grumphp": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
 }

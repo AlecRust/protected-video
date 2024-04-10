@@ -1,65 +1,65 @@
 name: Deploy Plugin
 
 on:
-  release:
-    types: [published]
+    release:
+        types: [published]
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-          cache: "npm"
-      - name: Install Node packages
-        run: npm ci
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.3"
-      - name: Install Composer packages
-        run: composer install --prefer-dist --no-progress --no-suggest
-      - name: Run lint
-        run: npm run lint
+    lint:
+        name: Lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 'lts/*'
+                  cache: 'npm'
+            - name: Install Node packages
+              run: npm ci
+            - name: Set up PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.3'
+            - name: Install Composer packages
+              run: composer install --prefer-dist --no-progress --no-suggest
+            - name: Run lint
+              run: npm run lint
 
-  deploy:
-    name: Deploy Plugin
-    needs: lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-          cache: "npm"
-      - name: Install Node packages
-        run: npm ci
-      - name: Build dist files
-        run: npm run build
-      - name: Clean up old SVN tags
-        run: bash .github/workflows/cleanup-svn-tags.sh
-        env:
-          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-      - name: Deploy to WordPress SVN
-        id: deploy
-        uses: 10up/action-wordpress-plugin-deploy@stable
-        env:
-          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        with:
-          generate-zip: true
-      - name: Upload release asset
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release upload \
-            ${{ github.event.release.tag_name }} \
-            ${{github.workspace}}/${{ github.event.repository.name }}.zip
+    deploy:
+        name: Deploy Plugin
+        needs: lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 'lts/*'
+                  cache: 'npm'
+            - name: Install Node packages
+              run: npm ci
+            - name: Build dist files
+              run: npm run build
+            - name: Clean up old SVN tags
+              run: bash .github/workflows/cleanup-svn-tags.sh
+              env:
+                  SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+                  SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+            - name: Deploy to WordPress SVN
+              id: deploy
+              uses: 10up/action-wordpress-plugin-deploy@stable
+              env:
+                  SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+                  SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+              with:
+                  generate-zip: true
+            - name: Upload release asset
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  gh release upload \
+                    ${{ github.event.release.tag_name }} \
+                    ${{github.workspace}}/${{ github.event.repository.name }}.zip

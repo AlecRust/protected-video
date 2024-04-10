@@ -1,28 +1,28 @@
 {
-  "plugins": {
-    "@release-it/bumper": {
-      "out": [
-        "protected-video.php",
-        "src/block.json",
-        {
-          "file": ".cliff/cliff-readme-txt.toml",
-          "type": "text/plain"
-        }
-      ]
-    }
-  },
-  "hooks": {
-    "after:bump": ["node .cliff/build-changelogs.js"]
-  },
-  "git": {
-    "commitArgs": ["-S"],
-    "tagArgs": ["-s"]
-  },
-  "npm": {
-    "publish": false
-  },
-  "github": {
-    "release": true,
-    "releaseName": "${version}"
-  }
+	"plugins": {
+		"@release-it/bumper": {
+			"out": [
+				"protected-video.php",
+				"src/block.json",
+				{
+					"file": ".cliff/cliff-readme-txt.toml",
+					"type": "text/plain"
+				}
+			]
+		}
+	},
+	"hooks": {
+		"after:bump": ["node .cliff/build-changelogs.js"]
+	},
+	"git": {
+		"commitArgs": ["-S"],
+		"tagArgs": ["-s"]
+	},
+	"npm": {
+		"publish": false
+	},
+	"github": {
+		"release": true,
+		"releaseName": "${version}"
+	}
 }

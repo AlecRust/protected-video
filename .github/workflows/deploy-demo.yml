@@ -1,67 +1,67 @@
 name: Deploy Demo
 
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    group: 'pages'
+    cancel-in-progress: false
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-          cache: "npm"
-      - name: Install Node packages
-        run: npm ci
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.3"
-      - name: Install Composer packages
-        run: composer install --prefer-dist --no-progress --no-suggest
-      - name: Run lint
-        run: npm run lint
+    lint:
+        name: Lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 'lts/*'
+                  cache: 'npm'
+            - name: Install Node packages
+              run: npm ci
+            - name: Set up PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.3'
+            - name: Install Composer packages
+              run: composer install --prefer-dist --no-progress --no-suggest
+            - name: Run lint
+              run: npm run lint
 
-  deploy:
-    name: Deploy Demo
-    needs: lint
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-          cache: "npm"
-      - name: Install Node packages
-        run: npm ci
-      - name: Build demo files
-        run: npm run build:demo
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "demo"
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    deploy:
+        name: Deploy Demo
+        needs: lint
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 'lts/*'
+                  cache: 'npm'
+            - name: Install Node packages
+              run: npm ci
+            - name: Build demo files
+              run: npm run build:demo
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: 'demo'
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4

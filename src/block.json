@@ -1,33 +1,33 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
-  "name": "protected-video/protected-video",
-  "version": "1.11.4",
-  "title": "Protected Video",
-  "category": "embed",
-  "example": {
-    "attributes": {
-      "videoUrl": "https://www.youtube.com/watch?v=9bZkp7q19f0",
-      "videoId": "9bZkp7q19f0",
-      "videoService": "youtube"
-    }
-  },
-  "description": "Embed YouTube/Vimeo player that prevents easy sharing of the video.",
-  "keywords": ["video", "player", "plyr", "youtube", "vimeo"],
-  "attributes": {
-    "videoUrl": {
-      "type": "string"
-    },
-    "videoId": {
-      "type": "string"
-    },
-    "videoService": {
-      "type": "string"
-    }
-  },
-  "textdomain": "protected-video",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "protected-video/protected-video",
+	"version": "1.11.4",
+	"title": "Protected Video",
+	"category": "embed",
+	"example": {
+		"attributes": {
+			"videoUrl": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+			"videoId": "9bZkp7q19f0",
+			"videoService": "youtube"
+		}
+	},
+	"description": "Embed YouTube/Vimeo player that prevents easy sharing of the video.",
+	"keywords": ["video", "player", "plyr", "youtube", "vimeo"],
+	"attributes": {
+		"videoUrl": {
+			"type": "string"
+		},
+		"videoId": {
+			"type": "string"
+		},
+		"videoService": {
+			"type": "string"
+		}
+	},
+	"textdomain": "protected-video",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
 }

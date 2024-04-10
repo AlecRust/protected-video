@@ -1,4 +1,4 @@
 {
-  "*": "prettier --write --ignore-unknown",
-  "*.js": "eslint --fix"
+	"*": "prettier --write --ignore-unknown",
+	"*.js": "eslint --fix"
 }

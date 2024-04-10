@@ -1,28 +1,28 @@
 {
-  "landingPage": "/wp-admin/options-general.php?page=protected-video",
-  "preferredVersions": {
-    "php": "8.0",
-    "wp": "latest"
-  },
-  "phpExtensionBundles": ["kitchen-sink"],
-  "features": {
-    "networking": true
-  },
-  "steps": [
-    {
-      "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "wordpress.org/plugins",
-        "slug": "protected-video"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "login",
-      "username": "admin",
-      "password": "password"
-    }
-  ]
+	"landingPage": "/wp-admin/options-general.php?page=protected-video",
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "latest"
+	},
+	"phpExtensionBundles": ["kitchen-sink"],
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "protected-video"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		}
+	]
 }
