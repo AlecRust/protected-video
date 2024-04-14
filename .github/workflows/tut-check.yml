@@ -1,4 +1,4 @@
-name: Weekly "Tested up to" check
+name: '"Tested up to" check'
 
 on:
     schedule:
