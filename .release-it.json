@@ -12,7 +12,10 @@
 		}
 	},
 	"hooks": {
-		"after:bump": ["node .cliff/build-changelogs.js"]
+		"after:bump": [
+			"git-cliff -c .cliff/cliff-changelog-md.toml -o CHANGELOG.md --tag ${version}",
+			"git-cliff -c .cliff/cliff-readme-txt.toml -o readme.txt --tag ${version}"
+		]
 	},
 	"git": {
 		"commitArgs": ["-S"],
