@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [1.11.6](https://github.com/AlecRust/protected-video/releases/tag/1.11.6)
+
+> 6 July 2024
+
+-   Update WordPress "Tested up to" to 6.6 [`3ca1e4c`](https://github.com/AlecRust/protected-video/commit/3ca1e4c0ae2402d6c37b33b332ad99ad42a6729e)
+-   Bump dependencies [`1ec4960`](https://github.com/AlecRust/protected-video/commit/1ec496037acf41f6d2988cba7ccf9c63c8647215)
+-   Remove Node script to simplify build process [`6b373d9`](https://github.com/AlecRust/protected-video/commit/6b373d9e064d63a415d2b09811961168b2ea9609)
+-   Improve workflow name [`c5e96e0`](https://github.com/AlecRust/protected-video/commit/c5e96e0d03a109324b84120780c84d74a79e3082)
+-   Rename workflow [`9e48536`](https://github.com/AlecRust/protected-video/commit/9e485362e5129d7bdc346fa84e7deebc1431a47a)
+-   Add weekly "Tested up to" CI check [`2e9aa6e`](https://github.com/AlecRust/protected-video/commit/2e9aa6e3bdcd4abf4de20719aa498674ced4e779)
+-   Set permissions for deploy plugin workflow [`9347896`](https://github.com/AlecRust/protected-video/commit/93478962d0b254793b5e67aef5806021cd0fb78a)
+-   Remove "v" prefix from git-cliff commands [`119c91a`](https://github.com/AlecRust/protected-video/commit/119c91a42864e8bbb4ec8df53550d1d3294d275c)
+-   Improve tag deletion SVN commit message [`51a996b`](https://github.com/AlecRust/protected-video/commit/51a996b8ab41d237f00d58a0b7a4f41900d54499)
+-   Simplify changelog config [`6a922b2`](https://github.com/AlecRust/protected-video/commit/6a922b2360f4960d1f930263a6393e6a7eadff53)
+-   Tidy comments [`2876caa`](https://github.com/AlecRust/protected-video/commit/2876caa6abec067cf268b60a04db4f587a4628ee)
+
 #### [1.11.5](https://github.com/AlecRust/protected-video/releases/tag/1.11.5)
 
 > 10 April 2024

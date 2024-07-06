@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 4.6
 Tested up to:      6.6
-Stable tag:        1.11.5
+Stable tag:        1.11.6
 Requires PHP:      7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,20 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
+
+= 1.11.6 - 2024-07-06 =
+
+* Update WordPress "Tested up to" to 6.6
+* Bump dependencies
+* Remove Node script to simplify build process
+* Improve workflow name
+* Rename workflow
+* Add weekly "Tested up to" CI check
+* Set permissions for deploy plugin workflow
+* Remove "v" prefix from git-cliff commands
+* Improve tag deletion SVN commit message
+* Simplify changelog config
+* Tidy comments
 
 = 1.11.5 - 2024-04-10 =
 
