@@ -66,14 +66,14 @@ class Protected_Video {
 		require_once plugin_dir_path( __DIR__ ) . 'includes/class-protected-video-public.php';
 	}
 
-	/**
-	 * Register hooks related to the admin area functionality.
-	 *
-	 * @SuppressWarnings(PHPMD.MissingImport)
-	 *
-	 * @return void
-	 */
-	private function define_admin_hooks() {
+		/**
+		 * Register hooks related to the admin area functionality.
+		 *
+		 * @SuppressWarnings("PHPMD.MissingImport")
+		 *
+		 * @return void
+		 */
+		private function define_admin_hooks() {
 		$plugin_admin = new Protected_Video_Admin(
 			$this->get_plugin_name(),
 			$this->get_version()
@@ -101,14 +101,14 @@ class Protected_Video {
 		add_action( 'plugins_loaded', array( $plugin_admin, 'migrate_plugin_options' ) );
 	}
 
-	/**
-	 * Register hooks related to the public-facing functionality.
-	 *
-	 * @SuppressWarnings(PHPMD.MissingImport)
-	 *
-	 * @return void
-	 */
-	private function define_public_hooks() {
+		/**
+		 * Register hooks related to the public-facing functionality.
+		 *
+		 * @SuppressWarnings("PHPMD.MissingImport")
+		 *
+		 * @return void
+		 */
+		private function define_public_hooks() {
 		$plugin_public = new Protected_Video_Public(
 			$this->get_plugin_name(),
 			$this->get_version()

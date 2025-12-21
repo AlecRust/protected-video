@@ -6,10 +6,10 @@ WordPress plugin that provides a Gutenberg block and traditional Shortcode for e
 
 ## Features
 
--   [Plyr](https://plyr.io/) player used to overlay default player with custom controls
--   Player modifications to always prevent clicking the default player
--   Encodes video ID in HTML to prevent finding it via “View Source”
--   Settings page e.g. to configure the player theme to match your site
+- [Plyr](https://plyr.io/) player used to overlay default player with custom controls
+- Player modifications to always prevent clicking the default player
+- Encodes video ID in HTML to prevent finding it via “View Source”
+- Settings page e.g. to configure the player theme to match your site
 
 [View Player Demo](https://protected-video.alecrust.com/)
 
@@ -26,9 +26,9 @@ To embed a video either search for "Protected Video" in the Block Editor, or use
 
 Ensure you have the following installed:
 
--   [Node.js](https://nodejs.org/)
--   [Composer](https://getcomposer.org/)
--   [Docker](https://www.docker.com/)
+- [Node.js](https://nodejs.org/)
+- [Composer](https://getcomposer.org/)
+- [Docker](https://www.docker.com/)
 
 Start a WordPress instance for developing this plugin:
 

@@ -34,8 +34,9 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-protected-video.php';
 /**
  * Begin plugin execution.
  *
+ * @SuppressWarnings("PHPMD.MissingImport")
+ *
  * @return void
- * @SuppressWarnings(PHPMD.MissingImport)
  */
 function protected_video_init() {
 	$plugin = new Protected_Video();
