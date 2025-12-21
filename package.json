@@ -6,6 +6,7 @@
 	"license": "GPL-2.0-or-later",
 	"homepage": "https://protected-video.alecrust.com/",
 	"repository": "https://github.com/AlecRust/protected-video",
+	"packageManager": "npm@11.7.0",
 	"main": "build/index.js",
 	"scripts": {
 		"start": "wp-scripts start",
