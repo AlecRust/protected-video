@@ -18,7 +18,6 @@ jobs:
               uses: actions/setup-node@v6
               with:
                   node-version: 'lts/*'
-                  cache: 'npm'
             - name: Install Node packages
               run: npm ci
             - name: Set up PHP
@@ -41,7 +40,6 @@ jobs:
               uses: actions/setup-node@v6
               with:
                   node-version: 'lts/*'
-                  cache: 'npm'
             - name: Install Node packages
               run: npm ci
             - name: Build dist files
