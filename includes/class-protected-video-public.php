@@ -30,10 +30,17 @@ class Protected_Video_Public {
 			$atts,
 			'protected_video'
 		);
+
+		// Used to obscure the original values in HTML attributes.
+		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
+		$encoded_service = base64_encode( $atts['service'] );
+		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
+		$encoded_url = base64_encode( $atts['url'] );
+
 		return sprintf(
 			'<div class="wp-block-protected-video-protected-video" data-id1="%s" data-id2="%s"></div>',
-			base64_encode( $atts['service'] ),
-			base64_encode( $atts['url'] )
+			$encoded_service,
+			$encoded_url
 		);
 	}
 
@@ -88,7 +95,7 @@ class Protected_Video_Public {
 			'1'
 		);
 
-		if ( $disable_right_click === '1' ) {
+		if ( '1' === $disable_right_click ) {
 			$classes[] = 'protected-video-disable-right-click';
 		}
 
@@ -127,7 +134,8 @@ class Protected_Video_Public {
 	private function post_is_custom( $post_id ) {
 		$is_custom_post_type = in_array(
 			get_post_type( $post_id ),
-			get_post_types( array( '_builtin' => false ) )
+			get_post_types( array( '_builtin' => false ) ),
+			true
 		);
 
 		$is_custom_template = get_page_template_slug( $post_id ) !== '';

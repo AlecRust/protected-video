@@ -2,8 +2,9 @@ grumphp:
     tasks:
         phpversion:
             project: '7.0'
-        # phpcs:
-        #   standard: ['WordPress']
+        phpcs:
+            standard: ['.phpcs.xml']
+            triggered_by: ['php']
         phpmd:
             ruleset: ['cleancode', 'naming']
         phpmnd:

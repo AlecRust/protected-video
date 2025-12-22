@@ -79,16 +79,16 @@ class Protected_Video {
 			$this->get_version()
 		);
 
-		// Gutenberg block
+		// Gutenberg block.
 		add_action( 'init', array( $plugin_admin, 'register_block' ) );
 
-		// Admin settings page
+		// Admin settings page.
 		add_action( 'admin_init', array( $plugin_admin, 'settings_page_init' ) );
 
-		// Admin menu item
+		// Admin menu item.
 		add_action( 'admin_menu', array( $plugin_admin, 'add_menu_item' ) );
 
-		// Plugin settings link on "Plugins" page
+		// Plugin settings link on "Plugins" page.
 		add_filter(
 			'plugin_action_links_protected-video/protected-video.php',
 			array(
@@ -97,7 +97,7 @@ class Protected_Video {
 			)
 		);
 
-		// Migrate settings when plugins have loaded
+		// Migrate settings when plugins have loaded.
 		add_action( 'plugins_loaded', array( $plugin_admin, 'migrate_plugin_options' ) );
 	}
 
@@ -111,20 +111,20 @@ class Protected_Video {
 	private function define_public_hooks() {
 		$plugin_public = new Protected_Video_Public();
 
-		// Shortcode
+		// Shortcode.
 		add_shortcode( 'protected_video', array( $plugin_public, 'render_shortcode' ) );
 
-		// Public CSS
+		// Public CSS.
 		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ), 9 );
 
-		// Public JS
+		// Public JS.
 		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ), 9 );
 
-		// Body class
+		// Body class.
 		add_filter( 'body_class', array( $plugin_public, 'add_body_classes' ) );
 
-		// Allow plugin styles to be enqueued in "MemberPress Courses" course pages
-		// https://docs.memberpress.com/article/381-how-to-edit-lessons-in-classroom-mode-with-a-page-builder
+		// Allow plugin styles to be enqueued in "MemberPress Courses" course pages.
+		// See https://docs.memberpress.com/article/381-how-to-edit-lessons-in-classroom-mode-with-a-page-builder.
 		add_filter(
 			'mpcs_classroom_style_handles',
 			function ( $allowed_handles ) {

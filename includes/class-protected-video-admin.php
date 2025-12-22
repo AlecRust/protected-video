@@ -123,11 +123,11 @@ class Protected_Video_Admin {
 	 */
 	public function add_menu_item() {
 		add_options_page(
-			__( 'Protected Video', 'protected-video' ), // page_title
-			__( 'Protected Video', 'protected-video' ), // menu_title
-			'manage_options', // capability
-			$this->plugin_name, // menu_slug
-			array( $this, 'render_settings_page' ) // callback
+			__( 'Protected Video', 'protected-video' ), // page_title.
+			__( 'Protected Video', 'protected-video' ), // menu_title.
+			'manage_options', // capability.
+			$this->plugin_name, // menu_slug.
+			array( $this, 'render_settings_page' ) // callback.
 		);
 	}
 
@@ -193,54 +193,54 @@ class Protected_Video_Admin {
 	 * @return void
 	 */
 	public function settings_page_init() {
-		// Add settings section
+		// Add settings section.
 		add_settings_section(
-			'protected_video_setting_section', // HTML id
-			__( 'Settings', 'protected-video' ), // title
-			array( $this, 'render_settings_description' ), // callback
-			'protected-video-admin' // page
+			'protected_video_setting_section', // HTML id.
+			__( 'Settings', 'protected-video' ), // title.
+			array( $this, 'render_settings_description' ), // callback.
+			'protected-video-admin' // page.
 		);
 
-		// Add "Player theme color" setting field
+		// Add "Player theme color" setting field.
 		add_settings_field(
-			'player_theme_color', // HTML id
-			__( 'Player theme color', 'protected-video' ), // field title
-			array( $this, 'render_color_input' ), // callback
-			'protected-video-admin', // page
-			'protected_video_setting_section', // section
+			'player_theme_color', // HTML id.
+			__( 'Player theme color', 'protected-video' ), // field title.
+			array( $this, 'render_color_input' ), // callback.
+			'protected-video-admin', // page.
+			'protected_video_setting_section', // section.
 			array(
 				'id'          => 'player_theme_color',
 				'option_name' => 'protected_video_player_theme_color',
 			)
 		);
 
-		// Register "Player theme color" setting
+		// Register "Player theme color" setting.
 		register_setting(
-			'protected_video_option_group', // settings group name
-			'protected_video_player_theme_color', // option name
+			'protected_video_option_group', // settings group name.
+			'protected_video_player_theme_color', // option name.
 			array(
 				'default'           => '#00b3ff',
 				'sanitize_callback' => array( $this, 'sanitize_color_input' ),
 			)
 		);
 
-		// Add "Disable right-click" setting field
+		// Add "Disable right-click" setting field.
 		add_settings_field(
-			'disable_right_click', // HTML id
-			__( 'Disable right-click', 'protected-video' ), // field title
-			array( $this, 'render_disable_right_click_checkbox' ), // callback
-			'protected-video-admin', // page
-			'protected_video_setting_section', // section
+			'disable_right_click', // HTML id.
+			__( 'Disable right-click', 'protected-video' ), // field title.
+			array( $this, 'render_disable_right_click_checkbox' ), // callback.
+			'protected-video-admin', // page.
+			'protected_video_setting_section', // section.
 			array(
 				'id'          => 'disable_right_click',
 				'option_name' => 'protected_video_disable_right_click',
 			)
 		);
 
-		// Register "Disable right-click" setting
+		// Register "Disable right-click" setting.
 		register_setting(
-			'protected_video_option_group', // settings group name
-			'protected_video_disable_right_click', // option name
+			'protected_video_option_group', // settings group name.
+			'protected_video_disable_right_click', // option name.
 			array(
 				'default'           => '1',
 				'sanitize_callback' => array( $this, 'sanitize_checkbox_input' ),
@@ -300,19 +300,19 @@ class Protected_Video_Admin {
 			esc_attr( $value )
 		);
 
-		printf(
-			'<p class="description">%s</p>',
-			sprintf(
-				// translators: %s is a link to the Plyr documentation
-				esc_html__(
-					'Sets the player theme color. See %s for advanced styling options.',
-					'protected-video'
-				),
-				'<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
+			printf(
+				'<p class="description">%s</p>',
+				sprintf(
+				// translators: %s is a link to the Plyr documentation.
+					esc_html__(
+						'Sets the player theme color. See %s for advanced styling options.',
+						'protected-video'
+					),
+					'<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
 					esc_html__( "Plyr's documentation", 'protected-video' ) .
 					'</a>'
-			)
-		);
+				)
+			);
 	}
 
 	/**
