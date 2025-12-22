@@ -3,8 +3,6 @@
  * the data attributes and initializes Plyr.
  */
 
-import Plyr from 'plyr';
-
 function decodeVideoBlock(videoBlock) {
 	const encodedProvider = videoBlock.dataset.id1;
 	const encodedVideoId = videoBlock.dataset.id2;
@@ -33,11 +31,14 @@ const videoBlocks = document.querySelectorAll(
 videoBlocks.forEach((videoBlock) => {
 	decodeVideoBlock(videoBlock);
 
-	new Plyr(videoBlock, {
+	const plyrConfig = {
+		iconUrl: globalThis.ProtectedVideoPlyr.iconUrl,
 		youtube: {
 			noCookie: true,
 		},
-	});
+	};
+
+	new Plyr(videoBlock, plyrConfig);
 });
 
 // Disable right-click if plugin option enabled

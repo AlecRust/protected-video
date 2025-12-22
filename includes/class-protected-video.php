@@ -109,19 +109,16 @@ class Protected_Video {
 	 * @return void
 	 */
 	private function define_public_hooks() {
-		$plugin_public = new Protected_Video_Public(
-			$this->get_plugin_name(),
-			$this->get_version()
-		);
+		$plugin_public = new Protected_Video_Public();
 
 		// Shortcode
 		add_shortcode( 'protected_video', array( $plugin_public, 'render_shortcode' ) );
 
 		// Public CSS
-		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ), 9 );
 
 		// Public JS
-		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ), 9 );
 
 		// Body class
 		add_filter( 'body_class', array( $plugin_public, 'add_body_classes' ) );
@@ -131,6 +128,7 @@ class Protected_Video {
 		add_filter(
 			'mpcs_classroom_style_handles',
 			function ( $allowed_handles ) {
+				$allowed_handles[] = 'protected-video-plyr-style';
 				$allowed_handles[] = 'protected-video-protected-video-style';
 				return $allowed_handles;
 			}

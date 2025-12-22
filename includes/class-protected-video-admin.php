@@ -25,7 +25,6 @@ class Protected_Video_Admin {
 	 *
 	 * @var string $version The current version of this plugin.
 	 */
-	// @phpstan-ignore-next-line
 	private $version;
 
 	/**
@@ -49,6 +48,72 @@ class Protected_Video_Admin {
 	 */
 	public function register_block() {
 		register_block_type( __DIR__ . '/../build' );
+
+		$plyr_style_handle  = 'protected-video-plyr-style';
+		$plyr_script_handle = 'protected-video-plyr-script';
+
+		if ( ! wp_style_is( $plyr_style_handle, 'registered' ) ) {
+			wp_register_style(
+				$plyr_style_handle,
+				plugin_dir_url( __FILE__ ) . '../build/vendor/plyr/plyr.css',
+				array(),
+				$this->version
+			);
+		}
+
+		if ( ! wp_script_is( $plyr_script_handle, 'registered' ) ) {
+			wp_register_script(
+				$plyr_script_handle,
+				plugin_dir_url( __FILE__ ) . '../build/vendor/plyr/plyr.min.js',
+				array(),
+				$this->version,
+				array(
+					'in_footer' => true,
+					'strategy'  => 'defer',
+				)
+			);
+		}
+
+		$block_style_handle = 'protected-video-protected-video-style';
+		$wp_styles          = wp_styles();
+		if (
+			isset( $wp_styles->registered[ $block_style_handle ] ) &&
+			! in_array(
+				$plyr_style_handle,
+				$wp_styles->registered[ $block_style_handle ]->deps,
+				true
+			)
+		) {
+			$wp_styles->registered[ $block_style_handle ]->deps[] = $plyr_style_handle;
+		}
+
+		$block_script_handle = 'protected-video-protected-video-view-script';
+		$wp_scripts          = wp_scripts();
+		if (
+			isset( $wp_scripts->registered[ $block_script_handle ] ) &&
+			! in_array(
+				$plyr_script_handle,
+				$wp_scripts->registered[ $block_script_handle ]->deps,
+				true
+			)
+		) {
+			$wp_scripts->registered[ $block_script_handle ]->deps[] = $plyr_script_handle;
+		}
+
+		wp_script_add_data( $block_script_handle, 'strategy', 'defer' );
+		wp_script_add_data( $block_script_handle, 'group', 1 );
+
+		wp_add_inline_script(
+			$block_script_handle,
+			'window.ProtectedVideoPlyr = ' .
+				wp_json_encode(
+					array(
+						'iconUrl' => plugin_dir_url( __FILE__ ) . '../build/vendor/plyr/plyr.svg',
+					)
+				) .
+				';',
+			'before'
+		);
 	}
 
 	/**

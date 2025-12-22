@@ -78,6 +78,42 @@ module.exports = {
 					from: path.resolve(__dirname, 'images'),
 					to: 'images',
 				},
+				{
+					from: path.resolve(
+						__dirname,
+						'..',
+						'..',
+						'node_modules',
+						'plyr',
+						'dist',
+						'plyr.min.js'
+					),
+					to: 'vendor/plyr/plyr.min.js',
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'..',
+						'..',
+						'node_modules',
+						'plyr',
+						'dist',
+						'plyr.css'
+					),
+					to: 'vendor/plyr/plyr.css',
+				},
+				{
+					from: path.resolve(
+						__dirname,
+						'..',
+						'..',
+						'node_modules',
+						'plyr',
+						'dist',
+						'plyr.svg'
+					),
+					to: 'vendor/plyr/plyr.svg',
+				},
 			],
 		}),
 	],

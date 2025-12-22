@@ -9,8 +9,12 @@
 	"packageManager": "npm@11.7.0",
 	"main": "build/index.js",
 	"scripts": {
+		"copy:plyr": "node scripts/copy-plyr-assets.mjs",
+		"preenv": "npm run copy:plyr",
+		"prestart": "npm run copy:plyr",
 		"start": "wp-scripts start",
 		"build": "wp-scripts build",
+		"postbuild": "npm run copy:plyr",
 		"env": "wp-env",
 		"start:demo": "webpack serve --mode development -c src/demo/webpack.config.js",
 		"build:demo": "webpack -c src/demo/webpack.config.js",
@@ -21,7 +25,7 @@
 	},
 	"dependencies": {
 		"get-video-id": "^4.1.7",
-		"plyr": "^3.7.8"
+		"plyr": "^3.8.3"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.39.2",

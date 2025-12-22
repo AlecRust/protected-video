@@ -5,12 +5,12 @@
 /.wordpress-org
 /demo
 /node_modules
+/scripts
 /src
 
 .distignore
 .editorconfig
-.eslintignore
-.eslintrc.json
+eslint.config.mjs
 .gitignore
 .lintstagedrc.json
 .prettierignore

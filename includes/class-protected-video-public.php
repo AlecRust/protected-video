@@ -14,32 +14,6 @@
 class Protected_Video_Public {
 
 	/**
-	 * The plugin ID.
-	 *
-	 * @var string $plugin_name The ID of this plugin.
-	 */
-	// @phpstan-ignore-next-line
-	private $plugin_name;
-
-	/**
-	 * The plugin version.
-	 *
-	 * @var string $version The current version of this plugin.
-	 */
-	private $version;
-
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @param string $plugin_name The name of the plugin.
-	 * @param string $version     The version of this plugin.
-	 */
-	public function __construct( $plugin_name, $version ) {
-		$this->plugin_name = $plugin_name;
-		$this->version     = $version;
-	}
-
-	/**
 	 * Render Shortcode (Gutenberg block alternative).
 	 *
 	 * Usage example: [protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
@@ -71,23 +45,19 @@ class Protected_Video_Public {
 	 * @return void
 	 */
 	public function enqueue_styles() {
-		if ( $this->should_enqueue_assets() ) {
-			// Public CSS with bundled Plyr CSS
-			wp_enqueue_style(
-				'protected-video-protected-video-style', // matches block asset handle
-				plugin_dir_url( __FILE__ ) . '../build/style-index.css',
-				array(), // no stylesheet dependencies
-				$this->version // include plugin version in query string
-			);
-
-			wp_add_inline_style(
-				'protected-video-protected-video-style', // matches block asset handle
-				sprintf(
-					':root { --plyr-color-main: %s; }',
-					get_option( 'protected_video_player_theme_color', '#00b3ff' )
-				)
-			);
+		if ( ! $this->should_enqueue_assets() ) {
+			return;
 		}
+
+		$block_style_handle = 'protected-video-protected-video-style';
+		wp_enqueue_style( $block_style_handle );
+		wp_add_inline_style(
+			$block_style_handle,
+			sprintf(
+				':root { --plyr-color-main: %s; }',
+				get_option( 'protected_video_player_theme_color', '#00b3ff' )
+			)
+		);
 	}
 
 	/**
@@ -98,23 +68,12 @@ class Protected_Video_Public {
 	 * @return void
 	 */
 	public function enqueue_scripts() {
-		if ( $this->should_enqueue_assets() ) {
-			// Get block public JS metadata
-			$asset_file = include plugin_dir_path( __FILE__ ) .
-				'../build/view.asset.php';
-			$version    = isset( $asset_file['version'] )
-				? $asset_file['version']
-				: false;
-
-			// Public JS with bundled Plyr JS
-			wp_enqueue_script(
-				'protected-video-protected-video-view-script', // matches block asset handle
-				plugin_dir_url( __FILE__ ) . '../build/view.js',
-				array(), // no script dependencies
-				$version,
-				array( 'strategy' => 'defer' ) // defer script execution
-			);
+		if ( ! $this->should_enqueue_assets() ) {
+			return;
 		}
+
+		$block_script_handle = 'protected-video-protected-video-view-script';
+		wp_enqueue_script( $block_script_handle );
 	}
 
 	/**
