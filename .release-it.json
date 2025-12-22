@@ -26,6 +26,7 @@
 	},
 	"github": {
 		"release": true,
-		"releaseName": "${version}"
+		"releaseName": "${version}",
+		"releaseNotes": "git-cliff -c .cliff/cliff-changelog-md.toml --strip header --tag ${version} ${latestTag}..HEAD"
 	}
 }
