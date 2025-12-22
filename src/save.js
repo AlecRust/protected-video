@@ -17,12 +17,14 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function Save({ attributes }) {
 	const { videoId, videoService } = attributes;
+	const encodedVideoService = videoService ? btoa(videoService) : undefined;
+	const encodedVideoId = videoId ? btoa(videoId) : undefined;
 
 	return (
 		<div
 			{...useBlockProps.save()}
-			data-id1={btoa(videoService)}
-			data-id2={btoa(videoId)}
+			data-id1={encodedVideoService}
+			data-id2={encodedVideoId}
 		/>
 	);
 }

@@ -8,20 +8,29 @@ function decodeVideoBlock(videoBlock) {
 	const encodedVideoId = videoBlock.dataset.id2;
 
 	if (!encodedProvider || !encodedVideoId) {
-		return;
+		return null;
 	}
 
-	const decodedProvider = atob(encodedProvider);
-	const decodedVideoId = atob(encodedVideoId);
+	let decodedProvider;
+	let decodedVideoId;
+
+	try {
+		decodedProvider = atob(encodedProvider);
+		decodedVideoId = atob(encodedVideoId);
+	} catch {
+		return null;
+	}
 
 	if (!decodedProvider || !decodedVideoId) {
-		return;
+		return null;
 	}
 
 	// Add attributes that Plyr requires
 	// https://github.com/sampotts/plyr/issues/1936
 	videoBlock.dataset.plyrProvider = decodedProvider.toLowerCase();
 	videoBlock.dataset.plyrEmbedId = decodedVideoId;
+
+	return { provider: decodedProvider, videoId: decodedVideoId };
 }
 
 const videoBlocks = document.querySelectorAll(
@@ -29,16 +38,32 @@ const videoBlocks = document.querySelectorAll(
 );
 
 videoBlocks.forEach((videoBlock) => {
-	decodeVideoBlock(videoBlock);
+	const decoded = decodeVideoBlock(videoBlock);
+	if (!decoded) {
+		return;
+	}
+
+	const windowGlobal =
+		typeof globalThis !== 'undefined' ? globalThis : window;
+	const PlyrConstructor = windowGlobal.Plyr;
+	if (!PlyrConstructor) {
+		return;
+	}
 
 	const plyrConfig = {
-		iconUrl: globalThis.ProtectedVideoPlyr.iconUrl,
 		youtube: {
 			noCookie: true,
 		},
 	};
 
-	new Plyr(videoBlock, plyrConfig);
+	if (
+		windowGlobal.ProtectedVideoPlyr &&
+		windowGlobal.ProtectedVideoPlyr.iconUrl
+	) {
+		plyrConfig.iconUrl = windowGlobal.ProtectedVideoPlyr.iconUrl;
+	}
+
+	new PlyrConstructor(videoBlock, plyrConfig);
 });
 
 // Disable right-click if plugin option enabled

@@ -31,17 +31,89 @@ class Protected_Video_Public {
 			'protected_video'
 		);
 
+		$url     = trim( $atts['url'] );
+		$service = strtolower( trim( $atts['service'] ) );
+
+		if ( '' === $url ) {
+			return '';
+		}
+
+		if ( 'youtube' !== $service && 'vimeo' !== $service ) {
+			return '';
+		}
+
+		$video_id = null;
+		if ( 'youtube' === $service ) {
+			$video_id = $this->extract_youtube_id( $url );
+		}
+
+		if ( 'vimeo' === $service ) {
+			$video_id = $this->extract_vimeo_id( $url );
+		}
+
+		if ( ! $video_id ) {
+			return '';
+		}
+
 		// Used to obscure the original values in HTML attributes.
 		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
-		$encoded_service = base64_encode( $atts['service'] );
+		$encoded_service = base64_encode( $service );
 		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
-		$encoded_url = base64_encode( $atts['url'] );
+		$encoded_video_id = base64_encode( $video_id );
 
 		return sprintf(
 			'<div class="wp-block-protected-video-protected-video" data-id1="%s" data-id2="%s"></div>',
-			$encoded_service,
-			$encoded_url
+			esc_attr( $encoded_service ),
+			esc_attr( $encoded_video_id )
 		);
+	}
+
+	/**
+	 * Extract a YouTube ID from a URL or return it if it already looks like an ID.
+	 *
+	 * @param string $url Video URL or ID.
+	 * @return string|null
+	 */
+	private function extract_youtube_id( $url ) {
+		$url = trim( $url );
+
+		// Allow IDs directly.
+		if ( preg_match( '/^[A-Za-z0-9_-]{6,64}$/', $url ) ) {
+			return $url;
+		}
+
+		if (
+			preg_match(
+				'~(?:youtu\\.be/|youtube(?:-nocookie)?\\.com/(?:embed/|v/|shorts/|live/)|[?&]v=)([A-Za-z0-9_-]{6,64})~',
+				$url,
+				$matches
+			)
+		) {
+			return $matches[1];
+		}
+
+		return null;
+	}
+
+	/**
+	 * Extract a Vimeo ID from a URL or return it if it already looks like an ID.
+	 *
+	 * @param string $url Video URL or ID.
+	 * @return string|null
+	 */
+	private function extract_vimeo_id( $url ) {
+		$url = trim( $url );
+
+		// Allow IDs directly.
+		if ( preg_match( '/^[0-9]+$/', $url ) ) {
+			return $url;
+		}
+
+		if ( preg_match( '~vimeo\\.com/(?:.*?/)?([0-9]+)~', $url, $matches ) ) {
+			return $matches[1];
+		}
+
+		return null;
 	}
 
 	/**
