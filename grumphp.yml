@@ -8,4 +8,4 @@ grumphp:
             ruleset: ['cleancode', 'naming']
         phpmnd:
         phpstan:
-            memory_limit: 512M
+            memory_limit: 1G
