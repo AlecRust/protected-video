@@ -1,7 +1,7 @@
 === Protected Video ===
 Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
-Requires at least: 4.6
+Requires at least: 6.6
 Tested up to:      6.9
 Stable tag:        1.11.6
 Requires PHP:      7.0
