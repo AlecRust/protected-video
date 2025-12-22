@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Protected Video
- * Plugin URI:        http://github.com/AlecRust/protected-video
+ * Plugin URI:        https://github.com/AlecRust/protected-video
  * GitHub Plugin URI: AlecRust/protected-video
  * Description:       YouTube/Vimeo player that prevents easy sharing of the video.
  * Version:           1.11.6
