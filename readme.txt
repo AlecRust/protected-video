@@ -4,7 +4,7 @@ Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 6.6
 Tested up to:      6.9
 Stable tag:        1.11.6
-Requires PHP:      7.0
+Requires PHP:      7.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
