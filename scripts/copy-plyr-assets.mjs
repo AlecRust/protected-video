@@ -20,4 +20,8 @@ await Promise.all([
 		path.join(sourceDir, 'plyr.svg'),
 		path.join(targetDir, 'plyr.svg')
 	),
+	copyFile(
+		path.join(rootDir, 'node_modules', 'plyr', 'LICENSE.md'),
+		path.join(targetDir, 'LICENSE.md')
+	),
 ]);
