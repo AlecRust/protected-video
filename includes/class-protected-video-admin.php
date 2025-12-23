@@ -124,7 +124,6 @@ class Protected_Video_Admin {
 		);
 		wp_script_add_data( $block_script_handle, 'path', $build_path . 'view.js' );
 
-		wp_script_add_data( $block_script_handle, 'strategy', 'defer' );
 		wp_script_add_data( $block_script_handle, 'group', 1 );
 
 		wp_add_inline_script(
