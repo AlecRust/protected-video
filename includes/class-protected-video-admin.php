@@ -47,8 +47,11 @@ class Protected_Video_Admin {
 	 * @return void
 	 */
 	public function register_block() {
-		$build_url  = plugin_dir_url( __FILE__ ) . '../build/';
-		$build_path = plugin_dir_path( __FILE__ ) . '../build/';
+		$plugin_url  = trailingslashit( dirname( plugin_dir_url( __FILE__ ) ) );
+		$plugin_path = trailingslashit( dirname( plugin_dir_path( __FILE__ ) ) );
+
+		$build_url  = $plugin_url . 'build/';
+		$build_path = $plugin_path . 'build/';
 
 		$plyr_style_handle  = 'protected-video-plyr-style';
 		$plyr_script_handle = 'protected-video-plyr-script';
