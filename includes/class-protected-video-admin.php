@@ -218,13 +218,13 @@ class Protected_Video_Admin {
 		printf(
 			'<p class="description">%s</p>',
 			sprintf(
-			// translators: %s is a link to the Plyr documentation.
+				// translators: %s is a link to the Plyr documentation.
 				esc_html__(
 					'Sets the player theme color. See %s for advanced styling options.',
 					'protected-video'
 				),
 				'<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank" rel="noopener noreferrer">' .
-				esc_html__( "Plyr's documentation", 'protected-video' ) .
+					esc_html__( "Plyr's documentation", 'protected-video' ) .
 				'</a>'
 			)
 		);
