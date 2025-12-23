@@ -19,18 +19,20 @@ class Protected_Video_Public {
 	 * Usage example: [protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
 	 *
 	 * @param array<string, mixed>|string $atts Shortcode attributes.
-	 * @param string|null               $content Optional shortcode content.
-	 * @param string                    $tag Shortcode tag.
+	 * @param string|null                 $content Optional shortcode content.
+	 * @param string                      $tag Shortcode tag.
 	 * @return string HTML output for the shortcode.
 	 */
 	public function render_shortcode( $atts, $content = null, $tag = '' ) {
+		unset( $content );
+
 		$atts = shortcode_atts(
 			array(
 				'url'     => '',
 				'service' => '',
 			),
 			$atts,
-			'protected_video'
+			$tag ? $tag : 'protected_video'
 		);
 
 		$url     = trim( $atts['url'] );
