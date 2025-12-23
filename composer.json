@@ -17,7 +17,8 @@
 		"squizlabs/php_codesniffer": "*",
 		"phpstan/phpstan": "*",
 		"szepeviktor/phpstan-wordpress": "*",
-		"wp-coding-standards/wpcs": "*"
+		"wp-coding-standards/wpcs": "*",
+		"phpcompatibility/phpcompatibility-wp": "*"
 	},
 	"config": {
 		"allow-plugins": {

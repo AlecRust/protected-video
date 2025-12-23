@@ -11,6 +11,10 @@
 	<file>includes</file>
 	<file>uninstall.php</file>
 
+	<config name="testVersion" value="7.2-" />
+	<config name="minimum_supported_wp_version" value="6.6" />
+	<config name="text_domain" value="protected-video" />
+
 	<exclude-pattern>build</exclude-pattern>
 	<exclude-pattern>node_modules</exclude-pattern>
 	<exclude-pattern>vendor</exclude-pattern>
@@ -18,6 +22,7 @@
 	<rule ref="WordPress" />
 	<rule ref="WordPress-Core" />
 	<rule ref="WordPress-Docs" />
+	<rule ref="PHPCompatibilityWP" />
 
 	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
 		<exclude-pattern>includes/class-*.php</exclude-pattern>
