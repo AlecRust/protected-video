@@ -308,7 +308,7 @@ class Protected_Video_Admin {
 						'Sets the player theme color. See %s for advanced styling options.',
 						'protected-video'
 					),
-					'<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank">' .
+					'<a href="https://github.com/sampotts/plyr#customizing-the-css" target="_blank" rel="noopener noreferrer">' .
 					esc_html__( "Plyr's documentation", 'protected-video' ) .
 					'</a>'
 				)
