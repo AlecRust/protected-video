@@ -65,8 +65,8 @@ class Protected_Video_Admin {
 	/**
 	 * Add link to plugin settings on Plugins page.
 	 *
-	 * @param array<string> $links Array of links.
-	 * @return array<string> Modified array of links.
+	 * @param string[] $links Array of links.
+	 * @return string[] Modified array of links.
 	 */
 	public function add_settings_link( $links ) {
 		$url           = esc_url(
@@ -166,8 +166,8 @@ class Protected_Video_Admin {
 	/**
 	 * Sanitize color input data.
 	 *
-	 * @param string $input Input data.
-	 * @return string Sanitized input data.
+	 * @param mixed $input Input data.
+	 * @return string|null Sanitized input data.
 	 */
 	public function sanitize_color_input( $input ) {
 		return sanitize_hex_color( $input );
@@ -176,8 +176,8 @@ class Protected_Video_Admin {
 	/**
 	 * Sanitize checkbox input data.
 	 *
-	 * @param string $input Input data.
-	 * @return string Sanitized input data.
+	 * @param mixed $input Input data.
+	 * @return '0'|'1' Sanitized input data.
 	 */
 	public function sanitize_checkbox_input( $input ) {
 		return ! empty( $input ) ? '1' : '0';
@@ -200,7 +200,7 @@ class Protected_Video_Admin {
 	/**
 	 * Render the "Player theme color" field.
 	 *
-	 * @param array<string> $val Field values.
+	 * @param array{id: string, option_name: string} $val Field values.
 	 * @return void
 	 */
 	public function render_color_input( $val ) {
@@ -233,7 +233,7 @@ class Protected_Video_Admin {
 	/**
 	 * Render the "Disable right-click" field.
 	 *
-	 * @param array<string> $val Field values.
+	 * @param array{id: string, option_name: string} $val Field values.
 	 * @return void
 	 */
 	public function render_disable_right_click_checkbox( $val ) {

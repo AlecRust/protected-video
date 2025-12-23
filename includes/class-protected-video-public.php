@@ -18,10 +18,12 @@ class Protected_Video_Public {
 	 *
 	 * Usage example: [protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
 	 *
-	 * @param array<string> $atts Shortcode attributes.
+	 * @param array<string, mixed>|string $atts Shortcode attributes.
+	 * @param string|null               $content Optional shortcode content.
+	 * @param string                    $tag Shortcode tag.
 	 * @return string HTML output for the shortcode.
 	 */
-	public function render_shortcode( $atts ) {
+	public function render_shortcode( $atts, $content = null, $tag = '' ) {
 		$atts = shortcode_atts(
 			array(
 				'url'     => '',
@@ -158,8 +160,8 @@ class Protected_Video_Public {
 	/**
 	 * Return body classes for the public-facing side of the site
 	 *
-	 * @param array<string> $classes Body classes.
-	 * @return array<string> Body classes.
+	 * @param string[] $classes Body classes.
+	 * @return string[] Body classes.
 	 */
 	public function add_body_classes( $classes ) {
 		$disable_right_click = get_option(
