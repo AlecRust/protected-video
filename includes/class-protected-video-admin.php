@@ -132,22 +132,6 @@ class Protected_Video_Admin {
 	}
 
 	/**
-	 * Migrate old plugin options.
-	 *
-	 * @return void
-	 */
-	public function migrate_plugin_options() {
-		$old_option = get_option( 'protected_video_option_name' );
-		if ( isset( $old_option['player_theme_color'] ) ) {
-			update_option(
-				'protected_video_player_theme_color',
-				sanitize_hex_color( $old_option['player_theme_color'] )
-			);
-			delete_option( 'protected_video_option_name' );
-		}
-	}
-
-	/**
 	 * Add link to plugin settings on Plugins page.
 	 *
 	 * @param array<string> $links Array of links.

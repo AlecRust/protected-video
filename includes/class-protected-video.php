@@ -96,9 +96,6 @@ class Protected_Video {
 				'add_settings_link',
 			)
 		);
-
-		// Migrate settings when plugins have loaded.
-		add_action( 'plugins_loaded', array( $plugin_admin, 'migrate_plugin_options' ) );
 	}
 
 	/**
