@@ -6,7 +6,6 @@
 /demo
 /node_modules
 /vendor
-/scripts
 /src
 
 .distignore
