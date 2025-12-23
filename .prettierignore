@@ -1,2 +1,7 @@
 composer.lock
 package-lock.json
+
+/build/
+/demo/
+/node_modules/
+/vendor/
