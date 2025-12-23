@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [2.0.1](https://github.com/AlecRust/protected-video/releases/tag/2.0.1)
+
+> 23 December 2025
+
+- Trial simpler release notes building [`e7bc043`](https://github.com/AlecRust/protected-video/commit/e7bc043795e0d6b47184530ca3eee52b810e6a4b)
+- Improve formatting [`ef64e3c`](https://github.com/AlecRust/protected-video/commit/ef64e3c9a9f0d3ef5790db9018f8f8d9f59134f6)
+- Exclude .phpcs.xml from plugin dist [`bd61fc8`](https://github.com/AlecRust/protected-video/commit/bd61fc8ea8152079c1777b7644b3743802c8a719)
+
 #### [2.0.0](https://github.com/AlecRust/protected-video/releases/tag/2.0.0)
 
 > 23 December 2025
