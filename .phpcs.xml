@@ -20,8 +20,6 @@
 	<exclude-pattern>vendor</exclude-pattern>
 
 	<rule ref="WordPress" />
-	<rule ref="WordPress-Core" />
-	<rule ref="WordPress-Docs" />
 	<rule ref="PHPCompatibilityWP" />
 
 	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
