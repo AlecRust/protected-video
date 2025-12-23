@@ -34,7 +34,7 @@ class Protected_Video {
 	 * Define core plugin functionality.
 	 */
 	public function __construct() {
-		$this->version     = defined( 'PROTECTED_VIDEO_VERSION' ) ? PROTECTED_VIDEO_VERSION : '1.0.0';
+		$this->version     = PROTECTED_VIDEO_VERSION;
 		$this->plugin_name = 'protected-video';
 	}
 
