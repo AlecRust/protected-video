@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [2.0.0](https://github.com/AlecRust/protected-video/releases/tag/2.0.0)
+
+> 23 December 2025
+
+- Improve formatting [`373e422`](https://github.com/AlecRust/protected-video/commit/373e422f844dc096318cd215ad548b3aa4f6b4c3)
+- Remove /scripts from .distignore [`8f5f9c5`](https://github.com/AlecRust/protected-video/commit/8f5f9c516353148b671f6c5144957de928dcaee2)
+- Fix lint [`d304b3f`](https://github.com/AlecRust/protected-video/commit/d304b3fb7d63e78fad10c0d817ac6c335d648fb9)
+- Align 7.2 as the minimum PHP version [`52221ec`](https://github.com/AlecRust/protected-video/commit/52221ecacdfb1e7026ba7a2bd109d3420434ae8c)
+- Apply PHPDoc/type fixes [`0d16df5`](https://github.com/AlecRust/protected-video/commit/0d16df53a3b6edb88cbc0782f1e7d916a3248fbb)
+- Exclude built files from Prettier [`ce7f381`](https://github.com/AlecRust/protected-video/commit/ce7f381e9159f5dfd58130604900d996157d0ed4)
+- Simplify PHPCS config [`5967f9c`](https://github.com/AlecRust/protected-video/commit/5967f9cc444dc8d1ff7024d9753fdc636b91dbdc)
+- Fix has_block() call to use post content [`8f480de`](https://github.com/AlecRust/protected-video/commit/8f480de9822eb980e353d08bc1599b7242be9b89)
+- Add phpcompatibility-wp lint check [`256abdb`](https://github.com/AlecRust/protected-video/commit/256abdbd32d63c47783fe04430e6e3148fe93570)
+- Refactor back to bundling Plyr within plugin assets [`3145af5`](https://github.com/AlecRust/protected-video/commit/3145af54087a0e265b4438a883adcf4630b9386e)
+- Remove unnecessary version fallback [`7ed9282`](https://github.com/AlecRust/protected-video/commit/7ed92820ecfdbe04231b7d1642b2e128999e7a20)
+- Tidy build URL/path computation [`352a7c3`](https://github.com/AlecRust/protected-video/commit/352a7c3501cdf8e15559c065b81b35790a817053)
+- Remove redundant wp_script_add_data [`c08b895`](https://github.com/AlecRust/protected-video/commit/c08b895f339dfb7621ebc2e19a0383a329f807fd)
+- Refactor block assets loading [`18808d0`](https://github.com/AlecRust/protected-video/commit/18808d0bfb457fe56b132597db181e08c97c54f2)
+- Remove legacy options migration hook [`f1e3fcd`](https://github.com/AlecRust/protected-video/commit/f1e3fcda8b2e6ac384911ffc21811e98f784f5c8)
+- Add rel attribute to external link [`6538a9e`](https://github.com/AlecRust/protected-video/commit/6538a9e92dab6b982a16114bd3c08c477ce4d3ea)
+- Fix shortcode to encode video ID and harden frontend decode [`75374be`](https://github.com/AlecRust/protected-video/commit/75374bec80d950a0af3a414d47474be8628aab26)
+- Add PHPCS and fix fallout [`d848a03`](https://github.com/AlecRust/protected-video/commit/d848a030560a307e846ec3a00f7189a01b10efb5)
+- Include Plyr and get-video-id LICENSE.md files in build [`151eea6`](https://github.com/AlecRust/protected-video/commit/151eea6e21301aca5139800521eac6ed2cfb9c4b)
+- Exclude /vendor from plugin dist [`6261aae`](https://github.com/AlecRust/protected-video/commit/6261aae79f6030d1d5351a6aa27d023dc971429b)
+- Update minimum PHP version 7.0 -> 7.2 [`eb9b868`](https://github.com/AlecRust/protected-video/commit/eb9b8685f6b616c749e54db7f64b7bb1c54616ac)
+- Change Plugin URI to HTTPS [`8ccbdd7`](https://github.com/AlecRust/protected-video/commit/8ccbdd7a89aabcf8948be500df253563a1d29d45)
+- Fix minimum WP version 4.6 -> 6.6 [`0738c0c`](https://github.com/AlecRust/protected-video/commit/0738c0c9141c83a536027d58fcc2218aeadf80a0)
+- Improve release notes generating [`7ec2a0f`](https://github.com/AlecRust/protected-video/commit/7ec2a0f5e9ba300bcd5616f3584646a827a9db2c)
+- Upgrade Plyr 3.7.8 -> 3.8.3 and improve loading behaviour [`ec21e19`](https://github.com/AlecRust/protected-video/commit/ec21e19c9a1e24b183930e9b40ba3b6f7a41ac63)
+- Increase GrumPHP memory limit [`e6f2470`](https://github.com/AlecRust/protected-video/commit/e6f24703d968cf593ae10e0f2fc64ea89b6fc0c7)
+- Update WordPress "Tested up to" version to 6.9 [`0863f71`](https://github.com/AlecRust/protected-video/commit/0863f71a957c8a7289445cd4f87f253624ce5742)
+- Upgrade CI PHP version 8.3 -> 8.4 [`63c273b`](https://github.com/AlecRust/protected-video/commit/63c273b487ca9928938727ddf7b87aa068a4459f)
+- Remove unnecessary cache option from actions/setup-node [`2d74aed`](https://github.com/AlecRust/protected-video/commit/2d74aed519e504adf674b9af8e1ef6f51d555800)
+- Bump actions/setup-node from 4 to 6 [`81c858a`](https://github.com/AlecRust/protected-video/commit/81c858af88d88cb0b3b824ab58ec433c94ae051c)
+- Set packageManager in package.json [`3cd0200`](https://github.com/AlecRust/protected-video/commit/3cd0200ea545a16c1f4129393b5c92cf29403abd)
+- Update Composer dependencies [`e28c0b7`](https://github.com/AlecRust/protected-video/commit/e28c0b75c9cd2744932be5276ba48a50c3a5659e)
+- Upgrade ESLint v8 -> v9 [`6ca926c`](https://github.com/AlecRust/protected-video/commit/6ca926c5e2f51f1cc92066850623954ad525910a)
+- Bump npm dependencies [`4d9b3d3`](https://github.com/AlecRust/protected-video/commit/4d9b3d3bc1eb3b034e5c994c3f207407436151c4)
+- Adjust formatting [`349cea5`](https://github.com/AlecRust/protected-video/commit/349cea513e05258f5e3812608015a3ecb6e5fe41)
+- Improve formatting [`332318a`](https://github.com/AlecRust/protected-video/commit/332318a86610f021274bd6b674d32e13144825d5)
+- Bump actions/checkout from 5 to 6 [`27d51f3`](https://github.com/AlecRust/protected-video/commit/27d51f3086e084090ef658a6a07808057e11fa89)
+- Bump actions/checkout from 4 to 5 [`1e7ee0f`](https://github.com/AlecRust/protected-video/commit/1e7ee0f44b748e84c8954020e04f0bff400fe21e)
+- Bump actions/upload-pages-artifact from 3 to 4 [`fd559d4`](https://github.com/AlecRust/protected-video/commit/fd559d4c8c4fca1512ee3b347e2c508232616546)
+
 #### [1.11.6](https://github.com/AlecRust/protected-video/releases/tag/1.11.6)
 
 > 6 July 2024

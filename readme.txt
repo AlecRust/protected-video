@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 6.6
 Tested up to:      6.9
-Stable tag:        1.11.6
+Stable tag:        2.0.0
 Requires PHP:      7.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -64,10 +64,10 @@ The main color of the player can be configured at **Settings > Protected Video**
 
 `
 <style>
-  :root {
-    --plyr-badge-background: #000;
-    --plyr-control-radius: 5px;
-  }
+:root {
+--plyr-badge-background: #000;
+--plyr-control-radius: 5px;
+}
 </style>
 `
 
@@ -118,6 +118,48 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
+
+= 2.0.0 - 2025-12-23 =
+
+* Improve formatting
+* Remove /scripts from .distignore
+* Fix lint
+* Align 7.2 as the minimum PHP version
+* Apply PHPDoc/type fixes
+* Exclude built files from Prettier
+* Simplify PHPCS config
+* Fix has_block() call to use post content
+* Add phpcompatibility-wp lint check
+* Refactor back to bundling Plyr within plugin assets
+* Remove unnecessary version fallback
+* Tidy build URL/path computation
+* Remove redundant wp_script_add_data
+* Refactor block assets loading
+* Remove legacy options migration hook
+* Add rel attribute to external link
+* Fix shortcode to encode video ID and harden frontend decode
+* Add PHPCS and fix fallout
+* Include Plyr and get-video-id LICENSE.md files in build
+* Exclude /vendor from plugin dist
+* Update minimum PHP version 7.0 -> 7.2
+* Change Plugin URI to HTTPS
+* Fix minimum WP version 4.6 -> 6.6
+* Improve release notes generating
+* Upgrade Plyr 3.7.8 -> 3.8.3 and improve loading behaviour
+* Increase GrumPHP memory limit
+* Update WordPress "Tested up to" version to 6.9
+* Upgrade CI PHP version 8.3 -> 8.4
+* Remove unnecessary cache option from actions/setup-node
+* Bump actions/setup-node from 4 to 6
+* Set packageManager in package.json
+* Update Composer dependencies
+* Upgrade ESLint v8 -> v9
+* Bump npm dependencies
+* Adjust formatting
+* Improve formatting
+* Bump actions/checkout from 5 to 6
+* Bump actions/checkout from 4 to 5
+* Bump actions/upload-pages-artifact from 3 to 4
 
 = 1.11.6 - 2024-07-06 =
 
