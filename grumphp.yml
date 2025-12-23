@@ -1,7 +1,7 @@
 grumphp:
     tasks:
         phpversion:
-            project: '7.0'
+            project: '7.2'
         phpcs:
             standard: ['.phpcs.xml']
             triggered_by: ['php']
