@@ -193,7 +193,7 @@ class Protected_Video_Public {
 	 */
 	private function post_contains_block_or_shortcode( $post_id ) {
 		$post_content = get_post_field( 'post_content', $post_id );
-		return has_block( 'protected-video/protected-video', $post_id ) ||
+		return has_block( 'protected-video/protected-video', $post_content ) ||
 			has_shortcode( $post_content, 'protected_video' );
 	}
 
