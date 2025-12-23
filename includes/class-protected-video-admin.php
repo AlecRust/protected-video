@@ -47,7 +47,8 @@ class Protected_Video_Admin {
 	 * @return void
 	 */
 	public function register_block() {
-		register_block_type( __DIR__ . '/../build' );
+		$build_url  = plugin_dir_url( __FILE__ ) . '../build/';
+		$build_path = plugin_dir_path( __FILE__ ) . '../build/';
 
 		$plyr_style_handle  = 'protected-video-plyr-style';
 		$plyr_script_handle = 'protected-video-plyr-script';
@@ -55,16 +56,21 @@ class Protected_Video_Admin {
 		if ( ! wp_style_is( $plyr_style_handle, 'registered' ) ) {
 			wp_register_style(
 				$plyr_style_handle,
-				plugin_dir_url( __FILE__ ) . '../build/vendor/plyr/plyr.css',
+				$build_url . 'vendor/plyr/plyr.css',
 				array(),
 				$this->version
+			);
+			wp_style_add_data(
+				$plyr_style_handle,
+				'path',
+				$build_path . 'vendor/plyr/plyr.css'
 			);
 		}
 
 		if ( ! wp_script_is( $plyr_script_handle, 'registered' ) ) {
 			wp_register_script(
 				$plyr_script_handle,
-				plugin_dir_url( __FILE__ ) . '../build/vendor/plyr/plyr.min.js',
+				$build_url . 'vendor/plyr/plyr.min.js',
 				array(),
 				$this->version,
 				array(
@@ -72,33 +78,51 @@ class Protected_Video_Admin {
 					'strategy'  => 'defer',
 				)
 			);
+			wp_script_add_data(
+				$plyr_script_handle,
+				'path',
+				$build_path . 'vendor/plyr/plyr.min.js'
+			);
 		}
+
+		register_block_type( __DIR__ . '/../build' );
 
 		$block_style_handle = 'protected-video-protected-video-style';
-		$wp_styles          = wp_styles();
-		if (
-			isset( $wp_styles->registered[ $block_style_handle ] ) &&
-			! in_array(
-				$plyr_style_handle,
-				$wp_styles->registered[ $block_style_handle ]->deps,
-				true
-			)
-		) {
-			$wp_styles->registered[ $block_style_handle ]->deps[] = $plyr_style_handle;
-		}
+		wp_deregister_style( $block_style_handle );
+		wp_register_style(
+			$block_style_handle,
+			$build_url . 'style-index.css',
+			array( $plyr_style_handle ),
+			$this->version
+		);
+		wp_style_add_data( $block_style_handle, 'path', $build_path . 'style-index.css' );
+		wp_style_add_data( $block_style_handle, 'rtl', 'replace' );
 
 		$block_script_handle = 'protected-video-protected-video-view-script';
-		$wp_scripts          = wp_scripts();
-		if (
-			isset( $wp_scripts->registered[ $block_script_handle ] ) &&
-			! in_array(
-				$plyr_script_handle,
-				$wp_scripts->registered[ $block_script_handle ]->deps,
-				true
-			)
-		) {
-			$wp_scripts->registered[ $block_script_handle ]->deps[] = $plyr_script_handle;
+		$asset_deps          = array();
+		$asset_version       = $this->version;
+		if ( file_exists( $build_path . 'view.asset.php' ) ) {
+			$asset = require $build_path . 'view.asset.php';
+			if ( isset( $asset['dependencies'] ) && is_array( $asset['dependencies'] ) ) {
+				$asset_deps = $asset['dependencies'];
+			}
+			if ( isset( $asset['version'] ) && is_string( $asset['version'] ) ) {
+				$asset_version = $asset['version'];
+			}
 		}
+
+		wp_deregister_script( $block_script_handle );
+		wp_register_script(
+			$block_script_handle,
+			$build_url . 'view.js',
+			array_merge( array( $plyr_script_handle ), $asset_deps ),
+			$asset_version,
+			array(
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			)
+		);
+		wp_script_add_data( $block_script_handle, 'path', $build_path . 'view.js' );
 
 		wp_script_add_data( $block_script_handle, 'strategy', 'defer' );
 		wp_script_add_data( $block_script_handle, 'group', 1 );
@@ -108,7 +132,7 @@ class Protected_Video_Admin {
 			'window.ProtectedVideoPlyr = ' .
 				wp_json_encode(
 					array(
-						'iconUrl' => plugin_dir_url( __FILE__ ) . '../build/vendor/plyr/plyr.svg',
+						'iconUrl' => $build_url . 'vendor/plyr/plyr.svg',
 					)
 				) .
 				';',
