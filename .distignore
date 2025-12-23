@@ -13,6 +13,7 @@
 eslint.config.mjs
 .gitignore
 .lintstagedrc.json
+.phpcs.xml
 .prettierignore
 .prettierrc.js
 .release-it.json
