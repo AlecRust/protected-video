@@ -3,6 +3,11 @@
  * the data attributes and initializes Plyr.
  */
 
+import '../node_modules/plyr/dist/plyr.js';
+import plyrSpriteUrl from '../node_modules/plyr/dist/plyr.svg';
+
+const Plyr = globalThis.Plyr;
+
 function decodeVideoBlock(videoBlock) {
 	const encodedProvider = videoBlock.dataset.id1;
 	const encodedVideoId = videoBlock.dataset.id2;
@@ -43,27 +48,14 @@ videoBlocks.forEach((videoBlock) => {
 		return;
 	}
 
-	const windowGlobal =
-		typeof globalThis !== 'undefined' ? globalThis : window;
-	const PlyrConstructor = windowGlobal.Plyr;
-	if (!PlyrConstructor) {
-		return;
-	}
-
 	const plyrConfig = {
 		youtube: {
 			noCookie: true,
 		},
+		iconUrl: plyrSpriteUrl,
 	};
 
-	if (
-		windowGlobal.ProtectedVideoPlyr &&
-		windowGlobal.ProtectedVideoPlyr.iconUrl
-	) {
-		plyrConfig.iconUrl = windowGlobal.ProtectedVideoPlyr.iconUrl;
-	}
-
-	new PlyrConstructor(videoBlock, plyrConfig);
+	new Plyr(videoBlock, plyrConfig);
 });
 
 // Disable right-click if plugin option enabled

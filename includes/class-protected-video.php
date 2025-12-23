@@ -74,10 +74,7 @@ class Protected_Video {
 	 * @return void
 	 */
 	private function define_admin_hooks() {
-		$plugin_admin = new Protected_Video_Admin(
-			$this->get_plugin_name(),
-			$this->get_version()
-		);
+		$plugin_admin = new Protected_Video_Admin( $this->get_plugin_name() );
 
 		// Gutenberg block.
 		add_action( 'init', array( $plugin_admin, 'register_block' ) );
@@ -125,7 +122,6 @@ class Protected_Video {
 		add_filter(
 			'mpcs_classroom_style_handles',
 			function ( $allowed_handles ) {
-				$allowed_handles[] = 'protected-video-plyr-style';
 				$allowed_handles[] = 'protected-video-protected-video-style';
 				return $allowed_handles;
 			}

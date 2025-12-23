@@ -20,7 +20,6 @@ export default [
 			globals: {
 				...globals.browser,
 				...globals.node,
-				Plyr: 'readonly',
 			},
 		},
 	},
