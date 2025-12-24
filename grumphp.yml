@@ -8,5 +8,8 @@ grumphp:
         phpmd:
             ruleset: ['cleancode', 'naming']
         phpmnd:
+            exclude:
+                - node_modules
+                - vendor
         phpstan:
             memory_limit: 1G
