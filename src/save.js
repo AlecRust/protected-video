@@ -13,18 +13,21 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
  *
- * @return {WPElement} Element to render.
+ * @param {Object} props            Component props.
+ * @param {Object} props.attributes Block attributes.
+ * @return {Element} Element to render.
  */
-export default function Save({ attributes }) {
+export default function Save( props ) {
+	const { attributes } = props;
 	const { videoId, videoService } = attributes;
-	const encodedVideoService = videoService ? btoa(videoService) : undefined;
-	const encodedVideoId = videoId ? btoa(videoId) : undefined;
+	const encodedVideoService = videoService ? btoa( videoService ) : undefined;
+	const encodedVideoId = videoId ? btoa( videoId ) : undefined;
 
 	return (
 		<div
-			{...useBlockProps.save()}
-			data-id1={encodedVideoService}
-			data-id2={encodedVideoId}
+			{ ...useBlockProps.save() }
+			data-id1={ encodedVideoService }
+			data-id2={ encodedVideoId }
 		/>
 	);
 }

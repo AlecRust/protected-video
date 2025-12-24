@@ -27,8 +27,8 @@ import { pluginIcon } from './icons';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType(metadata.name, {
+registerBlockType( metadata.name, {
 	icon: pluginIcon,
 	edit: Edit,
 	save: Save,
-});
+} );

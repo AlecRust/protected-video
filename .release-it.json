@@ -18,8 +18,8 @@
 		]
 	},
 	"git": {
-		"commitArgs": ["-S"],
-		"tagArgs": ["-s"]
+		"commitArgs": [ "-S" ],
+		"tagArgs": [ "-s" ]
 	},
 	"npm": {
 		"publish": false

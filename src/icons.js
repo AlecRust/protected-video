@@ -1,4 +1,4 @@
-import { G, Path, SVG } from '@wordpress/components'; // eslint-disable-line no-unused-vars
+import { Path, SVG } from '@wordpress/components';
 
 export const pluginIcon = (
 	<SVG viewBox="0 0 363 512" xmlns="http://www.w3.org/2000/svg">

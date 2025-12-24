@@ -1,8 +1,8 @@
+import { BlockIcon, useBlockProps } from '@wordpress/block-editor';
+import { Notice, Placeholder, TextControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, BlockIcon } from '@wordpress/block-editor'; // eslint-disable-line no-unused-vars
-import { Placeholder, TextControl, Notice } from '@wordpress/components'; // eslint-disable-line no-unused-vars
-import { pluginIcon } from './icons';
 import getVideoId from 'get-video-id';
+import { pluginIcon } from './icons';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -18,69 +18,73 @@ import './editor.scss';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
- * @return {WPElement} Element to render.
+ * @param {Object}   props               Component props.
+ * @param {Object}   props.attributes    Block attributes.
+ * @param {Function} props.setAttributes Updates block attributes.
+ * @return {Element} Element to render.
  */
-export default function Edit({ attributes, setAttributes }) {
+export default function Edit( props ) {
+	const { attributes, setAttributes } = props;
 	const { videoUrl, videoId, videoService } = attributes;
 
-	function handleVideoUrlChange(newUrl) {
-		const { id: newId, service: newService } = getVideoId(newUrl);
-		setAttributes({
+	function handleVideoUrlChange( newUrl ) {
+		const { id: newId, service: newService } = getVideoId( newUrl );
+		setAttributes( {
 			videoUrl: newUrl,
 			videoId: newId,
 			videoService: newService,
-		});
+		} );
 	}
 
 	function renderVideoThumb() {
 		const thumbUrls = {
-			youtube: `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`,
-			vimeo: `https://vumbnail.com/${videoId}.jpg`,
+			youtube: `https://i.ytimg.com/vi/${ videoId }/mqdefault.jpg`,
+			vimeo: `https://vumbnail.com/${ videoId }.jpg`,
 		};
 
 		return (
 			<img
-				src={thumbUrls[videoService]}
+				src={ thumbUrls[ videoService ] }
 				width="320"
 				height="180"
-				alt={__('Video thumbnail', 'protected-video')}
+				alt={ __( 'Video thumbnail', 'protected-video' ) }
 			/>
 		);
 	}
 
 	return (
-		<div {...useBlockProps()}>
+		<div { ...useBlockProps() }>
 			<Placeholder
-				icon={<BlockIcon icon={pluginIcon} />}
-				label={__('Protected Video', 'protected-video')}
-				instructions={__(
+				icon={ <BlockIcon icon={ pluginIcon } /> }
+				label={ __( 'Protected Video', 'protected-video' ) }
+				instructions={ __(
 					'Paste the URL of a YouTube or Vimeo video you want to display in a protected player.',
 					'protected-video'
-				)}
+				) }
 			>
 				<TextControl
-					label={__('Video URL', 'protected-video')}
-					value={videoUrl}
-					onChange={handleVideoUrlChange}
-					placeholder={__(
+					label={ __( 'Video URL', 'protected-video' ) }
+					value={ videoUrl }
+					onChange={ handleVideoUrlChange }
+					placeholder={ __(
 						'e.g. https://youtu.be/aqz-KE-bpKQ',
 						'protected-video'
-					)}
+					) }
 				/>
-				{videoUrl && (
+				{ videoUrl && (
 					<div>
-						{videoId ? (
+						{ videoId ? (
 							renderVideoThumb()
 						) : (
-							<Notice status="error" isDismissible={false}>
-								{__(
+							<Notice status="error" isDismissible={ false }>
+								{ __(
 									'Sorry, a video ID could not be found in that URL.',
 									'protected-video'
-								)}
+								) }
 							</Notice>
-						)}
+						) }
 					</div>
-				)}
+				) }
 			</Placeholder>
 		</div>
 	);

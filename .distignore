@@ -5,12 +5,11 @@
 /.wordpress-org
 /demo
 /node_modules
-/vendor
 /src
+/vendor
 
 .distignore
 .editorconfig
-eslint.config.mjs
 .gitignore
 .lintstagedrc.json
 .phpcs.xml
@@ -19,6 +18,7 @@ eslint.config.mjs
 .release-it.json
 .wp-env.json
 CHANGELOG.md
+composer.json
 composer.lock
 grumphp.yml
 package-lock.json

@@ -6,13 +6,13 @@
 import '../node_modules/plyr/dist/plyr.js';
 import plyrSpriteUrl from '../node_modules/plyr/dist/plyr.svg';
 
-const Plyr = globalThis.Plyr;
+const Plyr = window.Plyr;
 
-function decodeVideoBlock(videoBlock) {
+function decodeVideoBlock( videoBlock ) {
 	const encodedProvider = videoBlock.dataset.id1;
 	const encodedVideoId = videoBlock.dataset.id2;
 
-	if (!encodedProvider || !encodedVideoId) {
+	if ( ! encodedProvider || ! encodedVideoId ) {
 		return null;
 	}
 
@@ -20,13 +20,13 @@ function decodeVideoBlock(videoBlock) {
 	let decodedVideoId;
 
 	try {
-		decodedProvider = atob(encodedProvider);
-		decodedVideoId = atob(encodedVideoId);
+		decodedProvider = atob( encodedProvider );
+		decodedVideoId = atob( encodedVideoId );
 	} catch {
 		return null;
 	}
 
-	if (!decodedProvider || !decodedVideoId) {
+	if ( ! decodedProvider || ! decodedVideoId ) {
 		return null;
 	}
 
@@ -42,9 +42,9 @@ const videoBlocks = document.querySelectorAll(
 	'.wp-block-protected-video-protected-video'
 );
 
-videoBlocks.forEach((videoBlock) => {
-	const decoded = decodeVideoBlock(videoBlock);
-	if (!decoded) {
+videoBlocks.forEach( ( videoBlock ) => {
+	const decoded = decodeVideoBlock( videoBlock );
+	if ( ! decoded ) {
 		return;
 	}
 
@@ -55,10 +55,14 @@ videoBlocks.forEach((videoBlock) => {
 		iconUrl: plyrSpriteUrl,
 	};
 
-	new Plyr(videoBlock, plyrConfig);
-});
+	new Plyr( videoBlock, plyrConfig );
+} );
 
 // Disable right-click if plugin option enabled
-if (document.body.classList.contains('protected-video-disable-right-click')) {
-	document.addEventListener('contextmenu', (event) => event.preventDefault());
+if (
+	document.body.classList.contains( 'protected-video-disable-right-click' )
+) {
+	document.addEventListener( 'contextmenu', ( event ) =>
+		event.preventDefault()
+	);
 }

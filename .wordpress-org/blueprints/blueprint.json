@@ -4,7 +4,7 @@
 		"php": "8.0",
 		"wp": "latest"
 	},
-	"phpExtensionBundles": ["kitchen-sink"],
+	"phpExtensionBundles": [ "kitchen-sink" ],
 	"features": {
 		"networking": true
 	},

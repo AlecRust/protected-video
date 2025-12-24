@@ -1,28 +1,28 @@
-const path = require('path');
-const fs = require('fs');
+const path = require( 'path' );
+const fs = require( 'fs' );
 const blockJson = JSON.parse(
-	fs.readFileSync(path.resolve(__dirname, '..', 'block.json'), 'utf8')
+	fs.readFileSync( path.resolve( __dirname, '..', 'block.json' ), 'utf8' )
 );
 const pluginVersion = blockJson.version;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const CssMinimizerPlugin = require( 'css-minimizer-webpack-plugin' );
+const TerserPlugin = require( 'terser-webpack-plugin' );
+const CopyPlugin = require( 'copy-webpack-plugin' );
 
 module.exports = {
 	mode: 'production',
 	entry: [
-		path.resolve(__dirname, '..', 'view.js'),
-		path.resolve(__dirname, 'style.scss'),
+		path.resolve( __dirname, '..', 'view.js' ),
+		path.resolve( __dirname, 'style.scss' ),
 	],
 	output: {
-		path: path.resolve(__dirname, '..', '..', 'demo'),
+		path: path.resolve( __dirname, '..', '..', 'demo' ),
 		filename: '[name].[contenthash].js',
 	},
 	devServer: {
 		static: {
-			directory: path.resolve(__dirname, 'demo'),
+			directory: path.resolve( __dirname, 'demo' ),
 		},
 		client: {
 			overlay: false,
@@ -38,7 +38,7 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@wordpress/babel-preset-default'],
+						presets: [ '@wordpress/babel-preset-default' ],
 					},
 				},
 			},
@@ -57,11 +57,11 @@ module.exports = {
 		],
 	},
 	optimization: {
-		minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+		minimizer: [ new TerserPlugin(), new CssMinimizerPlugin() ],
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, 'index.ejs'),
+		new HtmlWebpackPlugin( {
+			template: path.resolve( __dirname, 'index.ejs' ),
 			templateParameters: {
 				version: pluginVersion,
 				description:
@@ -72,17 +72,17 @@ module.exports = {
 					'https://ps.w.org/protected-video/assets/banner-772x250.png',
 				viewport: 'width=device-width, initial-scale=1',
 			},
-		}),
-		new MiniCssExtractPlugin({
+		} ),
+		new MiniCssExtractPlugin( {
 			filename: '[name].[contenthash].css',
-		}),
-		new CopyPlugin({
+		} ),
+		new CopyPlugin( {
 			patterns: [
 				{
-					from: path.resolve(__dirname, 'images'),
+					from: path.resolve( __dirname, 'images' ),
 					to: 'images',
 				},
 			],
-		}),
+		} ),
 	],
 };
