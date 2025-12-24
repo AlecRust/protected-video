@@ -1,4 +1,4 @@
 {
 	"*.{js,jsx,json,ts,tsx,yml,yaml}": "wp-scripts format",
-	"*.{js,jsx,ts,tsx}": "wp-scripts lint-js --fix --resolve-plugins-relative-to node_modules/@wordpress/eslint-plugin"
+	"*.{js,jsx,ts,tsx}": "wp-scripts lint-js --fix"
 }
