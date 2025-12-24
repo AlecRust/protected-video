@@ -1,4 +1,5 @@
 {
 	"*.{js,jsx,json,ts,tsx,yml,yaml}": "wp-scripts format",
-	"*.{js,jsx,ts,tsx}": "wp-scripts lint-js --fix"
+	"*.{js,jsx,ts,tsx}": "wp-scripts lint-js --fix",
+	"*.{css,scss}": "wp-scripts lint-style --fix"
 }

@@ -14,8 +14,8 @@
 		"env": "wp-env",
 		"start:demo": "webpack serve --mode development -c src/demo/webpack.config.js",
 		"build:demo": "webpack -c src/demo/webpack.config.js",
-		"lint": "wp-scripts lint-js && prettier --check \"**/*.{js,jsx,json,ts,tsx,yml,yaml}\" && ./vendor/bin/grumphp run",
-		"format": "wp-scripts format && wp-scripts lint-js --fix",
+		"lint": "wp-scripts lint-js && wp-scripts lint-style \"src/**/*.{css,scss}\" && prettier --check \"**/*.{js,jsx,json,ts,tsx,yml,yaml}\" && ./vendor/bin/grumphp run",
+		"format": "wp-scripts format && wp-scripts lint-js --fix && wp-scripts lint-style --fix \"src/**/*.{css,scss}\"",
 		"release": "GITHUB_TOKEN=${GITHUB_TOKEN:-$(gh auth token)} release-it --ci",
 		"prepare": "husky"
 	},
