@@ -2,7 +2,6 @@
 /**
  * Plugin Name:       Protected Video
  * Plugin URI:        https://github.com/AlecRust/protected-video
- * GitHub Plugin URI: AlecRust/protected-video
  * Description:       YouTube/Vimeo player that prevents easy sharing of the video.
  * Version:           2.0.1
  * Author:            Alec Rust
