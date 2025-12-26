@@ -1,5 +1,25 @@
 grumphp:
     tasks:
+        composer:
+            strict: true
+        jsonlint:
+            ignore_patterns:
+                - vendor
+                - node_modules
+                - build
+                - demo
+        yamllint:
+            ignore_patterns:
+                - vendor
+                - node_modules
+                - build
+                - demo
+        xmllint:
+            ignore_patterns:
+                - vendor
+                - node_modules
+                - build
+                - demo
         phpversion:
             project: '7.2'
         phpcs:
