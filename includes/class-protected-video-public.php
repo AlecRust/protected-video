@@ -26,6 +26,10 @@ class Protected_Video_Public {
 	public function render_shortcode( $atts, $content = null, $tag = '' ) {
 		unset( $content );
 
+		if ( ! is_array( $atts ) ) {
+			$atts = array();
+		}
+
 		$atts = shortcode_atts(
 			array(
 				'url'     => '',
@@ -185,6 +189,10 @@ class Protected_Video_Public {
 	 */
 	private function should_enqueue_assets() {
 		$post_id = get_the_ID();
+		if ( false === $post_id ) {
+			return false;
+		}
+
 		return $this->post_contains_block_or_shortcode( $post_id ) ||
 			$this->post_is_custom( $post_id );
 	}
@@ -197,6 +205,10 @@ class Protected_Video_Public {
 	 */
 	private function post_contains_block_or_shortcode( $post_id ) {
 		$post_content = get_post_field( 'post_content', $post_id );
+		if ( ! is_string( $post_content ) ) {
+			$post_content = '';
+		}
+
 		return has_block( 'protected-video/protected-video', $post_content ) ||
 			has_shortcode( $post_content, 'protected_video' );
 	}
