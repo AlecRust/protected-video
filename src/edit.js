@@ -4,6 +4,21 @@ import { __ } from '@wordpress/i18n';
 import getVideoId from 'get-video-id';
 import { pluginIcon } from './icons';
 
+const SUPPORTED_VIDEO_SERVICES = new Set( [ 'youtube', 'vimeo' ] );
+
+function parseVideoUrl( url ) {
+	const parsed = getVideoId( url );
+
+	return {
+		id: typeof parsed?.id === 'string' ? parsed.id : '',
+		service: typeof parsed?.service === 'string' ? parsed.service : '',
+	};
+}
+
+function isSupportedVideoService( service ) {
+	return SUPPORTED_VIDEO_SERVICES.has( service );
+}
+
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -25,26 +40,35 @@ import './editor.scss';
  */
 export default function Edit( props ) {
 	const { attributes, setAttributes } = props;
-	const { videoUrl, videoId, videoService } = attributes;
+	const { videoUrl } = attributes;
+
+	const parsedVideo = videoUrl
+		? parseVideoUrl( videoUrl )
+		: { id: '', service: '' };
+	const isSupportedService = isSupportedVideoService( parsedVideo.service );
+	const canRenderThumbnail = Boolean( parsedVideo.id ) && isSupportedService;
 
 	function handleVideoUrlChange( newUrl ) {
-		const { id: newId, service: newService } = getVideoId( newUrl );
+		const nextUrl = typeof newUrl === 'string' ? newUrl : '';
+		const nextVideo = nextUrl ? parseVideoUrl( nextUrl ) : null;
+		const isSupported = isSupportedVideoService( nextVideo?.service );
+
 		setAttributes( {
-			videoUrl: newUrl,
-			videoId: newId,
-			videoService: newService,
+			videoUrl: nextUrl,
+			videoId: isSupported ? nextVideo.id : '',
+			videoService: isSupported ? nextVideo.service : '',
 		} );
 	}
 
 	function renderVideoThumb() {
 		const thumbUrls = {
-			youtube: `https://i.ytimg.com/vi/${ videoId }/mqdefault.jpg`,
-			vimeo: `https://vumbnail.com/${ videoId }.jpg`,
+			youtube: `https://i.ytimg.com/vi/${ parsedVideo.id }/mqdefault.jpg`,
+			vimeo: `https://vumbnail.com/${ parsedVideo.id }.jpg`,
 		};
 
 		return (
 			<img
-				src={ thumbUrls[ videoService ] }
+				src={ thumbUrls[ parsedVideo.service ] }
 				width="320"
 				height="180"
 				alt={ __( 'Video thumbnail', 'protected-video' ) }
@@ -73,14 +97,19 @@ export default function Edit( props ) {
 				/>
 				{ videoUrl && (
 					<div>
-						{ videoId ? (
+						{ canRenderThumbnail ? (
 							renderVideoThumb()
 						) : (
 							<Notice status="error" isDismissible={ false }>
-								{ __(
-									'Sorry, a video ID could not be found in that URL.',
-									'protected-video'
-								) }
+								{ parsedVideo.service && ! isSupportedService
+									? __(
+											'Only YouTube and Vimeo URLs are supported.',
+											'protected-video'
+									  )
+									: __(
+											'Sorry, a video ID could not be found in that URL.',
+											'protected-video'
+									  ) }
 							</Notice>
 						) }
 					</div>
