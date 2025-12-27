@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [2.0.2](https://github.com/AlecRust/protected-video/releases/tag/2.0.2)
+
+> 27 December 2025
+
+- Bump release-it version [`96a2ced`](https://github.com/AlecRust/protected-video/commit/96a2cedb93fc5fed45bb2d8f0d7d07e7631a9e87)
+- Improve type safety [`2a9f039`](https://github.com/AlecRust/protected-video/commit/2a9f039db114f7dc03523f7ce35475a0ea41ad04)
+- Add WordPress stubs to vscode settings for PHP Intelephense [`7a526ee`](https://github.com/AlecRust/protected-video/commit/7a526eeb090b2f08a91195726430033a250a1b7f)
+- Enable more GrumPHP tasks [`9a3acfe`](https://github.com/AlecRust/protected-video/commit/9a3acfe736192da0a36fa6625783092d3e9c945f)
+- Increase PHPStan level 6 -> 8 [`f5e95f1`](https://github.com/AlecRust/protected-video/commit/f5e95f1fd116daee534e4662bc6d9c72d7f73630)
+- Improve handling of non-supported video platform URLs [`beb5da2`](https://github.com/AlecRust/protected-video/commit/beb5da23f8d721672cd33c90821b189cefc52c93)
+- Add styles linting [`bd99aa8`](https://github.com/AlecRust/protected-video/commit/bd99aa8d078237f3f45eaec1c0630525a0b8eb6f)
+- Remove claimed support for Git Updater [`3a294e1`](https://github.com/AlecRust/protected-video/commit/3a294e1e5ffefdca38358af84632e9fe09b1a4f6)
+- Simplify linting [`d206c1f`](https://github.com/AlecRust/protected-video/commit/d206c1f834944e885eeafae096734147aff8d072)
+- Update npm dependencies [`d10277d`](https://github.com/AlecRust/protected-video/commit/d10277d116d09c69285f48751ef830b419236610)
+- Replace custom ESLint/Prettier with wp-scripts [`bc07c19`](https://github.com/AlecRust/protected-video/commit/bc07c19d7eb699586e56dc0763a99b06bad70e04)
+
 #### [2.0.1](https://github.com/AlecRust/protected-video/releases/tag/2.0.1)
 
 > 23 December 2025

@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 6.6
 Tested up to:      6.9
-Stable tag:        2.0.1
+Stable tag:        2.0.2
 Requires PHP:      7.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,20 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
+
+= 2.0.2 - 2025-12-27 =
+
+* Bump release-it version
+* Improve type safety
+* Add WordPress stubs to vscode settings for PHP Intelephense
+* Enable more GrumPHP tasks
+* Increase PHPStan level 6 -> 8
+* Improve handling of non-supported video platform URLs
+* Add styles linting
+* Remove claimed support for Git Updater
+* Simplify linting
+* Update npm dependencies
+* Replace custom ESLint/Prettier with wp-scripts
 
 = 2.0.1 - 2025-12-23 =
 
