@@ -18,9 +18,9 @@ class Protected_Video_Public {
 	 *
 	 * Usage example: [protected_video url="https://youtu.be/aqz-KE-bpKQ" service="youtube"]
 	 *
-	 * @param array<string, mixed>|string $atts Shortcode attributes.
-	 * @param string|null                 $content Optional shortcode content.
-	 * @param string                      $tag Shortcode tag.
+	 * @param array<int|string, mixed>|string $atts Shortcode attributes.
+	 * @param string|null                     $content Optional shortcode content.
+	 * @param string                          $tag Shortcode tag.
 	 * @return string HTML output for the shortcode.
 	 */
 	public function render_shortcode( $atts, $content = null, $tag = '' ) {
@@ -136,13 +136,21 @@ class Protected_Video_Public {
 			return;
 		}
 
+		$player_theme_color = get_option(
+			'protected_video_player_theme_color',
+			'#00b3ff'
+		);
+		$player_theme_color = is_string( $player_theme_color )
+			? $player_theme_color
+			: '#00b3ff';
+
 		$block_style_handle = 'protected-video-protected-video-style';
 		wp_enqueue_style( $block_style_handle );
 		wp_add_inline_style(
 			$block_style_handle,
 			sprintf(
 				':root { --plyr-color-main: %s; }',
-				get_option( 'protected_video_player_theme_color', '#00b3ff' )
+				$player_theme_color
 			)
 		);
 	}

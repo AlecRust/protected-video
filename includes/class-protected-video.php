@@ -122,6 +122,10 @@ class Protected_Video {
 		add_filter(
 			'mpcs_classroom_style_handles',
 			function ( $allowed_handles ) {
+				if ( ! is_array( $allowed_handles ) ) {
+					$allowed_handles = array();
+				}
+
 				$allowed_handles[] = 'protected-video-protected-video-style';
 				return $allowed_handles;
 			}

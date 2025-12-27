@@ -170,6 +170,10 @@ class Protected_Video_Admin {
 	 * @return string|null Sanitized input data.
 	 */
 	public function sanitize_color_input( $input ) {
+		if ( ! is_string( $input ) ) {
+			return null;
+		}
+
 		return sanitize_hex_color( $input );
 	}
 
@@ -207,6 +211,7 @@ class Protected_Video_Admin {
 		$field_id = $val['id'];
 		$name     = $val['option_name'];
 		$value    = get_option( $name, '#00b3ff' );
+		$value    = is_string( $value ) ? $value : '#00b3ff';
 
 		printf(
 			'<input type="color" id="%s" name="%s" value="%s">',
