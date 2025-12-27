@@ -44,7 +44,7 @@
 		"mini-css-extract-plugin": "^2.9.4",
 		"normalize.css": "^8.0.1",
 		"prettier": "npm:wp-prettier@3.0.3",
-		"release-it": "^19.2.1",
+		"release-it": "^19.2.2",
 		"sass": "^1.97.1",
 		"sass-loader": "^16.0.6",
 		"terser-webpack-plugin": "^5.3.16",
