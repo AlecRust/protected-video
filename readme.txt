@@ -3,7 +3,7 @@ Contributors:      alecrust
 Tags:              video, player, plyr, youtube, vimeo
 Requires at least: 6.6
 Tested up to:      6.9
-Stable tag:        2.0.2
+Stable tag:        2.0.3
 Requires PHP:      7.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,12 @@ For performance reasons, Protected Video only loads its associated JS and CSS wh
 5. Optional Shortcode embed method also supported.
 
 == Changelog ==
+
+= 2.0.3 - 2026-01-04 =
+
+* Rebuild composer lockfile
+* Rebuild npm lockfile
+* Update Plyr version 3.8.3 → 3.8.4
 
 = 2.0.2 - 2025-12-27 =
 

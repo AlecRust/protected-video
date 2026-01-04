@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [2.0.3](https://github.com/AlecRust/protected-video/releases/tag/2.0.3)
+
+> 4 January 2026
+
+- Rebuild composer lockfile [`35c82bd`](https://github.com/AlecRust/protected-video/commit/35c82bd919083274e05f15a6e06026fc7c1ba319)
+- Rebuild npm lockfile [`9f5ca43`](https://github.com/AlecRust/protected-video/commit/9f5ca4362a391c1544f0e26dd9d7777b99f05d31)
+- Update Plyr version 3.8.3 → 3.8.4 [`03d6c7b`](https://github.com/AlecRust/protected-video/commit/03d6c7b8dd44a3038dd7c146f85dcab467b32368)
+
 #### [2.0.2](https://github.com/AlecRust/protected-video/releases/tag/2.0.2)
 
 > 27 December 2025
