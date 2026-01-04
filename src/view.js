@@ -3,10 +3,8 @@
  * the data attributes and initializes Plyr.
  */
 
-import '../node_modules/plyr/dist/plyr.js';
-import plyrSpriteUrl from '../node_modules/plyr/dist/plyr.svg';
-
-const Plyr = window.Plyr;
+import plyrSpriteUrl from './assets/plyr.svg';
+import Plyr from 'plyr';
 
 function decodeVideoBlock( videoBlock ) {
 	const encodedProvider = videoBlock.dataset.id1;

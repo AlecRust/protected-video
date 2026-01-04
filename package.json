@@ -21,7 +21,7 @@
 	},
 	"dependencies": {
 		"get-video-id": "^4.1.7",
-		"plyr": "^3.8.3"
+		"plyr": "^3.8.4"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.28.5",
