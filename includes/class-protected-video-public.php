@@ -167,27 +167,24 @@ class Protected_Video_Public {
 			return;
 		}
 
-		$block_script_handle = 'protected-video-protected-video-view-script';
-		wp_enqueue_script( $block_script_handle );
-	}
-
-	/**
-	 * Return body classes for the public-facing side of the site
-	 *
-	 * @param string[] $classes Body classes.
-	 * @return string[] Body classes.
-	 */
-	public function add_body_classes( $classes ) {
 		$disable_right_click = get_option(
 			'protected_video_disable_right_click',
 			'1'
 		);
 
-		if ( '1' === $disable_right_click ) {
-			$classes[] = 'protected-video-disable-right-click';
-		}
-
-		return $classes;
+		$block_script_handle = 'protected-video-protected-video-view-script';
+		wp_enqueue_script( $block_script_handle );
+		wp_add_inline_script(
+			$block_script_handle,
+			'window.ProtectedVideoSettings = ' .
+				wp_json_encode(
+					array(
+						'disableRightClick' => '1' === $disable_right_click,
+					)
+				) .
+				';',
+			'before'
+		);
 	}
 
 	/**

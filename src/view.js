@@ -6,6 +6,13 @@
 import plyrSpriteUrl from './assets/plyr.svg';
 import Plyr from 'plyr';
 
+function shouldDisableRightClick() {
+	return Boolean(
+		window.ProtectedVideoSettings &&
+			window.ProtectedVideoSettings.disableRightClick
+	);
+}
+
 function decodeVideoBlock( videoBlock ) {
 	const encodedProvider = videoBlock.dataset.id1;
 	const encodedVideoId = videoBlock.dataset.id2;
@@ -56,10 +63,7 @@ videoBlocks.forEach( ( videoBlock ) => {
 	new Plyr( videoBlock, plyrConfig );
 } );
 
-// Disable right-click if plugin option enabled
-if (
-	document.body.classList.contains( 'protected-video-disable-right-click' )
-) {
+if ( shouldDisableRightClick() && videoBlocks.length > 0 ) {
 	document.addEventListener( 'contextmenu', ( event ) =>
 		event.preventDefault()
 	);

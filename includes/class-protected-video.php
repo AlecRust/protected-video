@@ -114,9 +114,6 @@ class Protected_Video {
 		// Public JS.
 		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ), 9 );
 
-		// Body class.
-		add_filter( 'body_class', array( $plugin_public, 'add_body_classes' ) );
-
 		// Allow plugin styles to be enqueued in "MemberPress Courses" course pages.
 		// See https://docs.memberpress.com/article/381-how-to-edit-lessons-in-classroom-mode-with-a-page-builder.
 		add_filter(
