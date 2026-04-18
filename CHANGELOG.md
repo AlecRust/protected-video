@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+#### [2.0.4](https://github.com/AlecRust/protected-video/releases/tag/2.0.4)
+
+> 18 April 2026
+
+- Disable wp-env test environment [`03bc3b4`](https://github.com/AlecRust/protected-video/commit/03bc3b43f1eea4bddf898630569c77507d00e53b)
+- Bump packageManager [`24d8179`](https://github.com/AlecRust/protected-video/commit/24d817913a59e1baf411ea6f40aca15da6f65f7b)
+- Bump remaining npm dependencies [`d4f4e16`](https://github.com/AlecRust/protected-video/commit/d4f4e164d095572c4724daa739c924dd9004ef43)
+- Bump safe dependencies [`2f4ec0a`](https://github.com/AlecRust/protected-video/commit/2f4ec0aa2da4f7727c1a4c34f8f6f9402ef7aadd)
+- Only disable right-click on pages with a Protected Video [`81bfb5e`](https://github.com/AlecRust/protected-video/commit/81bfb5e476e8edde3d199974b3421ea4742534f7)
+- Bump actions/deploy-pages from 4 to 5 [`0ffc568`](https://github.com/AlecRust/protected-video/commit/0ffc568d5772e96f1d1a52fcaa20f7052ac0e07e)
+- Bump actions/configure-pages from 5 to 6 [`444e5d9`](https://github.com/AlecRust/protected-video/commit/444e5d9b1909b06ede12d124da417ebf76ec694e)
+
 #### [2.0.3](https://github.com/AlecRust/protected-video/releases/tag/2.0.3)
 
 > 4 January 2026

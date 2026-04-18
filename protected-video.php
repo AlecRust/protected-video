@@ -3,7 +3,7 @@
  * Plugin Name:       Protected Video
  * Plugin URI:        https://github.com/AlecRust/protected-video
  * Description:       YouTube/Vimeo player that prevents easy sharing of the video.
- * Version:           2.0.3
+ * Version:           2.0.4
  * Author:            Alec Rust
  * Author URI:        https://www.alecrust.com/
  * Requires PHP:      7.2
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Plugin version.
  */
-define( 'PROTECTED_VIDEO_VERSION', '2.0.3' );
+define( 'PROTECTED_VIDEO_VERSION', '2.0.4' );
 
 /**
  * Load core plugin class defining all hooks.
